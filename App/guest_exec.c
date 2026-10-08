@@ -3,6 +3,7 @@
  * Fixed host dereferences and native function casts are removed. This is a
  * bounded execution/debugging aid, not a full PS1 emulator or playable game. */
 #include "guest_exec.h"
+#include "irq_registers.h"
 #include "pc/compat/gte.h"
 #include <setjmp.h>
 #include <stdlib.h>
@@ -12,6 +13,7 @@
 typedef struct State {
  uint32_t r[32],hi,lo,pc,steps,budget,pending_reg,pending_value;
  int pending, interrupts_enabled; MemoriesMemory *memory; LekakExecResult *out; jmp_buf escape;
+ LekakIrqRegisters irq;
 } State;
 static void fail(State *s,uint32_t pc,const char *reason,uint32_t detail) {
  s->out->pc=pc;s->out->detail=detail;
@@ -22,11 +24,11 @@ static void *span(State *s,uint32_t a,size_t n,size_t align) {
  if(!p)fail(s,s->pc,"Unimplemented memory or invalid alignment",a);
  return p;
 }
-static uint32_t l32(State *s,uint32_t a){return Memories_ReadLE32(span(s,a,4,4));}
-static uint16_t l16(State *s,uint32_t a){uint8_t *p=span(s,a,2,2);return p[0]|((uint16_t)p[1]<<8);}
+static uint32_t l32(State *s,uint32_t a){uint32_t v;if(LekakIrq_Read(&s->irq,a,4,&v))return v;return Memories_ReadLE32(span(s,a,4,4));}
+static uint16_t l16(State *s,uint32_t a){uint32_t v;if(LekakIrq_Read(&s->irq,a,2,&v))return (uint16_t)v;uint8_t *p=span(s,a,2,2);return p[0]|((uint16_t)p[1]<<8);}
 static uint8_t l8(State *s,uint32_t a){return *(uint8_t*)span(s,a,1,1);}
-static void s32(State *s,uint32_t a,uint32_t v){Memories_WriteLE32(span(s,a,4,4),v);}
-static void s16(State *s,uint32_t a,uint16_t v){uint8_t *p=span(s,a,2,2);p[0]=(uint8_t)v;p[1]=(uint8_t)(v>>8);}
+static void s32(State *s,uint32_t a,uint32_t v){if(LekakIrq_Write(&s->irq,a,4,v))return;Memories_WriteLE32(span(s,a,4,4),v);}
+static void s16(State *s,uint32_t a,uint16_t v){if(LekakIrq_Write(&s->irq,a,2,v))return;uint8_t *p=span(s,a,2,2);p[0]=(uint8_t)v;p[1]=(uint8_t)(v>>8);}
 static void s8(State *s,uint32_t a,uint8_t v){*(uint8_t*)span(s,a,1,1)=v;}
 static uint32_t checked_add(State *s,uint32_t pc,uint32_t a,uint32_t b){
  int64_t n=(int64_t)(int32_t)a+(int32_t)b;if(n<INT32_MIN||n>INT32_MAX)fail(s,pc,"Signed arithmetic overflow",0);return (uint32_t)n;
@@ -205,6 +207,8 @@ int LekakExec_Run(MemoriesMemory *memory,uint32_t entry,uint32_t gp,uint32_t sp,
  }
  out->steps=s->steps;memcpy(out->registers,s->r,sizeof(s->r));
  out->logical_interrupts_enabled=s->interrupts_enabled;
+ out->irq_status=s->irq.status;out->irq_mask=s->irq.mask;
+ out->irq_reads=s->irq.reads;out->irq_writes=s->irq.writes;
  if(s->pc==LEKAK_EXEC_RETURN){out->returned=1;out->pc=s->pc;snprintf(out->reason,sizeof(out->reason),"Routine returned");}
  free(s);return out->returned;
 }

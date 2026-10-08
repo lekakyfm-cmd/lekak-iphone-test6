@@ -1,4 +1,5 @@
 #include "../App/guest_exec.h"
+#include "../App/irq_registers.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,6 +10,22 @@
 static void program(MemoriesMemory *m,const uint32_t *words,size_t count){memset(m,0,sizeof(*m));for(size_t i=0;i<count;i++)Memories_WriteLE32(m->ram+0x1000+i*4,words[i]);}
 int main(void){
  MemoriesMemory *m=malloc(sizeof(*m));assert(m);LekakExecResult r;
+ LekakIrqRegisters irq={0};uint32_t value;
+ assert(LekakIrq_Read(&irq,0x1f801070,2,&value)&&value==0);
+ irq.status=0x405;
+ assert(LekakIrq_Write(&irq,0x9f801070,2,0xfffb)&&irq.status==0x401);
+ assert(LekakIrq_Write(&irq,0xbf801070,4,0xffff)&&irq.status==0x401);
+ assert(LekakIrq_Write(&irq,0x1f801070,4,0)&&irq.status==0);
+ assert(LekakIrq_Write(&irq,0x1f801074,4,0xffffffff)&&irq.mask==0x7ff);
+ assert(LekakIrq_Read(&irq,0xbf801074,4,&value)&&value==0x7ff);
+ assert(!LekakIrq_Write(&irq,0x1f801072,2,0)&&!LekakIrq_Read(&irq,0x1f801074,1,&value));
+ const uint32_t irq_access[]={I(15,0,8,0x1f80),I(13,8,8,0x1070),
+  I(9,0,9,0xffff),I(0x29,8,9,4),I(0x25,8,10,4),0,
+  I(0x2b,8,0,4),I(0x23,8,11,4),0,I(0x29,8,0,0),RET,0};
+ program(m,irq_access,sizeof(irq_access)/4);
+ assert(LekakExec_Run(m,0x80001000,0,0x801fff00,100,&r));
+ assert(r.registers[10]==0x7ff&&r.registers[11]==0&&r.irq_status==0&&r.irq_mask==0);
+ assert(r.irq_reads==2&&r.irq_writes==3);
  const uint32_t basic[]={I(15,0,8,0x8000),I(13,8,8,0x200),I(9,0,9,1234),I(0x2b,8,9,0),I(0x23,8,10,0),I(9,10,11,1),I(9,10,12,1),RET,0};
  program(m,basic,sizeof(basic)/4);assert(LekakExec_Run(m,0x80001000,0,0x801fff00,100,&r));
  assert(r.registers[10]==1234&&r.registers[11]==1&&r.registers[12]==1235&&r.steps==9);assert(Memories_ReadLE32(m->ram+0x200)==1234);

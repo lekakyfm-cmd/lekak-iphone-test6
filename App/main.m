@@ -146,7 +146,9 @@ static NSDictionary *ExecutionDetails(const LekakExecResult *r) {
         @"instruction":Hex32(r->instruction),@"detail":Hex32(r->detail),
         @"reason":[NSString stringWithUTF8String:r->reason],@"registers":registers,@"trace":trace,
         @"critical_section_enters":@(r->critical_enters),@"critical_section_exits":@(r->critical_exits),
-        @"logical_interrupts_enabled":@(r->logical_interrupts_enabled)};
+        @"logical_interrupts_enabled":@(r->logical_interrupts_enabled),
+        @"irq_status":Hex32(r->irq_status),@"irq_mask":Hex32(r->irq_mask),
+        @"irq_register_reads":@(r->irq_reads),@"irq_register_writes":@(r->irq_writes)};
 }
 static NSDictionary *RunDiscExecution(MemoriesMemory *original,const LekakDiscResult *disc) {
     MemoriesMemory *native=malloc(sizeof(*native)), *guest=malloc(sizeof(*guest));
@@ -186,9 +188,10 @@ static NSDictionary *RunDiscExecution(MemoriesMemory *original,const LekakDiscRe
     NSDictionary *report=@{@"status":@"finished",@"startup_routines_match":@(all),
         @"routine_checks":checks,@"entry_execution":ExecutionDetails(&boot),
         @"gp_used":Hex32(gp),@"sp_used":Hex32(sp),@"instruction_budget":@1000000,
-        @"routine_instruction_budget":@100000,@"diagnostic_revision":@"6-critical-section",
+        @"routine_instruction_budget":@100000,@"diagnostic_revision":@"6-irq-registers",
+        @"irq_register_model":@"I_STAT/I_MASK 16/32-bit access; 11 implemented bits; upper undefined bits zero; reset status/mask zero. No device IRQ generation or delivery.",
         @"critical_section_model":@"SYS(1/2) logical enable flag, initially enabled, matching the PC port. No CP0 exception dispatch or interrupt delivery.",
-        @"scope":@"Bounded execution diagnostics on private RAM copies; SYS(1/2) adapted. Other BIOS, MMIO, CD, audio, full game loop and Lekak hooks remain unsupported. Unknown services halt.",
+        @"scope":@"Bounded execution diagnostics on private RAM copies; SYS(1/2) and I_STAT/I_MASK registers adapted. Other BIOS, MMIO, device IRQ delivery, CD, audio, full game loop and Lekak hooks remain unsupported. Unknown services halt.",
         @"original_loaded_ram_preserved":@YES};
     free(native);free(guest);return report;
 }

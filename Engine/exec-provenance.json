@@ -11,11 +11,13 @@
     "Bounded instruction trace and structured stop reason",
     "MIPS-I branch/load delays and trapping overflow; unsupported BIOS/MMIO/COP0 halt",
     "No complete PS1 hardware, cycle timing or full-game claim",
-    "SYS(1/2) logical critical-section flag with previous-state return for Enter and register preservation for Exit; other system calls still halt. Initially enabled, no CP0 exceptions or IRQ delivery."
+    "SYS(1/2) logical critical-section flag with previous-state return for Enter and register preservation for Exit; other system calls still halt. Initially enabled, no CP0 exceptions or IRQ delivery.",
+    "I_STAT/I_MASK register-only MMIO adapter: halfword/word aliases, 11-bit mask, zero-bit acknowledge semantics. No device edge generation, CP0 IRQ dispatch or scheduler."
   ],
   "critical_section_reference": {
     "pc_source": "src/pc/sdk/libetc.c",
     "specification": "https://psx-spx.consoledev.net/ps1/kernelbios/interrupt-exception-handling/",
     "sdk_reference": "https://psx.arthus.net/sdk/Psy-Q/DOCS/LibRef47.pdf"
-  }
+  },
+  "irq_register_reference": "https://psx-spx.consoledev.net/ps1/system/interrupts/"
 }

@@ -8,6 +8,7 @@ typedef struct LekakExecResult {
     uint32_t trace_pc[LEKAK_EXEC_TRACE], trace_ins[LEKAK_EXEC_TRACE], trace_count;
     int returned;
     uint32_t critical_enters, critical_exits;
+    uint32_t irq_status, irq_mask, irq_reads, irq_writes;
     int logical_interrupts_enabled;
     char reason[128];
 } LekakExecResult;
