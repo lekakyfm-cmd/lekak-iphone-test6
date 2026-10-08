@@ -144,7 +144,9 @@ static NSDictionary *ExecutionDetails(const LekakExecResult *r) {
     for (unsigned i=0;i<32;i++) [registers addObject:Hex32(r->registers[i])];
     return @{@"returned":@(r->returned),@"instructions":@(r->steps),@"stop_pc":Hex32(r->pc),
         @"instruction":Hex32(r->instruction),@"detail":Hex32(r->detail),
-        @"reason":[NSString stringWithUTF8String:r->reason],@"registers":registers,@"trace":trace};
+        @"reason":[NSString stringWithUTF8String:r->reason],@"registers":registers,@"trace":trace,
+        @"critical_section_enters":@(r->critical_enters),@"critical_section_exits":@(r->critical_exits),
+        @"logical_interrupts_enabled":@(r->logical_interrupts_enabled)};
 }
 static NSDictionary *RunDiscExecution(MemoriesMemory *original,const LekakDiscResult *disc) {
     MemoriesMemory *native=malloc(sizeof(*native)), *guest=malloc(sizeof(*guest));
@@ -184,8 +186,9 @@ static NSDictionary *RunDiscExecution(MemoriesMemory *original,const LekakDiscRe
     NSDictionary *report=@{@"status":@"finished",@"startup_routines_match":@(all),
         @"routine_checks":checks,@"entry_execution":ExecutionDetails(&boot),
         @"gp_used":Hex32(gp),@"sp_used":Hex32(sp),@"instruction_budget":@1000000,
-        @"routine_instruction_budget":@100000,@"diagnostic_revision":@"6-bss-budget-fix",
-        @"scope":@"Bounded execution diagnostics on private RAM copies; no BIOS, MMIO, CD, audio, full game loop or Lekak hooks. Unsupported services halt; no fake success.",
+        @"routine_instruction_budget":@100000,@"diagnostic_revision":@"6-critical-section",
+        @"critical_section_model":@"SYS(1/2) logical enable flag, initially enabled, matching the PC port. No CP0 exception dispatch or interrupt delivery.",
+        @"scope":@"Bounded execution diagnostics on private RAM copies; SYS(1/2) adapted. Other BIOS, MMIO, CD, audio, full game loop and Lekak hooks remain unsupported. Unknown services halt.",
         @"original_loaded_ram_preserved":@YES};
     free(native);free(guest);return report;
 }

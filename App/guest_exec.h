@@ -7,10 +7,13 @@ typedef struct LekakExecResult {
     uint32_t steps, pc, instruction, detail, registers[32];
     uint32_t trace_pc[LEKAK_EXEC_TRACE], trace_ins[LEKAK_EXEC_TRACE], trace_count;
     int returned;
+    uint32_t critical_enters, critical_exits;
+    int logical_interrupts_enabled;
     char reason[128];
 } LekakExecResult;
-/* Bounded functional MIPS-I diagnostic. No BIOS, MMIO, CD, SPU, scheduler or
- * cycle-accurate PS1 emulation. Unsupported operations halt with a report.
+/* Bounded functional MIPS-I diagnostic with logical SYS(1/2) critical flag.
+ * Other BIOS services, MMIO, CD, SPU, scheduler and
+ * cycle-accurate PS1 emulation are unsupported and halt with a report.
  * RAM may change: run on a fresh private copy of the loaded executable. */
 int LekakExec_Run(MemoriesMemory *,uint32_t entry,uint32_t gp,uint32_t sp,
                   uint32_t budget,LekakExecResult *);

@@ -10,6 +10,12 @@
     "Removed native casts, mapped stack, OS crash/fault handling, JIT and external callbacks",
     "Bounded instruction trace and structured stop reason",
     "MIPS-I branch/load delays and trapping overflow; unsupported BIOS/MMIO/COP0 halt",
-    "No complete PS1 hardware, cycle timing or full-game claim"
-  ]
+    "No complete PS1 hardware, cycle timing or full-game claim",
+    "SYS(1/2) logical critical-section flag with previous-state return for Enter and register preservation for Exit; other system calls still halt. Initially enabled, no CP0 exceptions or IRQ delivery."
+  ],
+  "critical_section_reference": {
+    "pc_source": "src/pc/sdk/libetc.c",
+    "specification": "https://psx-spx.consoledev.net/ps1/kernelbios/interrupt-exception-handling/",
+    "sdk_reference": "https://psx.arthus.net/sdk/Psy-Q/DOCS/LibRef47.pdf"
+  }
 }

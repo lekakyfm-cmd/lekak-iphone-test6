@@ -11,7 +11,7 @@
 #include <limits.h>
 typedef struct State {
  uint32_t r[32],hi,lo,pc,steps,budget,pending_reg,pending_value;
- int pending; MemoriesMemory *memory; LekakExecResult *out; jmp_buf escape;
+ int pending, interrupts_enabled; MemoriesMemory *memory; LekakExecResult *out; jmp_buf escape;
 } State;
 static void fail(State *s,uint32_t pc,const char *reason,uint32_t detail) {
  s->out->pc=pc;s->out->detail=detail;
@@ -59,7 +59,16 @@ static void plain(State *s, uint32_t pc)
         case 4: s->r[rd] = s->r[rt] << (s->r[rs] & 31); break;
         case 6: s->r[rd] = s->r[rt] >> (s->r[rs] & 31); break;
         case 7: s->r[rd] = (uint32_t)((int32_t)s->r[rt] >> (s->r[rs] & 31)); break;
-        case 0x0c: fail(s, pc, "syscall", ins); break;
+        case 0x0c:
+            /* Functional SYS(1/2) adapter, matching the PC port's logical
+             * critical flag. No exception vectors, CP0 or IRQ delivery yet.
+             * Psy-Q Enter returns previous enabled state; Exit preserves v0.
+             * Only the plain syscall encoding is supported. */
+            if(ins!=0x0000000cu)fail(s,pc,"Unsupported syscall encoding",ins);
+            if(s->r[4]==1){s->r[2]=(uint32_t)s->interrupts_enabled;s->interrupts_enabled=0;s->out->critical_enters++;}
+            else if(s->r[4]==2){s->interrupts_enabled=1;s->out->critical_exits++;}
+            else fail(s,pc,"System call not implemented",s->r[4]);
+            break;
         case 0x0d: fail(s, pc, "break instruction", ins); break;
         case 0x10: s->r[rd] = s->hi; break;
         case 0x11: s->hi = s->r[rs]; break;
@@ -150,6 +159,8 @@ static void execute_plain(State *s,uint32_t pc,int delay_slot){
  s->pc=pc;
  uint32_t ins=l32(s,pc),op=ins>>26;trace(s,pc,ins);
  if(control(ins))fail(s,pc,delay_slot?"Branch in delay slot":"Unexpected branch",ins);
+ if(delay_slot && op==0 && (ins&63)==0x0c)fail(s,pc,"Syscall in delay slot not implemented",ins);
+ int writes_syscall_v0=op==0 && (ins&63)==0x0c && s->r[4]==1;
  int load=loaded_register(ins);uint32_t before=load>=0?s->r[load]:0;
  if((op==0x22||op==0x26)&&s->pending&&s->pending_reg==(uint32_t)load){
   if(((ins>>21)&31)==(unsigned)load)fail(s,pc,"Unaligned load base aliases merge register",ins);
@@ -158,7 +169,7 @@ static void execute_plain(State *s,uint32_t pc,int delay_slot){
  plain(s,pc);
  uint32_t value=load>=0?s->r[load]:0;
  if(load>=0)s->r[load]=before;
- finish_pending(s,load>=0?-1:written_register(ins),load,value);
+ finish_pending(s,load>=0?-1:(writes_syscall_v0?2:written_register(ins)),load,value);
 }
 int LekakExec_Run(MemoriesMemory *memory,uint32_t entry,uint32_t gp,uint32_t sp,
                   uint32_t budget,LekakExecResult *out){
@@ -166,7 +177,7 @@ int LekakExec_Run(MemoriesMemory *memory,uint32_t entry,uint32_t gp,uint32_t sp,
  memset(out,0,sizeof(*out));
  if(!memory||!budget){snprintf(out->reason,sizeof(out->reason),"Missing RAM or instruction budget");return 0;}
  State *s=calloc(1,sizeof(*s));if(!s){snprintf(out->reason,sizeof(out->reason),"Execution state allocation failed");return 0;}
- s->memory=memory;s->out=out;s->pc=entry;s->budget=budget;
+ s->memory=memory;s->out=out;s->pc=entry;s->budget=budget;s->interrupts_enabled=1;
  s->r[28]=gp;s->r[29]=sp;s->r[31]=LEKAK_EXEC_RETURN;
  if(!setjmp(s->escape))while(s->pc!=LEKAK_EXEC_RETURN){
   uint32_t pc=s->pc,physical=pc&0x1fffffffu;
@@ -193,6 +204,7 @@ int LekakExec_Run(MemoriesMemory *memory,uint32_t entry,uint32_t gp,uint32_t sp,
   finish_pending(s,written,-1,0);execute_plain(s,pc+4,1);s->pc=target;
  }
  out->steps=s->steps;memcpy(out->registers,s->r,sizeof(s->r));
+ out->logical_interrupts_enabled=s->interrupts_enabled;
  if(s->pc==LEKAK_EXEC_RETURN){out->returned=1;out->pc=s->pc;snprintf(out->reason,sizeof(out->reason),"Routine returned");}
  free(s);return out->returned;
 }
