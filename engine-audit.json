@@ -1,0 +1,43 @@
+{
+  "engine_revision": "0d78202729967a5bbdbc886aa128e48e82bef7ac",
+  "ios_target_present": false,
+  "stored_pointers": "__ptr32 __uptr",
+  "guest_ram_address": "0x80000000",
+  "guest_scratchpad_address": "0x9F800000",
+  "android_native_code_base": "0xC0000000",
+  "runtime_code_changes": true,
+  "built_ios_app": false,
+  "tested_on_iphone": false,
+  "next_step": "Build integration 06, choose the same USA BIN on iPhone, compare startup routines and inspect the real entry-point halt trace. No complete game/BIOS/hardware or Lekak hook integration yet.",
+  "integration_04": {
+    "portable_engine_sources": true,
+    "local_engine_tests_passed": true,
+    "full_game_integrated": false,
+    "device_build_pending": false,
+    "device_execution_pending": false,
+    "device_tests_passed": true,
+    "framebuffer_hash": "73895525"
+  },
+  "integration_05": {
+    "disc_loader": true,
+    "translated_game_utilities": 3,
+    "full_game_integrated": false,
+    "device_build_pending": false,
+    "device_execution_pending": false,
+    "local_host_tests_passed": true,
+    "new_c_routines_sanitizers_passed": true,
+    "device_tests_passed": true,
+    "disc_load_verified_on_device": true,
+    "disc_payload_hash": "44E8F764",
+    "disc_load_bytes": 1900544
+  },
+  "integration_06": {
+    "bounded_guest_execution": true,
+    "native_startup_routines": 3,
+    "full_game_integrated": false,
+    "device_build_pending": true,
+    "device_execution_pending": true,
+    "local_host_tests_passed": true,
+    "new_c_routines_sanitizers_passed": true
+  }
+}
