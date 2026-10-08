@@ -28,5 +28,19 @@ int main(void){
  const uint32_t loop[]={I(4,0,0,0xffff),0};program(m,loop,2);assert(!LekakExec_Run(m,0x80001000,0,0x801fff00,7,&r)&&r.steps==7&&strstr(r.reason,"budget"));
  const uint32_t bad_delay[]={I(4,0,0,1),RET};program(m,bad_delay,2);assert(!LekakExec_Run(m,0x80001000,0,0x801fff00,100,&r)&&strstr(r.reason,"delay slot"));
  const uint32_t cop0[]={0x40086000};program(m,cop0,1);assert(!LekakExec_Run(m,0x80001000,0,0x801fff00,100,&r)&&strstr(r.reason,"unsupported"));
- free(m);puts("Bounded guest execution: load/branch delays, merge pair, signed division, overflow, MMIO/BIOS rejection, budget and delay-slot rejection passed");return 0;
+ /* Retail entry's BSS clear range and exact five-instruction loop, followed
+  * by our return sentinel. The old limit must stop; the corrected limit
+  * must finish, clear the entire span and leave both neighbours intact. */
+ const uint32_t clear_bss[]={I(15,0,2,0x8009),I(13,2,2,0xb090),
+  I(15,0,3,0x800f),I(13,3,3,0xe728),I(0x2b,2,0,0),I(9,2,2,4),
+  R(2,3,1,0x2b),I(5,1,0,0xfffc),0,RET,0};
+ program(m,clear_bss,sizeof(clear_bss)/4);
+ memset(m->ram+0x9b08f,0xa5,0xfe728-0x9b090+2);
+ assert(!LekakExec_Run(m,0x80001000,0,0x801fff00,100000,&r)&&strstr(r.reason,"budget"));
+ memset(m->ram+0x9b08f,0xa5,0xfe728-0x9b090+2);
+ assert(LekakExec_Run(m,0x80001000,0,0x801fff00,1000000,&r));
+ assert(r.steps==4+5*((0xfe728-0x9b090)/4)+2);
+ assert(r.registers[2]==0x800fe728&&m->ram[0x9b08f]==0xa5&&m->ram[0xfe728]==0xa5);
+ for(size_t offset=0x9b090;offset<0xfe728;offset++)assert(m->ram[offset]==0);
+ free(m);puts("Bounded guest execution: load/branch delays, merge pair, signed division, overflow, MMIO/BIOS rejection, budget, delay-slot rejection and full retail BSS clear passed");return 0;
 }

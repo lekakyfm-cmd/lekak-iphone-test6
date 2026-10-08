@@ -177,10 +177,14 @@ static NSDictionary *RunDiscExecution(MemoriesMemory *original,const LekakDiscRe
             @"native_applied":@(adapted),@"ram_matches":@(same),@"execution":ExecutionDetails(&result)}];
     }
     memcpy(guest,original,sizeof(*guest));LekakExecResult boot;
-    LekakExec_Run(guest,disc->entry,gp,sp,100000,&boot);
+    /* Retail entry clears 0x63698 BSS bytes with five instructions per word
+     * (508990 instructions for that loop alone). Keep a finite diagnostic
+     * limit, but allow this normal initialization to finish. */
+    LekakExec_Run(guest,disc->entry,gp,sp,1000000,&boot);
     NSDictionary *report=@{@"status":@"finished",@"startup_routines_match":@(all),
         @"routine_checks":checks,@"entry_execution":ExecutionDetails(&boot),
-        @"gp_used":Hex32(gp),@"sp_used":Hex32(sp),@"instruction_budget":@100000,
+        @"gp_used":Hex32(gp),@"sp_used":Hex32(sp),@"instruction_budget":@1000000,
+        @"routine_instruction_budget":@100000,@"diagnostic_revision":@"6-bss-budget-fix",
         @"scope":@"Bounded execution diagnostics on private RAM copies; no BIOS, MMIO, CD, audio, full game loop or Lekak hooks. Unsupported services halt; no fake success.",
         @"original_loaded_ram_preserved":@YES};
     free(native);free(guest);return report;
