@@ -1,0 +1,7779 @@
+{
+  "other_sections_sha256": "9685162c8805f81d3a65ec32c8b5a547562900c71eb1e5c17d02487e5976a0a0",
+  "cards": [
+    {
+      "replace": 722,
+      "sha256": "17b1e8e7a7d0fa2b31e60b9f3bd68c20d2e2c93547122abfe42ed14a5b599133"
+    },
+    {
+      "id": "card-1",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2100,
+        "defense": 2800,
+        "attribute": "Light",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "d780ba31b2ce811fa3ed413acedcafa4594ae60263186ea99fc8639e7273658d"
+    },
+    {
+      "id": "card-2",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2200,
+        "defense": 2600,
+        "attribute": "Fire",
+        "level": 7,
+        "stars": [
+          "Mars",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "a2a772db98dc406fd75552c2fa9a8c95b5e380a039a171a64907c34eca3dc0f6"
+    },
+    {
+      "id": "card-3",
+      "visible": {
+        "type": "Machine",
+        "attack": 1400,
+        "defense": 1200,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "2dbb357a889920089ea6efc0a682a36d5657231a9173d75516e82e7ff1c9c3ae"
+    },
+    {
+      "id": "card-4",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2000,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Mercury",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "5ce8a07971cca3b9ccc9a511a1fe0a50125180f9fdfa60a8d50e5a04e4e34b1e"
+    },
+    {
+      "id": "card-5",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2600,
+        "defense": 2300,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "f786656885051fd808024d6cf1f0591cee7f6f548695e4c95e8d754693fe743a"
+    },
+    {
+      "id": "card-6",
+      "visible": {
+        "type": "Machine",
+        "attack": 2400,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "e9de85881f6166e4bb844b3f1101b040c51911a229a2c22adad6d7c5ba706fe8"
+    },
+    {
+      "id": "card-7",
+      "visible": {
+        "type": "Rock",
+        "attack": 1500,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "bab39eafa90c49510e331336d51771d859ef7cd921d03ae5b1f9fd3deea75b43"
+    },
+    {
+      "id": "card-8",
+      "visible": {
+        "type": "Rock",
+        "attack": 1700,
+        "defense": 1600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "2e9e2f9918549b6a83fae1a4741c73edf3fb433373fdbb932673aa6f5cc33750"
+    },
+    {
+      "id": "card-9",
+      "visible": {
+        "type": "Rock",
+        "attack": 1400,
+        "defense": 1700,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "ed6b742ab0b49f82843b6d49e7534a379f5625efff7eda23bb4ef02e265c7997"
+    },
+    {
+      "id": "card-10",
+      "visible": {
+        "type": "Rock",
+        "attack": 3500,
+        "defense": 3850,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Uranus",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "faa0a93eb8757344da915a615cfaa53eb1c62acdd19ac57f1459f2a0a6dbb9e3"
+    },
+    {
+      "id": "card-11",
+      "visible": {
+        "type": "Machine",
+        "attack": 1000,
+        "defense": 2100,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "07083c2508f87405d9aaac96e01b3072c7ea64eab47e0f3cb290343a25673e57"
+    },
+    {
+      "id": "card-12",
+      "visible": {
+        "type": "Warrior",
+        "attack": 500,
+        "defense": 1200,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "32d3cdfe5428dcd7cb8bb91b2349c1dcf2db142e41ee98ae1975b2b1506368c4"
+    },
+    {
+      "id": "card-13",
+      "visible": {
+        "type": "Aqua",
+        "attack": 850,
+        "defense": 400,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "a80d5cbcfca8d60800478c9c1e6636fe8f6d57e0cf59728951a9521e77b2025b"
+    },
+    {
+      "id": "card-14",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "91c92333b15e23f8b08c53b0316f1bb11a07042140ce41f055285cf1ee2eafcf"
+    },
+    {
+      "id": "card-15",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1400,
+        "defense": 1800,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "63d18e2ecc3640cbc98a7bb14070f22980d9b68352b89ce09adfd00799104b8e"
+    },
+    {
+      "id": "card-16",
+      "visible": {
+        "type": "Fairy",
+        "attack": 300,
+        "defense": 100,
+        "attribute": "Light",
+        "level": 1,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "a7692d0836b619cfc902e550389cc6ec9b82bd079d746a59388ddeb10d7e8446"
+    },
+    {
+      "id": "card-17",
+      "visible": {
+        "type": "Beast",
+        "attack": 900,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "cddac7c03d26dae30ea40d2bc57f38b5d302116bfafcc6dcfecac59ae0bd028f"
+    },
+    {
+      "id": "card-18",
+      "visible": {
+        "type": "Fish",
+        "attack": 800,
+        "defense": 500,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "404536b9fc7c6047b71bab2378f4049b60fea5f1108491b222b0350d8d7446a2"
+    },
+    {
+      "id": "card-19",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1600,
+        "defense": 1800,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "fb4da90ba3b315e38f66cb543681b33b4d7b7e77c7aad77bc8d66763dba67666"
+    },
+    {
+      "id": "card-20",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1000,
+        "defense": 1500,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "c6db9cbc1e140cc1a3a3c01b285d561937d02891ce6d78cd4c9a797ea661d79f"
+    },
+    {
+      "id": "card-21",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Wind",
+        "level": 3,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "d63261742f3a5a293b5aa199367b361eab5914cfea7de67e178a41ab3d0d2714"
+    },
+    {
+      "id": "card-22",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1300,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "2d0c8875cbb45648d85202666460f53c48ede9851e0046b2f4f7c28cbaaa8458"
+    },
+    {
+      "id": "card-23",
+      "visible": {
+        "type": "Fiend",
+        "attack": 500,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "955778a10d31abeae57e2db866cdbe9d9db643943c7c17dba43ef6d056987a82"
+    },
+    {
+      "id": "card-24",
+      "visible": {
+        "type": "Pyro",
+        "attack": 550,
+        "defense": 450,
+        "attribute": "Fire",
+        "level": 2,
+        "stars": [
+          "Mars",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "58f8e949c5659d7341976fbd127689a6cc880c1c81ebdd24cd2fcc78a0e648f9"
+    },
+    {
+      "id": "card-25",
+      "visible": {
+        "type": "Rock",
+        "attack": 400,
+        "defense": 1400,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "4bec8b2fd6e3e874cd8f44d643e061d1a9ae5078c142d032a4e4f88a8700b0fe"
+    },
+    {
+      "id": "card-26",
+      "visible": {
+        "type": "Thunder",
+        "attack": 350,
+        "defense": 750,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "9674482ccc19a6c49402484613f6f36facf7b9d609875c0f2a41f067ddffacfa"
+    },
+    {
+      "id": "card-27",
+      "visible": {
+        "type": "Aqua",
+        "attack": 1600,
+        "defense": 1200,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4168f1f11275608da31d7e70527f4a4c0402d5384931178424b75df683236de3"
+    },
+    {
+      "id": "card-28",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1800,
+        "defense": 700,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "bdd5794400f8bae25f770fafa32ef9c098264ea5a1d2e747edb504f724c90dce"
+    },
+    {
+      "id": "card-29",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 800,
+        "defense": 900,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Venus",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "a15955e4a527bb4f078bd29934e7d0adb00849cf1c31e4b8d6675f70e58e74ce"
+    },
+    {
+      "id": "card-30",
+      "visible": {
+        "type": "Beast",
+        "attack": 1600,
+        "defense": 900,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "4f3e43ba5491e0232e38421a26e5898600e5e265da3e248eb7caa5f2bd75711a"
+    },
+    {
+      "id": "card-31",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 2800,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "97d61e139e14356ce2bfff3e765311fb9913bab8edc0966ac50f3b3300ef206e"
+    },
+    {
+      "id": "card-32",
+      "visible": {
+        "type": "Rock",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Uranus",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "e41fc376324151f64d4028b4827bd6f6a738620fcb127e287940cf80cc56ff5f"
+    },
+    {
+      "id": "card-33",
+      "visible": {
+        "type": "Pyro",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "4c11b4f07c60d2e4b757c883825121269b2e1e7057ae48cb24ea28bc31e8d9e2"
+    },
+    {
+      "id": "card-34",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 1400,
+        "defense": 400,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "0b2f062a39af631822c4732bbf2a22f9b09642c8b1f7d2282bc44f62e9b50b2c"
+    },
+    {
+      "id": "card-35",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 2000,
+        "defense": 1900,
+        "attribute": "Fire",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "a9f801a19ea94523fd646b821eea715d995f2dbdc2d90774d8aa9252f0e0407a"
+    },
+    {
+      "id": "card-36",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 2600,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Mercury",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "2697905b1a776b2df435fdf6cee86cdbc341c57712a89ba0c07a16aad0d1a792"
+    },
+    {
+      "id": "card-37",
+      "visible": {
+        "type": "Machine",
+        "attack": 1600,
+        "defense": 800,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "95687db798c7b01224d77d7591986ed173af0797fb21360b032be6cabde78917"
+    },
+    {
+      "id": "card-38",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1800,
+        "defense": 1200,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "9e13fa5cfb0ca30c62592a080d049a2d66a2cd9bd4c0dce3915d7ad499df6449"
+    },
+    {
+      "id": "card-39",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2400,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "a943b9f4b46453fa7cf99b1dad75a332eecaae1246f9a6aa33cc8a23d34143be"
+    },
+    {
+      "id": "card-40",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1100,
+        "defense": 1000,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "4a2c162f7ffdbd50b0f3952be80d4996ae1b3cf959246d9023e86def957b910f"
+    },
+    {
+      "id": "card-42",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 2800,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "5a6bb7bf6c15942a01b247cea6c4fe26b1cd30f48e5a39ebfac0f91c17f786b2"
+    },
+    {
+      "id": "card-43",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2500,
+        "defense": 2100,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Mercury",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "3f020b7219900b4d19c3e1c82bd9dbe4a0b7fa832875d21a5cb80eff86508ec2"
+    },
+    {
+      "id": "card-44",
+      "visible": {
+        "type": "Pyro",
+        "attack": 800,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 1,
+        "stars": [
+          "Mars",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "dbbfd8360301a48805bb704b42b423dbcd95a60ddaaab2fd7441850fe0a368da"
+    },
+    {
+      "id": "card-45",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1900,
+        "defense": 1600,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "9153ccaf32d7eb876d7a7f9fd02650fb3ce6b4f75bd3ebeff21082f807c8875f"
+    },
+    {
+      "id": "card-46",
+      "visible": {
+        "type": "Plant",
+        "attack": 900,
+        "defense": 400,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "377753ecc6b76e115ac696b7d9f769b4ebe459741df9da00320a4cf1519e0b85"
+    },
+    {
+      "id": "card-47",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 400,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Venus",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e1df7b5a2a737816c1837342c9ec6af1d621a8ef2654dd785085f1ce6afecd2f"
+    },
+    {
+      "id": "card-48",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3200,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "7ade7ca31828220ac1f68a430e9fa46d55830c5b3069480a3bd514fb72f29a3f"
+    },
+    {
+      "id": "card-49",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3300,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "daec969ab981873fc75b8017782ca0c21812daa5d6c45f4b46aa32919a87eb42"
+    },
+    {
+      "id": "card-50",
+      "visible": {
+        "type": "Reptile",
+        "attack": 800,
+        "defense": 1400,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "632d1a98ec720309ed5fcd60cac54ec65da029748c90e919e47e58ca413afab0"
+    },
+    {
+      "id": "card-51",
+      "visible": {
+        "type": "Zombie",
+        "attack": 500,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Moon",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "7bf455b07005f755fcc45a4864586403d89592fc95f88423ce232e65fe347634"
+    },
+    {
+      "id": "card-52",
+      "visible": {
+        "type": "Machine",
+        "attack": 1600,
+        "defense": 1900,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "fb20a3ca927818237f740be34585b15df22324da1ac2bcf14a5e17cbbece5950"
+    },
+    {
+      "id": "card-53",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1200,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "9609e450450ad89e26141d74baf89cf71b3f759e71c25138ace4af2557d719fb"
+    },
+    {
+      "id": "card-54",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2000,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Mercury",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "ab76ea11941d3c6756b397b00af71512974606c10c59338abf74cb74c1d030e1"
+    },
+    {
+      "id": "card-55",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 700,
+        "defense": 500,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Moon",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "2206af8db96a2b288c61bde259b3c415b2c16342d96d95c86bc1e32c48822998"
+    },
+    {
+      "id": "card-56",
+      "visible": {
+        "type": "Beast",
+        "attack": 500,
+        "defense": 300,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Jupiter",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "5a3762708af6b6602d6df038767eabf14206b8c5490d03e78f39a076e41e4a37"
+    },
+    {
+      "id": "card-57",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 2700,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "d9bd6442b3d5a5e69addbe109930b6d60c9dae853fdbed4347d803025fe88ab0"
+    },
+    {
+      "id": "card-58",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 3700,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 9,
+        "stars": [
+          "Sun",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "41e436c93696c90a3dd9b29d25aff57560169256ea96ac33c6227bb7c654b911"
+    },
+    {
+      "id": "card-59",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1800,
+        "defense": 1600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "207e8f4f860e88c79c3e7fc39f663845a19a3c1ee5aa039291de13819ab9c63b"
+    },
+    {
+      "id": "card-60",
+      "visible": {
+        "type": "Machine",
+        "attack": 2800,
+        "defense": 2600,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "5913c0542b82fdf408978c1fadc2018b64fd2dcee6130fb1e0c28a7d10150a9b"
+    },
+    {
+      "id": "card-61",
+      "visible": {
+        "type": "Thunder",
+        "attack": 1000,
+        "defense": 400,
+        "attribute": "Wind",
+        "level": 3,
+        "stars": [
+          "Saturn",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "df6b354f87847b6476be351b566fbc8f8de520aa53a65c543f8414ffe19f7785"
+    },
+    {
+      "id": "card-62",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1800,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "ad1e838a072f692216d39e285c49324f974207c5f093fd3b0dd8763edf767728"
+    },
+    {
+      "id": "card-63",
+      "visible": {
+        "type": "Dragon",
+        "attack": 900,
+        "defense": 600,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Saturn",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "cc09518b90a64e278c971ea0d1ab07920c00d6292ea1ae2da69f53f66a22d567"
+    },
+    {
+      "id": "card-64",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Mars",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "1563e5a44d137e04f6b8d315dbfbb538007faaf56994d358cfd2028a34ce1220"
+    },
+    {
+      "id": "card-65",
+      "visible": {
+        "type": "Aqua",
+        "attack": 1500,
+        "defense": 1000,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4a70ba019b1900326fdf7deb3e41c15ebaedd51b79e5b216d6d8f37dbdd1d2cf"
+    },
+    {
+      "id": "card-66",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1700,
+        "defense": 300,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Venus",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "8e1aadc13bcf74c6e41283ff5494934481e8cad64c81cb225874d05ecaaafab1"
+    },
+    {
+      "id": "card-67",
+      "visible": {
+        "type": "Beast",
+        "attack": 1100,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "6bc8440cd72f46728015532734fe45b12d8f0da5a76847f4cf7a85d39faf2a1a"
+    },
+    {
+      "id": "card-68",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2400,
+        "defense": 1900,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Uranus",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "4a49d8acc2f810e08740216f03ebbba8f665f0f401b379b32d8f33387c821aa1"
+    },
+    {
+      "id": "card-69",
+      "visible": {
+        "type": "Beast",
+        "attack": 1100,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "5cb584460d3aa429e75392f518fe9673afc4e88c5f995dcfccaf2b1d93a7e636"
+    },
+    {
+      "id": "card-70",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "cce0b77ae7cc3328cb5f594518fdf5a0fc4aefe7c04fb18b0a973afee590f3fa"
+    },
+    {
+      "id": "card-71",
+      "visible": {
+        "type": "Reptile",
+        "attack": 2950,
+        "defense": 2800,
+        "attribute": "Water",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c013e6da616fa4664764412c1624f628649aa10faa1468716247de0b23d40860"
+    },
+    {
+      "id": "card-72",
+      "visible": {
+        "type": "Fairy",
+        "attack": 500,
+        "defense": 500,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Venus",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "533d4741b7cb5a493e13252318aac2627f864b5e28038d3348680227ed1da11b"
+    },
+    {
+      "id": "card-73",
+      "visible": {
+        "type": "Rock",
+        "attack": 1300,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "ca5745db42ee2926a0d6429208fc2a37091d8bfda9a2a02a06ff3582a7a3c00f"
+    },
+    {
+      "id": "card-74",
+      "visible": {
+        "type": "Machine",
+        "attack": 2300,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "7483b7b53420c9931d737e877c4407974131bc293a15f5e534f1be1af4d12ecc"
+    },
+    {
+      "id": "card-75",
+      "visible": {
+        "type": "Aqua",
+        "attack": 1500,
+        "defense": 700,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "ee057eef973ee3130953a1ea4ba0c6c8fc79abc187490fd5dbebfcc819515403"
+    },
+    {
+      "id": "card-76",
+      "visible": {
+        "type": "Machine",
+        "attack": 1700,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "5a31686f37f4e46a8f72817cd462fdc2d432596291b14c64c8346b9d13062a71"
+    },
+    {
+      "id": "card-77",
+      "visible": {
+        "type": "Warrior",
+        "attack": 900,
+        "defense": 1400,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "e69c8547f1bf3ca93d81b9409677c84e397225c531b3e25377093a303949a647"
+    },
+    {
+      "id": "card-78",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1200,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Uranus",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "a66cdf43426be7d5c14d595214d6338cc2b2be260c985b2d38e34ffe7242a117"
+    },
+    {
+      "id": "card-79",
+      "visible": {
+        "type": "Zombie",
+        "attack": 900,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Moon",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "5b7f5e1c3f63a1bdd217e6f70e9c8aa2ba05c19c8c60128904f5540989f23ffd"
+    },
+    {
+      "id": "card-80",
+      "visible": {
+        "type": "Fiend",
+        "attack": 400,
+        "defense": 400,
+        "attribute": "Dark",
+        "level": 1,
+        "stars": [
+          "Mercury",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d7d5adf7abe2e872c9fef5cfd9848497c4bb1de5b152182dd5cc3316315c8a30"
+    },
+    {
+      "id": "card-81",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "392d6ad87ea8a22f6c3c6b1d47e1ffe2e604aa68c5976567168a49ae0983f981"
+    },
+    {
+      "id": "card-82",
+      "visible": {
+        "type": "Warrior",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "4b099fcd98065acd2f9ecaa47c80846e34789e0033cc697361a25cb74b7a60d0"
+    },
+    {
+      "id": "card-83",
+      "visible": {
+        "type": "Fiend",
+        "attack": 4500,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Mercury",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "d92ceeba98f50667157c342c19c067174e4d74075b4ac5b78fd4a1d052f24fdc"
+    },
+    {
+      "id": "card-84",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 2300,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e58f83f26ea5e1300eedf42bc7e384e16f2da0b58e86d68a4b67447bedbf4f71"
+    },
+    {
+      "id": "card-85",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1100,
+        "defense": 1900,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "4687aaed6584437606c336691eddc5ffd5e0e4c1732694bb93997b02b02f13a7"
+    },
+    {
+      "id": "card-86",
+      "visible": {
+        "type": "Beast",
+        "attack": 900,
+        "defense": 300,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "5594dd8393a9c5701bffb1d7f96665994049117605289fb7d68e5e67e518deb6"
+    },
+    {
+      "id": "card-87",
+      "visible": {
+        "type": "Rock",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "63f3e3b9d7f15170707a70cbefaebb5c0f488f9314eb5fefd7fe8cbd913f6784"
+    },
+    {
+      "id": "card-88",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1700,
+        "defense": 1600,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "c1bec888dec28c404b5b07bed7a2a96a9dd6a92d6dfaed8972321ff0ee1c3afe"
+    },
+    {
+      "id": "card-89",
+      "visible": {
+        "type": "Beast",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "4e61dc0bee3ca5b69243045df8e2adc2836c9791752e7191422794f6e8baa482"
+    },
+    {
+      "id": "card-90",
+      "visible": {
+        "type": "Beast",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "c9a4516cd953e3e5a8a71a9c9d571010b5b68015f192562f0cd5742cceb1ed1e"
+    },
+    {
+      "id": "card-91",
+      "visible": {
+        "type": "Beast",
+        "attack": 2500,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "7c2470f449eafe09721eb6d7131596283f48ce2910afcde3e6dd8bdaa35ddd9d"
+    },
+    {
+      "id": "card-92",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 500,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Uranus",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "a59d265998e26e3994f5363ba2cd9ab547284c1fcd08f0ebc5575eb2b6983244"
+    },
+    {
+      "id": "card-93",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1550,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "ab33df5b602aaf7271a4cfa6c4873247e79e75f9f4075ffc9ba2047f697caf85"
+    },
+    {
+      "id": "card-94",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1200,
+        "defense": 1900,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "89366bed9eff9580c3023c7ba4793d9ff94822c48e9f824ac00bc5dcf5b85d01"
+    },
+    {
+      "id": "card-95",
+      "visible": {
+        "type": "Insect",
+        "attack": 2200,
+        "defense": 2400,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "f7a865d2945f62311b2083da810b0e8f2b034855bf1172d50251ef13b6cafdd2"
+    },
+    {
+      "id": "card-96",
+      "visible": {
+        "type": "Beast",
+        "attack": 4200,
+        "defense": 3700,
+        "attribute": "Earth",
+        "level": 9,
+        "stars": [
+          "Jupiter",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "31b4de6d156c3d5166cf5c02c32684479acc7e334dc41c4c47bb2228f1bf499f"
+    },
+    {
+      "id": "card-97",
+      "visible": {
+        "type": "Beast",
+        "attack": 0,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "1fde2c44d42af9ffa165393fd44833f9072f8160491dcb6695f84399176a55a9"
+    },
+    {
+      "id": "card-98",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2100,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Uranus",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "d7545b8cee27e8898a526f06f0b067b31600ff147f7eb575f4a01a9949cf6fec"
+    },
+    {
+      "id": "eagle-eye",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1300,
+        "defense": 1200,
+        "attribute": "Wind",
+        "level": 3,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "b76b9c7c141db22a3d88fe4453fa114c2a382c7c80727790d3e3816f67591807"
+    },
+    {
+      "id": "dark-blade-dragon-knight",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2200,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "2d713ca541bdd820fbf5bd12baa8a4e3b0f3b111dddee83a91d2c82888efd28b"
+    },
+    {
+      "id": "a-team-trap-disposal",
+      "visible": {
+        "type": "Machine",
+        "attack": 300,
+        "defense": 400,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Moon",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "bc981dd8815f9f163e6bba427c51fbf69321718988f6363ac8516eec2c498582"
+    },
+    {
+      "id": "dark-ruler-ha-des",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2450,
+        "defense": 1600,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "729dcc9ac6647ccab2f1bda5a8f29d1dc079f6721fc9a3c60296b7dcdea3d596"
+    },
+    {
+      "id": "vampire-genesis",
+      "visible": {
+        "type": "Zombie",
+        "attack": 3000,
+        "defense": 2100,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "7dee9a2148c88d87d256894796fca5ef829835c752c0d6da7eab00d446f7ec9b"
+    },
+    {
+      "id": "master-kyonshee",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1750,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "e4c29419904c88531e686f60bb2d1ad0d3158c06a90c13c3a47dc0fed9a4ef06"
+    },
+    {
+      "id": "paladin-white-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1900,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a1c9173deba01a85c5603b77a960fa0d8887415bbd8982cb52cd9289d0aaae57"
+    },
+    {
+      "id": "guardian-baou",
+      "visible": {
+        "type": "Fiend",
+        "attack": 800,
+        "defense": 400,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "4d2d9d16d16d5fcbb3e78d85038d08cb1d596c056ca58b3ca17a79f215e66b7d"
+    },
+    {
+      "id": "dark-master-zorc",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Mercury",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "975d36a241024b573affb22e829f3de55e4f39763770d2886f510e3fd61134d2"
+    },
+    {
+      "id": "space-mambo",
+      "visible": {
+        "type": "Fish",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "3a2c329ea8446ad218a6528f857ef24482b50566d7898bb7ac8c19c9e9ffa6c4"
+    },
+    {
+      "id": "divine-dragon-ragnarok",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1500,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "94fba046bd112afe9bab71bcfdd87b039b734e4f94ca2ec1c2836636daa6f2fe"
+    },
+    {
+      "id": "chu-ske-mouse-fighter",
+      "visible": {
+        "type": "Beast",
+        "attack": 1200,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "167f0a99dfceb0cc85d2bde3f00d3d0ee815c1fcfa4950a22567a8468829527d"
+    },
+    {
+      "id": "insect-knight",
+      "visible": {
+        "type": "Insect",
+        "attack": 1900,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Saturn"
+        ]
+      },
+      "other_fields_sha256": "7365d79a0aa8faf0c77d1ae0a9bdb4077e4bc764c045c296f5e740bff0d6c1e7"
+    },
+    {
+      "id": "terrorking-archfiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2000,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Mercury",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "6a6c8a8fa647a9521a3f499b831aa6dbdbb5221722a7767ad9a4f5015658f167"
+    },
+    {
+      "id": "skull-archfiend-lightning",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Mercury",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "86ced8bad4c2d2d490e96f8d89c2e260f91ae453c684565c5f6a8df31eaa5084"
+    },
+    {
+      "id": "metallizing-parasite-lunatite",
+      "visible": {
+        "type": "Aqua",
+        "attack": 1000,
+        "defense": 500,
+        "attribute": "Water",
+        "level": 7,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "1220690b58c5cf3838e83f2fc5d86710363e2f4a6e834537b7957a14c3b72a34"
+    },
+    {
+      "id": "tsukuyomi",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1100,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "95b999ffa6539a41869de7d4c7b76c6c87edc614d4a3cd4dec612a0756f01e1a"
+    },
+    {
+      "id": "mudora",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1500,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Venus",
+          "Jupiter"
+        ]
+      },
+      "other_fields_sha256": "0ec501d17be88ed321bf4a6a4e8d127651befbea7b08717498a198446aac5683"
+    },
+    {
+      "id": "biofalcon",
+      "visible": {
+        "type": "Machine",
+        "attack": 1700,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "f033790ab45a3fc818e35527598f6135423bd2b573a4f68c4f4565cc06e2cdcb"
+    },
+    {
+      "id": "koa-ki-meiru-sandman",
+      "visible": {
+        "type": "Rock",
+        "attack": 1900,
+        "defense": 1200,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1dbe0be9f98c006ab582f19056c7310799c801ebe7bc35f737627f444184e7c0"
+    },
+    {
+      "id": "memory-crush-king",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "138e1847482c22aecbeb4f1b38fda373da9c1af90874a93e3a08febc6359b187"
+    },
+    {
+      "id": "hunter-of-black-feathers",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "58ac8577320c731b34122658c31b7e4398655723d6d012157a17ee22eefdf83e"
+    },
+    {
+      "id": "blazing-inpachi",
+      "visible": {
+        "type": "Pyro",
+        "attack": 1850,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "ed175663b44f8405a68344339acc2cef707cc6b6462b0ebe7be0df688e305880"
+    },
+    {
+      "id": "tune-warrior",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1600,
+        "defense": 200,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "f1d69a8fea487176e923275be363381d1d3b401187f35f745a95feb0d3e6c3dd"
+    },
+    {
+      "id": "x-saber-galahad",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1800,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1eac21e8f74b1206e52e7d7398a49a89199791d52885cf2b973b903979620d47"
+    },
+    {
+      "id": "twin-sword-marauder",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1600,
+        "defense": 1000,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c8daafedc97547a3ec1564e9897fe1809ce05af581d3f1fb8a4f058f22e53d92"
+    },
+    {
+      "id": "mist-valley-watcher",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 1900,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "04c4e400b3a9040c1e8397bb358a3a5b473a337e5166ec73739acfe24c362f8b"
+    },
+    {
+      "id": "amazoness-fighter",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1300,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "b4e0c50978d59de39420ad5407f0a323e666ddba27f20f7484e5b4a2b42f1da9"
+    },
+    {
+      "id": "amazoness-swords-woman",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "74eb6834939b63d525ebdc432608f502dd4a44f48c1b7069c44ef31edf027274"
+    },
+    {
+      "id": "amazoness-chain-master",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1300,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "de67f8f8f5353cc79cdb744f7068a197754812e758e75c55d7b0a768fe332a5f"
+    },
+    {
+      "id": "blackwing-bora-the-spear",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1700,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c1cc9d69d6e63a89b225cdd931d2b0f694bd207b1cbb1747d60066313ccf6deb"
+    },
+    {
+      "id": "blackwing-sirocco-the-dawn",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 2000,
+        "defense": 900,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "a356efd51d72a00152b060fa55f24cc036c1b9755886b2912d88e6913282e4e3"
+    },
+    {
+      "id": "blackwing-shura-the-blue-flame",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1800,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "524bb01d85eb7d4d40019ebc81a888411225d793c894fd1f56b1e4d6103e2d15"
+    },
+    {
+      "id": "worm-gulse",
+      "visible": {
+        "type": "Reptile",
+        "attack": 1500,
+        "defense": 300,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "344320d1c8e8d6c717cf0fb6156a14a69cb310cfd2fa862bef93fa17318f02d5"
+    },
+    {
+      "id": "koa-ki-meiru-drago",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1900,
+        "defense": 1600,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "f77ccb278a7df76036d466df724986068decf19c3591939d732a15952fdda3b8"
+    },
+    {
+      "id": "earthquake-giant",
+      "visible": {
+        "type": "Rock",
+        "attack": 1600,
+        "defense": 2100,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "43fb90b8f608f549195f8b61083a5d2d7a17e0d4a4950e7a178d0c650d3c75c6"
+    },
+    {
+      "id": "stardust-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2500,
+        "defense": 2000,
+        "attribute": "Wind",
+        "level": 8,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "0a0d43aa7a0eee307cc7b73d12637714668e6a168eb7fcec7ce0f4c824308130"
+    },
+    {
+      "id": "turbo-warrior",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2500,
+        "defense": 1500,
+        "attribute": "Wind",
+        "level": 6,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "ab464c9229cfd1d16cb9e28c7e6a6674ee40b26e6f863524ec9918aa3071867c"
+    },
+    {
+      "id": "vice-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "b6af02a51f7bc01237131138e0cad4b21d1dcf6df41b9a0c6a6117e13df6e93d"
+    },
+    {
+      "id": "black-rose-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2400,
+        "defense": 1800,
+        "attribute": "Fire",
+        "level": 7,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "49bd300889b12450f69e27ba4552c9aaa5aa4ac198a03a184f9090401f0c458d"
+    },
+    {
+      "id": "blackwing-elphin-the-raven",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 2200,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4a0146b8cae9fa06cfc9a5a6ad2e6a487921424804af6298db2ab28862f68784"
+    },
+    {
+      "id": "blackwing-kogarashi-the-wanderer",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 2300,
+        "defense": 1600,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2955f8706f6bbb1c5f7f082121290f48c1aecb07a516b3e14c7084a677bfea16"
+    },
+    {
+      "id": "tyr-of-the-nordic-champions",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2000,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c43047b02b7e4b9e24215b618ddd3f0e547f331b98482492aabe481e858c9be2"
+    },
+    {
+      "id": "t-g-power-gladiator",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2300,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "3d474aceb82080e13f2dce02c81d2511e5abfb399b31b57f9c4ccdf43c2c6e39"
+    },
+    {
+      "id": "power-tool-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 2300,
+        "defense": 2500,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "a80687d390314abf6a1903ebc3adf9e5ff269dce178e6d5562d809bebdc7f46e"
+    },
+    {
+      "id": "ancient-fairy-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2100,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a0c9ab31fc44247eed7f9361aec95f4a1a438608f5617e8fb9702865591d9e8e"
+    },
+    {
+      "id": "moon-dragon-quilla",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2500,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "baac261b5feae4f5daa0152fd3622e93e270f3ae59e40b1373ddc0d158cfe8e1"
+    },
+    {
+      "id": "ancient-gear-gadjiltron-chimera",
+      "visible": {
+        "type": "Machine",
+        "attack": 2300,
+        "defense": 1300,
+        "attribute": "Earth",
+        "level": 6,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "935e5482041cc059b516c1cfa1d8dd5add389a27579fc90fe9b3a78232d0fc11"
+    },
+    {
+      "id": "gear-gigant-x",
+      "visible": {
+        "type": "Machine",
+        "attack": 2300,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d35f961719d381b420d9a67d78c8ab65c2d784d19138fd59efdddf6a249ae041"
+    },
+    {
+      "id": "elegy-the-melodious-diva",
+      "visible": {
+        "type": "Fairy",
+        "attack": 2000,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "69e2c1a0299d1c3e8e1b535c380fc43f9e81599ed81ab2a75400d8c22619b2b4"
+    },
+    {
+      "id": "gogogo-goram",
+      "visible": {
+        "type": "Rock",
+        "attack": 2300,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "ecfd02e536580e9b31e1ee860a9cf856f51465b9db2457af4042833bcf7d411b"
+    },
+    {
+      "id": "yosenju-magat",
+      "visible": {
+        "type": "Beast",
+        "attack": 2000,
+        "defense": 100,
+        "attribute": "Wind",
+        "level": 6,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "612055de744f61b5087089e525b187146c7e6aa5347e0d7b6803a6532596f74c"
+    },
+    {
+      "id": "elemental-hero-neos",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2500,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "f1e6fe80a4f7c9b79fc6a8308f57ad4f23e37d4a81fc82712777e5c129c88fac"
+    },
+    {
+      "id": "phantom-gryphon",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "1a6e4f6a762224e1b6ed5bc5599b6cecf9fc2ac50df4678130faa3c64df84100"
+    },
+    {
+      "id": "zefraxa-flame-beast-of-the-nekroz",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 5,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "1ec4c29856794152a46d736a711926db234f79ff67a2f5e3d0c36db79d0500c3"
+    },
+    {
+      "id": "infernoid-sjette",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "78f3618731f430fdd293efb661bdcf881b1a70dd8d49f7004c04c5ab1d43aae4"
+    },
+    {
+      "id": "axe-dragonute",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "d42f32e877c9460edf5053b51ef21ffe596c4b6456fa25afdf0a5ee6f9b267e5"
+    },
+    {
+      "id": "alexandrite-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 100,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "131ab9ed13dda1e4225166aad787fa554b6c3b952e543324788ff59c933f5124"
+    },
+    {
+      "id": "kaiser-glider",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2400,
+        "defense": 2200,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "f21a775d4d163d5d3f94f5d31481fa12b1f3efde831ff406067daf26c8731990"
+    },
+    {
+      "id": "cyber-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 2100,
+        "defense": 1600,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "04d6ad4a7b02bccb85c0579e819781a84b21b1dee78f9ae597f86f862d114b15"
+    },
+    {
+      "id": "beast-of-talwar",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 2150,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3dd9c259205a1df2a2757d86b7cd9945e81abf03cb66dc5efc329d45b93fbab6"
+    },
+    {
+      "id": "black-tyranno",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 2600,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "3546bd2677b2d1b63ba551fe212cc72fb2177798b42bf2fae9f740ec79f6784f"
+    },
+    {
+      "id": "ultimate-tyranno",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 3000,
+        "defense": 2200,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "8a3d6caf20acb7fb5c1646a565cf1899f77ce785e1a9859c879073c11bdaa6e3"
+    },
+    {
+      "id": "ancient-gear-golem",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "ede43b4cee23ad036ed2e14c2d68744b5c225c2b52c707b6b53ec5bc4530554f"
+    },
+    {
+      "id": "big-koala",
+      "visible": {
+        "type": "Beast",
+        "attack": 2700,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "a1e06343801f58c12eb16eaaca85c5537cd66f65a31e176a37ccc601e782c440"
+    },
+    {
+      "id": "mementotlan-twin-dragon",
+      "visible": {
+        "type": "Thunder",
+        "attack": 2800,
+        "defense": 2100,
+        "attribute": "Light",
+        "level": 7,
+        "stars": [
+          "Sun",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "62a4df9beab2d6ed27837279a19a175a2d21c69d12c52f5397ad88ecfcfb13c2"
+    },
+    {
+      "id": "thunder-dragonlord",
+      "visible": {
+        "type": "Thunder",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 9,
+        "stars": [
+          "Sun",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "e15e5767ea6c151829ca834e99ca9755a16414a577ab73618f3a10c51de6c537"
+    },
+    {
+      "id": "mist-valley-thunder-lord",
+      "visible": {
+        "type": "Thunder",
+        "attack": 2600,
+        "defense": 2400,
+        "attribute": "Wind",
+        "level": 7,
+        "stars": [
+          "Saturn",
+          "Pluto"
+        ]
+      },
+      "other_fields_sha256": "54b9991c14df004dd89d15d3a134a8be762b8b61b06c31f75aa46f608b7e55ec"
+    },
+    {
+      "id": "chaos-emperor-dragon-envoy-of-the-end",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "10ade9f9944e761256e4ad03551c9735be14c8a6f3e57518f0c224e518d6eb49"
+    },
+    {
+      "id": "black-luster-soldier-envoy-of-the-beginning",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a59ee81b10bb960195b1d749d946d95a9ae16aad26eec7e2d5d1e37b6a3142f2"
+    },
+    {
+      "id": "chimera-the-master-of-beasts",
+      "visible": {
+        "type": "Beast",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c5b63f420ed414b67943762fdaaac5a89263f04d3beca23002481761ebbecb47"
+    },
+    {
+      "id": "elemental-hero-magma-neos",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Fire",
+        "level": 9,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0ff4da8cbe58d4644c5d864a27e4eafe7dfa598e0b868de23074e8a4a57d162f"
+    },
+    {
+      "id": "elemental-hero-chaos-neos",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 9,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "26a6742fc31f6cc81f701d8054edbc811894375cf207bcb84c7a3e5e9c7852bc"
+    },
+    {
+      "id": "gladiator-beast-heraklinos",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 3000,
+        "defense": 2800,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "384c0955a957e5bbc0d5c92779e10a3fcd1acac82f5a38df81813f1d8342bf29"
+    },
+    {
+      "id": "shinato-king-of-a-higher-plane",
+      "visible": {
+        "type": "Fairy",
+        "attack": 3300,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "920c252f2d1e576074f20b02a056bb0351a7530e5d51a224c9b57304ceb94f2c"
+    },
+    {
+      "id": "hyper-psychic-blaster",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Earth",
+        "level": 9,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "513f0bdd71d3fa7b6daa8a666359c0a685ecb63f74a3c2418ff64bce6b207811"
+    },
+    {
+      "id": "colossal-fighter-assault-mode",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3300,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "832dd6ea4cfc703fe04999cb3e9589114ac415cf80af3a0dcba2f7be33e3e541"
+    },
+    {
+      "id": "stardust-dragon-assault-mode",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "67610dad289266a99b8786bac7c1ba3d0d226bac74e15fae271d65884ff2700a"
+    },
+    {
+      "id": "jurrac-titano",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 3000,
+        "defense": 2800,
+        "attribute": "Fire",
+        "level": 9,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "295744ebb3b32570c7411fb510ab11ae25e18292bc93d3ba3608b546835e5f0a"
+    },
+    {
+      "id": "ally-of-justice-decisive-armor",
+      "visible": {
+        "type": "Machine",
+        "attack": 3300,
+        "defense": 3300,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c0830a21e6f16b72f518bfccce0463f0fc2cf4c1a67ffa6d5cd7812dc39cc1ce"
+    },
+    {
+      "id": "shooting-star-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3300,
+        "defense": 2500,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "714672afabc48dcd747e3dea7a5c68c29df372548d6a61e5d4c6e7479467f095"
+    },
+    {
+      "id": "red-dragon-archfiend",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "0c7a22d1af780360390bd05bcfbbee2c945b9521e365eea34d219367c924b735"
+    },
+    {
+      "id": "rainbow-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "979991e2f97139babd7c654f429cb4369a6a6b673b03924afcd5bbcc40df2a77"
+    },
+    {
+      "id": "cyber-end-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 4000,
+        "defense": 2800,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a5d33e6e770c9da94b4dc0de70f1029dab50caa133dc645cbbe557f3fdc0309f"
+    },
+    {
+      "id": "hamon-lord-of-striking-thunder",
+      "visible": {
+        "type": "Thunder",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "501a98e1313409d52c603544642f75f9bd865bdb1403fdfcc0097e90a6033f41"
+    },
+    {
+      "id": "super-vehicroid-stealth-union",
+      "visible": {
+        "type": "Machine",
+        "attack": 3600,
+        "defense": 3000,
+        "attribute": "Earth",
+        "level": 9,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "eec4f4747ecc7a22bb8c99365426e48f89e96f7baf97c3a7755142aa3c3f7e35"
+    },
+    {
+      "id": "berserk-dragon",
+      "visible": {
+        "type": "Zombie",
+        "attack": 3500,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9d21e85920048edd9ba1570e84a83b097ad63d2c0b6ae77fd898b7bbd4a2b278"
+    },
+    {
+      "id": "evil-hero-malicious-fiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 2100,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "adb26813a3bbbb9be748b91809dfbdd6e81bfbe369b6f7d9ece8062501697f8e"
+    },
+    {
+      "id": "the-wicked-dreadroot",
+      "visible": {
+        "type": "Fiend",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "d865fb72cdcf0a1601fbd4b2ea79e28481050e48249e2d2e187da885907eaa1e"
+    },
+    {
+      "id": "majestic-star-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3800,
+        "defense": 3000,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "2833b619efc34c40cba994a5466f29b8817cdf3ea540ff5879d60b4ebddd3bb6"
+    },
+    {
+      "id": "darkness-neosphere",
+      "visible": {
+        "type": "Fiend",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "8466b1f2176b0bb2601a4af061e4653381c49f30c26af1a80e79d0f6158d78f2"
+    },
+    {
+      "id": "arcana-knight-joker",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3800,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 9,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a3043b06601dcfec96061600e6ba8372bc26f57b69d26193fd273c3359245782"
+    },
+    {
+      "id": "red-nova-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mars"
+        ]
+      },
+      "other_fields_sha256": "3bebc9355014991b135c65c5c0e5d0c29d860ddd627e11c6feae0441ebe366ae"
+    },
+    {
+      "id": "gaia-drake-universal-force",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 3500,
+        "defense": 2800,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "8231006784edcac584c4181380aefd565417dd87c153931288c8757a8325aa5c"
+    },
+    {
+      "id": "ultimate-ancient-gear-golem",
+      "visible": {
+        "type": "Machine",
+        "attack": 4400,
+        "defense": 3400,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1d500140f1c60dc9318a98d0d64e64d0f2333f4007beb2c1516db961633644fc"
+    },
+    {
+      "id": "infernal-incinerator",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2800,
+        "defense": 1800,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "e0ced317548782ed2dbb3b31e162a5eb44808670e9194a1b8675a41ed17de1bc"
+    },
+    {
+      "id": "sillva-warlord-of-dark-world",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "193b2551c85c3a8a95f309a9c0ea98678cf703a9cd26f57c8d07771cefc78cf1"
+    },
+    {
+      "id": "goldd-wu-lord-of-dark-world",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "ce18079e9c9be80f9c4e8c30f1ebfa4ee2d91f1047487ceb3b0567178b7c43a0"
+    },
+    {
+      "id": "demise-king-of-armageddon",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "e247cb4a5b2c19b16a8feb5063f3d274e083a4bb17ccc8c9767bce12c9994873"
+    },
+    {
+      "id": "evil-hero-malicious-edge",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2600,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "6e4b4bb6f09b636e61ce17ebf3ea19e04a855d359fca6f464bd13fd75a5f38a1"
+    },
+    {
+      "id": "evil-hero-inferno-wing",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2100,
+        "defense": 1200,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "c42371578047be25ee6791733564bd6ee7fcd5c5f01c3ed5c3e6642083dc9e3e"
+    },
+    {
+      "id": "evil-hero-lightning-golem",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1500,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c737be675f28b2277ad8d08cff6db44d71ea3bdfe90511bf27b033d57f95e809"
+    },
+    {
+      "id": "vampire-lord",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2000,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "dae4d046f1fb306c2704dd3e37371053fc824c1f7e03f727956d048d8d6b18b6"
+    },
+    {
+      "id": "despair-from-the-dark",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2800,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "99de7c216824e35d6d00b02dc4dda289284e2bc66dac29c1eebf837220a5e36c"
+    },
+    {
+      "id": "archfiend-general",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2100,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3d910ca344842283b6a354d82b9ebeeaec0070946b9d75afad651705b0ee75f6"
+    },
+    {
+      "id": "sky-scourge-norleras",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "894d49bdb8b12fda2511f188e9aa8a59a09666c948b82b66fac79d4adea9e24d"
+    },
+    {
+      "id": "lich-lord-king-of-the-underworld",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "27e78c41180d27808c311625f9b1852488423f60da168b00b5acfcb28dce77e3"
+    },
+    {
+      "id": "mist-archfiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "fce5d7e19f3863b3e6a8c0db42820773816ec9e4c605c4dd1f276cc66c0e8b91"
+    },
+    {
+      "id": "ryu-kokki",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "75e4229eb23093c2bc09afa7da2aac581e53acdd4b1586ad0f7f040a59585be7"
+    },
+    {
+      "id": "invader-of-darkness",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2900,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f0f92ed34787cfe066d3ef4fd0bd7aae2b9d6b5c90336e6f4b60d17037e94b12"
+    },
+    {
+      "id": "desert-twister",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 2000,
+        "attribute": "Wind",
+        "level": 6,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "14e50e54e19c56eab1b4ab7dc2974758f101437ba09f21b1c30047e0e95c6dac"
+    },
+    {
+      "id": "il-blud",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2100,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9376bb332c573737362c2f6334d7ecedcecef605efaa6a638e721f0b61107ed2"
+    },
+    {
+      "id": "goblin-elite-attack-force",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1576d384e7b3fc3377ce40a9f57349157bf5b28e18525e5a6e613514b9b06ada"
+    },
+    {
+      "id": "dark-lucius-lv8",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2800,
+        "defense": 900,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "06095613214274c7065fc1eddef48aff0dda8fea7caa035b36846613fefa90b7"
+    },
+    {
+      "id": "flame-ogre",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1700,
+        "attribute": "Fire",
+        "level": 7,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "c2c6e1b99b1839f37d583ef8a24685bf1f2d4bd2291dd0c44ddb15db4213b11d"
+    },
+    {
+      "id": "vanity-s-fiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "5cb45bd901891b67f4e30cd50ac5c6e8fc960dbc2e52f08e9256d2725325d180"
+    },
+    {
+      "id": "reshef-the-dark-being",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1500,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "1ed4128f01bb973164dae7fdd5d0651bb96cb15512c4d62abf067c9349b1c909"
+    },
+    {
+      "id": "dark-balter-the-terrible",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2000,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "72da3674847e61c97d4fc0c841c658eb21191e8fe938b28e6446770fb8112eb2"
+    },
+    {
+      "id": "reign-beaux-overlord-of-dark-world",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "271ef798c8cfaeb92dbf5108c603264b967e6875775cfe2c9411b2176f4a6f9a"
+    },
+    {
+      "id": "evil-hero-infernal-sniper",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2000,
+        "defense": 2500,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "97cf875cfce38f5eb19ebf1910b1a3e1861d2d047cd3b1086d9001a97a5f72fb"
+    },
+    {
+      "id": "grinder-golem",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 300,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "18af69ef66c5bd6d3a5f1d1ad71d1af77a22607173491b965e5825290bf93a43"
+    },
+    {
+      "id": "imprisoned-queen-archfiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2600,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "fd77f8229f545871f128749681d86d605231c1f2ef7080694fff58ea6624f7bf"
+    },
+    {
+      "id": "vampire-s-curse",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2000,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c74b2f030ebbb032677979fd2b48d1d45c7d9492caff57fab966c633a0708273"
+    },
+    {
+      "id": "belial-marquis-of-darkness",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2800,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2d8161f945f427ac18d72aaf667c920119d81929a1ccf0939215334c7ba4a243"
+    },
+    {
+      "id": "caius-the-shadow-monarch",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1000,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "0027ae3eaa754c2a3092ef68d16f53618ce204c9404681ad6a62077b42e02915"
+    },
+    {
+      "id": "toon-summoned-skull",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "ec04b043a74226845337a1695aad60d058b1be3e439f13ca62ba1d74727ea605"
+    },
+    {
+      "id": "dark-dust-spirit",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2200,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 6,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "be4137707a7662611d469c692e63575b8ae0425787aaa4c4b28d873c6858b8d5"
+    },
+    {
+      "id": "red-eyes-zombie-dragon",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f16e1a77964b5fa9897ff8cc2509cab9083f25acfde12d83e8876e76ef38a2cc"
+    },
+    {
+      "id": "malevolent-mech-goku-en",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 1400,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "1e24227415594b86b504a19573da35b2cc43020a4876b96c9b28bd4a43262696"
+    },
+    {
+      "id": "patrician-of-darkness",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2000,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "586d5067a1b39ccac576af8f2c3f48519cc4c79cb06f8f04e017874726bf8a6b"
+    },
+    {
+      "id": "doomkaiser-dragon",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 1500,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0e989236e01bc09ca65fb422867ef3a34cb698e9d335c4c68880b9a78434826e"
+    },
+    {
+      "id": "revived-king-ha-des",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2450,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "d1dfd2166d499c0cda0f26efffc0a7b1bdff65a90154890a9ee937159acbc455"
+    },
+    {
+      "id": "goka-the-pyre-of-malice",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2200,
+        "defense": 1900,
+        "attribute": "Fire",
+        "level": 6,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "758c28cc5aab812c50f7c77934261707b65683c3d37b1770fc1bdd01c1442a9d"
+    },
+    {
+      "id": "red-ogre",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2800,
+        "defense": 2100,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "888252a6d4f1957aed12d2e55aa8b31a230f94f652774cd24dd6ca4fc3c40576"
+    },
+    {
+      "id": "gorz-the-emissary-of-darkness",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "1d5e2dd50f623a8d516c58b6b06a9801b49553cb312342a295f8a116b02a02f8"
+    },
+    {
+      "id": "darkness-destroyer",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "49a8b4dce446ea2afcbdd9bc56c59a3a73754c929c38d2a61cf2622b5bb8d627"
+    },
+    {
+      "id": "doomkaiser-dragon-assault-mode",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2900,
+        "defense": 2000,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "a4140621e0ab20e92c4d62b470dafbfc0e8d2826d47f76337f52d74ad426a75b"
+    },
+    {
+      "id": "ido-the-supreme-magical-force",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 800,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "76f3c110aa7c77b9e7650c6a94d936fa8aba0b4f12eae9c815550da7de3c006a"
+    },
+    {
+      "id": "earthbound-immortal-ccapac-apu",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "7cb7dd85e7e9978dedfd17728b698a0d645c656c6d2abeb151eca8a1f247e6cf"
+    },
+    {
+      "id": "koa-ki-meiru-valafar",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2100,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "13f91a36669318e6cf2ffc98686d4606ef7de6f4a316be7dfde834cfe507d3d1"
+    },
+    {
+      "id": "brain-golem",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "0c1c133da34b53faf2c16ce13fce6911f82912b832466ab4bd7b70602f7b0122"
+    },
+    {
+      "id": "emissary-from-pandemonium",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2600,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d690508b30c6fc5e2481e8576d2bda9fe2023b42ace3b25a5b116d32eb558a41"
+    },
+    {
+      "id": "lava-golem",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0b7f2b47bb0a007f1816548f6ba03ee3a7514010961b43fc9902e73dcaf4a392"
+    },
+    {
+      "id": "archfiend-of-gilfer",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "58166415552463fa228f243038e681bb107a75e0c09d640a243121bb70843cba"
+    },
+    {
+      "id": "archfiend-zombie-skull",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2500,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f0de63ad42c2064f626b3ebb002c2ca467094ecb921945088692d4d4b0876f73"
+    },
+    {
+      "id": "koa-ki-meiru-ghoulungulate",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2500,
+        "defense": 1700,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "9abfaa6cbb0bc379cffabb92791c1ab1ca5b51602f38f88d03a697691dacddc4"
+    },
+    {
+      "id": "gaap-the-divine-soldier",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "383f1c7551381baa22f188e3933c47180d3a80991766ca2c8ace8e5feb25237a"
+    },
+    {
+      "id": "aggiba-the-malevolent-sh-nn-s-yo",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "38706e7a79382f9cf99cc8af317b6366a19eba5c8eb636f7cb1d3e6200a87750"
+    },
+    {
+      "id": "supersonic-skull-flame",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2600,
+        "defense": 2000,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "226d9ef62afd804b84d73f2bab41158e033c9bfd9ed6eb251fb87a1fb5520c59"
+    },
+    {
+      "id": "skull-flame",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2600,
+        "defense": 2000,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "72dc67c697e5c563d84524ca9cd9bad03e760f6b5ee0d67495c473612956d97a"
+    },
+    {
+      "id": "flamvell-fiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2100,
+        "defense": 1200,
+        "attribute": "Fire",
+        "level": 5,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "37fac6169c6df4bd1f5fc9d9a4ddf907774e96c1e77479c5e0f14825afef0b06"
+    },
+    {
+      "id": "power-invader",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2c4bb66fdfd09f3d6437a9b9f3b05a560a50169918d549a411c087c8f85f1f5c"
+    },
+    {
+      "id": "garlandolf-king-of-destruction",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2500,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "8254efc6c63e90abd215d2bb42eb204d27937168db539f77dffe40f26ea00387"
+    },
+    {
+      "id": "skull-conductor",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "471b3a4e5db32a8451ad9e5f39ad37ef10791ec5c6951fb8268dea28e4d00f9a"
+    },
+    {
+      "id": "stygian-sergeants",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "a2835bc4c363180d38829bc5371378e1bcf82e6c6843f39e758ec8da5b8d0b03"
+    },
+    {
+      "id": "fabled-valkyrus",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2900,
+        "defense": 1700,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "998cd0d5775b8d25eea892baed51f941bd23fc5d43e1a4ae2284235875cd8652"
+    },
+    {
+      "id": "chaos-king-archfiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2600,
+        "defense": 2600,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f2af1502d059023134b94fb8c6640c36d2d1e2fcd8d2f49bf7acc5b35def9740"
+    },
+    {
+      "id": "infernity-destroyer",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 1000,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "10c453c87e9346f3cb07dc0950336feee3518b94248028560052a49fb1f40ba4"
+    },
+    {
+      "id": "scrap-archfiend",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 7,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "80ea1b0697ebcdb088e2ab3a6e3c325767d3ab47a981c80a9c4e5c4a468156d3"
+    },
+    {
+      "id": "ambitious-gofer",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 100,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "40e1907655f2202393752c88b0cec2adfdae7098d2ada3dbfb8985cc241ae6b5"
+    },
+    {
+      "id": "steelswarm-longhorn",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 9,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "bce6a7795a25b4ab45550592faf8f24bb053aa8ba805060e399fd923c84140ae"
+    },
+    {
+      "id": "adreus-keeper-of-armageddon",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2600,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "e3c6fd2f272a983ffade6536f2ffee7797244f120dfde2dfdb964ee341329835"
+    },
+    {
+      "id": "tardy-orc",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2200,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "6447fa212ad19db44e69ea94e0a013fe337acf731cef968cd3134a6756f3cf72"
+    },
+    {
+      "id": "grapha-dragon-lord-of-dark-world",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 1800,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "adeafc8832a35a738527670a772e71bdabfa20af8bae159ab0eb2bfc00cf6356"
+    },
+    {
+      "id": "dark-highlander",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2800,
+        "defense": 2300,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "74372064fe1575e24e1c2688fe78299a0360f6b81ab24a437a25541286e12989"
+    },
+    {
+      "id": "illusory-snatcher",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2400,
+        "defense": 1000,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "53bdad411dc70def01cbc4b6bbe837804a1330e24ea950fb211878d75b1b80a6"
+    },
+    {
+      "id": "infernity-general",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2700,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 7,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4ec70c17dc8345d03f2a90e5ae7f0062138ec34d834d4ccaedecabe75a580cda"
+    },
+    {
+      "id": "the-supremacy-sun",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "5b734bb14e53cf2930a15fe2da663018dea44672e50f6626b8b2328e1e602f83"
+    },
+    {
+      "id": "number-85-crazy-box",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 300,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "340ed46a8e9139c48dafef6789829343eb3c875e1bf371208fd9bb2dcd760c93"
+    },
+    {
+      "id": "archfiend-emperor-the-first-lord-of-horror",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2633d23bbdb709446f51cd8d1dcc4641702ef4146fb6fbf85e8732c8a960e0cf"
+    },
+    {
+      "id": "armades-keeper-of-boundaries",
+      "visible": {
+        "type": "Fiend",
+        "attack": 2300,
+        "defense": 1500,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "e8b5f7663486a6f8285f823d9c824389dc5684b3d4667610404afdbfe15885b8"
+    },
+    {
+      "id": "vampire-dragon",
+      "visible": {
+        "type": "Zombie",
+        "attack": 2400,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "ac53370be79df440fc306bc09519336aa82464864d024b07a1b7d2cc02aa6396"
+    },
+    {
+      "id": "steelswarm-hercules",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3200,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "8b19f61ac9d61675f7a82944dea1fdc266270821ca4d062a54186468102d7681"
+    },
+    {
+      "id": "infernoid-tierra",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3400,
+        "defense": 3600,
+        "attribute": "Fire",
+        "level": 11,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "cd85558b2123191201d5e05ce1de1310c4475196669cb3d20e01c17315a7db0d"
+    },
+    {
+      "id": "d-d-d-wave-oblivion-king-caesar-ragnarok",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3200,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "5e55a8e962fa54cd77401302a296f6c42cabf1bde490a01b089ce65fb7a989a9"
+    },
+    {
+      "id": "d-d-d-duo-dawn-king-kali-yuga",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "874e51ce227e7f9ada422ee99c5058cdcc0a4de612b25c1416f420c83c17270d"
+    },
+    {
+      "id": "tierra-source-of-destruction",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3400,
+        "defense": 3600,
+        "attribute": "Light",
+        "level": 11,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "449787dd72c00b4e2e717a16e77e0ec086544019bb4018ee6efa841550e2f24c"
+    },
+    {
+      "id": "shiranui-sunsaga",
+      "visible": {
+        "type": "Zombie",
+        "attack": 3500,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 10,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "3965e439eed6f964b4bed082f0d1193e0352360b751bbbb2161c1ab5bb5501bc"
+    },
+    {
+      "id": "d-d-d-super-doom-king-bright-armageddon",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "e6e23192a6033336bca33367e9cf814f76b27d4bf92e3e34f0169e9cf315fd0c"
+    },
+    {
+      "id": "d-d-d-super-doom-king-dark-armageddon",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "67f01c2014a63a9b6a59e552dfb883731f10b590735e70d6e07f388edfa73f1c"
+    },
+    {
+      "id": "d-d-d-super-doom-king-purple-armageddon",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "7667f557bc267e3620d2a713150fc3315da7b5246b9e7cc9e08e4207797c6ad2"
+    },
+    {
+      "id": "gashadokuro-the-skeletal-mayakashi",
+      "visible": {
+        "type": "Zombie",
+        "attack": 3300,
+        "defense": 2600,
+        "attribute": "Dark",
+        "level": 11,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f0a459d7fa0921d8316b9223468453137c1c6a27225559cf7bb1d6041964148c"
+    },
+    {
+      "id": "despian-proskenion",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3200,
+        "defense": 3200,
+        "attribute": "Light",
+        "level": 11,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "eb433efc93e34545edde0c52523439c8117d10d89aef8c7358b12d3a2c4943c8"
+    },
+    {
+      "id": "evil-twin-s-trouble-sunny",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3300,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "39750c629e3408da8b459cf33db4ed5f64c2746dbd652c24862a225b4357ab52"
+    },
+    {
+      "id": "grapha-dragon-overlord-of-dark-world",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3200,
+        "defense": 2300,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "98fb330b486e61ea0ceccf1a916159b57dc3e64525f766ccb84bd6c2c170e491"
+    },
+    {
+      "id": "chaos-angel",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 2800,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c090e4d97be990db167a81ce8a887f055c29d1bd37534b90fb9ec5c900b27c29"
+    },
+    {
+      "id": "lord-of-the-missing-barrows",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3100,
+        "defense": 2900,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "2e93ea5112f3a6784f68262df2d8a83d2796fd92e6ba2bfce96f52333173c76d"
+    },
+    {
+      "id": "earthbound-immortal-red-nova",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "32a140a280977d8ea74f209f9e2f051bc5ec66edc7f5cd2b23ae70412ef5fc18"
+    },
+    {
+      "id": "luce-the-dusk-s-dark",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3500,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2edfb63bab41bd0666019a741a8d93f93b2d42992874713c672c9d6f5e5869f6"
+    },
+    {
+      "id": "junora-the-power-patron-of-tuning",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3100,
+        "defense": 3800,
+        "attribute": "Fire",
+        "level": 10,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "b83d39f76a766181482ff75262295b65401c0483cb264ec2d3b6b8bd9504ba30"
+    },
+    {
+      "id": "five-headed-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "f24387c8ff6bebbde1ffb6fda60f5d8f70ba0b87ebff45585296981c7bc1be6b"
+    },
+    {
+      "id": "dragon-master-knight",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Light",
+        "level": 12,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "b85395283a549b6230b101fdeb49304e61723b476e00465915af46a48968e63d"
+    },
+    {
+      "id": "machina-force",
+      "visible": {
+        "type": "Machine",
+        "attack": 4600,
+        "defense": 4100,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "3cc9fbf6a945dc835014734b1be751f82dd5463186eeeff209f6c1159cc33c84"
+    },
+    {
+      "id": "malefic-truth-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "782cfbfce7e6ed0ffbd7e78641912339cf59501eba2be80526631a381f527d55"
+    },
+    {
+      "id": "dystopia-the-despondent",
+      "visible": {
+        "type": "Fiend",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "79e7c6ad4d008b20eac363b292580ac6a04f1159510be58485f2393f5369b2a3"
+    },
+    {
+      "id": "flower-cardian-lightflare",
+      "visible": {
+        "type": "Warrior",
+        "attack": 5000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "0599a8dc7a1cf7bc71c6fb014b7b16ba9e477041e7e28dec98fefb539927badc"
+    },
+    {
+      "id": "five-headed-link-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4a81b3bed5ee54ef76ceffad62bd4ff838528c16bfcb4508eaad21302c6d222c"
+    },
+    {
+      "id": "superdimensional-robot-galaxy-destroyer",
+      "visible": {
+        "type": "Machine",
+        "attack": 5000,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "809fb49d707cb2fee90ce62286e299842ecb32332aa90ce30f7a4e995936f05b"
+    },
+    {
+      "id": "cyberdark-end-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 5000,
+        "defense": 3800,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c85287a6a05d45641971f0df0e27fc47fcf19f5cdc3c37f83c3fdbafac0cbb25"
+    },
+    {
+      "id": "machina-ruinforce",
+      "visible": {
+        "type": "Machine",
+        "attack": 4600,
+        "defense": 4100,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "87a150cf831d566f6b7a4e010c952fb245dd72c9b56d67545d1d668ef5c27ef9"
+    },
+    {
+      "id": "dragon-master-magia",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 12,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "cabe74ff964d0cbeb6f3b475d0b10e5e3dc7443d7fd015530b098ed37ef8e6d6"
+    },
+    {
+      "id": "drytron-meteonis-da-draconids",
+      "visible": {
+        "type": "Machine",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Light",
+        "level": 12,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "987a8e49b2512e15c821ef878be6acb240b26e40e9a5064d0db6728ff87a8317"
+    },
+    {
+      "id": "dragon-master-lords",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c6cb1973bcfc58cdef7dea1d19810ef54017ca50b7c5b57dc45747ed1d26aad1"
+    },
+    {
+      "id": "mementoal-tecuhtlica-combined-creation",
+      "visible": {
+        "type": "Dragon",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Earth",
+        "level": 11,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "acdbf779f5a5136edd2457c533271110b7ed1510bb178008503270ab3121f179"
+    },
+    {
+      "id": "vidolium-the-unstable-power-patron-of-unity",
+      "visible": {
+        "type": "Fairy",
+        "attack": 5000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "0d5c1edfaef9456cc05dc19b6974ca4f02b4ca33b81e57df9c5af6c05d98a82f"
+    },
+    {
+      "id": "superdreadnought-rail-cannon-gustav-rocket",
+      "visible": {
+        "type": "Machine",
+        "attack": 5000,
+        "defense": 3000,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "4f9d5a19f110be01c520ebaa7a9a5381a581315a99ce9e939616e74dc78489cb"
+    },
+    {
+      "id": "the-chaotic-phantasmal-sacred-beasts",
+      "visible": {
+        "type": "Fiend",
+        "attack": 5000,
+        "defense": 5000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "11adb9828b4efad9700f12fc718caa7cf9e9e7d8b4b7ca2142ee3588ed9c7baa"
+    },
+    {
+      "id": "raviel-lord-of-phantasms",
+      "visible": {
+        "type": "Fiend",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3463778b5dc9e2b6aa7b88d8550f2907e85109a9f17539423bbb316569421336"
+    },
+    {
+      "id": "rainbow-dark-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9277a291b896b2349362628000c1c3af47bb9f872fbb057693658a8ef0e53bde"
+    },
+    {
+      "id": "rainbow-neos",
+      "visible": {
+        "type": "Warrior",
+        "attack": 4500,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "54c42082b9ae326781fff02450e2f304bcb00e51235fd80c6aac1853f271959b"
+    },
+    {
+      "id": "arcana-force-ex-the-dark-ruler",
+      "visible": {
+        "type": "Fairy",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "8b2ffc06f34e4a64b2e818971450ec78896f0e5b385c15a7b02d4de3074a4eb3"
+    },
+    {
+      "id": "daigusto-phoenix",
+      "visible": {
+        "type": "Pyro",
+        "attack": 1500,
+        "defense": 1100,
+        "attribute": "Wind",
+        "level": 2,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "27b82a964810f011171093506782aad6e0ca4e16a228f2a8862bfabee0258117"
+    },
+    {
+      "id": "wind-up-zenmaines",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 2100,
+        "attribute": "Fire",
+        "level": 3,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0b40cf339b31e53e8644811f00bfa974ed2eec4184c9e3d725e7f4726dd1edc9"
+    },
+    {
+      "id": "wind-up-rabbit",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1400,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "eaa19d579c07cbaf2e79bae856f50b67fbb609e880869d00813adb5022f217de"
+    },
+    {
+      "id": "damage-mage",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 600,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9b8557c03f7f86f502b21ebc0e29edc5f434efb429bb358008bacb9fbcafe6ef"
+    },
+    {
+      "id": "zw-phoenix-bow",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1100,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 3,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "fda3b5f8f93f44b0d3a9a0bf095d42fe1e471c3347df3efa0fe4091a5ab15059"
+    },
+    {
+      "id": "heroic-challenger-swordshield",
+      "visible": {
+        "type": "Warrior",
+        "attack": 0,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "55a88880159eda69250c6212b2578328e3a03593ad8b5969b695aed201d8250e"
+    },
+    {
+      "id": "chronomaly-mayan-machine",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 700,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "a53b6b57a579911666952e875fe4dbb58aa22a0b1f0747613e643ae03a09ca06"
+    },
+    {
+      "id": "chronomaly-colossal-head",
+      "visible": {
+        "type": "Rock",
+        "attack": 800,
+        "defense": 1600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "c7463e043b1ce10e91c26a8521e8515ce37bd9c949065f36033b1f7d3fb21028"
+    },
+    {
+      "id": "chronomaly-golden-jet",
+      "visible": {
+        "type": "Machine",
+        "attack": 1300,
+        "defense": 1400,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "bbf2349fa4c4b0eff66542e4e19c547649ab01d5ab509907d5dc1daecce6e065"
+    },
+    {
+      "id": "chronomaly-crystal-bones",
+      "visible": {
+        "type": "Rock",
+        "attack": 1300,
+        "defense": 400,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "2607ec2e60ae1025521a80393a96a5b3c468ac18a5820427413c19ea040af8cd"
+    },
+    {
+      "id": "chronomaly-crystal-skull",
+      "visible": {
+        "type": "Rock",
+        "attack": 900,
+        "defense": 600,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "e280a9852408acfd445f88c16445178b23f10a4b9725cb30df197c9a39e03eec"
+    },
+    {
+      "id": "spellbook-magician-of-prophecy",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 500,
+        "defense": 400,
+        "attribute": "Water",
+        "level": 2,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "22a7f3a4956e25e4a1df03637006e22b1015f214443d7d05feb96b6a3fa6d954"
+    },
+    {
+      "id": "temperance-of-prophecy",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "8f217aa12b453d5dd37705cb6bdbb65c58eb735b02ebed68db58222d365512c0"
+    },
+    {
+      "id": "strength-of-prophecy",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 1400,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "88574ca64b32ef3462172c3ba8fc7e53cfb2eb4802dd96ce68bcdd46f6fb1816"
+    },
+    {
+      "id": "madolche-baaple",
+      "visible": {
+        "type": "Beast",
+        "attack": 0,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "492c8ccde8ae90fd8edb6a9fecaa267f718368fc1a03933bbd6a5cb0504ae2bf"
+    },
+    {
+      "id": "madolche-magileine",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1400,
+        "defense": 1200,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "f823d3d1e4b4f905d9ed2b1f1170c7803aa044b9d7e5ff0411287eaebf4104d5"
+    },
+    {
+      "id": "madolche-butlerusk",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "3d3b231d537621f9704cafb649907e00a6efd7db34549d0b42b406402ec6d5fc"
+    },
+    {
+      "id": "madolche-puddingcess",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "28ce3a05b6d13ec04d72c3ad44d5552bab9ce88f300265f16625c3d22ca8ca26"
+    },
+    {
+      "id": "geargiano-mk-ii",
+      "visible": {
+        "type": "Machine",
+        "attack": 1000,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "6b28cc330494aa1775e241f01d2b153f8cb59dc25a9350b7e870ecbaf98822d7"
+    },
+    {
+      "id": "geargiaccelerator",
+      "visible": {
+        "type": "Machine",
+        "attack": 1400,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d6b436469b75638ca1c9b567f7a150a310b42a7180f0884bcf550af7708a3675"
+    },
+    {
+      "id": "geargiarsenal",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "41b1c962b66b25941dd109a7e78cfe1b7e08a74cf486ff9969c26908d2ffeda9"
+    },
+    {
+      "id": "geargiarmor",
+      "visible": {
+        "type": "Machine",
+        "attack": 1100,
+        "defense": 1900,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "bcb1a6859473afe45b63b78ba2744bedbf04775d56b7306a63f22a77a2f3fd38"
+    },
+    {
+      "id": "little-trooper",
+      "visible": {
+        "type": "Warrior",
+        "attack": 900,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 1,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e38261de10b89759a44798a7feea39868ff7c0aa9c5e380a95ef6bd9fe183794"
+    },
+    {
+      "id": "silver-sentinel",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1300,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "ea23cf47b15932d217e0635efb6251e7c5ef01a4e2a8fc2e2793e9c1fada28c4"
+    },
+    {
+      "id": "dust-knight",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1400,
+        "defense": 1200,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1a776e1c300e927e5e5c549a5cfcb4de45bae5644471652ac9de3d17844d010d"
+    },
+    {
+      "id": "block-golem",
+      "visible": {
+        "type": "Rock",
+        "attack": 1000,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "cbf66431e6ef5d360d947b189a3d15fe4c1a7c317058905951a588b63f4b54ec"
+    },
+    {
+      "id": "atlantean-attack-squad",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1400,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "18e2a9fa8babe8ca58fdec0f7befd968ec36e59da9c7fd470a4c94584240fd83"
+    },
+    {
+      "id": "alchemic-magician",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 1500,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "40d5575cc270b81ca651fb6e3593af63129f7175d2cd8a1cd13eb0f98fa6f5aa"
+    },
+    {
+      "id": "lightray-madoor",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1200,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "b15b4b4d55705440fe939eae6c0627cf8b52440163d8b4a18807732ee34e76b2"
+    },
+    {
+      "id": "imairuka",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Water",
+        "level": 2,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "a4d98def83750ae36f2238e921c5dede51ac1748e1640a0f79fb247a3cb02281"
+    },
+    {
+      "id": "revival-golem",
+      "visible": {
+        "type": "Rock",
+        "attack": 100,
+        "defense": 2100,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "36e62531336e36be696821ff3ef5ea82ac053c0ce93c425bbed611c4c4d82678"
+    },
+    {
+      "id": "pahunder",
+      "visible": {
+        "type": "Thunder",
+        "attack": 1300,
+        "defense": 600,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "43ca3e342c64f87d59f568f283da0c15e171612f9989ae5e8f31fb7ab57f1dc2"
+    },
+    {
+      "id": "mahunder",
+      "visible": {
+        "type": "Thunder",
+        "attack": 1400,
+        "defense": 700,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "37aa0933586e9a5875807fb3de3ef9166a801b228600624abddf688a04763d5c"
+    },
+    {
+      "id": "sishunder",
+      "visible": {
+        "type": "Thunder",
+        "attack": 900,
+        "defense": 400,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "e9979c1e5172cf04f1691c9db6fc8f35bd2e73ea4e931b4063a1fa50e8c47734"
+    },
+    {
+      "id": "honest",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1100,
+        "defense": 1900,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "47c013c6af076b71325b92465d80c193280da2c8836f3484f4f11f93f4352cd0"
+    },
+    {
+      "id": "neo-spacian-grand-mole",
+      "visible": {
+        "type": "Rock",
+        "attack": 900,
+        "defense": 300,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "710feb15f8f240b4a744d056f664eeab65576b11b753fccdd891ab6e41e3f470"
+    },
+    {
+      "id": "quillbolt-hedgehog",
+      "visible": {
+        "type": "Machine",
+        "attack": 800,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 2,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e1ada5f168c5d552038f3b41622a34b09e256091301eb0e9e93986ebaa31c571"
+    },
+    {
+      "id": "fabled-raven",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1300,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "ab66186c7613f84c1bdca12d75a9bac3555b1694ff765f1091ace12614892f66"
+    },
+    {
+      "id": "gishki-avance",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 800,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "9a8bcb383be6bbcc79664dae9d2fd67f35d9cdf6f82a1ec8ac55c5531b8b0096"
+    },
+    {
+      "id": "gusto-griffin",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 800,
+        "defense": 300,
+        "attribute": "Wind",
+        "level": 2,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "eb9e86db7bfd86af09cf8a05e10950a0108d75a72d469dda7141f54548a5f6fc"
+    },
+    {
+      "id": "constellar-sheratan",
+      "visible": {
+        "type": "Beast",
+        "attack": 700,
+        "defense": 1900,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "cae0ac06baa1777c7bcd56fea1cf844a249b07d87ec098b645c262deaae7d45f"
+    },
+    {
+      "id": "constellar-aldebaran",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1300,
+        "defense": 800,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "28fb12c0161f069b1de85f830daf8ea8bf94e3f2478f05a0e3027e267b136173"
+    },
+    {
+      "id": "amores-of-prophecy",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 600,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "f31cc769c2e08547dc299efd7cf2b663017324c92f867e4bb8ff9618d1eb80be"
+    },
+    {
+      "id": "madolche-mewfeuille",
+      "visible": {
+        "type": "Beast",
+        "attack": 500,
+        "defense": 300,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "0a522d0cfff6bffb90fdf48799450274983eebdd88bd2c282c3121d2e0dd5c00"
+    },
+    {
+      "id": "uniflora-mystical-beast-of-the-forest",
+      "visible": {
+        "type": "Beast",
+        "attack": 700,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 1,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "b15d59476eb9a7ee2d1bdbda2c2be992ccd3ca2a976e22a5cb2622bf3d28eaec"
+    },
+    {
+      "id": "chewbone",
+      "visible": {
+        "type": "Zombie",
+        "attack": 300,
+        "defense": 300,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "424cb4b987d58785dcb780a0808169ef6ad80ac18066170c6293f0ad6a6c66dc"
+    },
+    {
+      "id": "calamity-of-the-sacred-beasts-hamon-lord-of-striking-thunder",
+      "visible": {
+        "type": "Thunder",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "3d6816441a25ab51c9afa62ecaf883fd714fbe957f83b810c361d72e4281eb79"
+    },
+    {
+      "id": "infinity-of-the-sacred-beasts-raviel-lord-of-phantasms",
+      "visible": {
+        "type": "Fiend",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3adfae0ed79d62a72f1bed5da9c3f6bf2f5f173e6f380f5543c77eec9cc756e7"
+    },
+    {
+      "id": "galaxy-eyes-antimatter-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 9,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "1ebac65e1af079fe9b1224cc665837cc2308d32c6c758c8ca18def9b7dbda655"
+    },
+    {
+      "id": "queen-s-knight",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1600,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a8759af6a1f292cd43f073d3af2b0917b1d17c1aeeff01ec253c2b586f22862f"
+    },
+    {
+      "id": "watapon",
+      "visible": {
+        "type": "Fairy",
+        "attack": 200,
+        "defense": 300,
+        "attribute": "Light",
+        "level": 1,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "d65b06309bdba16528ec71b98ec00153262a18249cb14e4ae4e26c89feecc6d3"
+    },
+    {
+      "id": "big-shield-gardna",
+      "visible": {
+        "type": "Warrior",
+        "attack": 100,
+        "defense": 2600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "b8ab07a72cf03218de8d3692e201fdda56e27565e5c5ace99c983ccfc00de16e"
+    },
+    {
+      "id": "silent-swordsman-lv3",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a99778f13d33294ec772f4d1950bf0845e538a7ed4ab3a1a1b8947ddebdccdd6"
+    },
+    {
+      "id": "obnoxious-celtic-guard",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1400,
+        "defense": 1200,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e9ded66a59b68f587bc767a90f3131aa40037b9d19ca62067894292fec7cac41"
+    },
+    {
+      "id": "silent-magician-lv4",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1000,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "087f50a7f2567a2b5625d8048dfe73761798d865074f3cac566bc8d975296514"
+    },
+    {
+      "id": "green-gadget",
+      "visible": {
+        "type": "Machine",
+        "attack": 1400,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "dcb90afa226a28d47f361ae1201b76df745e1c41dfa7bff45f3f86daefb4b3c9"
+    },
+    {
+      "id": "mother-grizzly",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1400,
+        "defense": 1000,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "208a8f348d06187e680469d6c0d918b09ce61a0002ad901bed88a83448aee26e"
+    },
+    {
+      "id": "pyramid-turtle",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1200,
+        "defense": 1400,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "6709dcf158cd2e7e83de82817695ca51c6a61c3f38dafc3bffa4efc015f25b3a"
+    },
+    {
+      "id": "spirit-reaper",
+      "visible": {
+        "type": "Zombie",
+        "attack": 300,
+        "defense": 200,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "b8b6cf70aeda3d737de259ad511a3968766b7b5449a6887ccded7950e1e30bdb"
+    },
+    {
+      "id": "manju-of-the-ten-thousand-hands",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1400,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "7ce631e9e10e003b7ecba451a81f45f09d9a57b293a93dd0e6e6853a46f202b9"
+    },
+    {
+      "id": "lost-blue-breaker",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1400,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "c5611ccf96deb5fde786cc3e28e864614ed01461c68b4e2ff46d4f7cdb3345ee"
+    },
+    {
+      "id": "spined-gillman",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1300,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "7f9f27727235bd143cf562e2868c357e75738b42abe584966c2ab9f76d011156"
+    },
+    {
+      "id": "deep-sea-diva",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 200,
+        "defense": 400,
+        "attribute": "Water",
+        "level": 2,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "1bd2d853b7c84ebf7e4b6af47e4c43b6d4b6c14b26477e6f7a3c22fdb97b32cd"
+    },
+    {
+      "id": "mermaid-archer",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1200,
+        "defense": 200,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "12af9e6684e42d653bf3fb25c2fa2c775e3a64171162b41047419ae0fc1fe3f5"
+    },
+    {
+      "id": "codarus",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 1400,
+        "defense": 1200,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "8d2ed2240d593cc3a7e5e160a2fcfbdc92fc9cb1e36f953c90d3ee83a6df2ca2"
+    },
+    {
+      "id": "skreech",
+      "visible": {
+        "type": "Reptile",
+        "attack": 1500,
+        "defense": 400,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "664ce4559fad782465df01b15304f2f8360c796a7c0fbcbbc86b014d414105e4"
+    },
+    {
+      "id": "snowman-eater",
+      "visible": {
+        "type": "Aqua",
+        "attack": 0,
+        "defense": 1900,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "b0f3b98e483be5ff91607e52e357953626c941a57202659156130d41c55a0c3c"
+    },
+    {
+      "id": "nightmare-penguin",
+      "visible": {
+        "type": "Aqua",
+        "attack": 900,
+        "defense": 1800,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "f67cd210d937fe53bfd4ef023917ada08d57c70281b701befa7a7357e57ef34b"
+    },
+    {
+      "id": "deep-diver",
+      "visible": {
+        "type": "Aqua",
+        "attack": 1000,
+        "defense": 1100,
+        "attribute": "Water",
+        "level": 3,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "1ef1eb88dbf0f26d4016847d6a8800005f65dc993070c948532e49bc7cef1f92"
+    },
+    {
+      "id": "house-duston",
+      "visible": {
+        "type": "Fiend",
+        "attack": 0,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 1,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "b5ebb79f58fda14fbd46240156b0390a815c40264cb4fabd577291e5dbb7a66e"
+    },
+    {
+      "id": "puny-penguin",
+      "visible": {
+        "type": "Aqua",
+        "attack": 400,
+        "defense": 200,
+        "attribute": "Water",
+        "level": 1,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "881546fcfe70ca505e1222dbc5641e8024a5574725c5f711086ca3f12efd3a3f"
+    },
+    {
+      "id": "missing-force",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1000,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "2a135f11ee73db655aea7af784496263213d9d5146d3964c1acf6a7a8f65be86"
+    },
+    {
+      "id": "gagaga-cowboy",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 2400,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "66d4c2b2340e7774a947e36492ac856b5fdb3ded555054806bd87e02294a9fe4"
+    },
+    {
+      "id": "mermail-abyssmander",
+      "visible": {
+        "type": "Fish",
+        "attack": 100,
+        "defense": 2000,
+        "attribute": "Water",
+        "level": 4,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "73709242da39cb0dfb0bb1ae87684a35e6693c78014faeb87d7205ca7316e09b"
+    },
+    {
+      "id": "slushy",
+      "visible": {
+        "type": "Aqua",
+        "attack": 0,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 2,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "027a15c0d2551a83621098b19b111e1caa3f79b20311c3fa9c34c03eceaf9546"
+    },
+    {
+      "id": "giant-soldier-of-steel",
+      "visible": {
+        "type": "Rock",
+        "attack": 1300,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "07629c0aead88aeb64bd95ff3bf8dcbe44f0e86760b47b12a81de01b41b0c9b3"
+    },
+    {
+      "id": "electromagnetic-bagworm",
+      "visible": {
+        "type": "Insect",
+        "attack": 200,
+        "defense": 1400,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "36e77dc91f8e940a0945cfd2f5c572c18e4b640715e6e432357e0e31fd965015"
+    },
+    {
+      "id": "rage-of-the-deep-sea",
+      "visible": {
+        "type": "Fish",
+        "attack": 0,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 5,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "88da7f8c87ad30f9b3869ca49ad1beb157da384a6f2e7bf033db06360e59f1b3"
+    },
+    {
+      "id": "paladin-of-the-cursed-dragon",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1900,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "26e6da181369cf620d56444e2e154ecab2bc89c863c28541423236adf4c5f58b"
+    },
+    {
+      "id": "immortal-ruler",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1800,
+        "defense": 200,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "90f63d53f8cd572eee650599412bed743d7fa1714934d49855f5595f1fbcd494"
+    },
+    {
+      "id": "zombie-master",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1800,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "92128c47d84667872ce86e56feccb84635e56606c20c9fb967580120407340ca"
+    },
+    {
+      "id": "tristan-knight-of-the-underworld",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1800,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "18d1cf31d1e9a0b1bfe4c7ee31c95cf0298bf79658bef5710d92d2c5a624f48a"
+    },
+    {
+      "id": "mezuki",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1700,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "9750551ad3d6f890895a91316c31d7f51c86873e5d22b3bd620318d9a2fc9b47"
+    },
+    {
+      "id": "shutendoji",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1500,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "256546cac1e6bc827b2fd5520780ed640b754ab0320e1abb7f8cc3bf3c31a8fa"
+    },
+    {
+      "id": "elemental-hero-stratos",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1800,
+        "defense": 300,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "f37192818db16655b290969e6be30a6e3cbdfd4279c471370383d971e9ae12ae"
+    },
+    {
+      "id": "trickstar-lycoris",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1600,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 3,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "0d29a8bbdcfb1d9aa994ae6d57b0456bb9f84753515f37a9b42f3c5d568b5126"
+    },
+    {
+      "id": "elemental-hero-neos-alius",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1900,
+        "defense": 1300,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "80887769afd77c6ada5878b02ceca3ee9403f6f0ca2bc6e99986b130d3db063a"
+    },
+    {
+      "id": "scrap-chimera",
+      "visible": {
+        "type": "Beast",
+        "attack": 1700,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "1e6241f46923b725fc836a3ee302b8d0bc48dec79b8420a642dba47a2a6f2e1d"
+    },
+    {
+      "id": "scrap-orthros",
+      "visible": {
+        "type": "Beast",
+        "attack": 1700,
+        "defense": 1100,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "eec7a298602d705958f4236c9842e7fb962fd24392376495da8efd8460d13cd6"
+    },
+    {
+      "id": "harpie-queen",
+      "visible": {
+        "type": "Winged Beast",
+        "attack": 1900,
+        "defense": 1200,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "44b1e4de0705851a6b962bb9d80e82c988f3531eaecec9cb2a89e853ebaca742"
+    },
+    {
+      "id": "cyber-angel-benten",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1800,
+        "defense": 1500,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a6711d3e82166777627b18bf6aad514130cba75f19b89a2bf67536eb6f38e284"
+    },
+    {
+      "id": "cyber-angel-idaten",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1600,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 6,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "d517364d7439d42589ac49f9cb5dfd73de92b5fe4fc91f9cbf7ad5c103ef7e6d"
+    },
+    {
+      "id": "garden-rose-maiden",
+      "visible": {
+        "type": "Plant",
+        "attack": 1600,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 5,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3ae9e9df9cb30b265d24198940053b636a64d4274aae6507848a0c4e28aa07fe"
+    },
+    {
+      "id": "witch-of-the-black-rose",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1700,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "582376b57b3e8647ccba188a64f90cd8bb75b2d06b02bb50ddbf20de9c212063"
+    },
+    {
+      "id": "blue-rose-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1600,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "604ba33c056e3647451ab0d7caf4cd6b95c2288508f815e3f9e3bf14e47607ab"
+    },
+    {
+      "id": "flying-pegasus-railroad-stampede",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e8718b4df2918b5d54d027193d74747f3545fa45ec07237b38df8669c15d636e"
+    },
+    {
+      "id": "ruffian-railcar",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "9bbeb0adae2dc827ca2b86dc1230fc5508fba13af5360f836a838a9386c29eaa"
+    },
+    {
+      "id": "lunalight-blue-cat",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 1600,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "6972a36880cc1c33f8d2f4c39a496dd4d2c1173be4e22c9c473fed7f0628ea03"
+    },
+    {
+      "id": "the-stern-mystic",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 1200,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "22c9e33bb57455b9af188555e65a57144a158a85104b170f592224c0ae1077ff"
+    },
+    {
+      "id": "double-coston",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1700,
+        "defense": 1650,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "d36395f3218924325663891ba9f5925ddc2aaeddb8907186b17667f92dfa7ac7"
+    },
+    {
+      "id": "blue-dragon-summoner",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1500,
+        "defense": 600,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "84ad79f59e85af8538a06a95f1e597a3f791e7fb79fb862f2650d4fa6718f6cd"
+    },
+    {
+      "id": "flying-kamakiri-1",
+      "visible": {
+        "type": "Insect",
+        "attack": 1400,
+        "defense": 900,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "00cb0754af54aa4e73230a4fbc538d4391795a8bfd69b5066d35efbcae048d76"
+    },
+    {
+      "id": "mystic-tomato",
+      "visible": {
+        "type": "Plant",
+        "attack": 1400,
+        "defense": 1100,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "577dad9c212df75b4b67abc27fccb5a511d6fa88cd476e92ef6772bcc9cd1c46"
+    },
+    {
+      "id": "morphing-jar-2",
+      "visible": {
+        "type": "Rock",
+        "attack": 800,
+        "defense": 700,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "a31b4a4133c4cfb9567e90bd2e79dca3431335b3234278e713aa0fb12805f3a0"
+    },
+    {
+      "id": "ape-magician",
+      "visible": {
+        "type": "Beast",
+        "attack": 800,
+        "defense": 1200,
+        "attribute": "Dark",
+        "level": 3,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "efdc6abd8bcd4e375e545e7c51ed2da65d390e42bdd4098b8bf8397d73945e45"
+    },
+    {
+      "id": "gozuki",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1700,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "ef02a7ef3bf5b9c322dedf0ceb9a54d310bf83c1939bcc8ad488df867b824b36"
+    },
+    {
+      "id": "sky-striker-ace-shizuku",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Water",
+        "level": 1,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "52fafd6fd28ad3e4b05b8a711ffdeda82ad35d064d7534f498adc63119140a6c"
+    },
+    {
+      "id": "t-g-rush-rhino",
+      "visible": {
+        "type": "Beast",
+        "attack": 1600,
+        "defense": 800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "8bf27a5ec94a3a49ce12eafa3ce78a9554484ec4c855767b1daaef1fe693f884"
+    },
+    {
+      "id": "salamangreat-parro",
+      "visible": {
+        "type": "Machine",
+        "attack": 2000,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 5,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "e85fe7b96b6bbaac3a55046c119c512064935d38e627682510a4c0b68b5c5ee6"
+    },
+    {
+      "id": "guardragon-garmides",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1600,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d1a92c5b19b4cd73c68d484c61476752ec6a6ded6b89898b8f73d8c52182876b"
+    },
+    {
+      "id": "guardragon-andrake",
+      "visible": {
+        "type": "Dragon",
+        "attack": 2000,
+        "defense": 600,
+        "attribute": "Wind",
+        "level": 4,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "3a5af16876c10cd2bf490b2f6daafc112454787880ed8811d851b6b818625a3a"
+    },
+    {
+      "id": "shiranui-squire",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "6234463fc4f6d25976061026797df27b839da5e9e9fd3188600176bb9bd80e1c"
+    },
+    {
+      "id": "prank-kids-rocksies",
+      "visible": {
+        "type": "Rock",
+        "attack": 1500,
+        "defense": 1500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "dfa32ca71b781aa2488b412cee1d0858b3f9251ea47b3dce45cbae49472d1957"
+    },
+    {
+      "id": "psychic-tracker",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1600,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 3,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "bb44e9ab66b88f3128998ff4c2504c0c536a11ee02483da4e761733c5db34d5b"
+    },
+    {
+      "id": "thunderclap-monk",
+      "visible": {
+        "type": "Thunder",
+        "attack": 1900,
+        "defense": 200,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "9ff8b55592054ef8baf4c9b84f84ecebb18b7cef4fbdab6d973cc5b43870a40e"
+    },
+    {
+      "id": "aloof-lupine",
+      "visible": {
+        "type": "Beast",
+        "attack": 1700,
+        "defense": 300,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "257cb0423c035b3974df3f50bf7e16fc1b9c0e511f7c69b3320ad1fa6efb1c22"
+    },
+    {
+      "id": "shiranui-swordsaga",
+      "visible": {
+        "type": "Zombie",
+        "attack": 1900,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 5,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0a1e3e043bba01f899e2a97c709282bf8296768b8b2496c65ac0184a02de21c0"
+    },
+    {
+      "id": "hyper-psychic-riser",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2000,
+        "defense": 600,
+        "attribute": "Earth",
+        "level": 6,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "d7726d39ec5e84b5d793fe02698df1978cf617b5d9af11887b48b5e155368c6b"
+    },
+    {
+      "id": "update-jammer",
+      "visible": {
+        "type": "Machine",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Wind",
+        "level": 2,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "34918d29c3ca91d99bcaa67fab58341dc6bd458245ee77d599cdf6dec584a01e"
+    },
+    {
+      "id": "salamangreat-sunlight-wolf",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 2,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "dbf49f55b70f5e0a86bd899b87d641dd2a286af21ea57ecf167e9ee972cbe2c4"
+    },
+    {
+      "id": "trickstar-divaridis",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1800,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "5ea096b0865b207a41811def6145cab8845d8652dc88e92cd278439d463aff35"
+    },
+    {
+      "id": "guardragon-agarpain",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "e983f221959a63f827e6449f309d219588eb642b02bbbb220d62c5fde1a3c77e"
+    },
+    {
+      "id": "sky-striker-ace-kaina",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 1,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "fe2e70ef3a3434b156b6ae9e4309903b001eaf4e5e6bf39b6803480840e3b8db"
+    },
+    {
+      "id": "hiita-the-fire-charmer-ablaze",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1850,
+        "defense": 0,
+        "attribute": "Fire",
+        "level": 2,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "8d56cc8fe3e3ad2b94d651c4eaa357030acb17d7af82a32b2c5c9a4ad6b0055f"
+    },
+    {
+      "id": "time-thief-winder",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1800,
+        "defense": 1300,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9f69f11883a06497586c3965d30a3bc47dc1dfdd5e3a5ed292f48cdcc1b2cc4a"
+    },
+    {
+      "id": "subterror-guru",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1600,
+        "defense": 1800,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "005a67e75c6c64b9d6b1a651ab7ed151b6653a35b294aab62670fb2990c67b02"
+    },
+    {
+      "id": "trickstar-corobane",
+      "visible": {
+        "type": "Fairy",
+        "attack": 2000,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "395591c2cf4ed21cdd4722d996d7ff03497bc2a3d04ece0420b1c08226f75ce6"
+    },
+    {
+      "id": "performapal-clay-breaker",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2000,
+        "defense": 1000,
+        "attribute": "Earth",
+        "level": 6,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "dc8b4390bb881a9d7cca1d94d22890afcdc6eeea4566e0f8d3615e03464fef3c"
+    },
+    {
+      "id": "trickstar-crimson-heart",
+      "visible": {
+        "type": "Fairy",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "e97943709036b51cb5cb054f028fa5de2b469788caabc8a9817e6c0198072406"
+    },
+    {
+      "id": "salamangreat-gazelle",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 3,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "3cc6d59721678177d410ee0fa65a8a6647458d0096bd7580f0b6b68e3f994b3b"
+    },
+    {
+      "id": "salamangreat-fowl",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 200,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "6e3305711ad6669cbcb08fa8e7f66bea206a9e173343be0400e1ded421f52202"
+    },
+    {
+      "id": "salamangreat-jack-jaguar",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 1200,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "00d05bf80bc515401e3c23b1c1d1a1a6988d002b6ab82e32284e9a02e4a894fd"
+    },
+    {
+      "id": "salamangreat-wolvie",
+      "visible": {
+        "type": "Machine",
+        "attack": 1700,
+        "defense": 1000,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "59499f4a79c12af4c01ce8cc74df8d554301fe73aec98dcde66b9f21caab052d"
+    },
+    {
+      "id": "flamvell-firedog",
+      "visible": {
+        "type": "Beast",
+        "attack": 1900,
+        "defense": 200,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "3e6918f6af526011e6c37f405573c26a26522ac52b0232d440b26c0c17a2923d"
+    },
+    {
+      "id": "fencing-fire-ferret",
+      "visible": {
+        "type": "Beast",
+        "attack": 1700,
+        "defense": 600,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0d848a5e2882d975f7e9469df7dd077a36991db9838ce2879b093b911bf0cfd6"
+    },
+    {
+      "id": "salamangreat-miragestallio",
+      "visible": {
+        "type": "Machine",
+        "attack": 2000,
+        "defense": 900,
+        "attribute": "Fire",
+        "level": 3,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "1e9fc4b60fa9eda15fc79bd633fcd03c68edf1f2285fb86f86ef0c9af3ef5f18"
+    },
+    {
+      "id": "infinitrack-anchor-drill",
+      "visible": {
+        "type": "Machine",
+        "attack": 1800,
+        "defense": 500,
+        "attribute": "Earth",
+        "level": 4,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "eaf184aa46863058a9f1bbef045c656defc77233159523435d91e92c3ecc2d61"
+    },
+    {
+      "id": "infinitrack-drag-shovel",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 2100,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "7d256de95356c61f57d077eb881aac5ed5df7ed17939d5ed96a0a6bfcb910ea7"
+    },
+    {
+      "id": "witchcrafter-schmietta",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1800,
+        "defense": 600,
+        "attribute": "Fire",
+        "level": 4,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0f387671e57c24822e820966ac5f5c7f19a8649db2ac35bd0286fb871977232e"
+    },
+    {
+      "id": "witchcrafter-edel",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2000,
+        "defense": 2300,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "113eaaa4c9bc69182fc159a7a9326c741da094f7d93906d7698725e52bb0b8de"
+    },
+    {
+      "id": "serziel-watcher-of-the-evil-eye",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1600,
+        "defense": 1400,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "a612e811c49e115f7504d9f6c1d491b1298bca347d3c77a16e3e92ba7b7eea04"
+    },
+    {
+      "id": "juragedo",
+      "visible": {
+        "type": "Fiend",
+        "attack": 1700,
+        "defense": 1300,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "cd7fc9649e23a40057120d7986cbe7ccab176be5e6322ef9f0bbb187f208f22f"
+    },
+    {
+      "id": "king-s-knight",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1600,
+        "defense": 1400,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "f4e60dda799d136a9bebf40de2d56f5274d558d9de301ddb6d21ae9ee98387e6"
+    },
+    {
+      "id": "jack-s-knight",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1900,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 5,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "9b29a3add3e20be4cbf04254969b5b77314f1ca0920c59006f4454ac6a5c0b23"
+    },
+    {
+      "id": "gravekeeper-s-ambusher",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 1700,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "cbf5f70f6ab9745c2273d30209b033fc6f8781fca431012ee7eb8c474efa57c3"
+    },
+    {
+      "id": "utopic-onomatopoeia",
+      "visible": {
+        "type": "Warrior",
+        "attack": 1500,
+        "defense": 1500,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "ba91465aab3e48b5e8854a64425940b0ecab6f4ad3e80c70ddcb2b0f27074a60"
+    },
+    {
+      "id": "doublebyte-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "fd7bc1d94d299db020e2e4662d14c3c01f518e1f94e08787bc5b1776a6426038"
+    },
+    {
+      "id": "gouki-jet-ogre",
+      "visible": {
+        "type": "Warrior",
+        "attack": 2000,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 2,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "0599715def4ff232556a38c935882717e02e45c996a0f4526cfa1e68dcbf6634"
+    },
+    {
+      "id": "booster-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 1900,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 2,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4c61ec9475cd04c2580bad464cbc03de5576bcacf89841de55a99c98f1afcade"
+    },
+    {
+      "id": "aromaseraphy-jasmine",
+      "visible": {
+        "type": "Plant",
+        "attack": 1800,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "0594295713f150f0f01ede46a558c903e2480b46e06cb8c19528e6e435c44e6d"
+    },
+    {
+      "id": "platinum-gadget",
+      "visible": {
+        "type": "Machine",
+        "attack": 1600,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 2,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "784c3d796200cf8c0563b3a4d92b196f6fb1fe61be5dc949f415e5704ff7ba42"
+    },
+    {
+      "id": "toon-dark-magician-girl",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 2000,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 6,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "ac09007f70c9fd24ca527ad6f3cf7504abff3612587b4822fa6acfb5c10a71af"
+    },
+    {
+      "id": "silver-gadget",
+      "visible": {
+        "type": "Machine",
+        "attack": 1500,
+        "defense": 1000,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "8c70ea304fb86db2967e3025e82bfd96f6568f19d340b6b3713e664eaafb4ea8"
+    },
+    {
+      "id": "gold-gadget",
+      "visible": {
+        "type": "Machine",
+        "attack": 1700,
+        "defense": 800,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "3815659ce4491bb5a35d75df9e66f38f339e7c3e9c591410fb56e425e061b8a5"
+    },
+    {
+      "id": "star-seraph-scepter",
+      "visible": {
+        "type": "Fairy",
+        "attack": 1800,
+        "defense": 400,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "694bb42ac6b8263c5e9007cb1b9a6e68fd776e8a45e2a2f46cd5f040103abd8f"
+    },
+    {
+      "id": "destiny-hero-dogma",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3400,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3ac205578770438158c889da83143d0042f3ce56abe3a01ad851a3c80b11f44e"
+    },
+    {
+      "id": "super-vehicroid-jumbo-drill",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e7bcd365547d2ecd17dd15fc4fc3f7a7dae9ccfa5f61eb02e8116a58e67b8015"
+    },
+    {
+      "id": "super-conductor-tyranno",
+      "visible": {
+        "type": "Dinosaur",
+        "attack": 3300,
+        "defense": 1400,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c7edee9dd9e053f8c026879611746a1d10dcd00b8d3ddf1d64063ae5606b73fa"
+    },
+    {
+      "id": "horus-the-black-flame-dragon-lv8",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 1800,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "6476640f701ea83e7cd1634711955133cbb37d4f90d741afe5162822130fb3b7"
+    },
+    {
+      "id": "ancient-gear-gadjiltron-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "9f20eb0ede1bc1f050fe25fd829b95ae5d481c096d0afdc84c28a76020f15d60"
+    },
+    {
+      "id": "galaxy-eyes-photon-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c3f55f35a10ef491137282fdd2414034af13145bb31388f079ece9bf1798c5d5"
+    },
+    {
+      "id": "fabled-leviathan",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "a445f1e075444d050b1bea974f7b8301e74529353332e27ce901fd39c12a3765"
+    },
+    {
+      "id": "gem-knight-master-diamond-dispersion",
+      "visible": {
+        "type": "Rock",
+        "attack": 3000,
+        "defense": 2600,
+        "attribute": "Earth",
+        "level": 9,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e16fce0d047a004b29e8c31e6fa074770921ed68e443fef0d38608ce7b645417"
+    },
+    {
+      "id": "number-38-hope-harbinger-dragon-titanic-galaxy",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "c462bc375abb58761fa7201bd87caf7c541d4557f85043b0310fdefa0ada82f5"
+    },
+    {
+      "id": "house-dragonmaid",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 9,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "07202a030dc734e895bbf47321aa8fd2a7ff6ac892d543fed24c00f7d352ca19"
+    },
+    {
+      "id": "dragonmaid-sheou",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3500,
+        "defense": 2000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "6481797977c2e0531b1607e205b6cca9cc291f2c1a940bf5d5053192c4757a27"
+    },
+    {
+      "id": "ukiyoe-p-u-n-k-amazing-dragon",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 3000,
+        "defense": 2800,
+        "attribute": "Wind",
+        "level": 11,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "791daf6c264cb68117e0937b8f162ddd438100bf3d06f31f99157a23858e2951"
+    },
+    {
+      "id": "mekk-knight-crusadia-avramax",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "7ce35b10073d67b6f422c89e782a8164dce5072af97e63c45b0c19723259a7f6"
+    },
+    {
+      "id": "nekroz-of-decisive-armor",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3300,
+        "defense": 2300,
+        "attribute": "Water",
+        "level": 10,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "8d31a8451bd463f202e958ab86c7d67558bcd14e4ba93e45767ba9095ecb9a8f"
+    },
+    {
+      "id": "nekroz-of-sophia",
+      "visible": {
+        "type": "Spellcaster",
+        "attack": 3600,
+        "defense": 3400,
+        "attribute": "Light",
+        "level": 11,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "b902fe210f412a4a156e233e6441b05b20390c2faaa98b96fd9b8332ebcf66aa"
+    },
+    {
+      "id": "nekroz-of-areadbhair",
+      "visible": {
+        "type": "Warrior",
+        "attack": 3300,
+        "defense": 3200,
+        "attribute": "Water",
+        "level": 10,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "e0f159afe2402d97f2928b952d50586d10e23b3725c05a8c31d5f5434f30f371"
+    },
+    {
+      "id": "gem-knight-lady-brilliant-diamond",
+      "visible": {
+        "type": "Rock",
+        "attack": 3400,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "4bb8a8e536ac3ac773bb342dd74c3f5eb744805f02092bcdcb8894daa1478c89"
+    },
+    {
+      "id": "stardust-sifr-divine-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 12,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "b6a66651bc50e381700a720a446c0e65fdf700df4d1a3e47f556c5b290d8e7d4"
+    },
+    {
+      "id": "jupiter-the-power-patron-of-destruction",
+      "visible": {
+        "type": "Machine",
+        "attack": 3500,
+        "defense": 2500,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "0236e6c5c557ea0e22104068f724da9c9b1314d9de626c6f0f8f7955cf75a891"
+    },
+    {
+      "id": "ancient-gear-dark-golem",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Earth",
+        "level": 8,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "a0cbdd8edc560e738ce209fafa64b09a6bb187b7103baf77dd8078516cfca735"
+    },
+    {
+      "id": "light-and-darkness-dragonlord",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3400,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "19d964ad47a6807890644ccdd112186fa96abe4488c9e3ea90ff0798e38739ab"
+    },
+    {
+      "id": "mementomictlan-tecuhtlica-creation-king",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Earth",
+        "level": 9,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "db7bd97bc5379020a801bec32a3a030f192c407ddef0a89e10d8f1fe226f6a1e"
+    },
+    {
+      "id": "heart-of-the-blue-eyes",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "5b32e1646fcb254c1bbe8baab376e9330d3c673026b4b107445607671541c945"
+    },
+    {
+      "id": "red-eyes-black-fullmetal-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 3400,
+        "defense": 2400,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "c572603fbae73266c116c4c43dc742d4141df296e99e0704643e5001ca9f33a8"
+    },
+    {
+      "id": "beelze-of-the-diabolic-dragons",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4e3b3a16c27ae0fb2a93b867f8a3c589c89eaa02aec78671ebb0581f1f60d8df"
+    },
+    {
+      "id": "topologic-bomber-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 4,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "363d1af77dc6f11288707a792c3dc80f68df3942949cfb6890c183e16d3d0f9d"
+    },
+    {
+      "id": "chaos-dragon-levianeer",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "dc51977a28082563d526697d1de4e1a4cb08665b4899719f8a8331f3e43cd87b"
+    },
+    {
+      "id": "blue-eyes-tyrant-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3400,
+        "defense": 2900,
+        "attribute": "Light",
+        "level": 8,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "d2287bce75fd6b01ab42e1ce50eb108a7da4721da5058cb2dd332c09c98fccfb"
+    },
+    {
+      "id": "centur-ion-auxila",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "1085db04d001ef1808a439c70704eabc41fcecfc47f459b9ac83441b3dbecf66"
+    },
+    {
+      "id": "varudras-the-final-bringer-of-the-end-times",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9f76b072162208abe24d781b6ce1f2193505f7e9b64b6690b2bb064a21d1e9ec"
+    },
+    {
+      "id": "azamina-moa-regina",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 2000,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "43a1c81e87fd69adbf48b5b732d5ec4896318c25b7643b992c025f2cc8b76e0f"
+    },
+    {
+      "id": "poseidra-abyss-the-atlantean-dragon-lord",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 3000,
+        "defense": 1800,
+        "attribute": "Water",
+        "level": 7,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "03cd620ef75d995431a51f3fe4f573d3963ae1436052960212819e3cc60b6e39"
+    },
+    {
+      "id": "ryzeal-detonator",
+      "visible": {
+        "type": "Pyro",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Light",
+        "level": 4,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "0ec63e182812ca133baeb23c84d6213911a1a6c2a14af1a0f54593405e745c24"
+    },
+    {
+      "id": "danger-bigfoot",
+      "visible": {
+        "type": "Beast",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "4b5225674c336e736125926ff049b2b1b4e796e7a9524ddf71d7ea8ef072f750"
+    },
+    {
+      "id": "queen-of-the-blazing-domain",
+      "visible": {
+        "type": "Pyro",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 9,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "bb099720637cd0410b6aedad4634cbc171dca24ad036b77c389cb628de03ef0f"
+    },
+    {
+      "id": "chaos-ruler-the-chaotic-magical-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3025914fc1bb1bc403b8027fd9534185e5141b515f02081bef81882620284c2e"
+    },
+    {
+      "id": "horus-the-black-flame-deity",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 1800,
+        "attribute": "Fire",
+        "level": 8,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "0dd89a75f81a1de9d848c4d113eaa2d99a2adc39e18b3453022375fabb342c7a"
+    },
+    {
+      "id": "enlightenment-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "3ffafe384ed3a31cefb58fcbfb34fa542907165785ddc4a2f84796349fd6a846"
+    },
+    {
+      "id": "sangenpai-transcendent-dragion",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 3000,
+        "attribute": "Fire",
+        "level": 10,
+        "stars": [
+          "Mars",
+          "Sun"
+        ]
+      },
+      "other_fields_sha256": "03f896f5a5bb9694832bcd5a124a82177ef6c3c6398b0a9ced64432a2c8c4f58"
+    },
+    {
+      "id": "supreme-king-z-arc-synchro-universe",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Dark",
+        "level": 12,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "3c2041524e88132fd8d584f1c99f40312e33b514655d88722238b030364f3084"
+    },
+    {
+      "id": "number-c32-shark-drake-leveiss",
+      "visible": {
+        "type": "Sea Serpent",
+        "attack": 3100,
+        "defense": 2600,
+        "attribute": "Water",
+        "level": 5,
+        "stars": [
+          "Neptune",
+          "Moon"
+        ]
+      },
+      "other_fields_sha256": "73aacb6d931a78e1a41dddd0c87cdc78c71acb25d0aef22ac450dc42ff6a1a32"
+    },
+    {
+      "id": "crystal-clear-wing-synchro-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2500,
+        "attribute": "Wind",
+        "level": 10,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "212383f06b9cd0ce0fb61f6644b2d34d1d3d003bf3f43ef36f883a7f4a61f43e"
+    },
+    {
+      "id": "world-chalice-guardragon-almarduke",
+      "visible": {
+        "type": "Dragon",
+        "attack": 3000,
+        "defense": 2600,
+        "attribute": "Wind",
+        "level": 9,
+        "stars": [
+          "Saturn",
+          "Venus"
+        ]
+      },
+      "other_fields_sha256": "9d7e38135025c9530e30cac57ac22d04abf9d9eb86f6f7befcce4330450d7d9a"
+    },
+    {
+      "id": "number-95-galaxy-eyes-dark-matter-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 9,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "dccf9e0abf3ee9a081d7546bcb4c5a843510d4be0df09e55357c666584a45c90"
+    },
+    {
+      "id": "geistgrinder-golem",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 300,
+        "attribute": "Dark",
+        "level": 8,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "8ca61777927c3e2ded7c89af75ea8383280965ff172496e79884ea9d867b9f9e"
+    },
+    {
+      "id": "ragnaraika-stag-sovereign",
+      "visible": {
+        "type": "Insect",
+        "attack": 3300,
+        "defense": 0,
+        "attribute": "Earth",
+        "level": 5,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "e3522671c64e91b4221d2b77a6a960328bc1f8072bb4bce8cde373542971e63d"
+    },
+    {
+      "id": "vouiburial-the-dragon-undertaker",
+      "visible": {
+        "type": "Fiend",
+        "attack": 3000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "9cddf6c0ab8367b0332e9334202936d4f602a498b47318d2123050520e081fb9"
+    },
+    {
+      "id": "veidos-the-dragon-of-endless-darkness",
+      "visible": {
+        "type": "Pyro",
+        "attack": 3000,
+        "defense": 1700,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "dda75ff8f2cdeac7a9dbff4d413dcbfd919d1d7e86d3efcc1b8470ecd687d6aa"
+    },
+    {
+      "id": "majestic-red-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 3000,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "fc3520657e72a938df6c76a64b2610ca7cd922dad261562aeb488bfeab11798f"
+    },
+    {
+      "id": "thor-lord-of-the-aesir",
+      "visible": {
+        "type": "Beast-Warrior",
+        "attack": 3500,
+        "defense": 2800,
+        "attribute": "Earth",
+        "level": 10,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "663d1c6c4ba597b989a29257360951580878c5406472f168aef18fe33ac04889"
+    },
+    {
+      "id": "odin-father-of-the-aesir",
+      "visible": {
+        "type": "Fairy",
+        "attack": 4000,
+        "defense": 3500,
+        "attribute": "Light",
+        "level": 10,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "973ba930f26e99a768962f0bb0d268ad1e391c2748c0349c922974ff45e49f92"
+    },
+    {
+      "id": "malefic-cyber-end-dragon",
+      "visible": {
+        "type": "Machine",
+        "attack": 4000,
+        "defense": 2800,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "a24218b69fcfcbd2c0bbd65f488270931fb337fac15b3990409e7ef7d2bf09aa"
+    },
+    {
+      "id": "malefic-rainbow-dragon",
+      "visible": {
+        "type": "Dragon",
+        "attack": 4000,
+        "defense": 0,
+        "attribute": "Dark",
+        "level": 10,
+        "stars": [
+          "Moon",
+          "Mercury"
+        ]
+      },
+      "other_fields_sha256": "e91aec72922c1304fae1aa00de280f480a36808c42a210b928c0096df6b8d323"
+    },
+    {
+      "id": "t-g-halberd-cannon",
+      "visible": {
+        "type": "Machine",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Earth",
+        "level": 12,
+        "stars": [
+          "Jupiter",
+          "Uranus"
+        ]
+      },
+      "other_fields_sha256": "44804ca663b553126052ed8ce7c7883ce437e49597e70d183a554ce7fc1b852a"
+    },
+    {
+      "id": "meklord-astro-mekanikle",
+      "visible": {
+        "type": "Machine",
+        "attack": 4000,
+        "defense": 4000,
+        "attribute": "Light",
+        "level": 12,
+        "stars": [
+          "Sun",
+          "Neptune"
+        ]
+      },
+      "other_fields_sha256": "dea2286cfc0f7e4377251d232622089db2133f6fd520a3c810fbec6e6bfad350"
+    }
+  ]
+}
