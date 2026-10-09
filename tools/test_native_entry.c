@@ -10,22 +10,31 @@
 #include "pc/text/text.h"
 #include "pc/text/entry_layout.h"
 #include "pc/cards/cards.h"
+#include "pc/guest/translated_runtime.h"
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 static int mode,stage,stopped,shutdowns;
+static MemoriesMemory test_memory;
+extern void *GuestRuntime_malloc(size_t);
 void Log_Init(void){assert(stage++==0);}
-int Memories_GuestMap(void){assert(stage++==1);return 0;}
+int Memories_GuestMap(void){assert(stage++==1);return GuestRuntime_Bind(&test_memory);}
 int GameFiles_SelectDisc(const char *p,char *why,size_t n){(void)why;(void)n;assert(!strcmp(p,"/disc.bin"));assert(stage++==2);return 0;}
-unsigned char *GameFiles_ReadExecutable(const char *p,size_t *n){(void)p;assert(stage++==3);*n=1;return calloc(1,1);}
-int Memories_GuestLoadExeData(const unsigned char *p,size_t n,const char *name){(void)p;(void)name;assert(n==1&&stage++==4);return 0;}
+unsigned char *GameFiles_ReadExecutable(const char *p,size_t *n){
+    (void)p;assert(stage++==3);*n=1900544;
+    unsigned char *data=GuestRuntime_malloc(*n);assert(data&&GuestRuntime_RegionCount()==1);return data;
+}
+int Memories_GuestLoadExeData(const unsigned char *p,size_t n,const char *name){(void)p;(void)name;assert(n==1900544&&stage++==4);return 0;}
 int Memories_ModulesInit(void){assert(stage++==5);return 0;}
 int Platform_Open(const char *name){
     (void)name;assert(stage++==6);
     /* An old disabled setting must be overridden before the one-time data
      * preparation, not enabled after Platform_Open has already loaded mods. */
     assert(!strcmp(getenv("MEMORIES_MOD_LEKAKMOD"),"1"));
-    assert(!strcmp(getenv("MEMORIES_MODS"),"1"));return 0;
+    assert(!strcmp(getenv("MEMORIES_MODS"),"1"));
+    /* The iPhone crash kept the freed executable in this registry. Any
+     * subsequent malloc at its old address then failed overlap validation. */
+    assert(GuestRuntime_RegionCount()==0);return 0;
 }
 int Mods_Count(void){return 1;}
 const char *Mods_Id(int m){assert(m==0);return "Lekakmod";}
@@ -49,5 +58,6 @@ int main(int argc,char **argv){
     if(mode==1||mode==2){assert(result==-10&&stage==7&&stopped==0&&shutdowns==0);}
     else{assert(result==(mode==3?0:17)&&stage==13&&stopped==1&&shutdowns==1);}
     assert(LekakNative_Run("/disc.bin","/program","/user")==-2);
+    GuestRuntime_Reset();
     return 0;
 }
