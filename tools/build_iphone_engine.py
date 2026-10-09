@@ -40,6 +40,20 @@ def stage_sources(stage):
     replace_once(stage/'src/pc/platform/platform_common.c',
         'int Platform_HasDesktopGL(void) { return 1; }',
         'int Platform_HasDesktopGL(void) { return 0; }')
+    # Pixel-only kernels use packed RGB bytes and scalar palettes: no guest
+    # structs, globals, function tokens or allocator-owned return values.
+    art=stage/'src/pc/cards/art.c'
+    text=art.read_text()
+    resample=text[text.index('static void resample('):text.index('/* --- colors')]
+    colors=text[text.index('typedef struct { int first, count; } Box;'):text.index('static void put_clut(')]
+    quantize=colors[colors.index('static int channel('):]
+    kernels='#include <stddef.h>\n#include <stdlib.h>\n#include <string.h>\ntypedef struct { unsigned char r,g,b; } Rgb;\n'
+    kernels+=resample.replace('static void resample(', 'void LekakNative_CardResample(')
+    kernels+=colors.replace('static void quantize(', 'void LekakNative_CardQuantize(')
+    (stage/'src/pc/platform/native_card_pixels.c').write_text(kernels)
+    text=text.replace(resample,'extern void LekakNative_CardResample(const Rgb *,int,int,Rgb *,int,int);\n#define resample LekakNative_CardResample\n\n',1)
+    text=text.replace(quantize,'extern void LekakNative_CardQuantize(const Rgb *,int,int,unsigned short *,unsigned char *);\n#define quantize LekakNative_CardQuantize\n\n',1)
+    art.write_text(text)
     runtime=stage/'src/pc/guest/translated_runtime.c'
     replace_once(runtime,'static unsigned region_count, function_count;',
         'static unsigned region_count, function_count;\nstatic unsigned recent_region = ~0u;')
@@ -99,8 +113,9 @@ def build(output,jobs):
     natives=engine.native_sources(descriptor,backend=None)
     excluded={'src/pc/guest/main.c','src/pc/mods/object_loader.c'}
     natives=[s for s in natives if s not in excluded]
+    natives.append('src/pc/platform/native_card_pixels.c')
     ordinary={s for s in natives if s in engine.ORDINARY or '/translated_' in s}
-    ordinary.update({'src/pc/render/soft_gpu.c','src/pc/platform/native_platform.c','src/pc/platform/native_entry.c'})
+    ordinary.update({'src/pc/render/soft_gpu.c','src/pc/platform/native_platform.c','src/pc/platform/native_entry.c','src/pc/platform/native_card_pixels.c'})
     jobs_list=[(s,g) for g,ss in groups.items() for s in ss]+[(s,'native') for s in natives]
     for kind in ['raw','ir','obj','logs']:(output/kind).mkdir(exist_ok=True)
     def path_for(kind,source,suffix):return engine.unit_path(output,kind,source,suffix)
