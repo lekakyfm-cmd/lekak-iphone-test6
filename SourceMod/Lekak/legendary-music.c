@@ -1,3 +1,5 @@
+#include <stdarg.h>
+#include <stdio.h>
 #include "pc/mods/modapi.h"
 #include "pc/audio/replace.h"
 #include "game/sound.h"
