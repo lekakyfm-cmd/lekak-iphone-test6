@@ -1,4 +1,4 @@
-name: Lekak - native iPhone modules
+name: Lekak - native iPhone app
 on:
   workflow_dispatch:
 permissions:
@@ -9,7 +9,7 @@ concurrency:
 jobs:
   native-modules:
     runs-on: macos-15
-    timeout-minutes: 60
+    timeout-minutes: 90
     defaults:
       run:
         shell: bash
@@ -23,16 +23,24 @@ jobs:
           if [ -f Lekak_iPhone_10_Moteur_Et_Correctifs.zip ]; then
             unzip -o Lekak_iPhone_10_Moteur_Et_Correctifs.zip 'EngineSDK/*'
           fi
+      - name: Extract Lekak resources uploaded as ZIP parts
+        run: |
+          for pack in Lekak_iPhone_13_Assets_*.zip; do
+            if [ -f "$pack" ]; then unzip -o "$pack"; fi
+          done
       - name: Verify inputs and object platform checks
         run: |
           mkdir -p build/logs
           python tools/test_ios_object_format.py
           python -c 'import sys; sys.path.insert(0,"tools"); from test_lekak_sdk import verify_sources; verify_sources()'
           test -f SourceMod/Lekak/native-units.json
+          python tools/verify_lekak.py
       - name: Verify native display and controls
         run: |
           clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
           build/native-platform-test
+          clang -std=gnu11 -DMEMORIES_PC -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c -o build/native-entry-test
+          for mode in 0 1 2 3; do build/native-entry-test "$mode"; done
       - uses: actions/cache@v4
         with:
           path: |
@@ -41,18 +49,74 @@ jobs:
             EngineSDK/tmp/pc/macos-deps
             EngineSDK/tmp/pc/guest-compiler
           key: lekak-macos-arm64-v1-${{ hashFiles('EngineSDK/tools/pc/macos_toolchain.json', 'EngineSDK/tools/pc/macos_deps.py', 'EngineSDK/tools/pc/dependency_archives.py', 'EngineSDK/tools/pc/fetch_tools.py', 'EngineSDK/tools/pc/llvm/guest_ir.cpp') }}
+      - uses: actions/cache/restore@v4
+        id: game-abi-cache
+        with:
+          path: |
+            build/game-abi/summary.json
+            build/game-abi/exports.txt
+            build/game-abi/mod_signatures.json
+          key: lekak-ios-host-abi-v1-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
+      - uses: actions/cache/restore@v4
+        id: ios-deps-cache
+        with:
+          path: EngineSDK/tmp/pc/ios-deps
+          key: lekak-ios-deps-v1-${{ hashFiles('tools/build_iphone_deps.py', 'EngineSDK/tools/pc/dependency_archives.py', 'EngineSDK/tools/pc/macos_toolchain.json') }}
       - name: Compile complete engine and its ABI metadata
+        if: steps.game-abi-cache.outputs.cache-hit != 'true'
         run: |
           set -o pipefail
           python EngineSDK/tools/pc/build_arm64.py --jobs 3 --build "$PWD/build/game-abi" 2>&1 | tee build/logs/game-build.log
+      - uses: actions/cache/save@v4
+        if: steps.game-abi-cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            build/game-abi/summary.json
+            build/game-abi/exports.txt
+            build/game-abi/mod_signatures.json
+          key: ${{ steps.game-abi-cache.outputs.cache-primary-key }}
       - name: Compile static Lekak modules for a physical iPhone
         run: |
           set -o pipefail
           python tools/build_lekak_ios_objects.py --game-build build/game-abi --output build/lekak-ios 2>&1 | tee build/logs/lekak-ios.log
+      - uses: actions/cache/restore@v4
+        id: ios-core-cache
+        with:
+          path: |
+            build/iphone-core/libMemories_iPhone.a
+            build/iphone-core/ios-core-report.json
+          key: lekak-ios-core-v1-${{ hashFiles('App/native_entry.c', 'App/native_entry.h', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
       - name: Cross-compile complete engine core for iPhone
+        if: steps.ios-core-cache.outputs.cache-hit != 'true'
         run: |
           set -o pipefail
           python tools/build_iphone_engine.py --output build/iphone-core --jobs 3 2>&1 | tee build/logs/iphone-core.log
+      - uses: actions/cache/save@v4
+        if: steps.ios-core-cache.outputs.cache-hit != 'true'
+        with:
+          path: |
+            build/iphone-core/libMemories_iPhone.a
+            build/iphone-core/ios-core-report.json
+          key: ${{ steps.ios-core-cache.outputs.cache-primary-key }}
+      - name: Build physical iPhone image and font libraries
+        run: |
+          set -o pipefail
+          python tools/build_iphone_deps.py --jobs 3 2>&1 | tee build/logs/iphone-deps.log
+      - uses: actions/cache/save@v4
+        if: steps.ios-deps-cache.outputs.cache-hit != 'true'
+        with:
+          path: EngineSDK/tmp/pc/ios-deps
+          key: ${{ steps.ios-deps-cache.outputs.cache-primary-key }}
+      - name: Link complete native game and package unsigned IPA
+        run: |
+          set -o pipefail
+          python tools/build_native_ipa.py 2>&1 | tee build/logs/native-app.log
+      - name: Upload native iPhone application
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-Native-${{ github.run_number }}
+          if-no-files-found: error
+          path: build/native-app/Lekak_iPhone_13_Native.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
@@ -70,3 +134,6 @@ jobs:
             build/iphone-core/logs/
             build/iphone-core/ios-core-report.json
             build/iphone-core/libMemories_iPhone.a
+            EngineSDK/tmp/pc/ios-deps/ios-dependencies-report.json
+            build/native-app/native-app-report.json
+            build/native-app/native-link.map
