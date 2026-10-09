@@ -68,6 +68,7 @@ int LekakLegacyInit(const MemoriesModHost *h,MemoriesMod *mod) {
  int first=h->subscribe(h,MEMORIES_EVENT_LOAD,-1,loaded);
  if(!first)return 0;
  if(!h->subscribe(h,MEMORIES_EVENT_SLOT_LOAD,-1,loaded)){h->unsubscribe(h,first);host=NULL;return 0;}
+ mod->api=MEMORIES_MOD_API;
  clear();mod->frame=frame;mod->reset=reset;mod->applied=applied;mod->overlay=overlay;mod->overlay_signature=NULL;
  return 1;
 }

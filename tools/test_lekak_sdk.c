@@ -56,6 +56,7 @@ int main(int argc,char **argv) {
  host.subscribe=subscribe;host.unsubscribe=unsubscribe;host.overlay_size=size;
  host.text_width=text_width;host.draw_text=draw;host.fill=fill;
  MemoriesMod mod={0};assert(LekakLegacyInit(&host,&mod));
+ assert(mod.api==MEMORIES_MOD_API);
  mod.frame();mod.overlay();assert(!gate && !notifications);
  set_wins("Heishin",1);mod.frame();mod.overlay();assert(!gate && notifications==1);
  assert(!strcmp(last_message,"DARK SIMON UNLOCKED!"));
