@@ -1,0 +1,18 @@
+{
+  "scope": "Source chain for translated static ARM64 code; not an installed game backend",
+  "units": [
+    {"source": "legacy-native.c", "entry": "LekakLegacyInit"},
+    {"source": "demonic-triad.c", "entry": "LekakDuelistsInit"},
+    {"source": "password-shop.c", "rename_entry": "LekakBeforeColorsInit"},
+    {"source": "name-colors.c", "rename_entry": "LekakBeforeObjectivesInit"},
+    {"source": "objectives.c", "rename_entry": "LekakBeforeSanctuaryInit"},
+    {"source": "objectives-button.c"},
+    {"source": "sanctuary.c", "rename_entry": "LekakBeforeMusicInit"},
+    {"source": "legendary-music.c", "entry": "MemoriesModInit"}
+  ],
+  "excluded": ["password-shop-standalone.c"],
+  "entrypoint": "MemoriesModInit",
+  "guest_layout_translation_required": true,
+  "dynamic_loading_on_iphone": false,
+  "game_backend_link_pending": true
+}

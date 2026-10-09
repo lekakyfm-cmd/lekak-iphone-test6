@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build an unsigned iPhone diagnostic IPA on macOS/Xcode.
 
-No ROM, Lekak assets, developer credentials, or executable memory patching.
+No ROM, developer credentials, or executable memory patching.
+Supplied Lekak data is bundled; runtime mod hooks are not yet installed.
 The compiler check can fail without preventing the diagnostic app build.
 """
 import json,os,plistlib,shutil,subprocess,sys,zipfile
@@ -12,6 +13,8 @@ def run(args):
 def build():
     if sys.platform!='darwin':
         raise SystemExit('This build runs on the GitHub macOS runner, not Windows or Linux.')
+    from verify_lekak import verify
+    verify()
     sdk=run(['xcrun','--sdk','iphoneos','--show-sdk-path'])
     if sdk.returncode:raise SystemExit(sdk.stdout)
     compiler=run(['xcrun','--find','clang'])
@@ -47,8 +50,9 @@ def build():
     info['DTPlatformName']='iphoneos'
     (app/'Info.plist').write_bytes(plistlib.dumps(info))
     shutil.copy2(destination/'compiler-check.json',app/'compiler-check.json')
+    shutil.copytree(ROOT/'Resources/Lekak',app/'Lekak',dirs_exist_ok=True)
     sources=[str(ROOT/p) for p in [
-        'App/engine_bridge.c','App/guest_exec.c','App/startup_memory.c','App/disc_loader.c','App/game_memory.c','App/engine_callbacks.c','App/optional_textures.c','Engine/src/pc/memory.c',
+        'App/engine_bridge.c','App/lekak_rules.c','App/audio_ring.c','App/display_snapshot.c','App/xa_audio.c','App/mdec.c','App/spu_reverb.c','App/spu_dsp.c','App/gpu_io.c','App/guest_exec.c','App/startup_memory.c','App/disc_loader.c','App/game_memory.c','App/engine_callbacks.c','App/optional_textures.c','Engine/src/pc/memory.c',
         'Engine/src/pc/rng.c','Engine/src/pc/compat/libgs_ot.c','Engine/src/pc/compat/gte.c',
         'Engine/src/pc/compat/pgxp.c','Engine/src/pc/render/packets.c','Engine/src/pc/render/soft_gpu.c']]
     objects=[]
@@ -59,8 +63,8 @@ def build():
             (destination/'build-log.txt').write_text(compiled.stdout)
             raise SystemExit('Engine component compile failed: '+source+'\n'+compiled.stdout)
         objects.append(str(obj))
-    command=[cc,*flags,'-I'+str(ROOT/'Engine/src'),'-fobjc-arc','-fblocks','-O2','-Wall','-Wextra',str(ROOT/'App/main.m'),*objects,
-             '-framework','UIKit','-framework','Foundation','-framework','CoreGraphics','-framework','UniformTypeIdentifiers','-o',str(app/'LekakProbe')]
+    command=[cc,*flags,'-I'+str(ROOT/'Engine/src'),'-fobjc-arc','-fblocks','-O2','-Wall','-Wextra',str(ROOT/'App/main.m'),str(ROOT/'App/live_game.m'),*objects,
+             '-framework','UIKit','-framework','Foundation','-framework','CoreGraphics','-framework','UniformTypeIdentifiers','-framework','AVFoundation','-framework','QuartzCore','-o',str(app/'LekakProbe')]
     built=run(command)
     (destination/'build-log.txt').write_text(built.stdout)
     if built.returncode:raise SystemExit('The diagnostic app did not compile:\n'+built.stdout)

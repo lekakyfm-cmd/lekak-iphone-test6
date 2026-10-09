@@ -13,7 +13,7 @@ assert 'MAP_FIXED,' not in main and 'mprotect(' not in main
 assert 'UIDocumentPickerDelegate' in main and 'LekakDisc_Load' in main
 assert 'RunDiscExecution' in main and 'entry_execution' in main
 assert 'game_memory_routines' in main
-assert info['CFBundleVersion']=='6'
+assert info['CFBundleVersion']=='9'
 assert 'CheckEngine' in main and 'engine_core' in main
 assert 'CheckTranslation' in main and 'address_adapter' in main
 assert 'native_function_fits_32bits' in main and 'UIApplicationMain' in main
@@ -21,6 +21,8 @@ import hashlib
 provenance=json.loads((root/'Engine/provenance.json').read_text())
 for item in provenance['files']:
     assert hashlib.sha256((root/'Engine'/item['path']).read_bytes()).hexdigest()==item['sha256']
+from verify_lekak import verify
+verify()
 if '--built' in sys.argv:
     app=root/'build/Payload/LekakProbe.app';binary=(app/'LekakProbe').read_bytes()
     assert binary[:4]==b'\xcf\xfa\xed\xfe','Expected a 64-bit Mach-O executable'
@@ -29,4 +31,6 @@ if '--built' in sys.argv:
         assert z.testzip() is None
         assert 'Payload/LekakProbe.app/LekakProbe' in z.namelist()
         assert 'Payload/LekakProbe.app/compiler-check.json' in z.namelist()
+        assert 'Payload/LekakProbe.app/Lekak/mod.json' in z.namelist()
+        assert not any(name.endswith('.o') for name in z.namelist())
 print('Project checks passed'+('; unsigned ARM64 IPA structure passed' if '--built' in sys.argv else '; macOS build still required'))
