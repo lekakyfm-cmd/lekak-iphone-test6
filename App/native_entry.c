@@ -14,6 +14,7 @@
 #include <stdatomic.h>
 #include <setjmp.h>
 #include <string.h>
+#include <stdio.h>
 static atomic_int launched;
 static jmp_buf exit_boundary;
 static int boundary_active;
@@ -29,7 +30,8 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
     if(!disc||!program||!user||disc[0]!='/'||program[0]!='/'||user[0]!='/')return -1;
     if(atomic_exchange(&launched,1))return -2;
     if(setenv("MEMORIES_DISC",disc,1)||setenv("MEMORIES_PROGRAM_DIR",program,1)||
-       setenv("MEMORIES_USER_DIR",user,1)||setenv("MEMORIES_NO_MONITOR","1",1))return -3;
+       setenv("MEMORIES_USER_DIR",user,1)||setenv("MEMORIES_NO_MONITOR","1",1)||
+       setenv("MEMORIES_MODS","1",1)||setenv("MEMORIES_MOD_LEKAKMOD","1",1))return -3;
     Log_Init();
     if(Memories_GuestMap())return -4;
     char why[768];size_t size=0;
@@ -46,10 +48,12 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
         if(id&&!strcmp(id,"Lekakmod"))lekak=i;
     }
     if(lekak<0){Platform_ShowError("Lekak","The bundled Lekak manifest was not found.");return -9;}
-    Mods_SetEnabled(lekak,1);
-    if(!Mods_Enabled(lekak)||Mods_Status(lekak)[0]){
+    /* Restart-required data mods must be enabled before Mods_Load, not
+     * toggled afterwards: a late toggle would run the vanilla game once. */
+    if(!Mods_Enabled(lekak)||!Mods_Active(lekak)||Mods_Failed(lekak)){
         Platform_ShowError("Lekak",Mods_Status(lekak));return -10;
     }
+    if(Mods_Status(lekak)[0])fprintf(stderr,"Lekak mod notes: %s\n",Mods_Status(lekak));
     Text_Build();Cards_Build();Text_SortCards();
     boundary_active=1;
     if(setjmp(exit_boundary)==0){

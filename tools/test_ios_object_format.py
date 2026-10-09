@@ -19,6 +19,14 @@ class PlatformTests(unittest.TestCase):
     def test_accept_device(self):
         self.check(fixture())
 
+    def test_executable_requires_explicit_file_type(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'game';path.write_bytes(fixture(filetype=2))
+            with self.assertRaises(ValueError):check_macho_ios(path)
+            check_macho_ios(path,file_type=2)
+            path.write_bytes(fixture(filetype=2,platform=7))
+            with self.assertRaises(ValueError):check_macho_ios(path,file_type=2)
+
     def test_reject_incompatible(self):
         for data in [fixture(platform=1),fixture(platform=7),
                      fixture(cpu=0x01000007),fixture(filetype=2),

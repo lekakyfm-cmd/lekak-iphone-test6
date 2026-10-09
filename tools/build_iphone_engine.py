@@ -40,8 +40,17 @@ def stage_sources(stage):
     replace_once(stage/'src/pc/platform/platform_common.c',
         'int Platform_HasDesktopGL(void) { return 1; }',
         'int Platform_HasDesktopGL(void) { return 0; }')
+    # Desktop updater launches curl as a subprocess. iOS has no subprocess
+    # service; retain the API with an explicit unsupported result, as Android
+    # already does upstream. Never link the unavailable spawn calls.
+    replace_once(stage/'src/pc/platform/update_net.c',
+        '#elif defined(__ANDROID__)',
+        '#elif defined(__ANDROID__) || defined(MEMORIES_IOS)')
+    replace_once(stage/'src/pc/platform/update_net.c',
+        '"no update check on Android yet"',
+        '"Update through the app installer on mobile"')
     return {str(p.relative_to(stage)):hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in [mods,stage/'src/pc/sdk/libetc.c',stage/'src/pc/platform/platform_common.c']}
+        for p in [mods,stage/'src/pc/sdk/libetc.c',stage/'src/pc/platform/platform_common.c',stage/'src/pc/platform/update_net.c']}
 
 def build(output,jobs):
     if platform.system()!='Darwin' or platform.machine()!='arm64':

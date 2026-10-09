@@ -9,15 +9,15 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SDK=ROOT/'EngineSDK'
 
-def check_macho_ios(path):
+def check_macho_ios(path,file_type=1):
     import struct
     data=path.read_bytes()
     if len(data)<32 or data[:4]!=b'\xcf\xfa\xed\xfe':
         raise ValueError('Not a little-endian Mach-O64 object: '+str(path))
     if struct.unpack_from('<I',data,4)[0]!=0x0100000c:
         raise ValueError('Object is not ARM64: '+str(path))
-    if struct.unpack_from('<I',data,12)[0]!=1:
-        raise ValueError('Mach-O is not a relocatable object: '+str(path))
+    if struct.unpack_from('<I',data,12)[0]!=file_type:
+        raise ValueError('Unexpected Mach-O file type: '+str(path))
     commands,bytes_=struct.unpack_from('<II',data,16)
     end=32+bytes_
     if end>len(data):raise ValueError('Truncated load commands')
