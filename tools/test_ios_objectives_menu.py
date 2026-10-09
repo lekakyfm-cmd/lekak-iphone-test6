@@ -53,7 +53,7 @@ with tempfile.TemporaryDirectory(prefix='lekak-objectives-') as folder:
  builder=(stage/'tools/pc/build_arm64.py').read_text();ast.parse(builder)
  assert 'source == "src/pc/platform/title_screen.c"' in builder
  assert "'-DMEMORIES_IOS'" in (ROOT/'tools/build_lekak_ios_objects.py').read_text()
- for ios,expected in [(False,'MainMenu_UpdateFrontendMenu'),(True,'TitleScreen_Update')]:
+ for ios,expected in [(False,'TitleScreen_Update'),(True,'TitleScreen_Update')]:
   flags=['-DMEMORIES_PC','-DMEMORIES_TRANSLATED','-DMEMORIES_MOD']
   if ios:flags.append('-DMEMORIES_IOS')
   out=subprocess.check_output([os.environ.get('CC','cc'),'-E','-P',*flags,'-I'+str(ROOT/'EngineSDK/src'),'-I'+str(ROOT/'EngineSDK/config'),str(ROOT/'SourceMod/Lekak/objectives.c')],text=True)

@@ -10996,9 +10996,4267 @@
   "library": "demonic-triad",
   "min_api": 5,
   "passwords": {
-    "Magician of Black Chaos": {
-      "password": "00000001",
+    "1": {
       "starchips": 4000
+    },
+    "2": {
+      "starchips": 500
+    },
+    "3": {
+      "starchips": 500
+    },
+    "4": {
+      "starchips": 500
+    },
+    "5": {
+      "starchips": 500
+    },
+    "6": {
+      "starchips": 500
+    },
+    "7": {
+      "starchips": 500
+    },
+    "8": {
+      "starchips": 500
+    },
+    "9": {
+      "starchips": 500
+    },
+    "10": {
+      "starchips": 500
+    },
+    "11": {
+      "starchips": 1000
+    },
+    "12": {
+      "starchips": 1000
+    },
+    "13": {
+      "starchips": 500
+    },
+    "14": {
+      "starchips": 1000
+    },
+    "15": {
+      "starchips": 1000
+    },
+    "16": {
+      "starchips": 500
+    },
+    "17": {
+      "starchips": 500
+    },
+    "18": {
+      "starchips": 500
+    },
+    "19": {
+      "starchips": 500
+    },
+    "20": {
+      "starchips": 500
+    },
+    "21": {
+      "starchips": 500
+    },
+    "22": {
+      "starchips": 2000
+    },
+    "23": {
+      "starchips": 500
+    },
+    "24": {
+      "starchips": 500
+    },
+    "25": {
+      "starchips": 500
+    },
+    "26": {
+      "starchips": 1000
+    },
+    "27": {
+      "starchips": 500
+    },
+    "28": {
+      "starchips": 500
+    },
+    "29": {
+      "starchips": 500
+    },
+    "30": {
+      "starchips": 500
+    },
+    "31": {
+      "starchips": 500
+    },
+    "32": {
+      "starchips": 1000
+    },
+    "33": {
+      "starchips": 2000
+    },
+    "34": {
+      "starchips": 500
+    },
+    "35": {
+      "starchips": 2000
+    },
+    "36": {
+      "starchips": 500
+    },
+    "37": {
+      "starchips": 4000
+    },
+    "38": {
+      "starchips": 2000
+    },
+    "39": {
+      "starchips": 1000
+    },
+    "40": {
+      "starchips": 500
+    },
+    "41": {
+      "starchips": 500
+    },
+    "42": {
+      "starchips": 500
+    },
+    "43": {
+      "starchips": 500
+    },
+    "44": {
+      "starchips": 1000
+    },
+    "45": {
+      "starchips": 500
+    },
+    "46": {
+      "starchips": 500
+    },
+    "47": {
+      "starchips": 500
+    },
+    "48": {
+      "starchips": 500
+    },
+    "49": {
+      "starchips": 500
+    },
+    "50": {
+      "starchips": 500
+    },
+    "51": {
+      "starchips": 500
+    },
+    "52": {
+      "starchips": 500
+    },
+    "53": {
+      "starchips": 500
+    },
+    "54": {
+      "starchips": 500
+    },
+    "55": {
+      "starchips": 500
+    },
+    "56": {
+      "starchips": 500
+    },
+    "57": {
+      "starchips": 4000
+    },
+    "58": {
+      "starchips": 500
+    },
+    "59": {
+      "starchips": 500
+    },
+    "60": {
+      "starchips": 1000
+    },
+    "61": {
+      "starchips": 500
+    },
+    "62": {
+      "starchips": 500
+    },
+    "63": {
+      "starchips": 1000
+    },
+    "64": {
+      "starchips": 500
+    },
+    "65": {
+      "starchips": 500
+    },
+    "66": {
+      "starchips": 500
+    },
+    "67": {
+      "starchips": 8000
+    },
+    "68": {
+      "starchips": 1000
+    },
+    "69": {
+      "starchips": 2000
+    },
+    "70": {
+      "starchips": 500
+    },
+    "71": {
+      "starchips": 500
+    },
+    "72": {
+      "starchips": 500
+    },
+    "73": {
+      "starchips": 1000
+    },
+    "74": {
+      "starchips": 500
+    },
+    "75": {
+      "starchips": 500
+    },
+    "76": {
+      "starchips": 500
+    },
+    "77": {
+      "starchips": 500
+    },
+    "78": {
+      "starchips": 1000
+    },
+    "79": {
+      "starchips": 1000
+    },
+    "80": {
+      "starchips": 500
+    },
+    "81": {
+      "starchips": 1000
+    },
+    "82": {
+      "starchips": 2000
+    },
+    "83": {
+      "starchips": 500
+    },
+    "84": {
+      "starchips": 500
+    },
+    "85": {
+      "starchips": 1000
+    },
+    "86": {
+      "starchips": 500
+    },
+    "87": {
+      "starchips": 1000
+    },
+    "88": {
+      "starchips": 500
+    },
+    "89": {
+      "starchips": 500
+    },
+    "90": {
+      "starchips": 1000
+    },
+    "91": {
+      "starchips": 500
+    },
+    "92": {
+      "starchips": 1000
+    },
+    "93": {
+      "starchips": 500
+    },
+    "94": {
+      "starchips": 1000
+    },
+    "95": {
+      "starchips": 500
+    },
+    "96": {
+      "starchips": 500
+    },
+    "97": {
+      "starchips": 1000
+    },
+    "98": {
+      "starchips": 500
+    },
+    "99": {
+      "starchips": 1000
+    },
+    "100": {
+      "starchips": 500
+    },
+    "101": {
+      "starchips": 500
+    },
+    "102": {
+      "starchips": 500
+    },
+    "103": {
+      "starchips": 500
+    },
+    "104": {
+      "starchips": 500
+    },
+    "105": {
+      "starchips": 500
+    },
+    "106": {
+      "starchips": 1000
+    },
+    "107": {
+      "starchips": 500
+    },
+    "108": {
+      "starchips": 500
+    },
+    "109": {
+      "starchips": 500
+    },
+    "110": {
+      "starchips": 500
+    },
+    "111": {
+      "starchips": 1000
+    },
+    "112": {
+      "starchips": 500
+    },
+    "113": {
+      "starchips": 500
+    },
+    "114": {
+      "starchips": 500
+    },
+    "115": {
+      "starchips": 500
+    },
+    "116": {
+      "starchips": 500
+    },
+    "117": {
+      "starchips": 500
+    },
+    "118": {
+      "starchips": 500
+    },
+    "119": {
+      "starchips": 500
+    },
+    "120": {
+      "starchips": 500
+    },
+    "121": {
+      "starchips": 500
+    },
+    "122": {
+      "starchips": 500
+    },
+    "123": {
+      "starchips": 500
+    },
+    "124": {
+      "starchips": 1000
+    },
+    "125": {
+      "starchips": 500
+    },
+    "126": {
+      "starchips": 1000
+    },
+    "127": {
+      "starchips": 1000
+    },
+    "128": {
+      "starchips": 500
+    },
+    "129": {
+      "starchips": 500
+    },
+    "130": {
+      "starchips": 500
+    },
+    "131": {
+      "starchips": 1000
+    },
+    "132": {
+      "starchips": 500
+    },
+    "133": {
+      "starchips": 500
+    },
+    "134": {
+      "starchips": 500
+    },
+    "135": {
+      "starchips": 500
+    },
+    "136": {
+      "starchips": 500
+    },
+    "137": {
+      "starchips": 500
+    },
+    "138": {
+      "starchips": 500
+    },
+    "139": {
+      "starchips": 500
+    },
+    "140": {
+      "starchips": 500
+    },
+    "141": {
+      "starchips": 500
+    },
+    "142": {
+      "starchips": 500
+    },
+    "143": {
+      "starchips": 500
+    },
+    "144": {
+      "starchips": 500
+    },
+    "145": {
+      "starchips": 500
+    },
+    "146": {
+      "starchips": 500
+    },
+    "147": {
+      "starchips": 500
+    },
+    "148": {
+      "starchips": 500
+    },
+    "149": {
+      "starchips": 500
+    },
+    "150": {
+      "starchips": 1000
+    },
+    "151": {
+      "starchips": 500
+    },
+    "152": {
+      "starchips": 500
+    },
+    "153": {
+      "starchips": 500
+    },
+    "154": {
+      "starchips": 500
+    },
+    "155": {
+      "starchips": 500
+    },
+    "156": {
+      "starchips": 500
+    },
+    "157": {
+      "starchips": 500
+    },
+    "158": {
+      "starchips": 500
+    },
+    "159": {
+      "starchips": 500
+    },
+    "160": {
+      "starchips": 500
+    },
+    "161": {
+      "starchips": 500
+    },
+    "162": {
+      "starchips": 500
+    },
+    "163": {
+      "starchips": 500
+    },
+    "164": {
+      "starchips": 500
+    },
+    "165": {
+      "starchips": 500
+    },
+    "166": {
+      "starchips": 500
+    },
+    "167": {
+      "starchips": 500
+    },
+    "168": {
+      "starchips": 500
+    },
+    "169": {
+      "starchips": 500
+    },
+    "170": {
+      "starchips": 500
+    },
+    "171": {
+      "starchips": 500
+    },
+    "172": {
+      "starchips": 500
+    },
+    "173": {
+      "starchips": 500
+    },
+    "174": {
+      "starchips": 500
+    },
+    "175": {
+      "starchips": 500
+    },
+    "176": {
+      "starchips": 500
+    },
+    "177": {
+      "starchips": 500
+    },
+    "178": {
+      "starchips": 500
+    },
+    "179": {
+      "starchips": 500
+    },
+    "180": {
+      "starchips": 500
+    },
+    "181": {
+      "starchips": 500
+    },
+    "182": {
+      "starchips": 500
+    },
+    "183": {
+      "starchips": 500
+    },
+    "184": {
+      "starchips": 500
+    },
+    "185": {
+      "starchips": 500
+    },
+    "186": {
+      "starchips": 500
+    },
+    "187": {
+      "starchips": 500
+    },
+    "188": {
+      "starchips": 500
+    },
+    "189": {
+      "starchips": 500
+    },
+    "190": {
+      "starchips": 500
+    },
+    "191": {
+      "starchips": 500
+    },
+    "192": {
+      "starchips": 500
+    },
+    "193": {
+      "starchips": 500
+    },
+    "194": {
+      "starchips": 500
+    },
+    "195": {
+      "starchips": 500
+    },
+    "196": {
+      "starchips": 500
+    },
+    "197": {
+      "starchips": 500
+    },
+    "198": {
+      "starchips": 500
+    },
+    "199": {
+      "starchips": 500
+    },
+    "200": {
+      "starchips": 500
+    },
+    "201": {
+      "starchips": 500
+    },
+    "202": {
+      "starchips": 500
+    },
+    "203": {
+      "starchips": 500
+    },
+    "204": {
+      "starchips": 1000
+    },
+    "205": {
+      "starchips": 500
+    },
+    "206": {
+      "starchips": 500
+    },
+    "207": {
+      "starchips": 500
+    },
+    "208": {
+      "starchips": 500
+    },
+    "209": {
+      "starchips": 500
+    },
+    "210": {
+      "starchips": 500
+    },
+    "211": {
+      "starchips": 500
+    },
+    "212": {
+      "starchips": 500
+    },
+    "213": {
+      "starchips": 500
+    },
+    "214": {
+      "starchips": 500
+    },
+    "215": {
+      "starchips": 500
+    },
+    "216": {
+      "starchips": 500
+    },
+    "217": {
+      "starchips": 8000
+    },
+    "218": {
+      "starchips": 500
+    },
+    "219": {
+      "starchips": 500
+    },
+    "220": {
+      "starchips": 500
+    },
+    "221": {
+      "starchips": 500
+    },
+    "222": {
+      "starchips": 500
+    },
+    "223": {
+      "starchips": 2000
+    },
+    "224": {
+      "starchips": 500
+    },
+    "225": {
+      "starchips": 500
+    },
+    "226": {
+      "starchips": 500
+    },
+    "227": {
+      "starchips": 500
+    },
+    "228": {
+      "starchips": 500
+    },
+    "229": {
+      "starchips": 500
+    },
+    "230": {
+      "starchips": 500
+    },
+    "231": {
+      "starchips": 500
+    },
+    "232": {
+      "starchips": 500
+    },
+    "233": {
+      "starchips": 500
+    },
+    "234": {
+      "starchips": 1000
+    },
+    "235": {
+      "starchips": 500
+    },
+    "236": {
+      "starchips": 500
+    },
+    "237": {
+      "starchips": 500
+    },
+    "238": {
+      "starchips": 500
+    },
+    "239": {
+      "starchips": 500
+    },
+    "240": {
+      "starchips": 500
+    },
+    "241": {
+      "starchips": 500
+    },
+    "242": {
+      "starchips": 500
+    },
+    "243": {
+      "starchips": 500
+    },
+    "244": {
+      "starchips": 500
+    },
+    "245": {
+      "starchips": 500
+    },
+    "246": {
+      "starchips": 500
+    },
+    "247": {
+      "starchips": 500
+    },
+    "248": {
+      "starchips": 500
+    },
+    "249": {
+      "starchips": 500
+    },
+    "250": {
+      "starchips": 500
+    },
+    "251": {
+      "starchips": 500
+    },
+    "252": {
+      "starchips": 500
+    },
+    "253": {
+      "starchips": 500
+    },
+    "254": {
+      "starchips": 500
+    },
+    "255": {
+      "starchips": 500
+    },
+    "256": {
+      "starchips": 500
+    },
+    "257": {
+      "starchips": 500
+    },
+    "258": {
+      "starchips": 500
+    },
+    "259": {
+      "starchips": 500
+    },
+    "260": {
+      "starchips": 500
+    },
+    "261": {
+      "starchips": 500
+    },
+    "262": {
+      "starchips": 500
+    },
+    "263": {
+      "starchips": 500
+    },
+    "264": {
+      "starchips": 500
+    },
+    "265": {
+      "starchips": 500
+    },
+    "266": {
+      "starchips": 500
+    },
+    "267": {
+      "starchips": 500
+    },
+    "268": {
+      "starchips": 500
+    },
+    "269": {
+      "starchips": 500
+    },
+    "270": {
+      "starchips": 500
+    },
+    "271": {
+      "starchips": 500
+    },
+    "272": {
+      "starchips": 500
+    },
+    "273": {
+      "starchips": 500
+    },
+    "274": {
+      "starchips": 500
+    },
+    "275": {
+      "starchips": 500
+    },
+    "276": {
+      "starchips": 500
+    },
+    "277": {
+      "starchips": 500
+    },
+    "278": {
+      "starchips": 500
+    },
+    "279": {
+      "starchips": 500
+    },
+    "280": {
+      "starchips": 500
+    },
+    "281": {
+      "starchips": 500
+    },
+    "282": {
+      "starchips": 500
+    },
+    "283": {
+      "starchips": 500
+    },
+    "284": {
+      "starchips": 500
+    },
+    "285": {
+      "starchips": 500
+    },
+    "286": {
+      "starchips": 500
+    },
+    "287": {
+      "starchips": 500
+    },
+    "288": {
+      "starchips": 500
+    },
+    "289": {
+      "starchips": 500
+    },
+    "290": {
+      "starchips": 500
+    },
+    "291": {
+      "starchips": 500
+    },
+    "292": {
+      "starchips": 500
+    },
+    "293": {
+      "starchips": 500
+    },
+    "294": {
+      "starchips": 500
+    },
+    "295": {
+      "starchips": 500
+    },
+    "296": {
+      "starchips": 500
+    },
+    "297": {
+      "starchips": 500
+    },
+    "298": {
+      "starchips": 500
+    },
+    "299": {
+      "starchips": 500
+    },
+    "300": {
+      "starchips": 500
+    },
+    "301": {
+      "starchips": 500
+    },
+    "302": {
+      "starchips": 500
+    },
+    "303": {
+      "starchips": 500
+    },
+    "304": {
+      "starchips": 500
+    },
+    "305": {
+      "starchips": 500
+    },
+    "306": {
+      "starchips": 500
+    },
+    "307": {
+      "starchips": 500
+    },
+    "308": {
+      "starchips": 500
+    },
+    "309": {
+      "starchips": 500
+    },
+    "310": {
+      "starchips": 500
+    },
+    "311": {
+      "starchips": 500
+    },
+    "312": {
+      "starchips": 500
+    },
+    "313": {
+      "starchips": 500
+    },
+    "314": {
+      "starchips": 500
+    },
+    "315": {
+      "starchips": 500
+    },
+    "316": {
+      "starchips": 500
+    },
+    "317": {
+      "starchips": 500
+    },
+    "318": {
+      "starchips": 500
+    },
+    "319": {
+      "starchips": 500
+    },
+    "320": {
+      "starchips": 500
+    },
+    "321": {
+      "starchips": 500
+    },
+    "322": {
+      "starchips": 500
+    },
+    "323": {
+      "starchips": 500
+    },
+    "324": {
+      "starchips": 500
+    },
+    "325": {
+      "starchips": 500
+    },
+    "326": {
+      "starchips": 500
+    },
+    "327": {
+      "starchips": 500
+    },
+    "328": {
+      "starchips": 500
+    },
+    "329": {
+      "starchips": 500
+    },
+    "330": {
+      "starchips": 500
+    },
+    "331": {
+      "starchips": 500
+    },
+    "332": {
+      "starchips": 500
+    },
+    "333": {
+      "starchips": 500
+    },
+    "334": {
+      "starchips": 500
+    },
+    "335": {
+      "starchips": 500
+    },
+    "336": {
+      "starchips": 500
+    },
+    "337": {
+      "starchips": 500
+    },
+    "338": {
+      "starchips": 500
+    },
+    "339": {
+      "starchips": 500
+    },
+    "340": {
+      "starchips": 500
+    },
+    "341": {
+      "starchips": 500
+    },
+    "342": {
+      "starchips": 500
+    },
+    "343": {
+      "starchips": 500
+    },
+    "344": {
+      "starchips": 500
+    },
+    "345": {
+      "starchips": 500
+    },
+    "346": {
+      "starchips": 500
+    },
+    "347": {
+      "starchips": 500
+    },
+    "348": {
+      "starchips": 500
+    },
+    "349": {
+      "starchips": 500
+    },
+    "350": {
+      "starchips": 500
+    },
+    "351": {
+      "starchips": 500
+    },
+    "352": {
+      "starchips": 500
+    },
+    "353": {
+      "starchips": 500
+    },
+    "354": {
+      "starchips": 500
+    },
+    "355": {
+      "starchips": 500
+    },
+    "356": {
+      "starchips": 2000,
+      "password": "00000005"
+    },
+    "357": {
+      "starchips": 1000
+    },
+    "358": {
+      "starchips": 2000
+    },
+    "359": {
+      "starchips": 500
+    },
+    "360": {
+      "starchips": 4000,
+      "password": "00000006"
+    },
+    "361": {
+      "starchips": 500
+    },
+    "362": {
+      "starchips": 500
+    },
+    "363": {
+      "starchips": 500
+    },
+    "364": {
+      "starchips": 4000,
+      "password": "00000007"
+    },
+    "365": {
+      "starchips": 2000,
+      "password": "00000008"
+    },
+    "366": {
+      "starchips": 500
+    },
+    "367": {
+      "starchips": 2000
+    },
+    "368": {
+      "starchips": 1000
+    },
+    "369": {
+      "starchips": 1000
+    },
+    "370": {
+      "starchips": 2000
+    },
+    "371": {
+      "starchips": 4000
+    },
+    "372": {
+      "starchips": 2000
+    },
+    "373": {
+      "starchips": 2000
+    },
+    "374": {
+      "starchips": 16000,
+      "password": "00000009"
+    },
+    "375": {
+      "starchips": 1000
+    },
+    "376": {
+      "starchips": 1000
+    },
+    "377": {
+      "starchips": 1000
+    },
+    "378": {
+      "starchips": 1000
+    },
+    "379": {
+      "starchips": 1000
+    },
+    "380": {
+      "starchips": 32000,
+      "password": "00000010"
+    },
+    "381": {
+      "starchips": 500
+    },
+    "382": {
+      "starchips": 1000
+    },
+    "383": {
+      "starchips": 1000
+    },
+    "384": {
+      "starchips": 500
+    },
+    "385": {
+      "starchips": 2000
+    },
+    "386": {
+      "starchips": 1000
+    },
+    "387": {
+      "starchips": 500
+    },
+    "388": {
+      "starchips": 1000
+    },
+    "389": {
+      "starchips": 1000
+    },
+    "390": {
+      "starchips": 2000
+    },
+    "391": {
+      "starchips": 4000
+    },
+    "392": {
+      "starchips": 4000
+    },
+    "393": {
+      "starchips": 500
+    },
+    "394": {
+      "starchips": 500
+    },
+    "395": {
+      "starchips": 500
+    },
+    "396": {
+      "starchips": 1000
+    },
+    "397": {
+      "starchips": 500
+    },
+    "398": {
+      "starchips": 500
+    },
+    "399": {
+      "starchips": 500
+    },
+    "400": {
+      "starchips": 1000
+    },
+    "401": {
+      "starchips": 2000
+    },
+    "402": {
+      "starchips": 500
+    },
+    "403": {
+      "starchips": 1000
+    },
+    "404": {
+      "starchips": 500
+    },
+    "405": {
+      "starchips": 500
+    },
+    "406": {
+      "starchips": 500
+    },
+    "407": {
+      "starchips": 2000
+    },
+    "408": {
+      "starchips": 1000
+    },
+    "409": {
+      "starchips": 1000
+    },
+    "410": {
+      "starchips": 500
+    },
+    "411": {
+      "starchips": 500
+    },
+    "412": {
+      "starchips": 500
+    },
+    "413": {
+      "starchips": 500
+    },
+    "414": {
+      "starchips": 500
+    },
+    "415": {
+      "starchips": 1000
+    },
+    "416": {
+      "starchips": 500
+    },
+    "417": {
+      "starchips": 500
+    },
+    "418": {
+      "starchips": 500
+    },
+    "419": {
+      "starchips": 1000
+    },
+    "420": {
+      "starchips": 500
+    },
+    "421": {
+      "starchips": 500
+    },
+    "422": {
+      "starchips": 500
+    },
+    "423": {
+      "starchips": 1000
+    },
+    "424": {
+      "starchips": 1000
+    },
+    "425": {
+      "starchips": 1000
+    },
+    "426": {
+      "starchips": 1000
+    },
+    "427": {
+      "starchips": 2000
+    },
+    "428": {
+      "starchips": 500
+    },
+    "429": {
+      "starchips": 500
+    },
+    "430": {
+      "starchips": 500
+    },
+    "431": {
+      "starchips": 500
+    },
+    "432": {
+      "starchips": 500
+    },
+    "433": {
+      "starchips": 500
+    },
+    "434": {
+      "starchips": 1000
+    },
+    "435": {
+      "starchips": 500
+    },
+    "436": {
+      "starchips": 500
+    },
+    "437": {
+      "starchips": 1000
+    },
+    "438": {
+      "starchips": 1000
+    },
+    "439": {
+      "starchips": 1000
+    },
+    "440": {
+      "starchips": 1000
+    },
+    "441": {
+      "starchips": 1000
+    },
+    "442": {
+      "starchips": 2000
+    },
+    "443": {
+      "starchips": 1000
+    },
+    "444": {
+      "starchips": 500
+    },
+    "445": {
+      "starchips": 500
+    },
+    "446": {
+      "starchips": 500
+    },
+    "447": {
+      "starchips": 1000
+    },
+    "448": {
+      "starchips": 1000
+    },
+    "449": {
+      "starchips": 500
+    },
+    "450": {
+      "starchips": 500
+    },
+    "451": {
+      "starchips": 500
+    },
+    "452": {
+      "starchips": 500
+    },
+    "453": {
+      "starchips": 1000
+    },
+    "454": {
+      "starchips": 500
+    },
+    "455": {
+      "starchips": 500
+    },
+    "456": {
+      "starchips": 500
+    },
+    "457": {
+      "starchips": 500
+    },
+    "458": {
+      "starchips": 1000
+    },
+    "459": {
+      "starchips": 500
+    },
+    "460": {
+      "starchips": 500
+    },
+    "461": {
+      "starchips": 500
+    },
+    "462": {
+      "starchips": 500
+    },
+    "463": {
+      "starchips": 500
+    },
+    "464": {
+      "starchips": 1000
+    },
+    "465": {
+      "starchips": 2000
+    },
+    "466": {
+      "starchips": 1000
+    },
+    "467": {
+      "starchips": 2000
+    },
+    "468": {
+      "starchips": 500
+    },
+    "469": {
+      "starchips": 500
+    },
+    "470": {
+      "starchips": 500
+    },
+    "471": {
+      "starchips": 2000
+    },
+    "472": {
+      "starchips": 2000
+    },
+    "473": {
+      "starchips": 1000
+    },
+    "474": {
+      "starchips": 500
+    },
+    "475": {
+      "starchips": 500
+    },
+    "476": {
+      "starchips": 500
+    },
+    "477": {
+      "starchips": 500
+    },
+    "478": {
+      "starchips": 500
+    },
+    "479": {
+      "starchips": 500
+    },
+    "480": {
+      "starchips": 500
+    },
+    "481": {
+      "starchips": 500
+    },
+    "482": {
+      "starchips": 1000
+    },
+    "483": {
+      "starchips": 1000
+    },
+    "484": {
+      "starchips": 500
+    },
+    "485": {
+      "starchips": 500
+    },
+    "486": {
+      "starchips": 500
+    },
+    "487": {
+      "starchips": 1000
+    },
+    "488": {
+      "starchips": 500
+    },
+    "489": {
+      "starchips": 500
+    },
+    "490": {
+      "starchips": 500
+    },
+    "491": {
+      "starchips": 1000
+    },
+    "492": {
+      "starchips": 500
+    },
+    "493": {
+      "starchips": 1000
+    },
+    "494": {
+      "starchips": 1000
+    },
+    "495": {
+      "starchips": 1000
+    },
+    "496": {
+      "starchips": 500
+    },
+    "497": {
+      "starchips": 500
+    },
+    "498": {
+      "starchips": 1000
+    },
+    "499": {
+      "starchips": 500
+    },
+    "500": {
+      "starchips": 1000
+    },
+    "501": {
+      "starchips": 500
+    },
+    "502": {
+      "starchips": 500
+    },
+    "503": {
+      "starchips": 500
+    },
+    "504": {
+      "starchips": 500
+    },
+    "505": {
+      "starchips": 500
+    },
+    "506": {
+      "starchips": 500
+    },
+    "507": {
+      "starchips": 1000
+    },
+    "508": {
+      "starchips": 1000
+    },
+    "509": {
+      "starchips": 2000
+    },
+    "510": {
+      "starchips": 500
+    },
+    "511": {
+      "starchips": 500
+    },
+    "512": {
+      "starchips": 500
+    },
+    "513": {
+      "starchips": 1000
+    },
+    "514": {
+      "starchips": 500
+    },
+    "515": {
+      "starchips": 500
+    },
+    "516": {
+      "starchips": 500
+    },
+    "517": {
+      "starchips": 500
+    },
+    "518": {
+      "starchips": 500
+    },
+    "519": {
+      "starchips": 1000
+    },
+    "520": {
+      "starchips": 1000
+    },
+    "521": {
+      "starchips": 1000
+    },
+    "522": {
+      "starchips": 1000
+    },
+    "523": {
+      "starchips": 1000
+    },
+    "524": {
+      "starchips": 500
+    },
+    "525": {
+      "starchips": 500
+    },
+    "526": {
+      "starchips": 1000
+    },
+    "527": {
+      "starchips": 500
+    },
+    "528": {
+      "starchips": 1000
+    },
+    "529": {
+      "starchips": 2000
+    },
+    "530": {
+      "starchips": 500
+    },
+    "531": {
+      "starchips": 2000
+    },
+    "532": {
+      "starchips": 1000
+    },
+    "533": {
+      "starchips": 1000
+    },
+    "534": {
+      "starchips": 500
+    },
+    "535": {
+      "starchips": 500
+    },
+    "536": {
+      "starchips": 500
+    },
+    "537": {
+      "starchips": 500
+    },
+    "538": {
+      "starchips": 500
+    },
+    "539": {
+      "starchips": 500
+    },
+    "540": {
+      "starchips": 500
+    },
+    "541": {
+      "starchips": 500
+    },
+    "542": {
+      "starchips": 500
+    },
+    "543": {
+      "starchips": 500
+    },
+    "544": {
+      "starchips": 500
+    },
+    "545": {
+      "starchips": 1000
+    },
+    "546": {
+      "starchips": 500
+    },
+    "547": {
+      "starchips": 500
+    },
+    "548": {
+      "starchips": 500
+    },
+    "549": {
+      "starchips": 500
+    },
+    "550": {
+      "starchips": 500
+    },
+    "551": {
+      "starchips": 1000
+    },
+    "552": {
+      "starchips": 500
+    },
+    "553": {
+      "starchips": 500
+    },
+    "554": {
+      "starchips": 1000
+    },
+    "555": {
+      "starchips": 1000
+    },
+    "556": {
+      "starchips": 500
+    },
+    "557": {
+      "starchips": 500
+    },
+    "558": {
+      "starchips": 500
+    },
+    "559": {
+      "starchips": 500
+    },
+    "560": {
+      "starchips": 500
+    },
+    "561": {
+      "starchips": 500
+    },
+    "562": {
+      "starchips": 500
+    },
+    "563": {
+      "starchips": 500
+    },
+    "564": {
+      "starchips": 2000
+    },
+    "565": {
+      "starchips": 2000
+    },
+    "566": {
+      "starchips": 500
+    },
+    "567": {
+      "starchips": 500
+    },
+    "568": {
+      "starchips": 500
+    },
+    "569": {
+      "starchips": 500
+    },
+    "570": {
+      "starchips": 500
+    },
+    "571": {
+      "starchips": 2000
+    },
+    "572": {
+      "starchips": 2000
+    },
+    "573": {
+      "starchips": 500
+    },
+    "574": {
+      "starchips": 500
+    },
+    "575": {
+      "starchips": 1000
+    },
+    "576": {
+      "starchips": 500
+    },
+    "577": {
+      "starchips": 1000
+    },
+    "578": {
+      "starchips": 500
+    },
+    "579": {
+      "starchips": 500
+    },
+    "580": {
+      "starchips": 500
+    },
+    "581": {
+      "starchips": 500
+    },
+    "582": {
+      "starchips": 1000
+    },
+    "583": {
+      "starchips": 500
+    },
+    "584": {
+      "starchips": 500
+    },
+    "585": {
+      "starchips": 500
+    },
+    "586": {
+      "starchips": 500
+    },
+    "587": {
+      "starchips": 500
+    },
+    "588": {
+      "starchips": 500
+    },
+    "589": {
+      "starchips": 500
+    },
+    "590": {
+      "starchips": 500
+    },
+    "591": {
+      "starchips": 500
+    },
+    "592": {
+      "starchips": 500
+    },
+    "593": {
+      "starchips": 500
+    },
+    "594": {
+      "starchips": 1000
+    },
+    "595": {
+      "starchips": 500
+    },
+    "596": {
+      "starchips": 1000
+    },
+    "597": {
+      "starchips": 500
+    },
+    "598": {
+      "starchips": 500
+    },
+    "599": {
+      "starchips": 1000
+    },
+    "600": {
+      "starchips": 500
+    },
+    "601": {
+      "starchips": 500
+    },
+    "602": {
+      "starchips": 500
+    },
+    "603": {
+      "starchips": 500
+    },
+    "604": {
+      "starchips": 500
+    },
+    "605": {
+      "starchips": 500
+    },
+    "606": {
+      "starchips": 500
+    },
+    "607": {
+      "starchips": 500
+    },
+    "608": {
+      "starchips": 500
+    },
+    "609": {
+      "starchips": 500
+    },
+    "610": {
+      "starchips": 500
+    },
+    "611": {
+      "starchips": 500
+    },
+    "612": {
+      "starchips": 500
+    },
+    "613": {
+      "starchips": 4000
+    },
+    "614": {
+      "starchips": 1000
+    },
+    "615": {
+      "starchips": 500
+    },
+    "616": {
+      "starchips": 500
+    },
+    "617": {
+      "starchips": 1000
+    },
+    "618": {
+      "starchips": 1000
+    },
+    "619": {
+      "starchips": 1000
+    },
+    "620": {
+      "starchips": 500
+    },
+    "621": {
+      "starchips": 1000
+    },
+    "622": {
+      "starchips": 1000
+    },
+    "623": {
+      "starchips": 500
+    },
+    "624": {
+      "starchips": 1000
+    },
+    "625": {
+      "starchips": 1000
+    },
+    "626": {
+      "starchips": 500
+    },
+    "627": {
+      "starchips": 1000
+    },
+    "628": {
+      "starchips": 500
+    },
+    "629": {
+      "starchips": 500
+    },
+    "630": {
+      "starchips": 500
+    },
+    "631": {
+      "starchips": 500
+    },
+    "632": {
+      "starchips": 1000
+    },
+    "633": {
+      "starchips": 500
+    },
+    "634": {
+      "starchips": 500
+    },
+    "635": {
+      "starchips": 500
+    },
+    "636": {
+      "starchips": 1000
+    },
+    "637": {
+      "starchips": 500
+    },
+    "638": {
+      "starchips": 1000
+    },
+    "639": {
+      "starchips": 1000
+    },
+    "640": {
+      "starchips": 500
+    },
+    "641": {
+      "starchips": 500
+    },
+    "642": {
+      "starchips": 500
+    },
+    "643": {
+      "starchips": 500
+    },
+    "644": {
+      "starchips": 500
+    },
+    "645": {
+      "starchips": 1000
+    },
+    "646": {
+      "starchips": 500
+    },
+    "647": {
+      "starchips": 500
+    },
+    "648": {
+      "starchips": 1000
+    },
+    "649": {
+      "starchips": 500
+    },
+    "650": {
+      "starchips": 1000
+    },
+    "651": {
+      "starchips": 500
+    },
+    "652": {
+      "starchips": 500
+    },
+    "653": {
+      "starchips": 500
+    },
+    "654": {
+      "starchips": 500
+    },
+    "655": {
+      "starchips": 500
+    },
+    "656": {
+      "starchips": 500
+    },
+    "657": {
+      "starchips": 500
+    },
+    "658": {
+      "starchips": 500
+    },
+    "659": {
+      "starchips": 500
+    },
+    "660": {
+      "starchips": 500
+    },
+    "661": {
+      "starchips": 500
+    },
+    "662": {
+      "starchips": 500
+    },
+    "663": {
+      "starchips": 500
+    },
+    "664": {
+      "starchips": 500
+    },
+    "665": {
+      "starchips": 500
+    },
+    "666": {
+      "starchips": 500
+    },
+    "667": {
+      "starchips": 500
+    },
+    "668": {
+      "starchips": 500
+    },
+    "669": {
+      "starchips": 500
+    },
+    "670": {
+      "starchips": 500
+    },
+    "671": {
+      "starchips": 500
+    },
+    "672": {
+      "starchips": 500
+    },
+    "673": {
+      "starchips": 500
+    },
+    "674": {
+      "starchips": 500
+    },
+    "675": {
+      "starchips": 500
+    },
+    "676": {
+      "starchips": 500
+    },
+    "677": {
+      "starchips": 500
+    },
+    "678": {
+      "starchips": 500
+    },
+    "679": {
+      "starchips": 500
+    },
+    "680": {
+      "starchips": 500
+    },
+    "681": {
+      "starchips": 500
+    },
+    "682": {
+      "starchips": 500
+    },
+    "683": {
+      "starchips": 500
+    },
+    "684": {
+      "starchips": 500
+    },
+    "685": {
+      "starchips": 500
+    },
+    "686": {
+      "starchips": 500
+    },
+    "687": {
+      "starchips": 500
+    },
+    "688": {
+      "starchips": 500
+    },
+    "689": {
+      "starchips": 500
+    },
+    "690": {
+      "starchips": 500
+    },
+    "691": {
+      "starchips": 500
+    },
+    "692": {
+      "starchips": 500
+    },
+    "693": {
+      "starchips": 500
+    },
+    "694": {
+      "starchips": 500
+    },
+    "695": {
+      "starchips": 500
+    },
+    "696": {
+      "starchips": 500
+    },
+    "697": {
+      "starchips": 500
+    },
+    "698": {
+      "starchips": 500
+    },
+    "699": {
+      "starchips": 500
+    },
+    "700": {
+      "starchips": 500
+    },
+    "701": {
+      "starchips": 1000,
+      "password": "00000011"
+    },
+    "702": {
+      "starchips": 1000,
+      "password": "00000012"
+    },
+    "703": {
+      "starchips": 4000,
+      "password": "00000013"
+    },
+    "704": {
+      "starchips": 2000,
+      "password": "00000014"
+    },
+    "705": {
+      "starchips": 4000,
+      "password": "00000015"
+    },
+    "706": {
+      "starchips": 2000,
+      "password": "00000016"
+    },
+    "707": {
+      "starchips": 4000
+    },
+    "708": {
+      "starchips": 4000,
+      "password": "00000017"
+    },
+    "709": {
+      "starchips": 2000,
+      "password": "00000018"
+    },
+    "710": {
+      "starchips": 4000,
+      "password": "00000019"
+    },
+    "711": {
+      "starchips": 2000
+    },
+    "712": {
+      "starchips": 1000
+    },
+    "713": {
+      "starchips": 8000,
+      "password": "00000020"
+    },
+    "714": {
+      "starchips": 2000
+    },
+    "715": {
+      "starchips": 1000,
+      "password": "00000021"
+    },
+    "716": {
+      "starchips": 4000,
+      "password": "00000022"
+    },
+    "717": {
+      "starchips": 2000,
+      "password": "00000023"
+    },
+    "718": {
+      "starchips": 2000,
+      "password": "00000024"
+    },
+    "719": {
+      "starchips": 1000,
+      "password": "00000025"
+    },
+    "720": {
+      "starchips": 1000,
+      "password": "00000026"
+    },
+    "721": {
+      "starchips": 500,
+      "password": "00000027"
+    },
+    "722": {
+      "starchips": 4000,
+      "password": "00000001"
+    },
+    "Lekakmod:card-1:1": {
+      "starchips": 2000,
+      "password": "62397231"
+    },
+    "Lekakmod:card-2:1": {
+      "starchips": 2000,
+      "password": "28269349"
+    },
+    "Lekakmod:card-3:1": {
+      "starchips": 500,
+      "password": "60806437"
+    },
+    "Lekakmod:card-4:1": {
+      "starchips": 1000,
+      "password": "38033121"
+    },
+    "Lekakmod:card-5:1": {
+      "starchips": 4000,
+      "password": "78193831"
+    },
+    "Lekakmod:card-6:1": {
+      "starchips": 2000,
+      "password": "77585513"
+    },
+    "Lekakmod:card-7:1": {
+      "starchips": 500,
+      "password": "11549357"
+    },
+    "Lekakmod:card-8:1": {
+      "starchips": 1000,
+      "password": "39256679"
+    },
+    "Lekakmod:card-9:1": {
+      "starchips": 500,
+      "password": "99785935"
+    },
+    "Lekakmod:card-10:1": {
+      "starchips": 8000,
+      "password": "75347539"
+    },
+    "Lekakmod:card-11:1": {
+      "starchips": 500,
+      "password": "48094997"
+    },
+    "Lekakmod:card-12:1": {
+      "starchips": 500,
+      "password": "03573512"
+    },
+    "Lekakmod:card-13:1": {
+      "starchips": 500,
+      "password": "98456117"
+    },
+    "Lekakmod:card-14:1": {
+      "starchips": 1000,
+      "password": "90925163"
+    },
+    "Lekakmod:card-15:1": {
+      "starchips": 500,
+      "password": "90790253"
+    },
+    "Lekakmod:card-16:1": {
+      "starchips": 500,
+      "password": "27288416"
+    },
+    "Lekakmod:card-17:1": {
+      "starchips": 500,
+      "password": "06104968"
+    },
+    "Lekakmod:card-18:1": {
+      "starchips": 500,
+      "password": "31987274"
+    },
+    "Lekakmod:card-19:1": {
+      "starchips": 1000,
+      "password": "87303357"
+    },
+    "Lekakmod:card-20:1": {
+      "starchips": 500,
+      "password": "27132350"
+    },
+    "Lekakmod:card-21:1": {
+      "starchips": 500,
+      "password": "22419772"
+    },
+    "Lekakmod:card-22:1": {
+      "starchips": 500,
+      "password": "68049471"
+    },
+    "Lekakmod:card-23:1": {
+      "starchips": 500,
+      "password": "67105242"
+    },
+    "Lekakmod:card-24:1": {
+      "starchips": 500,
+      "password": "12883044"
+    },
+    "Lekakmod:card-25:1": {
+      "starchips": 500,
+      "password": "52121290"
+    },
+    "Lekakmod:card-26:1": {
+      "starchips": 500,
+      "password": "27671321"
+    },
+    "Lekakmod:card-27:1": {
+      "starchips": 1000,
+      "password": "24661486"
+    },
+    "Lekakmod:card-28:1": {
+      "starchips": 1000,
+      "password": "88240808"
+    },
+    "Lekakmod:card-29:1": {
+      "starchips": 500,
+      "password": "14644902"
+    },
+    "Lekakmod:card-30:1": {
+      "starchips": 1000,
+      "password": "40133511"
+    },
+    "Lekakmod:card-31:1": {
+      "starchips": 2000,
+      "password": "31829185"
+    },
+    "Lekakmod:card-32:1": {
+      "starchips": 1000,
+      "password": "76305638"
+    },
+    "Lekakmod:card-33:1": {
+      "starchips": 1000,
+      "password": "13522325"
+    },
+    "Lekakmod:card-34:1": {
+      "starchips": 500,
+      "password": "45894482"
+    },
+    "Lekakmod:card-35:1": {
+      "starchips": 1000,
+      "password": "47506081"
+    },
+    "Lekakmod:card-36:1": {
+      "starchips": 4000,
+      "password": "90957527"
+    },
+    "Lekakmod:card-37:1": {
+      "starchips": 1000,
+      "password": "21999001"
+    },
+    "Lekakmod:card-38:1": {
+      "starchips": 1000,
+      "password": "89172051"
+    },
+    "Lekakmod:card-39:1": {
+      "starchips": 2000,
+      "password": "70871153"
+    },
+    "Lekakmod:card-40:1": {
+      "starchips": 500,
+      "password": "71283180"
+    },
+    "Lekakmod:card-42:1": {
+      "starchips": 4000,
+      "password": "90807199"
+    },
+    "Lekakmod:card-43:1": {
+      "starchips": 2000,
+      "password": "47963370"
+    },
+    "Lekakmod:card-44:1": {
+      "starchips": 500,
+      "password": "09674034"
+    },
+    "Lekakmod:card-45:1": {
+      "starchips": 1000,
+      "password": "11091375"
+    },
+    "Lekakmod:card-46:1": {
+      "starchips": 500,
+      "password": "06979239"
+    },
+    "Lekakmod:card-47:1": {
+      "starchips": 500,
+      "password": "79575620"
+    },
+    "Lekakmod:card-48:1": {
+      "starchips": 8000,
+      "password": "49064413"
+    },
+    "Lekakmod:card-49:1": {
+      "starchips": 8000,
+      "password": "48948935"
+    },
+    "Lekakmod:card-50:1": {
+      "starchips": 500,
+      "password": "75109441"
+    },
+    "Lekakmod:card-51:1": {
+      "starchips": 500,
+      "password": "02326738"
+    },
+    "Lekakmod:card-52:1": {
+      "starchips": 1000,
+      "password": "97923414"
+    },
+    "Lekakmod:card-53:1": {
+      "starchips": 500,
+      "password": "04335645"
+    },
+    "Lekakmod:card-54:1": {
+      "starchips": 1000,
+      "password": "76052811"
+    },
+    "Lekakmod:card-55:1": {
+      "starchips": 500,
+      "password": "99690140"
+    },
+    "Lekakmod:card-56:1": {
+      "starchips": 500,
+      "password": "24140059"
+    },
+    "Lekakmod:card-57:1": {
+      "starchips": 4000,
+      "password": "98745000"
+    },
+    "Lekakmod:card-58:1": {
+      "starchips": 16000,
+      "password": "60342934"
+    },
+    "Lekakmod:card-59:1": {
+      "starchips": 1000,
+      "password": "00423705"
+    },
+    "Lekakmod:card-60:1": {
+      "starchips": 4000,
+      "password": "91998119"
+    },
+    "Lekakmod:card-61:1": {
+      "starchips": 500,
+      "password": "85936485"
+    },
+    "Lekakmod:card-62:1": {
+      "starchips": 1000,
+      "password": "11321183"
+    },
+    "Lekakmod:card-63:1": {
+      "starchips": 500,
+      "password": "47415292"
+    },
+    "Lekakmod:card-64:1": {
+      "starchips": 1000,
+      "password": "84814897"
+    },
+    "Lekakmod:card-65:1": {
+      "starchips": 500,
+      "password": "85359414"
+    },
+    "Lekakmod:card-66:1": {
+      "starchips": 1000,
+      "password": "47480070"
+    },
+    "Lekakmod:card-67:1": {
+      "starchips": 500,
+      "password": "10979723"
+    },
+    "Lekakmod:card-68:1": {
+      "starchips": 2000,
+      "password": "72630549"
+    },
+    "Lekakmod:card-69:1": {
+      "starchips": 500,
+      "password": "69579761"
+    },
+    "Lekakmod:card-70:1": {
+      "starchips": 2000,
+      "password": "65403020"
+    },
+    "Lekakmod:card-71:1": {
+      "starchips": 4000,
+      "password": "39674352"
+    },
+    "Lekakmod:card-72:1": {
+      "starchips": 500,
+      "password": "39552864"
+    },
+    "Lekakmod:card-73:1": {
+      "starchips": 500,
+      "password": "25773409"
+    },
+    "Lekakmod:card-74:1": {
+      "starchips": 2000,
+      "password": "25551951"
+    },
+    "Lekakmod:card-75:1": {
+      "starchips": 500,
+      "password": "24435369"
+    },
+    "Lekakmod:card-76:1": {
+      "starchips": 1000,
+      "password": "98162242"
+    },
+    "Lekakmod:card-77:1": {
+      "starchips": 500,
+      "password": "55001420"
+    },
+    "Lekakmod:card-78:1": {
+      "starchips": 500,
+      "password": "81383947"
+    },
+    "Lekakmod:card-79:1": {
+      "starchips": 500,
+      "password": "52550973"
+    },
+    "Lekakmod:card-80:1": {
+      "starchips": 500,
+      "password": "99171160"
+    },
+    "Lekakmod:card-81:1": {
+      "starchips": 2000,
+      "password": "58185394"
+    },
+    "Lekakmod:card-82:1": {
+      "starchips": 16000,
+      "password": "10000000"
+    },
+    "Lekakmod:card-83:1": {
+      "starchips": 32000,
+      "password": "00000002"
+    },
+    "Lekakmod:card-84:1": {
+      "starchips": 4000,
+      "password": "70780151"
+    },
+    "Lekakmod:card-85:1": {
+      "starchips": 500,
+      "password": "24221739"
+    },
+    "Lekakmod:card-86:1": {
+      "starchips": 500,
+      "password": "13409151"
+    },
+    "Lekakmod:card-87:1": {
+      "starchips": 500,
+      "password": "85166216"
+    },
+    "Lekakmod:card-88:1": {
+      "starchips": 1000,
+      "password": "13386503"
+    },
+    "Lekakmod:card-89:1": {
+      "starchips": 8000,
+      "password": "87997872"
+    },
+    "Lekakmod:card-90:1": {
+      "starchips": 4000,
+      "password": "15013468"
+    },
+    "Lekakmod:card-91:1": {
+      "starchips": 2000,
+      "password": "51402177"
+    },
+    "Lekakmod:card-92:1": {
+      "starchips": 500,
+      "password": "52624755"
+    },
+    "Lekakmod:card-93:1": {
+      "starchips": 1000,
+      "password": "75372290"
+    },
+    "Lekakmod:card-94:1": {
+      "starchips": 500,
+      "password": "10375182"
+    },
+    "Lekakmod:card-95:1": {
+      "starchips": 2000,
+      "password": "91512835"
+    },
+    "Lekakmod:card-96:1": {
+      "starchips": 32000,
+      "password": "27134689"
+    },
+    "Lekakmod:card-97:1": {
+      "starchips": 500,
+      "password": "90140980"
+    },
+    "Lekakmod:card-98:1": {
+      "starchips": 2000,
+      "password": "53539634"
+    },
+    "Lekakmod:eagle-eye:1": {
+      "starchips": 500,
+      "password": "53693416"
+    },
+    "Lekakmod:dark-blade-dragon-knight:1": {
+      "starchips": 2000,
+      "password": "86805855"
+    },
+    "Lekakmod:a-team-trap-disposal:1": {
+      "starchips": 500,
+      "password": "13026402"
+    },
+    "Lekakmod:dark-ruler-ha-des:1": {
+      "starchips": 2000,
+      "password": "53982768"
+    },
+    "Lekakmod:vampire-genesis:1": {
+      "starchips": 4000,
+      "password": "22056710"
+    },
+    "Lekakmod:master-kyonshee:1": {
+      "starchips": 1000,
+      "password": "24530661"
+    },
+    "Lekakmod:paladin-white-dragon:1": {
+      "starchips": 1000,
+      "password": "73398797"
+    },
+    "Lekakmod:guardian-baou:1": {
+      "starchips": 500,
+      "password": "73544866"
+    },
+    "Lekakmod:dark-master-zorc:1": {
+      "starchips": 4000,
+      "password": "97642679"
+    },
+    "Lekakmod:space-mambo:1": {
+      "starchips": 1000,
+      "password": "36119641"
+    },
+    "Lekakmod:divine-dragon-ragnarok:1": {
+      "starchips": 500,
+      "password": "62113340"
+    },
+    "Lekakmod:chu-ske-mouse-fighter:1": {
+      "starchips": 500,
+      "password": "08508055"
+    },
+    "Lekakmod:insect-knight:1": {
+      "starchips": 1000,
+      "password": "35052053"
+    },
+    "Lekakmod:terrorking-archfiend:1": {
+      "starchips": 1000,
+      "password": "35975813"
+    },
+    "Lekakmod:skull-archfiend-lightning:1": {
+      "starchips": 2000,
+      "password": "61370518"
+    },
+    "Lekakmod:metallizing-parasite-lunatite:1": {
+      "starchips": 500,
+      "password": "07369217"
+    },
+    "Lekakmod:tsukuyomi:1": {
+      "starchips": 500,
+      "password": "34853266"
+    },
+    "Lekakmod:mudora:1": {
+      "starchips": 500,
+      "password": "82108372"
+    },
+    "Lekakmod:biofalcon:1": {
+      "starchips": 1000,
+      "password": "74130411"
+    },
+    "Lekakmod:koa-ki-meiru-sandman:1": {
+      "starchips": 1000,
+      "password": "49680980"
+    },
+    "Lekakmod:memory-crush-king:1": {
+      "starchips": 1000,
+      "password": "75675029"
+    },
+    "Lekakmod:hunter-of-black-feathers:1": {
+      "starchips": 1000,
+      "password": "73018302"
+    },
+    "Lekakmod:blazing-inpachi:1": {
+      "starchips": 1000,
+      "password": "05464695"
+    },
+    "Lekakmod:tune-warrior:1": {
+      "starchips": 1000,
+      "password": "74093656"
+    },
+    "Lekakmod:x-saber-galahad:1": {
+      "starchips": 1000,
+      "password": "50604950"
+    },
+    "Lekakmod:twin-sword-marauder:1": {
+      "starchips": 1000,
+      "password": "40225398"
+    },
+    "Lekakmod:mist-valley-watcher:1": {
+      "starchips": 500,
+      "password": "29054481"
+    },
+    "Lekakmod:amazoness-fighter:1": {
+      "starchips": 500,
+      "password": "55821894"
+    },
+    "Lekakmod:amazoness-swords-woman:1": {
+      "starchips": 500,
+      "password": "94004268"
+    },
+    "Lekakmod:amazoness-chain-master:1": {
+      "starchips": 500,
+      "password": "29654737"
+    },
+    "Lekakmod:blackwing-bora-the-spear:1": {
+      "starchips": 1000,
+      "password": "49003716"
+    },
+    "Lekakmod:blackwing-sirocco-the-dawn:1": {
+      "starchips": 1000,
+      "password": "75498415"
+    },
+    "Lekakmod:blackwing-shura-the-blue-flame:1": {
+      "starchips": 1000,
+      "password": "58820853"
+    },
+    "Lekakmod:worm-gulse:1": {
+      "starchips": 500,
+      "password": "85754829"
+    },
+    "Lekakmod:koa-ki-meiru-drago:1": {
+      "starchips": 1000,
+      "password": "12435193"
+    },
+    "Lekakmod:earthquake-giant:1": {
+      "starchips": 1000,
+      "password": "61864793"
+    },
+    "Lekakmod:stardust-dragon:1": {
+      "starchips": 2000,
+      "password": "44508094"
+    },
+    "Lekakmod:turbo-warrior:1": {
+      "starchips": 2000,
+      "password": "46195773"
+    },
+    "Lekakmod:vice-dragon:1": {
+      "starchips": 1000,
+      "password": "54343893"
+    },
+    "Lekakmod:black-rose-dragon:1": {
+      "starchips": 2000,
+      "password": "73580471"
+    },
+    "Lekakmod:blackwing-elphin-the-raven:1": {
+      "starchips": 2000,
+      "password": "11613567"
+    },
+    "Lekakmod:blackwing-kogarashi-the-wanderer:1": {
+      "starchips": 2000,
+      "password": "49460512"
+    },
+    "Lekakmod:tyr-of-the-nordic-champions:1": {
+      "starchips": 1000,
+      "password": "02333365"
+    },
+    "Lekakmod:t-g-power-gladiator:1": {
+      "starchips": 2000,
+      "password": "24943456"
+    },
+    "Lekakmod:power-tool-dragon:1": {
+      "starchips": 2000,
+      "password": "02403771"
+    },
+    "Lekakmod:ancient-fairy-dragon:1": {
+      "starchips": 2000,
+      "password": "25862681"
+    },
+    "Lekakmod:moon-dragon-quilla:1": {
+      "starchips": 2000,
+      "password": "66818682"
+    },
+    "Lekakmod:ancient-gear-gadjiltron-chimera:1": {
+      "starchips": 2000,
+      "password": "86321248"
+    },
+    "Lekakmod:gear-gigant-x:1": {
+      "starchips": 2000,
+      "password": "28912357"
+    },
+    "Lekakmod:elegy-the-melodious-diva:1": {
+      "starchips": 1000,
+      "password": "79514956"
+    },
+    "Lekakmod:gogogo-goram:1": {
+      "starchips": 2000,
+      "password": "59911557"
+    },
+    "Lekakmod:yosenju-magat:1": {
+      "starchips": 1000,
+      "password": "49249907"
+    },
+    "Lekakmod:elemental-hero-neos:1": {
+      "starchips": 2000,
+      "password": "89943723"
+    },
+    "Lekakmod:phantom-gryphon:1": {
+      "starchips": 1000,
+      "password": "74852097"
+    },
+    "Lekakmod:zefraxa-flame-beast-of-the-nekroz:1": {
+      "starchips": 1000,
+      "password": "20773176"
+    },
+    "Lekakmod:infernoid-sjette:1": {
+      "starchips": 2000,
+      "password": "96055137"
+    },
+    "Lekakmod:axe-dragonute:1": {
+      "starchips": 1000,
+      "password": "84914462"
+    },
+    "Lekakmod:alexandrite-dragon:1": {
+      "starchips": 1000,
+      "password": "43096270"
+    },
+    "Lekakmod:kaiser-glider:1": {
+      "starchips": 2000,
+      "password": "52824910"
+    },
+    "Lekakmod:cyber-dragon:1": {
+      "starchips": 2000,
+      "password": "70095154"
+    },
+    "Lekakmod:beast-of-talwar:1": {
+      "starchips": 2000,
+      "password": "11761845"
+    },
+    "Lekakmod:black-tyranno:1": {
+      "starchips": 4000,
+      "password": "38670435"
+    },
+    "Lekakmod:ultimate-tyranno:1": {
+      "starchips": 4000,
+      "password": "15894048"
+    },
+    "Lekakmod:ancient-gear-golem:1": {
+      "starchips": 4000,
+      "password": "83104731"
+    },
+    "Lekakmod:big-koala:1": {
+      "starchips": 4000,
+      "password": "42129512"
+    },
+    "Lekakmod:mementotlan-twin-dragon:1": {
+      "starchips": 4000,
+      "password": "19181420"
+    },
+    "Lekakmod:thunder-dragonlord:1": {
+      "starchips": 4000,
+      "password": "05260415"
+    },
+    "Lekakmod:mist-valley-thunder-lord:1": {
+      "starchips": 4000,
+      "password": "89310929"
+    },
+    "Lekakmod:chaos-emperor-dragon-envoy-of-the-end:1": {
+      "starchips": 4000,
+      "password": "82301904"
+    },
+    "Lekakmod:black-luster-soldier-envoy-of-the-beginning:1": {
+      "starchips": 4000,
+      "password": "72989439"
+    },
+    "Lekakmod:chimera-the-master-of-beasts:1": {
+      "starchips": 4000,
+      "password": "00000003"
+    },
+    "Lekakmod:elemental-hero-magma-neos:1": {
+      "starchips": 4000,
+      "password": "78512663"
+    },
+    "Lekakmod:elemental-hero-chaos-neos:1": {
+      "starchips": 4000,
+      "password": "17032740"
+    },
+    "Lekakmod:gladiator-beast-heraklinos:1": {
+      "starchips": 4000,
+      "password": "27346636"
+    },
+    "Lekakmod:shinato-king-of-a-higher-plane:1": {
+      "starchips": 8000,
+      "password": "86327225"
+    },
+    "Lekakmod:hyper-psychic-blaster:1": {
+      "starchips": 4000,
+      "password": "95526884"
+    },
+    "Lekakmod:colossal-fighter-assault-mode:1": {
+      "starchips": 8000,
+      "password": "38898779"
+    },
+    "Lekakmod:stardust-dragon-assault-mode:1": {
+      "starchips": 4000,
+      "password": "61257789"
+    },
+    "Lekakmod:jurrac-titano:1": {
+      "starchips": 4000,
+      "password": "85028288"
+    },
+    "Lekakmod:ally-of-justice-decisive-armor:1": {
+      "starchips": 8000,
+      "password": "09888196"
+    },
+    "Lekakmod:shooting-star-dragon:1": {
+      "starchips": 8000,
+      "password": "24696097"
+    },
+    "Lekakmod:red-dragon-archfiend:1": {
+      "starchips": 4000,
+      "password": "70902743"
+    },
+    "Lekakmod:rainbow-dragon:1": {
+      "starchips": 16000,
+      "password": "79856792"
+    },
+    "Lekakmod:cyber-end-dragon:1": {
+      "starchips": 16000,
+      "password": "01546123"
+    },
+    "Lekakmod:hamon-lord-of-striking-thunder:1": {
+      "starchips": 16000,
+      "password": "32491822"
+    },
+    "Lekakmod:super-vehicroid-stealth-union:1": {
+      "starchips": 16000,
+      "password": "03877665"
+    },
+    "Lekakmod:berserk-dragon:1": {
+      "starchips": 8000,
+      "password": "85605684"
+    },
+    "Lekakmod:evil-hero-malicious-fiend:1": {
+      "starchips": 8000,
+      "password": "86676862"
+    },
+    "Lekakmod:the-wicked-dreadroot:1": {
+      "starchips": 16000,
+      "password": "62180201"
+    },
+    "Lekakmod:majestic-star-dragon:1": {
+      "starchips": 16000,
+      "password": "07841112"
+    },
+    "Lekakmod:darkness-neosphere:1": {
+      "starchips": 16000,
+      "password": "60417395"
+    },
+    "Lekakmod:arcana-knight-joker:1": {
+      "starchips": 16000,
+      "password": "06150044"
+    },
+    "Lekakmod:red-nova-dragon:1": {
+      "starchips": 8000,
+      "password": "97489701"
+    },
+    "Lekakmod:gaia-drake-universal-force:1": {
+      "starchips": 8000,
+      "password": "58601383"
+    },
+    "Lekakmod:ultimate-ancient-gear-golem:1": {
+      "starchips": 32000,
+      "password": "12652643"
+    },
+    "Lekakmod:infernal-incinerator:1": {
+      "starchips": 4000,
+      "password": "23309606"
+    },
+    "Lekakmod:sillva-warlord-of-dark-world:1": {
+      "starchips": 2000,
+      "password": "32619583"
+    },
+    "Lekakmod:goldd-wu-lord-of-dark-world:1": {
+      "starchips": 2000,
+      "password": "78004197"
+    },
+    "Lekakmod:demise-king-of-armageddon:1": {
+      "starchips": 2000,
+      "password": "72426662"
+    },
+    "Lekakmod:evil-hero-malicious-edge:1": {
+      "starchips": 4000,
+      "password": "58554959"
+    },
+    "Lekakmod:evil-hero-inferno-wing:1": {
+      "starchips": 2000,
+      "password": "22160245"
+    },
+    "Lekakmod:evil-hero-lightning-golem:1": {
+      "starchips": 2000,
+      "password": "21947653"
+    },
+    "Lekakmod:vampire-lord:1": {
+      "starchips": 1000,
+      "password": "53839837"
+    },
+    "Lekakmod:despair-from-the-dark:1": {
+      "starchips": 4000,
+      "password": "71200730"
+    },
+    "Lekakmod:archfiend-general:1": {
+      "starchips": 2000,
+      "password": "48675364"
+    },
+    "Lekakmod:sky-scourge-norleras:1": {
+      "starchips": 2000,
+      "password": "48453776"
+    },
+    "Lekakmod:lich-lord-king-of-the-underworld:1": {
+      "starchips": 2000,
+      "password": "55818463"
+    },
+    "Lekakmod:mist-archfiend:1": {
+      "starchips": 2000,
+      "password": "28601770"
+    },
+    "Lekakmod:ryu-kokki:1": {
+      "starchips": 2000,
+      "password": "57281778"
+    },
+    "Lekakmod:invader-of-darkness:1": {
+      "starchips": 4000,
+      "password": "56647086"
+    },
+    "Lekakmod:desert-twister:1": {
+      "starchips": 2000,
+      "password": "81977953"
+    },
+    "Lekakmod:il-blud:1": {
+      "starchips": 2000,
+      "password": "70595331"
+    },
+    "Lekakmod:goblin-elite-attack-force:1": {
+      "starchips": 2000,
+      "password": "85306040"
+    },
+    "Lekakmod:dark-lucius-lv8:1": {
+      "starchips": 4000,
+      "password": "58206034"
+    },
+    "Lekakmod:flame-ogre:1": {
+      "starchips": 2000,
+      "password": "58098303"
+    },
+    "Lekakmod:vanity-s-fiend:1": {
+      "starchips": 2000,
+      "password": "47084486"
+    },
+    "Lekakmod:reshef-the-dark-being:1": {
+      "starchips": 2000,
+      "password": "62420419"
+    },
+    "Lekakmod:dark-balter-the-terrible:1": {
+      "starchips": 1000,
+      "password": "80071763"
+    },
+    "Lekakmod:reign-beaux-overlord-of-dark-world:1": {
+      "starchips": 2000,
+      "password": "99458769"
+    },
+    "Lekakmod:evil-hero-infernal-sniper:1": {
+      "starchips": 1000,
+      "password": "50282757"
+    },
+    "Lekakmod:grinder-golem:1": {
+      "starchips": 4000,
+      "password": "75732622"
+    },
+    "Lekakmod:imprisoned-queen-archfiend:1": {
+      "starchips": 4000,
+      "password": "52248570"
+    },
+    "Lekakmod:vampire-s-curse:1": {
+      "starchips": 1000,
+      "password": "34294855"
+    },
+    "Lekakmod:belial-marquis-of-darkness:1": {
+      "starchips": 4000,
+      "password": "33655493"
+    },
+    "Lekakmod:caius-the-shadow-monarch:1": {
+      "starchips": 2000,
+      "password": "09748752"
+    },
+    "Lekakmod:toon-summoned-skull:1": {
+      "starchips": 2000,
+      "password": "91842653"
+    },
+    "Lekakmod:dark-dust-spirit:1": {
+      "starchips": 2000,
+      "password": "89111398"
+    },
+    "Lekakmod:red-eyes-zombie-dragon:1": {
+      "starchips": 2000,
+      "password": "05186893"
+    },
+    "Lekakmod:malevolent-mech-goku-en:1": {
+      "starchips": 2000,
+      "password": "31571902"
+    },
+    "Lekakmod:patrician-of-darkness:1": {
+      "starchips": 1000,
+      "password": "19153634"
+    },
+    "Lekakmod:doomkaiser-dragon:1": {
+      "starchips": 2000,
+      "password": "06021033"
+    },
+    "Lekakmod:revived-king-ha-des:1": {
+      "starchips": 2000,
+      "password": "05309481"
+    },
+    "Lekakmod:goka-the-pyre-of-malice:1": {
+      "starchips": 2000,
+      "password": "23116808"
+    },
+    "Lekakmod:red-ogre:1": {
+      "starchips": 4000,
+      "password": "68722455"
+    },
+    "Lekakmod:gorz-the-emissary-of-darkness:1": {
+      "starchips": 4000,
+      "password": "44330098"
+    },
+    "Lekakmod:darkness-destroyer:1": {
+      "starchips": 2000,
+      "password": "93709215"
+    },
+    "Lekakmod:doomkaiser-dragon-assault-mode:1": {
+      "starchips": 4000,
+      "password": "01764972"
+    },
+    "Lekakmod:ido-the-supreme-magical-force:1": {
+      "starchips": 2000,
+      "password": "35984222"
+    },
+    "Lekakmod:earthbound-immortal-ccapac-apu:1": {
+      "starchips": 4000,
+      "password": "46263076"
+    },
+    "Lekakmod:koa-ki-meiru-valafar:1": {
+      "starchips": 4000,
+      "password": "72258771"
+    },
+    "Lekakmod:brain-golem:1": {
+      "starchips": 2000,
+      "password": "17313545"
+    },
+    "Lekakmod:emissary-from-pandemonium:1": {
+      "starchips": 4000,
+      "password": "42685062"
+    },
+    "Lekakmod:lava-golem:1": {
+      "starchips": 4000,
+      "password": "00102380"
+    },
+    "Lekakmod:archfiend-of-gilfer:1": {
+      "starchips": 2000,
+      "password": "50287060"
+    },
+    "Lekakmod:archfiend-zombie-skull:1": {
+      "starchips": 2000,
+      "password": "59969392"
+    },
+    "Lekakmod:koa-ki-meiru-ghoulungulate:1": {
+      "starchips": 2000,
+      "password": "05817857"
+    },
+    "Lekakmod:gaap-the-divine-soldier:1": {
+      "starchips": 2000,
+      "password": "37955049"
+    },
+    "Lekakmod:aggiba-the-malevolent-sh-nn-s-yo:1": {
+      "starchips": 4000,
+      "password": "00000004"
+    },
+    "Lekakmod:supersonic-skull-flame:1": {
+      "starchips": 4000,
+      "password": "63804806"
+    },
+    "Lekakmod:skull-flame:1": {
+      "starchips": 4000,
+      "password": "99899504"
+    },
+    "Lekakmod:flamvell-fiend:1": {
+      "starchips": 2000,
+      "password": "91711547"
+    },
+    "Lekakmod:power-invader:1": {
+      "starchips": 2000,
+      "password": "18842395"
+    },
+    "Lekakmod:garlandolf-king-of-destruction:1": {
+      "starchips": 2000,
+      "password": "30646525"
+    },
+    "Lekakmod:skull-conductor:1": {
+      "starchips": 1000,
+      "password": "62782218"
+    },
+    "Lekakmod:stygian-sergeants:1": {
+      "starchips": 2000,
+      "password": "86137485"
+    },
+    "Lekakmod:fabled-valkyrus:1": {
+      "starchips": 4000,
+      "password": "54048462"
+    },
+    "Lekakmod:chaos-king-archfiend:1": {
+      "starchips": 4000,
+      "password": "36407615"
+    },
+    "Lekakmod:infernity-destroyer:1": {
+      "starchips": 2000,
+      "password": "98954375"
+    },
+    "Lekakmod:scrap-archfiend:1": {
+      "starchips": 4000,
+      "password": "45815891"
+    },
+    "Lekakmod:ambitious-gofer:1": {
+      "starchips": 2000,
+      "password": "41224658"
+    },
+    "Lekakmod:steelswarm-longhorn:1": {
+      "starchips": 4000,
+      "password": "62007535"
+    },
+    "Lekakmod:adreus-keeper-of-armageddon:1": {
+      "starchips": 4000,
+      "password": "94119480"
+    },
+    "Lekakmod:tardy-orc:1": {
+      "starchips": 2000,
+      "password": "64892035"
+    },
+    "Lekakmod:grapha-dragon-lord-of-dark-world:1": {
+      "starchips": 4000,
+      "password": "34230233"
+    },
+    "Lekakmod:dark-highlander:1": {
+      "starchips": 4000,
+      "password": "75326861"
+    },
+    "Lekakmod:illusory-snatcher:1": {
+      "starchips": 2000,
+      "password": "35073065"
+    },
+    "Lekakmod:infernity-general:1": {
+      "starchips": 4000,
+      "password": "17502671"
+    },
+    "Lekakmod:the-supremacy-sun:1": {
+      "starchips": 4000,
+      "password": "51402908"
+    },
+    "Lekakmod:number-85-crazy-box:1": {
+      "starchips": 4000,
+      "password": "42421606"
+    },
+    "Lekakmod:archfiend-emperor-the-first-lord-of-horror:1": {
+      "starchips": 4000,
+      "password": "28423537"
+    },
+    "Lekakmod:armades-keeper-of-boundaries:1": {
+      "starchips": 2000,
+      "password": "88033975"
+    },
+    "Lekakmod:vampire-dragon:1": {
+      "starchips": 2000,
+      "password": "36352429"
+    },
+    "Lekakmod:steelswarm-hercules:1": {
+      "starchips": 8000,
+      "password": "94092230"
+    },
+    "Lekakmod:infernoid-tierra:1": {
+      "starchips": 8000,
+      "password": "82734805"
+    },
+    "Lekakmod:d-d-d-wave-oblivion-king-caesar-ragnarok:1": {
+      "starchips": 8000,
+      "password": "27873305"
+    },
+    "Lekakmod:d-d-d-duo-dawn-king-kali-yuga:1": {
+      "starchips": 8000,
+      "password": "15939229"
+    },
+    "Lekakmod:tierra-source-of-destruction:1": {
+      "starchips": 8000,
+      "password": "91588074"
+    },
+    "Lekakmod:shiranui-sunsaga:1": {
+      "starchips": 8000,
+      "password": "59843383"
+    },
+    "Lekakmod:d-d-d-super-doom-king-bright-armageddon:1": {
+      "starchips": 8000,
+      "password": "72402069"
+    },
+    "Lekakmod:d-d-d-super-doom-king-dark-armageddon:1": {
+      "starchips": 8000,
+      "password": "18897163"
+    },
+    "Lekakmod:d-d-d-super-doom-king-purple-armageddon:1": {
+      "starchips": 8000,
+      "password": "84569886"
+    },
+    "Lekakmod:gashadokuro-the-skeletal-mayakashi:1": {
+      "starchips": 8000,
+      "password": "39475024"
+    },
+    "Lekakmod:despian-proskenion:1": {
+      "starchips": 8000,
+      "password": "18666161"
+    },
+    "Lekakmod:evil-twin-s-trouble-sunny:1": {
+      "starchips": 8000,
+      "password": "93672138"
+    },
+    "Lekakmod:grapha-dragon-overlord-of-dark-world:1": {
+      "starchips": 8000,
+      "password": "39552584"
+    },
+    "Lekakmod:chaos-angel:1": {
+      "starchips": 8000,
+      "password": "22850702"
+    },
+    "Lekakmod:lord-of-the-missing-barrows:1": {
+      "starchips": 8000,
+      "password": "59829423"
+    },
+    "Lekakmod:earthbound-immortal-red-nova:1": {
+      "starchips": 8000,
+      "password": "05267507"
+    },
+    "Lekakmod:luce-the-dusk-s-dark:1": {
+      "starchips": 8000,
+      "password": "45409943"
+    },
+    "Lekakmod:junora-the-power-patron-of-tuning:1": {
+      "starchips": 8000,
+      "password": "05914858"
+    },
+    "Lekakmod:five-headed-dragon:1": {
+      "starchips": 64000,
+      "password": "99267150"
+    },
+    "Lekakmod:dragon-master-knight:1": {
+      "starchips": 64000,
+      "password": "62873545"
+    },
+    "Lekakmod:machina-force:1": {
+      "starchips": 64000,
+      "password": "58054262"
+    },
+    "Lekakmod:malefic-truth-dragon:1": {
+      "starchips": 64000,
+      "password": "37115575"
+    },
+    "Lekakmod:dystopia-the-despondent:1": {
+      "starchips": 64000,
+      "password": "52085072"
+    },
+    "Lekakmod:flower-cardian-lightflare:1": {
+      "starchips": 64000,
+      "password": "87460579"
+    },
+    "Lekakmod:five-headed-link-dragon:1": {
+      "starchips": 64000,
+      "password": "10669138"
+    },
+    "Lekakmod:superdimensional-robot-galaxy-destroyer:1": {
+      "starchips": 64000,
+      "password": "66523544"
+    },
+    "Lekakmod:cyberdark-end-dragon:1": {
+      "starchips": 64000,
+      "password": "37542782"
+    },
+    "Lekakmod:machina-ruinforce:1": {
+      "starchips": 64000,
+      "password": "46033517"
+    },
+    "Lekakmod:dragon-master-magia:1": {
+      "starchips": 64000,
+      "password": "12381100"
+    },
+    "Lekakmod:drytron-meteonis-da-draconids:1": {
+      "starchips": 64000,
+      "password": "56863746"
+    },
+    "Lekakmod:dragon-master-lords:1": {
+      "starchips": 64000,
+      "password": "58931850"
+    },
+    "Lekakmod:mementoal-tecuhtlica-combined-creation:1": {
+      "starchips": 64000,
+      "password": "23288411"
+    },
+    "Lekakmod:vidolium-the-unstable-power-patron-of-unity:1": {
+      "starchips": 64000,
+      "password": "70488851"
+    },
+    "Lekakmod:superdreadnought-rail-cannon-gustav-rocket:1": {
+      "starchips": 64000,
+      "password": "92359409"
+    },
+    "Lekakmod:the-chaotic-phantasmal-sacred-beasts:1": {
+      "starchips": 64000,
+      "password": "07894706"
+    },
+    "Lekakmod:raviel-lord-of-phantasms:1": {
+      "starchips": 16000,
+      "password": "69890967"
+    },
+    "Lekakmod:rainbow-dark-dragon:1": {
+      "starchips": 16000,
+      "password": "79407975"
+    },
+    "Lekakmod:rainbow-neos:1": {
+      "starchips": 32000,
+      "password": "86346643"
+    },
+    "Lekakmod:arcana-force-ex-the-dark-ruler:1": {
+      "starchips": 16000,
+      "password": "69831560"
+    },
+    "Lekakmod:daigusto-phoenix:1": {
+      "starchips": 500,
+      "password": "02766877"
+    },
+    "Lekakmod:wind-up-zenmaines:1": {
+      "starchips": 500,
+      "password": "78156759"
+    },
+    "Lekakmod:wind-up-rabbit:1": {
+      "starchips": 500,
+      "password": "42874792"
+    },
+    "Lekakmod:damage-mage:1": {
+      "starchips": 500,
+      "password": "50613779"
+    },
+    "Lekakmod:zw-phoenix-bow:1": {
+      "starchips": 500,
+      "password": "87008374"
+    },
+    "Lekakmod:heroic-challenger-swordshield:1": {
+      "starchips": 500,
+      "password": "52370835"
+    },
+    "Lekakmod:chronomaly-mayan-machine:1": {
+      "starchips": 500,
+      "password": "25163248"
+    },
+    "Lekakmod:chronomaly-colossal-head:1": {
+      "starchips": 500,
+      "password": "52158283"
+    },
+    "Lekakmod:chronomaly-golden-jet:1": {
+      "starchips": 500,
+      "password": "88552992"
+    },
+    "Lekakmod:chronomaly-crystal-bones:1": {
+      "starchips": 500,
+      "password": "15941690"
+    },
+    "Lekakmod:chronomaly-crystal-skull:1": {
+      "starchips": 500,
+      "password": "51435705"
+    },
+    "Lekakmod:spellbook-magician-of-prophecy:1": {
+      "starchips": 500,
+      "password": "14824019"
+    },
+    "Lekakmod:temperance-of-prophecy:1": {
+      "starchips": 500,
+      "password": "87608852"
+    },
+    "Lekakmod:strength-of-prophecy:1": {
+      "starchips": 500,
+      "password": "13002461"
+    },
+    "Lekakmod:madolche-baaple:1": {
+      "starchips": 500,
+      "password": "49374988"
+    },
+    "Lekakmod:madolche-magileine:1": {
+      "starchips": 500,
+      "password": "11868731"
+    },
+    "Lekakmod:madolche-butlerusk:1": {
+      "starchips": 500,
+      "password": "48252330"
+    },
+    "Lekakmod:madolche-puddingcess:1": {
+      "starchips": 500,
+      "password": "74641045"
+    },
+    "Lekakmod:geargiano-mk-ii:1": {
+      "starchips": 500,
+      "password": "01045143"
+    },
+    "Lekakmod:geargiaccelerator:1": {
+      "starchips": 500,
+      "password": "47030842"
+    },
+    "Lekakmod:geargiarsenal:1": {
+      "starchips": 500,
+      "password": "73428497"
+    },
+    "Lekakmod:geargiarmor:1": {
+      "starchips": 500,
+      "password": "00923596"
+    },
+    "Lekakmod:little-trooper:1": {
+      "starchips": 500,
+      "password": "73702909"
+    },
+    "Lekakmod:silver-sentinel:1": {
+      "starchips": 500,
+      "password": "09791914"
+    },
+    "Lekakmod:dust-knight:1": {
+      "starchips": 500,
+      "password": "35195612"
+    },
+    "Lekakmod:block-golem:1": {
+      "starchips": 500,
+      "password": "72580321"
+    },
+    "Lekakmod:atlantean-attack-squad:1": {
+      "starchips": 500,
+      "password": "08078366"
+    },
+    "Lekakmod:alchemic-magician:1": {
+      "starchips": 500,
+      "password": "65301952"
+    },
+    "Lekakmod:lightray-madoor:1": {
+      "starchips": 500,
+      "password": "82579942"
+    },
+    "Lekakmod:imairuka:1": {
+      "starchips": 500,
+      "password": "41952656"
+    },
+    "Lekakmod:revival-golem:1": {
+      "starchips": 500,
+      "password": "87347365"
+    },
+    "Lekakmod:pahunder:1": {
+      "starchips": 500,
+      "password": "84530620"
+    },
+    "Lekakmod:mahunder:1": {
+      "starchips": 500,
+      "password": "21524779"
+    },
+    "Lekakmod:sishunder:1": {
+      "starchips": 500,
+      "password": "57019473"
+    },
+    "Lekakmod:honest:1": {
+      "starchips": 500,
+      "password": "37742478"
+    },
+    "Lekakmod:neo-spacian-grand-mole:1": {
+      "starchips": 500,
+      "password": "80344569"
+    },
+    "Lekakmod:quillbolt-hedgehog:1": {
+      "starchips": 500,
+      "password": "23571046"
+    },
+    "Lekakmod:fabled-raven:1": {
+      "starchips": 500,
+      "password": "47217354"
+    },
+    "Lekakmod:gishki-avance:1": {
+      "starchips": 500,
+      "password": "16693254"
+    },
+    "Lekakmod:gusto-griffin:1": {
+      "starchips": 500,
+      "password": "42082363"
+    },
+    "Lekakmod:constellar-sheratan:1": {
+      "starchips": 500,
+      "password": "78486968"
+    },
+    "Lekakmod:constellar-aldebaran:1": {
+      "starchips": 500,
+      "password": "15871676"
+    },
+    "Lekakmod:amores-of-prophecy:1": {
+      "starchips": 500,
+      "password": "40213117"
+    },
+    "Lekakmod:madolche-mewfeuille:1": {
+      "starchips": 500,
+      "password": "12980373"
+    },
+    "Lekakmod:uniflora-mystical-beast-of-the-forest:1": {
+      "starchips": 500,
+      "password": "36318200"
+    },
+    "Lekakmod:chewbone:1": {
+      "starchips": 500,
+      "password": "07392745"
+    },
+    "Lekakmod:calamity-of-the-sacred-beasts-hamon-lord-of-striking-thunder:1": {
+      "starchips": 16000,
+      "password": "50251045"
+    },
+    "Lekakmod:infinity-of-the-sacred-beasts-raviel-lord-of-phantasms:1": {
+      "starchips": 16000,
+      "password": "96345184"
+    },
+    "Lekakmod:galaxy-eyes-antimatter-dragon:1": {
+      "starchips": 16000,
+      "password": "92517928"
+    },
+    "Lekakmod:queen-s-knight:1": {
+      "starchips": 500,
+      "password": "25652259"
+    },
+    "Lekakmod:watapon:1": {
+      "starchips": 500,
+      "password": "87774234"
+    },
+    "Lekakmod:big-shield-gardna:1": {
+      "starchips": 500,
+      "password": "65240384"
+    },
+    "Lekakmod:silent-swordsman-lv3:1": {
+      "starchips": 500,
+      "password": "01995985"
+    },
+    "Lekakmod:obnoxious-celtic-guard:1": {
+      "starchips": 500,
+      "password": "52077741"
+    },
+    "Lekakmod:silent-magician-lv4:1": {
+      "starchips": 500,
+      "password": "73665146"
+    },
+    "Lekakmod:green-gadget:1": {
+      "starchips": 500,
+      "password": "41172955"
+    },
+    "Lekakmod:mother-grizzly:1": {
+      "starchips": 500,
+      "password": "57839750"
+    },
+    "Lekakmod:pyramid-turtle:1": {
+      "starchips": 500,
+      "password": "77044671"
+    },
+    "Lekakmod:spirit-reaper:1": {
+      "starchips": 500,
+      "password": "23205979"
+    },
+    "Lekakmod:manju-of-the-ten-thousand-hands:1": {
+      "starchips": 500,
+      "password": "95492061"
+    },
+    "Lekakmod:lost-blue-breaker:1": {
+      "starchips": 500,
+      "password": "95231062"
+    },
+    "Lekakmod:spined-gillman:1": {
+      "starchips": 500,
+      "password": "42463414"
+    },
+    "Lekakmod:deep-sea-diva:1": {
+      "starchips": 500,
+      "password": "78868119"
+    },
+    "Lekakmod:mermaid-archer:1": {
+      "starchips": 500,
+      "password": "04252828"
+    },
+    "Lekakmod:codarus:1": {
+      "starchips": 500,
+      "password": "65496056"
+    },
+    "Lekakmod:skreech:1": {
+      "starchips": 500,
+      "password": "27655513"
+    },
+    "Lekakmod:snowman-eater:1": {
+      "starchips": 500,
+      "password": "91133740"
+    },
+    "Lekakmod:nightmare-penguin:1": {
+      "starchips": 500,
+      "password": "81306586"
+    },
+    "Lekakmod:deep-diver:1": {
+      "starchips": 500,
+      "password": "17559367"
+    },
+    "Lekakmod:house-duston:1": {
+      "starchips": 500,
+      "password": "40343749"
+    },
+    "Lekakmod:puny-penguin:1": {
+      "starchips": 500,
+      "password": "76442347"
+    },
+    "Lekakmod:missing-force:1": {
+      "starchips": 500,
+      "password": "12836042"
+    },
+    "Lekakmod:gagaga-cowboy:1": {
+      "starchips": 500,
+      "password": "12014404"
+    },
+    "Lekakmod:mermail-abyssmander:1": {
+      "starchips": 500,
+      "password": "21767650"
+    },
+    "Lekakmod:slushy:1": {
+      "starchips": 500,
+      "password": "84650463"
+    },
+    "Lekakmod:giant-soldier-of-steel:1": {
+      "starchips": 500,
+      "password": "57043117"
+    },
+    "Lekakmod:electromagnetic-bagworm:1": {
+      "starchips": 500,
+      "password": "07914843"
+    },
+    "Lekakmod:rage-of-the-deep-sea:1": {
+      "starchips": 500,
+      "password": "73778008"
+    },
+    "Lekakmod:paladin-of-the-cursed-dragon:1": {
+      "starchips": 1000,
+      "password": "68670547"
+    },
+    "Lekakmod:immortal-ruler:1": {
+      "starchips": 1000,
+      "password": "32485518"
+    },
+    "Lekakmod:zombie-master:1": {
+      "starchips": 1000,
+      "password": "17259470"
+    },
+    "Lekakmod:tristan-knight-of-the-underworld:1": {
+      "starchips": 1000,
+      "password": "96163807"
+    },
+    "Lekakmod:mezuki:1": {
+      "starchips": 1000,
+      "password": "92826944"
+    },
+    "Lekakmod:shutendoji:1": {
+      "starchips": 500,
+      "password": "65422840"
+    },
+    "Lekakmod:elemental-hero-stratos:1": {
+      "starchips": 1000,
+      "password": "40044918"
+    },
+    "Lekakmod:trickstar-lycoris:1": {
+      "starchips": 1000,
+      "password": "35199656"
+    },
+    "Lekakmod:elemental-hero-neos-alius:1": {
+      "starchips": 1000,
+      "password": "69884162"
+    },
+    "Lekakmod:scrap-chimera:1": {
+      "starchips": 1000,
+      "password": "56746202"
+    },
+    "Lekakmod:scrap-orthros:1": {
+      "starchips": 1000,
+      "password": "64550682"
+    },
+    "Lekakmod:harpie-queen:1": {
+      "starchips": 1000,
+      "password": "75064463"
+    },
+    "Lekakmod:cyber-angel-benten:1": {
+      "starchips": 1000,
+      "password": "77235086"
+    },
+    "Lekakmod:cyber-angel-idaten:1": {
+      "starchips": 1000,
+      "password": "03629090"
+    },
+    "Lekakmod:garden-rose-maiden:1": {
+      "starchips": 1000,
+      "password": "53325667"
+    },
+    "Lekakmod:witch-of-the-black-rose:1": {
+      "starchips": 1000,
+      "password": "17720747"
+    },
+    "Lekakmod:blue-rose-dragon:1": {
+      "starchips": 1000,
+      "password": "98884569"
+    },
+    "Lekakmod:flying-pegasus-railroad-stampede:1": {
+      "starchips": 1000,
+      "password": "88875132"
+    },
+    "Lekakmod:ruffian-railcar:1": {
+      "starchips": 1000,
+      "password": "24919805"
+    },
+    "Lekakmod:lunalight-blue-cat:1": {
+      "starchips": 1000,
+      "password": "11439455"
+    },
+    "Lekakmod:the-stern-mystic:1": {
+      "starchips": 500,
+      "password": "87557188"
+    },
+    "Lekakmod:double-coston:1": {
+      "starchips": 1000,
+      "password": "44436472"
+    },
+    "Lekakmod:blue-dragon-summoner:1": {
+      "starchips": 500,
+      "password": "55969226"
+    },
+    "Lekakmod:flying-kamakiri-1:1": {
+      "starchips": 500,
+      "password": "84834865"
+    },
+    "Lekakmod:mystic-tomato:1": {
+      "starchips": 500,
+      "password": "83011277"
+    },
+    "Lekakmod:morphing-jar-2:1": {
+      "starchips": 500,
+      "password": "79106360"
+    },
+    "Lekakmod:ape-magician:1": {
+      "starchips": 500,
+      "password": "31975743"
+    },
+    "Lekakmod:gozuki:1": {
+      "starchips": 1000,
+      "password": "52467217"
+    },
+    "Lekakmod:sky-striker-ace-shizuku:1": {
+      "starchips": 500,
+      "password": "90673288"
+    },
+    "Lekakmod:t-g-rush-rhino:1": {
+      "starchips": 1000,
+      "password": "36687247"
+    },
+    "Lekakmod:salamangreat-parro:1": {
+      "starchips": 1000,
+      "password": "59577547"
+    },
+    "Lekakmod:guardragon-garmides:1": {
+      "starchips": 1000,
+      "password": "43411769"
+    },
+    "Lekakmod:guardragon-andrake:1": {
+      "starchips": 1000,
+      "password": "06990577"
+    },
+    "Lekakmod:shiranui-squire:1": {
+      "starchips": 500,
+      "password": "41562624"
+    },
+    "Lekakmod:prank-kids-rocksies:1": {
+      "starchips": 500,
+      "password": "31440046"
+    },
+    "Lekakmod:psychic-tracker:1": {
+      "starchips": 1000,
+      "password": "30227494"
+    },
+    "Lekakmod:thunderclap-monk:1": {
+      "starchips": 1000,
+      "password": "66722103"
+    },
+    "Lekakmod:aloof-lupine:1": {
+      "starchips": 1000,
+      "password": "92998610"
+    },
+    "Lekakmod:shiranui-swordsaga:1": {
+      "starchips": 1000,
+      "password": "26326541"
+    },
+    "Lekakmod:hyper-psychic-riser:1": {
+      "starchips": 1000,
+      "password": "99115354"
+    },
+    "Lekakmod:update-jammer:1": {
+      "starchips": 1000,
+      "password": "88093706"
+    },
+    "Lekakmod:salamangreat-sunlight-wolf:1": {
+      "starchips": 1000,
+      "password": "87871125"
+    },
+    "Lekakmod:trickstar-divaridis:1": {
+      "starchips": 1000,
+      "password": "14365823"
+    },
+    "Lekakmod:guardragon-agarpain:1": {
+      "starchips": 500,
+      "password": "59537380"
+    },
+    "Lekakmod:sky-striker-ace-kaina:1": {
+      "starchips": 500,
+      "password": "12421694"
+    },
+    "Lekakmod:hiita-the-fire-charmer-ablaze:1": {
+      "starchips": 1000,
+      "password": "48815792"
+    },
+    "Lekakmod:time-thief-winder:1": {
+      "starchips": 1000,
+      "password": "56308388"
+    },
+    "Lekakmod:subterror-guru:1": {
+      "starchips": 1000,
+      "password": "16428514"
+    },
+    "Lekakmod:trickstar-corobane:1": {
+      "starchips": 1000,
+      "password": "98169343"
+    },
+    "Lekakmod:performapal-clay-breaker:1": {
+      "starchips": 1000,
+      "password": "08820526"
+    },
+    "Lekakmod:trickstar-crimson-heart:1": {
+      "starchips": 1000,
+      "password": "51011872"
+    },
+    "Lekakmod:salamangreat-gazelle:1": {
+      "starchips": 500,
+      "password": "26889158"
+    },
+    "Lekakmod:salamangreat-fowl:1": {
+      "starchips": 1000,
+      "password": "89662401"
+    },
+    "Lekakmod:salamangreat-jack-jaguar:1": {
+      "starchips": 1000,
+      "password": "56003780"
+    },
+    "Lekakmod:salamangreat-wolvie:1": {
+      "starchips": 1000,
+      "password": "13173832"
+    },
+    "Lekakmod:flamvell-firedog:1": {
+      "starchips": 1000,
+      "password": "23297235"
+    },
+    "Lekakmod:fencing-fire-ferret:1": {
+      "starchips": 1000,
+      "password": "97396380"
+    },
+    "Lekakmod:salamangreat-miragestallio:1": {
+      "starchips": 1000,
+      "password": "87327776"
+    },
+    "Lekakmod:infinitrack-anchor-drill:1": {
+      "starchips": 1000,
+      "password": "62034800"
+    },
+    "Lekakmod:infinitrack-drag-shovel:1": {
+      "starchips": 500,
+      "password": "34923554"
+    },
+    "Lekakmod:witchcrafter-schmietta:1": {
+      "starchips": 1000,
+      "password": "21744288"
+    },
+    "Lekakmod:witchcrafter-edel:1": {
+      "starchips": 1000,
+      "password": "58139997"
+    },
+    "Lekakmod:serziel-watcher-of-the-evil-eye:1": {
+      "starchips": 1000,
+      "password": "82466274"
+    },
+    "Lekakmod:juragedo:1": {
+      "starchips": 1000,
+      "password": "59546797"
+    },
+    "Lekakmod:king-s-knight:1": {
+      "starchips": 1000,
+      "password": "64788463"
+    },
+    "Lekakmod:jack-s-knight:1": {
+      "starchips": 1000,
+      "password": "90876561"
+    },
+    "Lekakmod:gravekeeper-s-ambusher:1": {
+      "starchips": 1000,
+      "password": "22134079"
+    },
+    "Lekakmod:utopic-onomatopoeia:1": {
+      "starchips": 500,
+      "password": "08512558"
+    },
+    "Lekakmod:doublebyte-dragon:1": {
+      "starchips": 500,
+      "password": "23971061"
+    },
+    "Lekakmod:gouki-jet-ogre:1": {
+      "starchips": 1000,
+      "password": "59644128"
+    },
+    "Lekakmod:booster-dragon:1": {
+      "starchips": 1000,
+      "password": "12023931"
+    },
+    "Lekakmod:aromaseraphy-jasmine:1": {
+      "starchips": 1000,
+      "password": "21200905"
+    },
+    "Lekakmod:platinum-gadget:1": {
+      "starchips": 1000,
+      "password": "40216089"
+    },
+    "Lekakmod:toon-dark-magician-girl:1": {
+      "starchips": 1000,
+      "password": "90960358"
+    },
+    "Lekakmod:silver-gadget:1": {
+      "starchips": 500,
+      "password": "29021114"
+    },
+    "Lekakmod:gold-gadget:1": {
+      "starchips": 1000,
+      "password": "55010259"
+    },
+    "Lekakmod:star-seraph-scepter:1": {
+      "starchips": 1000,
+      "password": "38331564"
+    },
+    "Lekakmod:destiny-hero-dogma:1": {
+      "starchips": 8000,
+      "password": "17132130"
+    },
+    "Lekakmod:super-vehicroid-jumbo-drill:1": {
+      "starchips": 4000,
+      "password": "36256625"
+    },
+    "Lekakmod:super-conductor-tyranno:1": {
+      "starchips": 8000,
+      "password": "85520851"
+    },
+    "Lekakmod:horus-the-black-flame-dragon-lv8:1": {
+      "starchips": 4000,
+      "password": "48229808"
+    },
+    "Lekakmod:ancient-gear-gadjiltron-dragon:1": {
+      "starchips": 4000,
+      "password": "50933533"
+    },
+    "Lekakmod:galaxy-eyes-photon-dragon:1": {
+      "starchips": 4000,
+      "password": "93717133"
+    },
+    "Lekakmod:fabled-leviathan:1": {
+      "starchips": 4000,
+      "password": "39477584"
+    },
+    "Lekakmod:gem-knight-master-diamond-dispersion:1": {
+      "starchips": 4000,
+      "password": "25342956"
+    },
+    "Lekakmod:number-38-hope-harbinger-dragon-titanic-galaxy:1": {
+      "starchips": 4000,
+      "password": "63767246"
+    },
+    "Lekakmod:house-dragonmaid:1": {
+      "starchips": 4000,
+      "password": "41232647"
+    },
+    "Lekakmod:dragonmaid-sheou:1": {
+      "starchips": 8000,
+      "password": "24799107"
+    },
+    "Lekakmod:ukiyoe-p-u-n-k-amazing-dragon:1": {
+      "starchips": 4000,
+      "password": "44708154"
+    },
+    "Lekakmod:mekk-knight-crusadia-avramax:1": {
+      "starchips": 4000,
+      "password": "21887175"
+    },
+    "Lekakmod:nekroz-of-decisive-armor:1": {
+      "starchips": 8000,
+      "password": "88240999"
+    },
+    "Lekakmod:nekroz-of-sophia:1": {
+      "starchips": 16000,
+      "password": "21105106"
+    },
+    "Lekakmod:nekroz-of-areadbhair:1": {
+      "starchips": 8000,
+      "password": "39468724"
+    },
+    "Lekakmod:gem-knight-lady-brilliant-diamond:1": {
+      "starchips": 8000,
+      "password": "19355597"
+    },
+    "Lekakmod:stardust-sifr-divine-dragon:1": {
+      "starchips": 16000,
+      "password": "26268488"
+    },
+    "Lekakmod:jupiter-the-power-patron-of-destruction:1": {
+      "starchips": 8000,
+      "password": "68231287"
+    },
+    "Lekakmod:ancient-gear-dark-golem:1": {
+      "starchips": 4000,
+      "password": "64603182"
+    },
+    "Lekakmod:light-and-darkness-dragonlord:1": {
+      "starchips": 8000,
+      "password": "19652159"
+    },
+    "Lekakmod:mementomictlan-tecuhtlica-creation-king:1": {
+      "starchips": 4000,
+      "password": "14529511"
+    },
+    "Lekakmod:heart-of-the-blue-eyes:1": {
+      "starchips": 4000,
+      "password": "54475145"
+    },
+    "Lekakmod:red-eyes-black-fullmetal-dragon:1": {
+      "starchips": 8000,
+      "password": "80870883"
+    },
+    "Lekakmod:beelze-of-the-diabolic-dragons:1": {
+      "starchips": 4000,
+      "password": "34408491"
+    },
+    "Lekakmod:topologic-bomber-dragon:1": {
+      "starchips": 4000,
+      "password": "05821478"
+    },
+    "Lekakmod:chaos-dragon-levianeer:1": {
+      "starchips": 4000,
+      "password": "55878038"
+    },
+    "Lekakmod:blue-eyes-tyrant-dragon:1": {
+      "starchips": 8000,
+      "password": "11443677"
+    },
+    "Lekakmod:centur-ion-auxila:1": {
+      "starchips": 4000,
+      "password": "71858682"
+    },
+    "Lekakmod:varudras-the-final-bringer-of-the-end-times:1": {
+      "starchips": 4000,
+      "password": "70636044"
+    },
+    "Lekakmod:azamina-moa-regina:1": {
+      "starchips": 4000,
+      "password": "46174776"
+    },
+    "Lekakmod:poseidra-abyss-the-atlantean-dragon-lord:1": {
+      "starchips": 4000,
+      "password": "60517697"
+    },
+    "Lekakmod:ryzeal-detonator:1": {
+      "starchips": 4000,
+      "password": "34909328"
+    },
+    "Lekakmod:danger-bigfoot:1": {
+      "starchips": 4000,
+      "password": "43316238"
+    },
+    "Lekakmod:queen-of-the-blazing-domain:1": {
+      "starchips": 4000,
+      "password": "72162751"
+    },
+    "Lekakmod:chaos-ruler-the-chaotic-magical-dragon:1": {
+      "starchips": 4000,
+      "password": "03040496"
+    },
+    "Lekakmod:horus-the-black-flame-deity:1": {
+      "starchips": 4000,
+      "password": "99307040"
+    },
+    "Lekakmod:enlightenment-dragon:1": {
+      "starchips": 4000,
+      "password": "46186135"
+    },
+    "Lekakmod:sangenpai-transcendent-dragion:1": {
+      "starchips": 4000,
+      "password": "18969888"
+    },
+    "Lekakmod:supreme-king-z-arc-synchro-universe:1": {
+      "starchips": 16000,
+      "password": "48654267"
+    },
+    "Lekakmod:number-c32-shark-drake-leveiss:1": {
+      "starchips": 8000,
+      "password": "07628844"
+    },
+    "Lekakmod:crystal-clear-wing-synchro-dragon:1": {
+      "starchips": 4000,
+      "password": "59765225"
+    },
+    "Lekakmod:world-chalice-guardragon-almarduke:1": {
+      "starchips": 4000,
+      "password": "95793022"
+    },
+    "Lekakmod:number-95-galaxy-eyes-dark-matter-dragon:1": {
+      "starchips": 16000,
+      "password": "58820923"
+    },
+    "Lekakmod:geistgrinder-golem:1": {
+      "starchips": 4000,
+      "password": "26913989"
+    },
+    "Lekakmod:ragnaraika-stag-sovereign:1": {
+      "starchips": 8000,
+      "password": "42307760"
+    },
+    "Lekakmod:vouiburial-the-dragon-undertaker:1": {
+      "starchips": 4000,
+      "password": "36974120"
+    },
+    "Lekakmod:veidos-the-dragon-of-endless-darkness:1": {
+      "starchips": 4000,
+      "password": "08540986"
+    },
+    "Lekakmod:majestic-red-dragon:1": {
+      "starchips": 16000,
+      "password": "67030233"
+    },
+    "Lekakmod:thor-lord-of-the-aesir:1": {
+      "starchips": 8000,
+      "password": "30604579"
+    },
+    "Lekakmod:odin-father-of-the-aesir:1": {
+      "starchips": 16000,
+      "password": "93483212"
+    },
+    "Lekakmod:malefic-cyber-end-dragon:1": {
+      "starchips": 16000,
+      "password": "01710476"
+    },
+    "Lekakmod:malefic-rainbow-dragon:1": {
+      "starchips": 16000,
+      "password": "00598988"
+    },
+    "Lekakmod:t-g-halberd-cannon:1": {
+      "starchips": 16000,
+      "password": "97836203"
+    },
+    "Lekakmod:meklord-astro-mekanikle:1": {
+      "starchips": 16000,
+      "password": "63468625"
     }
   },
   "title": {

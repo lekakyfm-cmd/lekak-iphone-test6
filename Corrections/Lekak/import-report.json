@@ -3658,8 +3658,8 @@
     },
     {
       "path": "mod.json",
-      "sha256": "2c72211c3824b1ca17d38fc4a6e9a22330019bba40c1237b63e75234cab013b3",
-      "bytes": 336607
+      "sha256": "6741114792775ed7b4bb787b2b97b4e47f8e2cb9fe07d634245ef395b60d038d",
+      "bytes": 420055
     },
     {
       "path": "objectives.json",
@@ -3718,5 +3718,21 @@
     "added_cards_checked": 518,
     "spellcaster_bases_corrected": 37,
     "reason": "Skull Knight does not support Book of Secret Arts; use same-type Magician of Black Chaos and preserve visible card stats."
+  },
+  "shop_fix": {
+    "price_records": 1240,
+    "special_passwords": 23,
+    "runtime_table": "passwords",
+    "tier_prices": [
+      500,
+      1000,
+      2000,
+      4000,
+      8000,
+      16000,
+      32000,
+      64000
+    ],
+    "device_tested": false
   }
 }

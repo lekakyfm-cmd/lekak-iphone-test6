@@ -5,6 +5,7 @@
 #include "game/campaign_flags.h"
 #include "game/duel_rewards.h"
 #include "types.h"
+#include <string.h>
 /* Password shop declarations without unrelated 32-bit UI layout structs. */
 typedef struct { u32 price; s32 password; } PasswordShopCard;
 extern PasswordShopCard D_801A8000[];
@@ -34,8 +35,16 @@ static int shop_entry_id(const ShopEntry *entry) {
 }
 static int shop_known(int id) {
     if (id <= 0 || (unsigned)id >= SHOP_STAGING_RECORDS || !Cards_Valid(id)) return 0;
-    for (unsigned i=0; i<SHOP_ENTRY_COUNT; i++)
-        if (shop_entry_id(&shop_entries[i]) == id) return 1;
+    /* Identity is indexed by id. Resolving every catalogue entry here made
+     * each screen tick perform hundreds of nested card-table scans, including
+     * the closing animation. Compare identities without resolving them. */
+    const char *identity = id > CARD_COUNT ? Cards_Identity(id) : NULL;
+    for (unsigned i=0; i<SHOP_ENTRY_COUNT; i++) {
+        const ShopEntry *entry = &shop_entries[i];
+        if (entry->retail) {
+            if (entry->retail == id) return 1;
+        } else if (identity && !strcmp(entry->identity, identity)) return 1;
+    }
     return 0;
 }
 static unsigned shop_price(int attack) {
