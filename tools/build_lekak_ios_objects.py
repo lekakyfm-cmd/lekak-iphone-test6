@@ -102,7 +102,7 @@ def build(game,output):
             kind,name=fields[-2:];name=name[1:] if name.startswith('_') else name
             if kind=='U':undefined.add(name)
             else:defined.add(name)
-    missing=undefined-defined-exported-{'abort','dyld_stub_binder'}
+    missing=undefined-defined-exported-{'abort','dyld_stub_binder','fclose','fwrite'}
     if missing:raise ValueError('Game does not export required imports: '+', '.join(sorted(missing)))
     archive=output/'libLekak_iPhone.a'
     archive.unlink(missing_ok=True)
