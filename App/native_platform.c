@@ -1,6 +1,7 @@
 #include "native_platform.h"
 #include "pc/platform/platform.h"
 #include "pc/platform/menu.h"
+#include "pc/debug/hud.h"
 #include <stdatomic.h>
 #include <stdlib.h>
 #include <string.h>
@@ -45,6 +46,7 @@ int Platform_SelectDisc(char *p,size_t n,char *why,size_t wn) {
     const char *s="Import the USA disc through the iPhone document picker before launching.";
     if(why&&wn){size_t k=strlen(s);if(k>=wn)k=wn-1;memcpy(why,s,k);why[k]=0;}return -1;
 }
+static void present_overlay(void);
 void Platform_Present(const uint16_t *vram,int stride,int x,int y,int w,int h,int rgb24) {
     if(!vram||stride<=0||x<0||y<0||y+h>512||
        (!rgb24&&x+w>stride)||(rgb24&&((size_t)x*2+(size_t)w*3>(size_t)stride*2))||!reserve(w,h))return;
@@ -55,16 +57,23 @@ void Platform_Present(const uint16_t *vram,int stride,int x,int y,int w,int h,in
             rgb=((r<<3)|(r>>2))<<16|((g<<3)|(g>>2))<<8|((b<<3)|(b>>2));}
         picture[(size_t)row*w+col]=rgb;
     }
-    if(services.frame)services.frame(services.context,picture,w,h);
+    present_overlay();
 }
 int Platform_PresentPicture(const uint32_t *p,int stride,int x,int y,int w,int h,int at_scale) {
     if(!p||stride<=0||x<0||y<0||w>stride||x>stride-w||at_scale<1||!reserve(w,h))return 0;
     for(int row=0;row<h;row++)memcpy(picture+(size_t)row*w,p+(size_t)(y+row)*stride+x,(size_t)w*sizeof(*p));
-    if(services.frame)services.frame(services.context,picture,w,h);return 1;
+    present_overlay();return 1;
+}
+static void present_overlay(void) {
+    MenuCanvas canvas={picture,width,width,height,0};
+    Menu_SetOverlayArea(0,0,-1);
+    Hud_Draw(&canvas);
+    if(services.frame)services.frame(services.context,picture,width,height);
 }
 int Platform_ReadPicture(uint32_t *out,int x,int y,int w,int h) {
     if(!out||!picture||x<0||y<0||w<=0||h<=0||w>width||h>height||x>width-w||y>height-h)return 0;
-    for(int row=0;row<h;row++)memcpy(out+(size_t)row*w,picture+(size_t)(y+row)*width+x,(size_t)w*sizeof(*out));return 1;
+    for(int row=0;row<h;row++) { memcpy(out+(size_t)row*w,picture+(size_t)(y+row)*width+x,(size_t)w*sizeof(*out)); }
+    return 1;
 }
 int Platform_PresentWidePicture(int x,int y,int w,int h,int wide,int s){(void)x;(void)y;(void)w;(void)h;(void)wide;(void)s;return 0;}
 int Platform_ReadWidePicture(uint32_t *p,int x,int y,int w,int h,int wide,int s){(void)p;(void)x;(void)y;(void)w;(void)h;(void)wide;(void)s;return 0;}

@@ -40,6 +40,9 @@ def stage_sources(stage):
     replace_once(stage/'src/pc/platform/platform_common.c',
         'int Platform_HasDesktopGL(void) { return 1; }',
         'int Platform_HasDesktopGL(void) { return 0; }')
+    roster=stage/'src/pc/free_duel/duelists.c'
+    for name in ['Duelists_HasUnlock(int duelist)','Duelists_Unlocked(const void *state, int duelist)']:
+        replace_once(roster,'int '+name+'\n{','int '+name+'\n{\n#ifdef MEMORIES_IOS\n    if (getenv("LEKAK_TEST_UNLOCK_ALL")) return Duelists_Valid(duelist);\n#endif')
     # Desktop updater launches curl as a subprocess. iOS has no subprocess
     # service; retain the API with an explicit unsupported result, as Android
     # already does upstream. Never link the unavailable spawn calls.

@@ -1,10 +1,14 @@
 #include "native_platform.h"
 #include "pc/platform/platform.h"
+#include "pc/platform/menu.h"
 #include <assert.h>
 #include <string.h>
 static unsigned shown,opened,pumped;
 static uint32_t last[12];static int lw,lh;
+static unsigned overlays;
 void Menu_LoadSettings(void){}
+void Menu_SetOverlayArea(int a,int b,int c){(void)a;(void)b;(void)c;}
+void Hud_Draw(MenuCanvas *c){assert(c&&c->pixels);overlays++;}
 static int open_window(void *p){assert(p==&shown);opened++;return 0;}
 static void frame(void *p,const uint32_t *pixels,int w,int h){assert(p==&shown);assert(w*h<=12);memcpy(last,pixels,(size_t)w*h*4);lw=w;lh=h;shown++;}
 static void error(void *p,const char *t,const char *m){(void)p;(void)t;(void)m;}
@@ -21,7 +25,7 @@ int main(void){
     uint16_t vram[1024*512]={0};
     vram[1025]=31;vram[1026]=31<<5;vram[2049]=31<<10;vram[2050]=0x7fff;
     Platform_Present(vram,1024,1,1,2,2,0);
-    assert(shown==1&&lw==2&&lh==2);
+    assert(shown==1&&lw==2&&lh==2&&overlays==1);
     assert(last[0]==0xff0000&&last[1]==0x00ff00&&last[2]==0x0000ff&&last[3]==0xffffff);
     uint32_t crop;assert(Platform_ReadPicture(&crop,1,1,1,1)&&crop==0xffffff);
     assert(!Platform_ReadPicture(&crop,2,1,1,1));

@@ -90,6 +90,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     const uint16_t bits[]={0x10,0x80,0x40,0x20,0x1000,0x8000,0x4000,0x2000,0x400,0x100,0x800,0x200,1,8};
     for(NSUInteger i=0;i<names.count;i++) {
         UIButton *b=[self button:names[i] action:NULL];b.tag=bits[i];b.enabled=NO;
+        b.backgroundColor=[UIColor colorWithWhite:0.12 alpha:0.65];
         [b addTarget:self action:@selector(press:) forControlEvents:UIControlEventTouchDown|UIControlEventTouchDragEnter];
         [b addTarget:self action:@selector(release:) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchCancel|UIControlEventTouchDragExit];
         [controls addObject:b];
@@ -101,7 +102,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     [nc addObserver:self selector:@selector(suspendGame) name:UIApplicationWillResignActiveNotification object:nil];
     [nc addObserver:self selector:@selector(resumeGame) name:UIApplicationDidBecomeActiveNotification object:nil];
     [nc addObserver:self selector:@selector(audioInterrupted:) name:AVAudioSessionInterruptionNotification object:nil];
-    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@15,@"engine":@"full translated engine",@"device_tested":@NO}];
+    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@16,@"engine":@"full translated engine",@"device_tested":@NO}];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];CGRect box=UIEdgeInsetsInsetRect(self.view.bounds,self.view.safeAreaInsets);
@@ -118,8 +119,10 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     }
     controls[12].frame=CGRectMake(x+w/2-76,y+h-size-8,70,size-4);
     controls[13].frame=CGRectMake(x+w/2+6,y+h-size-8,70,size-4);
-    screen.frame=landscape?CGRectMake(left+3*step,y+44,MAX(1,w-6*step-20),MAX(1,h-96)):
-        CGRectMake(x+8,y+48,w-16,MAX(1,h-4*step-90));
+    screen.frame=landscape?CGRectMake(x+4,y+40,w-8,MAX(1,h-44)):
+        CGRectMake(x+2,y+40,w-4,MAX(1,h-4*step-70));
+    /* Controls overlay the margins; preserve the game aspect ratio. */
+    for(UIButton *control in controls)[self.view bringSubviewToFront:control];
     status.frame=screen.frame;
 }
 - (void)press:(UIButton *)b{heldButtons|=(uint16_t)b.tag;LekakNative_SetPad(0,heldButtons,1);}
@@ -266,6 +269,8 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED,0),^{@autoreleasepool {
         NSString *log=[self->userRoot stringByAppendingPathComponent:@"native-log.txt"];
         freopen(log.fileSystemRepresentation,"w",stderr);setvbuf(stderr,NULL,_IOLBF,0);
+        if([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"LekakTestUnlockAll"] boolValue]) setenv("LEKAK_TEST_UNLOCK_ALL","1",1);
+        else unsetenv("LEKAK_TEST_UNLOCK_ALL");
         int result=LekakNative_Run(self->discPath.fileSystemRepresentation,
             NSBundle.mainBundle.bundlePath.fileSystemRepresentation,self->userRoot.fileSystemRepresentation);
         dispatch_sync(dispatch_get_main_queue(),^{

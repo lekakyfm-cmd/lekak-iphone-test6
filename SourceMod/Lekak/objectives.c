@@ -21,7 +21,7 @@ static void (*old_applied)(int),(*old_reset)(void);
 static struct DuelEffectChannel *boxes[4];
 static int selected,opened,page,label=-1;
 static u16 visibility[11];
-static int hidden;
+static int hidden,update_logged;
 
 static void remove_box(int i) {
     if(boxes[i]) { TextBox_Destroy(boxes[i]); boxes[i]=0; }
@@ -93,6 +93,8 @@ static void destroy(void) {
 static s32 update(void) {
     u16 pressed=gInput_wPad1Pressed,held=gInput_wPad1Held,repeat=gInput_wPad1Repeat;
     int consume=0,result;
+    u16 navigation=repeat|pressed;
+    if(!update_logged && host->log){host->log(host,"Objectives menu update active");update_logged=1;}
     if(opened) {
         consume=1;
         if(pressed&PAD_BUTTON_CANCEL) close_book();
@@ -105,12 +107,12 @@ static s32 update(void) {
         else if(pressed&(PAD_BUTTON_L1|PAD_DIRECTION_LEFT)) {page=(page+39)%40;show_page();}
     } else if(stable()) {
         if(selected) {
-            if(repeat&PAD_DIRECTION_UP) {selected=0;variant(8,1);consume=1;}
-            else if(repeat&PAD_DIRECTION_DOWN) {selected=0;gMain_bMenuID=9;variant(9,1);consume=1;}
+            if(navigation&PAD_DIRECTION_UP) {selected=0;variant(8,1);consume=1;}
+            else if(navigation&PAD_DIRECTION_DOWN) {selected=0;gMain_bMenuID=9;variant(9,1);consume=1;}
             else if(pressed&PAD_BUTTON_CANCEL) selected=0;
             else if(pressed&(PAD_BUTTON_CONFIRM_MASK|PAD_BUTTON_START)) {page=0;show_page();consume=1;}
-        } else if((gMain_bMenuID==8 && (repeat&PAD_DIRECTION_DOWN))
-               || (gMain_bMenuID==9 && (repeat&PAD_DIRECTION_UP))) {
+        } else if((gMain_bMenuID==8 && (navigation&PAD_DIRECTION_DOWN))
+               || (gMain_bMenuID==9 && (navigation&PAD_DIRECTION_UP))) {
             variant(gMain_bMenuID,0);gMain_bMenuID=8;selected=1;consume=1;
         }
     }
@@ -147,6 +149,7 @@ int MemoriesModInit(const MemoriesModHost *h,MemoriesMod *m) {
        || !h->hook(h,(void *)MainMenu_UpdateFrontendMenu,(void *)update,&old_update)
        || !h->hook(h,(void *)MainMenu_DestroyFrontendMenu,(void *)destroy,&old_destroy)) return 0;
     if(!LekakButton_Init(h)) return 0;
+    if(h->log)h->log(h,"Objectives hooks installed");
     old_applied=m->applied;old_reset=m->reset;m->applied=applied;m->reset=reset;
     return 1;
 }
