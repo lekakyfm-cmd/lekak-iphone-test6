@@ -28,6 +28,9 @@ jobs:
           for pack in Lekak_iPhone_13_Assets_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
+      - name: Apply verified card reference corrections after asset extraction
+        run: |
+          if [ -d Corrections/Lekak ]; then cp -R Corrections/Lekak/. Resources/Lekak/; fi
       - name: Verify inputs and object platform checks
         run: |
           mkdir -p build/logs
@@ -35,11 +38,13 @@ jobs:
           python -c 'import sys; sys.path.insert(0,"tools"); from test_lekak_sdk import verify_sources; verify_sources()'
           test -f SourceMod/Lekak/native-units.json
           python tools/verify_lekak.py
+          python tools/test_card_references.py
       - name: Verify native display and controls
         run: |
           clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
           build/native-platform-test
           python tools/test_native_card_pixels.py
+          python tools/test_ios_objectives_menu.py
           clang -std=gnu11 -DMEMORIES_PC -DMEMORIES_TRANSLATED -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-test
           for mode in 0 1 2 3; do build/native-entry-test "$mode"; done
       - uses: actions/cache@v4
@@ -117,7 +122,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_19_*.ipa
+          path: build/native-app/Lekak_iPhone_20_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
