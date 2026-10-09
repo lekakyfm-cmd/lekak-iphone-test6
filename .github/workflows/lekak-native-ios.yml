@@ -18,14 +18,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Extract engine sources
-        run: unzip -o Lekak_iPhone_10_Moteur_Et_Correctifs.zip 'EngineSDK/*'
+      - name: Extract engine sources when uploaded as a ZIP
+        run: |
+          if [ -f Lekak_iPhone_10_Moteur_Et_Correctifs.zip ]; then
+            unzip -o Lekak_iPhone_10_Moteur_Et_Correctifs.zip 'EngineSDK/*'
+          fi
       - name: Verify inputs and object platform checks
         run: |
           mkdir -p build/logs
           python tools/test_ios_object_format.py
           python -c 'import sys; sys.path.insert(0,"tools"); from test_lekak_sdk import verify_sources; verify_sources()'
           test -f SourceMod/Lekak/native-units.json
+      - name: Verify native display and controls
+        run: |
+          clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
+          build/native-platform-test
       - uses: actions/cache@v4
         with:
           path: |
@@ -42,6 +49,10 @@ jobs:
         run: |
           set -o pipefail
           python tools/build_lekak_ios_objects.py --game-build build/game-abi --output build/lekak-ios 2>&1 | tee build/logs/lekak-ios.log
+      - name: Cross-compile complete engine core for iPhone
+        run: |
+          set -o pipefail
+          python tools/build_iphone_engine.py --output build/iphone-core --jobs 3 2>&1 | tee build/logs/iphone-core.log
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
@@ -56,3 +67,6 @@ jobs:
             build/game-abi/mod_signatures.json
             build/lekak-ios/build-report.json
             build/lekak-ios/libLekak_iPhone.a
+            build/iphone-core/logs/
+            build/iphone-core/ios-core-report.json
+            build/iphone-core/libMemories_iPhone.a
