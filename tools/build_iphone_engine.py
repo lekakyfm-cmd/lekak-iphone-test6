@@ -113,7 +113,9 @@ def build(output,jobs):
     natives=engine.native_sources(descriptor,backend=None)
     excluded={'src/pc/guest/main.c','src/pc/mods/object_loader.c'}
     natives=[s for s in natives if s not in excluded]
-    natives.append('src/pc/platform/native_card_pixels.c')
+    # native_sources discovers staged files automatically. Keep explicit
+    # inclusion for older inventories, but compile each unit exactly once.
+    natives=list(dict.fromkeys([*natives,'src/pc/platform/native_card_pixels.c']))
     ordinary={s for s in natives if s in engine.ORDINARY or '/translated_' in s}
     ordinary.update({'src/pc/render/soft_gpu.c','src/pc/platform/native_platform.c','src/pc/platform/native_entry.c','src/pc/platform/native_card_pixels.c'})
     jobs_list=[(s,g) for g,ss in groups.items() for s in ss]+[(s,'native') for s in natives]
@@ -148,6 +150,8 @@ def build(output,jobs):
     from build_lekak_ios_objects import check_macho_ios
     exports=engine.generate_mod_exports(output,jobs_list,path_for,raw,aliases,linked,pins,cc,flags)
     objects=[path_for('obj',s,'.o') for s,g in jobs_list]+[obj,exports]
+    if len(objects)!=len(set(objects)):
+        raise ValueError('Duplicate object in iPhone core archive')
     for p in objects:check_macho_ios(p)
     archive=output/'libMemories_iPhone.a';archive.unlink(missing_ok=True)
     subprocess.run(['ar','rcs',str(archive),*[str(p) for p in objects]],check=True)
