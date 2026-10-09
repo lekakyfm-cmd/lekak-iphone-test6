@@ -40,6 +40,29 @@ def stage_sources(stage):
     replace_once(stage/'src/pc/platform/platform_common.c',
         'int Platform_HasDesktopGL(void) { return 1; }',
         'int Platform_HasDesktopGL(void) { return 0; }')
+    runtime=stage/'src/pc/guest/translated_runtime.c'
+    replace_once(runtime,'static unsigned region_count, function_count;',
+        'static unsigned region_count, function_count;\nstatic unsigned recent_region = ~0u;')
+    replace_once(runtime,'    region_count = function_count = 0;',
+        '    region_count = function_count = 0;\n    recent_region = ~0u;')
+    replace_once(runtime,'        regions[i] = regions[--region_count];',
+        '        recent_region = ~0u;\n        regions[i] = regions[--region_count];')
+    replace_once(runtime,'    if (host) return host;\n    for (i = 0; i < region_count; ++i) {',
+        '    if (host) return host;\n'
+        '    if (recent_region < region_count) {\n'
+        '        const GuestRuntimeRegion *r = &regions[recent_region];\n'
+        '        if (address >= r->guest) {\n'
+        '            size_t offset = address - r->guest;\n'
+        '            if (offset < r->length && length <= r->length - offset)\n'
+        '                return (void *)(r->host + offset);\n'
+        '        }\n'
+        '    }\n'
+        '    for (i = 0; i < region_count; ++i) {')
+    replace_once(runtime,'        if (offset < r->length && length <= r->length - offset)\n            return (void *)(r->host + offset);',
+        '        if (offset < r->length && length <= r->length - offset) {\n'
+        '            recent_region = i;\n'
+        '            return (void *)(r->host + offset);\n'
+        '        }')
     roster=stage/'src/pc/free_duel/duelists.c'
     for name in ['Duelists_HasUnlock(int duelist)','Duelists_Unlocked(const void *state, int duelist)']:
         replace_once(roster,'int '+name+'\n{','int '+name+'\n{\n#ifdef MEMORIES_IOS\n    if (getenv("LEKAK_TEST_UNLOCK_ALL")) return Duelists_Valid(duelist);\n#endif')

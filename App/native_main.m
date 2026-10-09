@@ -17,6 +17,7 @@
     int latestWidth,latestHeight;
     BOOL frameChanged,started,importing,finished;
     uint16_t heldButtons;
+    NSTimeInterval launchTime;
     UIImageView *screen;
     UILabel *status;
     UIButton *choose,*launch,*share;
@@ -102,7 +103,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     [nc addObserver:self selector:@selector(suspendGame) name:UIApplicationWillResignActiveNotification object:nil];
     [nc addObserver:self selector:@selector(resumeGame) name:UIApplicationDidBecomeActiveNotification object:nil];
     [nc addObserver:self selector:@selector(audioInterrupted:) name:AVAudioSessionInterruptionNotification object:nil];
-    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@16,@"engine":@"full translated engine",@"device_tested":@NO}];
+    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@17,@"engine":@"full translated engine",@"device_tested":@NO}];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];CGRect box=UIEdgeInsetsInsetRect(self.view.bounds,self.view.safeAreaInsets);
@@ -169,6 +170,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     if(image){
         screen.image=[UIImage imageWithCGImage:image];CGImageRelease(image);status.hidden=YES;
         if(!report[@"first_frame_received"]) {
+            report[@"first_frame_seconds"]=@(NSProcessInfo.processInfo.systemUptime-launchTime);
             report[@"first_frame_received"]=@YES;report[@"state"]=@"frames_received";
             report[@"frame_width"]=@(w);report[@"frame_height"]=@(h);[self writeReport];
         }
@@ -258,6 +260,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
 - (void)startGame {
     if(started||importing)return;
     if(![NSFileManager.defaultManager fileExistsAtPath:discPath]){[self chooseDisc];return;}
+    launchTime=NSProcessInfo.processInfo.systemUptime;
     started=YES;launch.enabled=NO;choose.enabled=NO;lastError=nil;
     for(UIButton *b in controls)b.enabled=YES;
     status.hidden=NO;status.text=@"Démarrage de Lekak… / Starting Lekak…";

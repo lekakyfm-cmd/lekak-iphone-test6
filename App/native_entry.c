@@ -15,6 +15,10 @@
 #include <setjmp.h>
 #include <string.h>
 #include <stdio.h>
+#include <time.h>
+static double startup_begin;
+static double seconds_now(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return t.tv_sec+t.tv_nsec/1e9;}
+static void stage(const char *name){fprintf(stderr,"Lekak timing: %.3f s — %s\n",seconds_now()-startup_begin,name);}
 static atomic_int launched;
 static jmp_buf exit_boundary;
 static int boundary_active;
@@ -25,7 +29,7 @@ extern int Main_Init(void);
 extern void GuestRuntime_free(void *);
 #endif
 void Psx___main(void){}
-static int begin(void){TextEntries_Start();return Main_Init();}
+static int begin(void){stage("game initialization begins");TextEntries_Start();int result=Main_Init();stage("game initialization finished");return result;}
 void LekakNative_StopGame(void){
     /* Called only on the game worker after VSync stops timers and mods.
      * Return to the host instead of calling exit and terminating UIKit. */
@@ -37,7 +41,7 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
     if(setenv("MEMORIES_DISC",disc,1)||setenv("MEMORIES_PROGRAM_DIR",program,1)||
        setenv("MEMORIES_USER_DIR",user,1)||setenv("MEMORIES_NO_MONITOR","1",1)||
        setenv("MEMORIES_MODS","1",1)||setenv("MEMORIES_MOD_LEKAKMOD","1",1))return -3;
-    Log_Init();
+    Log_Init();startup_begin=seconds_now();stage("start");
     fprintf(stderr,"Lekak startup: mapping translated memory\n");
     if(Memories_GuestMap())return -4;
     char why[768];size_t size=0;
@@ -52,9 +56,12 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
     free(exe);
 #endif
     fprintf(stderr,"Lekak startup: executable loaded (%zu bytes), read buffer released\n",size);
+    stage("executable loaded");
     if(result||Memories_ModulesInit())return -7;
+    stage("modules initialized");
     fprintf(stderr,"Lekak startup: loading settings and bundled mod\n");
     if(Platform_Open("Lekak"))return -8;
+    stage("settings and mod loaded");
     int lekak=-1;
     for(int i=0;i<Mods_Count();i++) {
         const char *id=Mods_Id(i);
@@ -69,7 +76,7 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
     }
     if(Mods_Status(lekak)[0])fprintf(stderr,"Lekak mod notes: %s\n",Mods_Status(lekak));
     fprintf(stderr,"Lekak startup: mod active; building text and cards\n");
-    Text_Build();Cards_Build();Text_SortCards();
+    Text_Build();stage("text built");Cards_Build();stage("cards built");Text_SortCards();stage("card names sorted");
     fprintf(stderr,"Lekak startup: entering game\n");
     boundary_active=1;
     if(setjmp(exit_boundary)==0){
