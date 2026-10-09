@@ -20,6 +20,10 @@ def stage_sources(stage):
         shutil.copytree(SDK/folder,stage/folder,dirs_exist_ok=True)
     for file in ['native_platform.c','native_platform.h','native_entry.c','native_entry.h']:
         shutil.copyfile(ROOT/'App'/file,stage/'src/pc/platform'/file)
+    # Objectives must receive navigation before TitleMenu_Before consumes it.
+    replace_once(stage/'tools/pc/build_arm64.py',
+        'hooks=group != "native" or "/overrides/" in source,',
+        'hooks=group != "native" or "/overrides/" in source or source == "src/pc/platform/title_screen.c",')
     mods=stage/'src/pc/mods/mods.c'
     replace_once(mods,'#if defined(__APPLE__) && defined(__aarch64__) && defined(MEMORIES_TRANSLATED)\n    char error[STATUS_MAX];',
         '#if defined(MEMORIES_IOS)\n'
@@ -90,7 +94,7 @@ def stage_sources(stage):
         '"no update check on Android yet"',
         '"Update through the app installer on mobile"')
     return {str(p.relative_to(stage)):hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in [mods,stage/'src/pc/sdk/libetc.c',stage/'src/pc/platform/platform_common.c',stage/'src/pc/platform/update_net.c']}
+        for p in [mods,art,runtime,roster,stage/'tools/pc/build_arm64.py',stage/'src/pc/platform/native_card_pixels.c',stage/'src/pc/sdk/libetc.c',stage/'src/pc/platform/platform_common.c',stage/'src/pc/platform/update_net.c']}
 
 def build(output,jobs):
     if platform.system()!='Darwin' or platform.machine()!='arm64':

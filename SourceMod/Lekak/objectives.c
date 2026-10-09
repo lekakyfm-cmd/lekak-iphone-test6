@@ -8,6 +8,9 @@
 #include "game/save_data.h"
 #include "pc/free_duel/duelists.h"
 #include "pc/text/text.h"
+#ifdef MEMORIES_IOS
+#include "pc/platform/title_screen.h"
+#endif
 
 typedef struct { const char *identity,*name,*requirements; } Objective;
 #include "objectives-data.h"
@@ -146,7 +149,11 @@ int MemoriesModInit(const MemoriesModHost *h,MemoriesMod *m) {
     host=h;
     english=h->setting ? !!h->setting(h,"objectives_language",0) : 0;
     if(!h->hook(h,(void *)MainMenu_InitFrontendMenu,(void *)init,&old_init)
+#ifdef MEMORIES_IOS
+       || !h->hook(h,(void *)TitleScreen_Update,(void *)update,&old_update)
+#else
        || !h->hook(h,(void *)MainMenu_UpdateFrontendMenu,(void *)update,&old_update)
+#endif
        || !h->hook(h,(void *)MainMenu_DestroyFrontendMenu,(void *)destroy,&old_destroy)) return 0;
     if(!LekakButton_Init(h)) return 0;
     if(h->log)h->log(h,"Objectives hooks installed");

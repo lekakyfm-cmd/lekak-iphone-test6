@@ -54,7 +54,7 @@ def build(game,output):
     target=['-target','arm64-apple-ios15.0','-isysroot',sdk]
     flags=[*target,'-std=gnu11','-fms-extensions','-O0','-fno-strict-aliasing',
         '-ffp-contract=off','-fwrapv','-fno-stack-protector','-fno-common',
-        '-DMEMORIES_PC','-DMEMORIES_TRANSLATED','-DMEMORIES_MOD',
+        '-DMEMORIES_PC','-DMEMORIES_TRANSLATED','-DMEMORIES_MOD','-DMEMORIES_IOS',
         '-D_LANGUAGE_C','-DLANGUAGE_C','-D_DARWIN_C_SOURCE',
         '-I'+str(SDK/'src'),'-I'+str(ROOT/'SourceMod/Lekak')]
     output.mkdir(parents=True,exist_ok=True)
