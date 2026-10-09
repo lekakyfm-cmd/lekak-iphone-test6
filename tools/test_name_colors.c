@@ -1,6 +1,11 @@
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>
+/* This test uses ordinary host buffers, not the game's pinned 32-bit
+ * pointer storage. Keep its pointer fixture consistent on GCC and Clang. */
+#include "../EngineSDK/src/port_ptr.h"
+#undef G32
+#define G32
 #include "../SourceMod/Lekak/name-colors.c"
 static u16 vram[512][1024], initial[7][16];
 static int attack, disc_reads, fail_store;
