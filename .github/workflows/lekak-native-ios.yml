@@ -42,7 +42,7 @@ jobs:
           python tools/test_shop.py
           cc -std=gnu11 -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_name_colors.c -o /tmp/lekak-name-colors-test
           /tmp/lekak-name-colors-test
-          cc -std=gnu11 -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_shop_performance.c -o /tmp/lekak-shop-test
+          cc -std=gnu11 -fms-extensions -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_shop_performance.c -o /tmp/lekak-shop-test
           /tmp/lekak-shop-test
       - name: Verify native display and controls
         run: |
@@ -148,4 +148,3 @@ jobs:
             EngineSDK/tmp/pc/ios-deps/ios-dependencies-report.json
             build/native-app/native-app-report.json
             build/native-app/native-link.map
-
