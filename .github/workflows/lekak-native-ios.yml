@@ -39,7 +39,7 @@ jobs:
         run: |
           clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
           build/native-platform-test
-          clang -std=gnu11 -DMEMORIES_PC -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c -o build/native-entry-test
+          clang -std=gnu11 -DMEMORIES_PC -DMEMORIES_TRANSLATED -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-test
           for mode in 0 1 2 3; do build/native-entry-test "$mode"; done
       - uses: actions/cache@v4
         with:
@@ -116,7 +116,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_13_Native.ipa
+          path: build/native-app/Lekak_iPhone_14_Native.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
