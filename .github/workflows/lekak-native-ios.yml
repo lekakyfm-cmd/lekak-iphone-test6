@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-        - name: Extract engine sources
+      - name: Extract engine sources
         run: unzip -o Lekak_iPhone_10_Moteur_Et_Correctifs.zip 'EngineSDK/*'
       - name: Verify inputs and object platform checks
         run: |
