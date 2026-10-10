@@ -25,7 +25,7 @@ jobs:
           fi
       - name: Extract Lekak resources uploaded as ZIP parts
         run: |
-          for pack in Lekak_iPhone_13_Assets_*.zip; do
+          for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_24_Music_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
       - name: Apply verified card reference corrections after asset extraction
@@ -44,6 +44,8 @@ jobs:
           /tmp/lekak-name-colors-test
           cc -std=gnu11 -fms-extensions -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_shop_performance.c -o /tmp/lekak-shop-test
           /tmp/lekak-shop-test
+          cc -std=gnu11 -fms-extensions -O2 -ffunction-sections -fdata-sections -DMEMORIES_PC -DMEMORIES_MOD -D_LANGUAGE_C -DLANGUAGE_C -I EngineSDK/src tools/test_duelist_music.c EngineSDK/src/pc/mods/json.c -Wl,-dead_strip -o /tmp/lekak-music-test
+          /tmp/lekak-music-test
       - name: Verify native display and controls
         run: |
           clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
@@ -127,7 +129,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_23_*.ipa
+          path: build/native-app/Lekak_iPhone_24_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
