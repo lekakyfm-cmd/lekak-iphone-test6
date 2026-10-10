@@ -81,8 +81,8 @@ int MemoriesModInit(const MemoriesModHost *h,MemoriesMod *m){
  mh=h;prev_frame=m->frame;m->frame=frame;
  prev_applied=m->applied;m->applied=music_applied;
  prev_shutdown=m->shutdown;m->shutdown=music_shutdown;
- FILE *f=h->open_data(h,"music-diagnostic.txt","w");report=f!=0;if(f)fclose(f);
- if(report){for(int i=0;i<3;i++)trace("Loaded %s slot=%04x owner=%d\n",names[i],0xfff0+i,AudioReplace_Owner(AUDIO_MUSIC,0xfff0+i));}
+ /* No storage writes from the sound interrupt or during normal play. */
+ report=0;
  return h->hook(h,(void*)SD_BGMPlay,(void*)bgm,&prev_bgm)
  &&h->hook(h,(void*)SD_PlaySequence,(void*)play,&prev_play)
  &&h->hook(h,(void*)func_80045514,(void*)pump,&prev_pump);

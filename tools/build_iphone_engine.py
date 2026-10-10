@@ -24,6 +24,10 @@ def stage_sources(stage):
     replace_once(stage/'tools/pc/build_arm64.py',
         'hooks=group != "native" or "/overrides/" in source,',
         'hooks=group != "native" or "/overrides/" in source or source == "src/pc/platform/title_screen.c",')
+    # Native-rate stereo already matches the mixer; avoid a redundant full-song resample.
+    replace_once(stage/'src/pc/audio/replace.c',
+        '    /* Mono plays on both sides; stereo, and a wider source without speakers',
+        '    /* Already-native stereo needs no resampling or channel mixing. */\n    if (channels == 2 && rate == AUDIO_RATE &&\n        (!speakers || (speakers[0] == FL && speakers[1] == FR))) {\n        if (frames > AUDIO_CLIP_MAX_FRAMES) return -1;\n        out = malloc(frames * 2 * sizeof(*out));\n        if (!out) return -1;\n        memcpy(out, samples, frames * 2 * sizeof(*out));\n        clip->frames = out;\n        clip->count = (uint32_t)frames;\n        return 0;\n    }\n    /* Mono plays on both sides; stereo, and a wider source without speakers')
     mods=stage/'src/pc/mods/mods.c'
     replace_once(mods,'#if defined(__APPLE__) && defined(__aarch64__) && defined(MEMORIES_TRANSLATED)\n    char error[STATUS_MAX];',
         '#if defined(MEMORIES_IOS)\n'
