@@ -3658,8 +3658,8 @@
     },
     {
       "path": "mod.json",
-      "sha256": "6741114792775ed7b4bb787b2b97b4e47f8e2cb9fe07d634245ef395b60d038d",
-      "bytes": 420055
+      "bytes": 420055,
+      "sha256": "6741114792775ed7b4bb787b2b97b4e47f8e2cb9fe07d634245ef395b60d038d"
     },
     {
       "path": "objectives.json",
@@ -3690,6 +3690,201 @@
       "path": "CREDITS-MUSIQUES.txt",
       "sha256": "2ba9c4818d71d033070cddc4d966da0d5cd780c5cb2193b482e6d41cef10ef7f",
       "bytes": 1169
+    },
+    {
+      "path": "MUSIC_CREDITS.txt",
+      "bytes": 7249,
+      "sha256": "466fc5b96183036a2b826ab432a1dfc61df2f150fa08ed8508051d00f43fc465"
+    },
+    {
+      "path": "music/dark-simon.ogg",
+      "bytes": 2403963,
+      "sha256": "70759c692e548a2538d867a2c77fc5bd6e45d0a9c1e8691c80aa7f26cfab5be0"
+    },
+    {
+      "path": "music/destroyer-pegasus.ogg",
+      "bytes": 4872389,
+      "sha256": "984e1d60cee9d5744375eb7c92c9fc31f5662cafb89707798ce80a066ec996c3"
+    },
+    {
+      "path": "music/soul-reaper-bakura.ogg",
+      "bytes": 3291545,
+      "sha256": "d769d97f3ab4a59810f848ad63529c52f050bb1f878b1d0dbbebb6354084c07f"
+    },
+    {
+      "path": "music/eclipse-isis.ogg",
+      "bytes": 6345760,
+      "sha256": "0e0eca4ba3e227657c5d7dd51565e264d2b93312b16d4e03785c19d70647a399"
+    },
+    {
+      "path": "music/primal-rex.ogg",
+      "bytes": 1976531,
+      "sha256": "d0756e947e8da2200f2639321c68826ffa3a034ca2c35d83840e872af6740f9f"
+    },
+    {
+      "path": "music/heishin-the-eternal.ogg",
+      "bytes": 3089889,
+      "sha256": "0894ffcbcea8b9de14350f13e9ab3eb82e332e3af597ff5086a4a980ed0869ea"
+    },
+    {
+      "path": "music/tyrant-kaiba.ogg",
+      "bytes": 4267858,
+      "sha256": "0969d910f5166317cfb6883d2d06a560eb3071e167aa68d2c93f51f9d0ab7a25"
+    },
+    {
+      "path": "music/vorthrax.ogg",
+      "bytes": 1541870,
+      "sha256": "e170cb92e8dfe57ac4ab7fcdd8bc4993b888d31aff2cf2b51bd680be7229b10d"
+    },
+    {
+      "path": "music/nemerys.ogg",
+      "bytes": 2230772,
+      "sha256": "cac6e79cf5d5e69a5cc02c780171ed8a41fdc82bb04f777cea2a463a996b2ce6"
+    },
+    {
+      "path": "music/ignaroth.ogg",
+      "bytes": 1806983,
+      "sha256": "7a65d853603b42479087176ba717db063aa68ddc65768ea35339675cc012645d"
+    },
+    {
+      "path": "music/vesper.ogg",
+      "bytes": 7078434,
+      "sha256": "b5811c62807c69b4c55157c469c0f6e85cf721b66cc3724fb354034a83c7eded"
+    },
+    {
+      "path": "music/azhur.ogg",
+      "bytes": 4311210,
+      "sha256": "da97afb64d11c232edfac4f6979e7916668a07dbd43a11ed2298c6b237bffb7e"
+    },
+    {
+      "path": "music/ferron.ogg",
+      "bytes": 8992122,
+      "sha256": "5c83bd721892a3eebe91cdae3e7701c00a16d3d21db267ff650eff2d6d21a02d"
+    },
+    {
+      "path": "music/nerex.ogg",
+      "bytes": 1794168,
+      "sha256": "57cc783d49b5bd890b6e95c46b178f54589ec37e9d275b172dfbf3d48af43f1f"
+    },
+    {
+      "path": "music/ravok.ogg",
+      "bytes": 3347860,
+      "sha256": "30554dcbf88ec31b973426eaef3cc4ba0517463cb18c06cb5d88f59e524f49c3"
+    },
+    {
+      "path": "music/tharn.ogg",
+      "bytes": 948444,
+      "sha256": "70bec462b5b233dce6ca8fb17a3a4d7411cc8db714dae33abdc1fde706187be7"
+    },
+    {
+      "path": "music/zerak.ogg",
+      "bytes": 3021626,
+      "sha256": "9f6e1cd50461b40f9db354e7cef04be823695dde9e700cfdebcb924ef2e1c670"
+    },
+    {
+      "path": "music/nekris.ogg",
+      "bytes": 1495061,
+      "sha256": "4fae9cf020157bafcf0ef29b8d4d932cc274b8d087b4977a03a461c1873ff4d5"
+    },
+    {
+      "path": "music/oryx.ogg",
+      "bytes": 5081303,
+      "sha256": "f1508816df03ef852f04fad58d55611ee206c673aa80cdc332a02e60ac47736c"
+    },
+    {
+      "path": "music/valtor.ogg",
+      "bytes": 3307825,
+      "sha256": "4011d88962b2919c072ac64c14c593ecd064943ce107f76c225cf98a57306232"
+    },
+    {
+      "path": "music/serya.ogg",
+      "bytes": 1922192,
+      "sha256": "d8daaa26570ed3ddef084451bfbd6be77495d8b3afc6935d52f3aa2b8568bcfa"
+    },
+    {
+      "path": "music/drazhen.ogg",
+      "bytes": 1889751,
+      "sha256": "81d2c5abb3bcbcccd906be50af0bb732fdb86d613bb3361901207e6a54dd3a30"
+    },
+    {
+      "path": "music/malvek.ogg",
+      "bytes": 901183,
+      "sha256": "f118dcdaffa987c37bb78cd2d98e523537c41f943009583e2e0652beae1d4a28"
+    },
+    {
+      "path": "music/nyss.ogg",
+      "bytes": 1966979,
+      "sha256": "ed5c3581aa81972a658c8c3d621c461c9dafeca16e83bf8cc5d2be677dd66b86"
+    },
+    {
+      "path": "music/krag.ogg",
+      "bytes": 5129851,
+      "sha256": "460f7422086e08803eceec0f48631a9876e7b26d7ab7b7f0bc320d76cd3b120d"
+    },
+    {
+      "path": "music/velkor.ogg",
+      "bytes": 1641699,
+      "sha256": "e7de592f199b19fcb671aafcb15cb5d8bbf84dc771a1f898bc9df8e119cb399d"
+    },
+    {
+      "path": "music/ossyr.ogg",
+      "bytes": 1248412,
+      "sha256": "8cc281383b91bab309e1b65c77bd09adfad184f16275bc38db64e8459ac71dcb"
+    },
+    {
+      "path": "music/nharos.ogg",
+      "bytes": 5864812,
+      "sha256": "a3ef694af9aa31013da529bb47b17a752baeb31c887018d5e0f9c07cd79de762"
+    },
+    {
+      "path": "music/solkar.ogg",
+      "bytes": 5740002,
+      "sha256": "e53df4abfa75e8f99bfebafac8619c568edb004799030de367b1609c0903a092"
+    },
+    {
+      "path": "music/luneth.ogg",
+      "bytes": 3335650,
+      "sha256": "87e99270a80c8a7a032884c3ad897c8e3bc4651df813bfc7cfe6c8c723fbb07d"
+    },
+    {
+      "path": "music/voryn.ogg",
+      "bytes": 3374341,
+      "sha256": "f76466d1de2860668b03752a6ee17ba952049120579ee8715d7fa6360c9d09c3"
+    },
+    {
+      "path": "music/rakhan.ogg",
+      "bytes": 3960432,
+      "sha256": "f9deae5333b1e328dfb73c980a0c4c5b025106cee5a2269d84924651c5293b46"
+    },
+    {
+      "path": "music/krozak.ogg",
+      "bytes": 945387,
+      "sha256": "caf0c2b53a04f404ed85a6e71e9f4c3f3546fda1a254c0bb8c4babb739bd252f"
+    },
+    {
+      "path": "music/varnek.ogg",
+      "bytes": 2708386,
+      "sha256": "4758f80c5ea57795593d55a7f378da5e849dd00a3b1ac45afa7d177b8c33c278"
+    },
+    {
+      "path": "music/zhyr.ogg",
+      "bytes": 1679215,
+      "sha256": "39d282f8661d93640a5a61b2937b5e55d7376330fc2277c132b094d73411d1e7"
+    },
+    {
+      "path": "music/skorath.ogg",
+      "bytes": 5121648,
+      "sha256": "ed7fc3cbb0e25294f741228e05dc2509aa4a09bb9e9662b437e0746ddb5d8d71"
+    },
+    {
+      "path": "music/vezra.ogg",
+      "bytes": 3930977,
+      "sha256": "0a19320969f10a8506ac442cc95e621be5f3b5c4fa105c98d4de731cc94009d3"
+    },
+    {
+      "path": "MUSIC_CATALOG.json",
+      "bytes": 6163,
+      "sha256": "a939ea43e6e24bdae47373e847684dde5a6613f177289c3770854b468287b7d8"
     }
   ],
   "retail_names_require_engine_catalogue": [],

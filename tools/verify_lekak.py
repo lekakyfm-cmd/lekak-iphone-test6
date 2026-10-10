@@ -18,6 +18,16 @@ def verify():
     assert len(mod['duelists'])==report['duelists']==40
     assert sum('id' in c for c in mod['cards'])==report['added_cards']==518
     assert [d['id'] for d in mod['duelists'][-3:]]==['lesub','yem','lekak']
+    catalog=directory/'MUSIC_CATALOG.json'
+    if catalog.is_file():
+        music=json.loads(catalog.read_text())
+        assert set(music)=={d['id'] for d in mod['duelists'][:-3]}
+        for key,item in music.items():
+            assert item['file']=='music/'+key+'.ogg'
+            assert (directory/item['file']).read_bytes()[:4]==b'OggS'
+        # Added songs load one at a time; putting them in audio.music would
+        # eagerly decode the whole collection at startup.
+        assert set(mod['audio']['music'])=={'0xFFF0','0xFFF1','0xFFF2'}
     assert not report['runtime_hooks_installed'] and not report['saves_available']
     print(f"Lekak resources verified: {len(report['resources'])} unchanged files; runtime hooks pending.")
 if __name__=='__main__':verify()

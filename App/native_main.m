@@ -103,7 +103,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     [nc addObserver:self selector:@selector(suspendGame) name:UIApplicationWillResignActiveNotification object:nil];
     [nc addObserver:self selector:@selector(resumeGame) name:UIApplicationDidBecomeActiveNotification object:nil];
     [nc addObserver:self selector:@selector(audioInterrupted:) name:AVAudioSessionInterruptionNotification object:nil];
-    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@23,@"engine":@"full translated engine",@"device_tested":@NO}];
+    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@24,@"engine":@"full translated engine",@"device_tested":@NO}];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];CGRect box=UIEdgeInsetsInsetRect(self.view.bounds,self.view.safeAreaInsets);
