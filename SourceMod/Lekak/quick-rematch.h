@@ -77,8 +77,8 @@ static void qr_overlay(void){
     int w,h,scale,x,y,width=0,height,i;
     if(!qr_shown)return;
     qr_host->overlay_size(qr_host,&w,&h,&scale);
-    /* Size against the displayed window, independent of the qr_host's tiny default. */
-    scale=w>=1000 && h>=600?2:1;
+    /* iPhone: one compact game overlay; no UIKit duplicate. */
+    scale=1;
     for(i=0;i<3;i++){
         int n=qr_host->text_width(qr_host,(i==0?"O  QUITTER / EXIT":i==1?"X  REJOUER / REMATCH":"/\\ DECK + REJOUER / REMATCH"),scale);
         if(n>width)width=n;
