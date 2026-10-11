@@ -71,23 +71,53 @@ static void qr_run(void){
     }
 }
 static unsigned qr_signature(void){return (unsigned)qr_shown;}
+/* A 5x7 bitmap font avoids the host overlay's minimum 20-pixel font,
+ * which is enlarged again with the 320x240 game image on iPhone. */
+static const unsigned char qr_letters[26][7]={
+ {14,17,17,31,17,17,17},{30,17,17,30,17,17,30},
+ {14,17,16,16,16,17,14},{30,17,17,17,17,17,30},
+ {31,16,16,30,16,16,31},{31,16,16,30,16,16,16},
+ {14,17,16,23,17,17,15},{17,17,17,31,17,17,17},
+ {14,4,4,4,4,4,14},{7,2,2,2,18,18,12},
+ {17,18,20,24,20,18,17},{16,16,16,16,16,16,31},
+ {17,27,21,21,17,17,17},{17,25,21,19,17,17,17},
+ {14,17,17,17,17,17,14},{30,17,17,30,16,16,16},
+ {14,17,17,17,21,18,13},{30,17,17,30,20,18,17},
+ {15,16,16,14,1,1,30},{31,4,4,4,4,4,4},
+ {17,17,17,17,17,17,14},{17,17,17,17,17,10,4},
+ {17,17,17,21,21,21,10},{17,17,10,4,10,17,17},
+ {17,17,10,4,4,4,4},{31,1,2,4,8,16,31}
+};
+static int qr_small_width(const char *s,int pixel){
+ int n=0;while(s[n])n++;return (n?6*n-1:0)*pixel;
+}
+static void qr_small_text(int x,int y,const char *s,uint32_t color,int pixel){
+ static const unsigned char slash[7]={1,2,2,4,8,8,16};
+ static const unsigned char triangle[7]={4,4,10,10,17,17,31};
+ for(;*s;s++,x+=6*pixel){
+  const unsigned char *glyph=0;
+  if(*s>='A' && *s<='Z')glyph=qr_letters[*s-'A'];
+  else if(*s=='/')glyph=slash;
+  else if(*s=='^')glyph=triangle;
+  if(glyph)for(int row=0;row<7;row++)for(int col=0;col<5;col++)
+   if(glyph[row]&(16>>col))qr_host->fill(qr_host,x+col*pixel,y+row*pixel,pixel,pixel,color,255);
+ }
+}
 static void qr_overlay(void){
-
-    static const uint32_t colors[]={0xFF9999,0x99CCFF,0xFFAAFF};
-    int w,h,scale,x,y,width=0,height,i;
-    if(!qr_shown)return;
-    qr_host->overlay_size(qr_host,&w,&h,&scale);
-    /* iPhone: one compact game overlay; no UIKit duplicate. */
-    scale=1;
-    for(i=0;i<3;i++){
-        int n=qr_host->text_width(qr_host,(i==0?"O  QUITTER / EXIT":i==1?"X  REJOUER / REMATCH":"/\\ DECK + REJOUER / REMATCH"),scale);
-        if(n>width)width=n;
-    }
-    width+=24*scale;height=62*scale;
-    x=(w-width)/2;y=h/2-height/2;
-    qr_host->fill(qr_host,x-2,y-2,width+4,height+4,0xCCBBDD,255);
-    qr_host->fill(qr_host,x,y,width,height,0x17101D,245);
-    for(i=0;i<3;i++)qr_host->draw_text(qr_host,x+12*scale,y+(13+18*i)*scale,(i==0?"O  QUITTER / EXIT":i==1?"X  REJOUER / REMATCH":"/\\ DECK + REJOUER / REMATCH"),colors[i],scale);
+ static const char *const labels[]={"O QUITTER / EXIT","X REJOUER / REMATCH","^ DECK / REMATCH"};
+ static const uint32_t colors[]={0xFF9999,0x99CCFF,0xFFAAFF};
+ int w,h,unused,pixel,x,y,width=0,height;
+ if(!qr_shown)return;
+ qr_host->overlay_size(qr_host,&w,&h,&unused);
+ if(w<160 || h<100)return;
+ pixel=w/320;if(pixel<1)pixel=1;
+ if(h/240>0 && pixel>h/240)pixel=h/240;
+ for(int i=0;i<3;i++){int n=qr_small_width(labels[i],pixel);if(n>width)width=n;}
+ width+=12*pixel;height=35*pixel;
+ x=(w-width)/2;y=(h-height)/2;
+ qr_host->fill(qr_host,x-1,y-1,width+2,height+2,0xCCBBDD,255);
+ qr_host->fill(qr_host,x,y,width,height,0x17101D,245);
+ for(int i=0;i<3;i++)qr_small_text(x+6*pixel,y+(4+10*i)*pixel,labels[i],colors[i],pixel);
 }
 int QuickRematchInit(const MemoriesModHost *api,MemoriesMod *mod){
     void *fn_result,*fn_run,*fn_edit;int a,b,c;

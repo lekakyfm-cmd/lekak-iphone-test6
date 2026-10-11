@@ -47,20 +47,23 @@ static void *symbol(const MemoriesModHost *h,const char *s){
 static int hook(const MemoriesModHost*h,void*f,void*r,void**o){(void)h;(void)r;*o=f;return 1;}
 static void unhook(const MemoriesModHost*h,int t){(void)h;(void)t;}
 static void begin(void){qr_reset();flags=0x8000;keys.keys=0;keys.backup=0xABCD;next=6;active=67;phase=0x81;opp=7;side=-1;ret=0x80;res=0;for(int i=0;i<40;i++)deck[i]=1;}
-static int screen_w=1916,screen_h=970,lines,panels,last_scale;
+static int screen_w=1916,screen_h=970,lines,panels,font_colors;
 static void size_mock(const MemoriesModHost*h,int*w,int*t,int*s){(void)h;*w=screen_w;*t=screen_h;*s=1;}
 static int width_mock(const MemoriesModHost*h,const char*s,int scale){(void)h;return (int)strlen(s)*8*scale;}
 static void fill_mock(const MemoriesModHost*h,int x,int y,int w,int t,uint32_t rgb,unsigned a){
- (void)h;(void)rgb;(void)a;assert(x>=0 && y>=0 && x+w<=screen_w && y+t<=screen_h);panels++;
+ (void)h;(void)a;assert(x>=0 && y>=0 && x+w<=screen_w && y+t<=screen_h);
+ if(rgb==0xCCBBDD || rgb==0x17101D){assert(w<=screen_w/2 && t<=screen_h/5);panels++;}
+ else {assert(rgb==0xFF9999 || rgb==0x99CCFF || rgb==0xFFAAFF);font_colors|=rgb==0xFF9999?1:rgb==0x99CCFF?2:4;}
 }
 static void text_mock(const MemoriesModHost*h,int x,int y,const char*s,uint32_t rgb,int scale){
- (void)h;(void)rgb;assert(x>=0 && y>=0 && x+(int)strlen(s)*8*scale<=screen_w);last_scale=scale;lines++;
+ (void)h;(void)rgb;assert(x>=0 && y>=0 && x+(int)strlen(s)*8*scale<=screen_w);lines++;assert(!"large host font must not be used");
 }
 int main(void){
  MemoriesModHost api={0};MemoriesMod mod={0};api.api=9;api.symbol=symbol;api.hook=hook;api.unhook=unhook;api.overlay_size=size_mock;api.text_width=width_mock;api.fill=fill_mock;api.draw_text=text_mock;
  assert(MemoriesModInit(&api,&mod));mod.reset();assert(base_resets==1);
- begin();qr_result();assert(qr_shown && panel_visible);qr_overlay();assert(lines==3 && panels==2 && last_scale==1);
- screen_w=640;screen_h=480;qr_overlay();assert(lines==6 && last_scale==1);keys.keys=0x20;qr_result();
+ begin();qr_result();assert(qr_shown && panel_visible);qr_overlay();assert(lines==0 && panels==2 && font_colors==7);
+ screen_w=640;screen_h=480;qr_overlay();assert(lines==0 && panels==4);
+ screen_w=320;screen_h=240;qr_overlay();assert(lines==0 && panels==6);keys.keys=0x20;qr_result();
  assert(qr_pending==-1 && (flags&0x4000));phase=2;qr_run();assert(!restarted && rewards==1 && active==6);
  record_return();assert(records[7][0]==1);
  begin();keys.keys=0x1000;qr_result();assert(keys.keys==0x1000 && keys.backup==0xABCD);
