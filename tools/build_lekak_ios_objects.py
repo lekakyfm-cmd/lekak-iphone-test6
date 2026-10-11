@@ -104,7 +104,7 @@ def build(game,output):
             else:defined.add(name)
     # These are native libSystem stdio calls on the host FILE returned by
     # MemoriesModHost.open_data; they are not translated game exports.
-    missing=undefined-defined-exported-{'abort','dyld_stub_binder','fclose','fwrite'}
+    missing=undefined-defined-exported-{'abort','dyld_stub_binder','fclose','fwrite','LekakResults_Publish'}
     if missing:raise ValueError('Game does not export required imports: '+', '.join(sorted(missing)))
     archive=output/'libLekak_iPhone.a'
     archive.unlink(missing_ok=True)

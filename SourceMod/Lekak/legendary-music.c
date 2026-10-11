@@ -76,7 +76,7 @@ static void music_applied(int on){
  if(prev_applied)prev_applied(on);
 }
 static void music_shutdown(void){AudioReplace_Unload(LEKAK_MUSIC_OWNER);if(prev_shutdown)prev_shutdown();}
-int MemoriesModInit(const MemoriesModHost *h,MemoriesMod *m){
+int LekakMusicBaseInit(const MemoriesModHost *h,MemoriesMod *m){
  if(!LekakBeforeMusicInit(h,m))return 0;
  mh=h;prev_frame=m->frame;m->frame=frame;
  prev_applied=m->applied;m->applied=music_applied;
@@ -87,3 +87,5 @@ int MemoriesModInit(const MemoriesModHost *h,MemoriesMod *m){
  &&h->hook(h,(void*)SD_PlaySequence,(void*)play,&prev_play)
  &&h->hook(h,(void*)func_80045514,(void*)pump,&prev_pump);
 }
+
+#include "quick-rematch.h"

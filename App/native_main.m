@@ -1,3 +1,4 @@
+#include "results_panel.h"
 /* UIKit shell for the complete translated engine. Not the old disc probe. */
 #import <UIKit/UIKit.h>
 #import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
@@ -20,6 +21,7 @@
     NSTimeInterval launchTime;
     UIImageView *screen;
     UILabel *status;
+    UILabel *resultsActions;
     UIButton *choose,*launch,*share;
     NSMutableArray<UIButton *> *controls;
     CADisplayLink *displayLink;
@@ -87,6 +89,16 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     status.font=[UIFont systemFontOfSize:13];status.textAlignment=NSTextAlignmentCenter;
     status.text=@"Lekak — moteur natif iPhone\nChoisis ton BIN USA, puis Lancer. / Choose your USA BIN, then Play.";
     [self.view addSubview:status];
+    resultsActions=[UILabel new];resultsActions.numberOfLines=3;
+    resultsActions.text=@"○ Quitter / Exit\n× Rejouer / Rematch\n△ Deck + rejouer / Edit + rematch";
+    resultsActions.textColor=UIColor.whiteColor;
+    resultsActions.font=[UIFont boldSystemFontOfSize:16];
+    resultsActions.textAlignment=NSTextAlignmentCenter;
+    resultsActions.backgroundColor=[UIColor colorWithRed:0.09 green:0.06 blue:0.12 alpha:0.96];
+    resultsActions.layer.borderColor=UIColor.lightGrayColor.CGColor;
+    resultsActions.layer.borderWidth=1.5;resultsActions.layer.cornerRadius=8;
+    resultsActions.clipsToBounds=YES;resultsActions.hidden=YES;
+    [self.view addSubview:resultsActions];
     NSArray *names=@[@"↑",@"←",@"↓",@"→",@"△",@"□",@"×",@"○",@"L1",@"L2",@"R1",@"R2",@"Select",@"Start"];
     const uint16_t bits[]={0x10,0x80,0x40,0x20,0x1000,0x8000,0x4000,0x2000,0x400,0x100,0x800,0x200,1,8};
     for(NSUInteger i=0;i<names.count;i++) {
@@ -103,7 +115,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     [nc addObserver:self selector:@selector(suspendGame) name:UIApplicationWillResignActiveNotification object:nil];
     [nc addObserver:self selector:@selector(resumeGame) name:UIApplicationDidBecomeActiveNotification object:nil];
     [nc addObserver:self selector:@selector(audioInterrupted:) name:AVAudioSessionInterruptionNotification object:nil];
-    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@25,@"engine":@"full translated engine",@"device_tested":@NO}];
+    report=[NSMutableDictionary dictionaryWithDictionary:@{@"build":@28,@"engine":@"full translated engine",@"device_tested":@NO}];
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];CGRect box=UIEdgeInsetsInsetRect(self.view.bounds,self.view.safeAreaInsets);
@@ -125,6 +137,10 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     /* Controls overlay the margins; preserve the game aspect ratio. */
     for(UIButton *control in controls)[self.view bringSubviewToFront:control];
     status.frame=screen.frame;
+    CGFloat panelWidth=MIN(390,screen.frame.size.width-12);
+    resultsActions.frame=CGRectMake(CGRectGetMidX(screen.frame)-panelWidth/2,
+        CGRectGetMidY(screen.frame)-48,panelWidth,96);
+    [self.view bringSubviewToFront:resultsActions];
 }
 - (void)press:(UIButton *)b{heldButtons|=(uint16_t)b.tag;LekakNative_SetPad(0,heldButtons,1);}
 - (void)release:(UIButton *)b{heldButtons&=~(uint16_t)b.tag;LekakNative_SetPad(0,heldButtons,1);}
@@ -159,6 +175,7 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
     }
 }
 - (void)displayFrame {
+    resultsActions.hidden=!(started&&!finished&&LekakResults_Visible());
     [frameLock lock];BOOL changed=frameChanged;NSData *data=latestFrame;
     int w=latestWidth,h=latestHeight;frameChanged=NO;[frameLock unlock];
     if(!changed||!data)return;

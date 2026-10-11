@@ -48,11 +48,15 @@ def build(core,mods,deps,output):
     report['frontend_command']=command;save();subprocess.run(command,check=True)
     from build_lekak_ios_objects import check_macho_ios
     check_macho_ios(obj)
+    panel_obj=output/'results_panel.o'
+    subprocess.run([cc,*target,'-std=c11','-O2','-I'+str(ROOT/'App'),
+        '-c',str(ROOT/'App/results_panel.c'),'-o',str(panel_obj)],check=True)
+    check_macho_ios(panel_obj)
     payload=output/'Payload';shutil.rmtree(payload,ignore_errors=True)
     app=payload/'LekakNative.app';app.mkdir(parents=True)
     executable=app/'LekakNative'
     libraries=[deps/'install/lib'/x for x in ['libfreetype.a','libpng16.a','libz.a']]
-    command=[cc,*target,str(obj),'-Wl,-force_load,'+str(core/'libMemories_iPhone.a'),
+    command=[cc,*target,str(obj),str(panel_obj),'-Wl,-force_load,'+str(core/'libMemories_iPhone.a'),
         '-Wl,-force_load,'+str(mods/'libLekak_iPhone.a'),*[str(p) for p in libraries],'-liconv',
         '-Wl,-map,'+str(output/'native-link.map'),'-o',str(executable)]
     for framework in ['UIKit','Foundation','UniformTypeIdentifiers','AVFoundation','AudioToolbox','CoreText','CoreGraphics','QuartzCore']:
@@ -65,7 +69,7 @@ def build(core,mods,deps,output):
     shutil.copytree(ROOT/'Resources/Lekak',app/'mods/Lekak')
     info=plistlib.loads((ROOT/'App/Info.plist').read_bytes())
     info.update(CFBundleDisplayName='Lekak',CFBundleExecutable='LekakNative',
-        CFBundleName='LekakNative',CFBundleShortVersionString='0.25',CFBundleVersion='25',
+        CFBundleName='LekakNative',CFBundleShortVersionString='0.28',CFBundleVersion='28',
         MinimumOSVersion='15.0',UIFileSharingEnabled=True,LSSupportsOpeningDocumentsInPlace=True,
         ITSAppUsesNonExemptEncryption=False)
     (app/'Info.plist').write_bytes(plistlib.dumps(info))
@@ -75,7 +79,7 @@ def build(core,mods,deps,output):
         player_disc_included=False,unlock_conditions='normal, unchanged',
         pending=['Sign and install through Sideloadly','Verify launch, controls, saves, objectives and music on a physical iPhone'])
     (app/'native-build-report.json').write_text(json.dumps(report,indent=2)+'\n')
-    ipa=output/'Lekak_iPhone_25_Native.ipa'
+    ipa=output/'Lekak_iPhone_28_Revanche_Triangle.ipa'
     with zipfile.ZipFile(ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
         for file in sorted(payload.rglob('*')):
             if file.is_file():bundle.write(file,file.relative_to(output))
@@ -85,7 +89,7 @@ def build(core,mods,deps,output):
     (app/'Info.plist').write_bytes(plistlib.dumps(info))
     test_report=dict(report,unlock_conditions='all duelists unlocked for tests')
     (app/'native-build-report.json').write_text(json.dumps(test_report,indent=2)+'\n')
-    test_ipa=output/'Lekak_iPhone_25_Full_Unlock.ipa'
+    test_ipa=output/'Lekak_iPhone_28_Revanche_Triangle_Full_Unlock.ipa'
     with zipfile.ZipFile(test_ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
         for file in sorted(payload.rglob('*')):
             if file.is_file():bundle.write(file,file.relative_to(output))
