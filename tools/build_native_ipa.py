@@ -24,6 +24,14 @@ def validate_inputs(core,mods,deps):
     for unit in modules['units']:
         if unit['source_sha256']!=digest(ROOT/'SourceMod/Lekak'/unit['source']):
             raise RuntimeError('Stale mod source: '+unit['source'])
+        if unit.get('compiled_source_sha256'):
+            source=ROOT/'SourceMod/Lekak'/unit['source']
+            content=source.read_bytes()
+            if unit['source']=='name-colors.c':
+                from build_lekak_ios_objects import patch_number_colors
+                content=patch_number_colors(source.read_text()).encode()
+            if hashlib.sha256(content).hexdigest()!=unit['compiled_source_sha256']:
+                raise RuntimeError('Stale compiled mod source: '+unit['source'])
     from build_iphone_deps import NAMES,verify_archive
     dependencies=json.loads((deps/'ios-dependencies-report.json').read_text())
     for name,library in NAMES.items():

@@ -81,6 +81,7 @@ def build(game,output):
     objects=[];routines=[];entries=0;units=[]
     for index,unit in enumerate(plan['units']):
         source=ROOT/'SourceMod/Lekak'/unit['source']
+        source_sha256=hashlib.sha256(source.read_bytes()).hexdigest()
         if unit['source']=='name-colors.c':
             patched=output/'name-colors-numbers.c'
             patched.write_text(patch_number_colors(source.read_text()))
@@ -99,7 +100,8 @@ def build(game,output):
         subprocess.run([compiler,*target,'-O2','-fno-strict-aliasing','-c',str(ir),'-o',str(obj)],check=True)
         check_macho_ios(obj)
         objects.append(obj);routines.append(routine)
-        units.append({'source':unit['source'],'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+        units.append({'source':unit['source'],'source_sha256':source_sha256,
+            'compiled_source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'object_sha256':hashlib.sha256(obj.read_bytes()).hexdigest()})
     if entries!=1:raise ValueError('Expected exactly one final MemoriesModInit')
     registration=output/'registration.c'
