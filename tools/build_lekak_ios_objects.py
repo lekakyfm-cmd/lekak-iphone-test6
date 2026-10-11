@@ -37,6 +37,18 @@ def check_macho_ios(path,file_type=1):
         offset+=size
     if offset!=end or not ios:raise ValueError('Missing iPhoneOS build platform')
 
+def patch_number_colors(text):
+    marker='static void (*nc_original_append)(Box *,int);'
+    if marker in text:return text
+    hook=(ROOT/'tools/number-color-hook.h').read_text()
+    entry='int MemoriesModInit(const Host *h,Mod *m) {'
+    if entry not in text or 'static Saved saved[16];' not in text:
+        raise ValueError('Unrecognized name-color source; refusing an unsafe patch')
+    text=text.replace(entry,hook+'\n'+entry,1)
+    registration=' previous_reset=m->reset;previous_applied=m->applied;previous_shutdown=m->shutdown;'
+    if registration not in text:raise ValueError('Missing name-color callback registration')
+    return text.replace(registration,' if(!h->symbol || !nc_install(h)) return 0;\n'+registration,1)
+
 def build(game,output):
     if platform.system()!='Darwin' or platform.machine()!='arm64':
         raise SystemExit('Run on an ARM64 macOS runner with Xcode and the pinned LLVM toolchain.')
@@ -69,6 +81,10 @@ def build(game,output):
     objects=[];routines=[];entries=0;units=[]
     for index,unit in enumerate(plan['units']):
         source=ROOT/'SourceMod/Lekak'/unit['source']
+        if unit['source']=='name-colors.c':
+            patched=output/'name-colors-numbers.c'
+            patched.write_text(patch_number_colors(source.read_text()))
+            source=patched
         raw=output/f'{index}.raw.ll';ir=output/f'{index}.ll';obj=output/f'{index}.o'
         subprocess.run([compiler,*flags,'-S','-emit-llvm',str(source),'-o',str(raw)],check=True)
         names=dict(aliases)

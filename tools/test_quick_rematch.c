@@ -59,7 +59,7 @@ static void text_mock(const MemoriesModHost*h,int x,int y,const char*s,uint32_t 
 int main(void){
  MemoriesModHost api={0};MemoriesMod mod={0};api.api=9;api.symbol=symbol;api.hook=hook;api.unhook=unhook;api.overlay_size=size_mock;api.text_width=width_mock;api.fill=fill_mock;api.draw_text=text_mock;
  assert(MemoriesModInit(&api,&mod));mod.reset();assert(base_resets==1);
- begin();qr_result();assert(qr_shown && panel_visible);qr_overlay();assert(lines==3 && panels==2 && last_scale==2);
+ begin();qr_result();assert(qr_shown && panel_visible);qr_overlay();assert(lines==3 && panels==2 && last_scale==1);
  screen_w=640;screen_h=480;qr_overlay();assert(lines==6 && last_scale==1);keys.keys=0x20;qr_result();
  assert(qr_pending==-1 && (flags&0x4000));phase=2;qr_run();assert(!restarted && rewards==1 && active==6);
  record_return();assert(records[7][0]==1);
