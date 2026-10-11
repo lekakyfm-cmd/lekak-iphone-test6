@@ -40,6 +40,8 @@ jobs:
           python tools/verify_lekak.py
           python tools/test_card_references.py
           python tools/test_shop.py
+          cc -std=gnu11 -Wall -Wextra -Werror -I EngineSDK/src tools/test_quick_rematch.c -o /tmp/lekak-rematch-test
+          /tmp/lekak-rematch-test
           cc -std=gnu11 -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_name_colors.c -o /tmp/lekak-name-colors-test
           /tmp/lekak-name-colors-test
           cc -std=gnu11 -fms-extensions -O2 -DMEMORIES_PC -I EngineSDK/src tools/test_shop_performance.c -o /tmp/lekak-shop-test
@@ -129,7 +131,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_25_*.ipa
+          path: build/native-app/Lekak_iPhone_28_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
