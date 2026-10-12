@@ -173,45 +173,46 @@ static void overlay(void){
  if(height>h-16)height=h-16;
  int x=(w-width)/2,y=(h-height)/2;
  text_right=x+width-12*s;
- int header=height>=330*s?80*s:58*s;
- int bottom=height>=330*s?72*s:48*s;
- int step=(height-header-bottom)/5;
- if(step<19*s)step=19*s;
+ /* Bitmap fallback glyphs are 14*s tall. Reserve 18*s per line,
+  * 40*s per two-line reward, and paginate according to real canvas size. */
+ int header=72*s,bottom=68*s,step=40*s;
+ int visible=(height-header-bottom)/step;
+ if(visible<1)visible=1;if(visible>5)visible=5;
  RewardSave *state=ready();char line[160];
  available(state);
  host->fill(host,0,0,w,h,0x100B17,255);
  host->fill(host,x-2,y-2,width+4,height+4,0xB9A8CD,255);
  host->fill(host,x,y,width,height,0x1B1325,255);
  text(x+16*s,y+20*s,english?"LEKAK - REWARDS":"LEKAK - RECOMPENSES",0xEEE4FF,s);
- if(category==AVAILABLE_CATEGORY)snprintf(line,sizeof(line),english?"AVAILABLE REWARDS (%d)":"RECOMPENSES DISPONIBLES (%d)",available_count);
+ if(category==AVAILABLE_CATEGORY)snprintf(line,sizeof(line),english?"AVAILABLE (%d)":"DISPONIBLES (%d)",available_count);
  else snprintf(line,sizeof(line),"%s   %d/%d",category<ROSTER_COUNT?roster[category].name:(english?"SPECIAL GOALS":"OBJECTIFS SPECIAUX"),category+1,CATEGORY_COUNT);
- text(x+16*s,y+44*s,line,0x9ACDFF,s);
+ text(x+16*s,y+40*s,line,0x9ACDFF,s);
  snprintf(line,sizeof(line),english?"Star chips: %u":"Etoiles : %u",*starchips);
- text(x+16*s,y+(height>=330*s?64:52)*s,line,0xFFF1A0,s);
- int start=category<ROSTER_COUNT?0:(row/5)*5;
+ text(x+16*s,y+60*s,line,0xFFF1A0,s);
+ int start=(row/visible)*visible;
  if(category==AVAILABLE_CATEGORY&&!available_count)text(x+20*s,y+header+30*s,english?"No rewards available yet.":"Aucune recompense disponible pour le moment.",0xC9BAD8,s);
- for(int k=0;k<5;k++){
+ for(int k=0;k<visible;k++){
   if(category==AVAILABLE_CATEGORY){
    int index=start+k;if(index>=available_count)break;
    int key=available_keys[index],cat=key<ROSTER_COUNT*5?key/5:ROSTER_COUNT;
    int goal=key<ROSTER_COUNT*5?key%5:key-ROSTER_COUNT*5;
-   int yy=y+header+12*s+k*step;
+   int yy=y+header+8*s+k*step;
    if(index==row)host->fill(host,x+10*s,yy-12*s,width-20*s,step-3*s,0x413051,255);
    if(cat<ROSTER_COUNT){
     if(goal<4)snprintf(line,sizeof(line),"%s %s : %d %s",index==row?">":" ",roster[cat].name,goals[goal],english?"wins":"victoires");
     else snprintf(line,sizeof(line),"%s %s : S/A TEC",index==row?">":" ",roster[cat].name);
     text(x+20*s,yy,line,0x91FFAE,s);
-    snprintf(line,sizeof(line),english?"  Ready: %u star chips":"  Prete : %u etoiles",prizes[goal]);
+    snprintf(line,sizeof(line),english?"  +%u star chips":"  +%u etoiles",prizes[goal]);
    }else{
     const GroupSpec *g=&groups[goal];
     snprintf(line,sizeof(line),"%s %s",index==row?">":" ",english?g->en:g->name);text(x+20*s,yy,line,0x91FFAE,s);
-    if(g->stars)snprintf(line,sizeof(line),english?"  Ready: %u star chips":"  Prete : %u etoiles",g->stars);
+    if(g->stars)snprintf(line,sizeof(line),english?"  +%u star chips":"  +%u etoiles",g->stars);
     else snprintf(line,sizeof(line),"  %s x1",g->card_name);
    }
-   text(x+20*s,yy+14*s,line,0xC9BAD8,s);continue;
+   text(x+20*s,yy+18*s,line,0xC9BAD8,s);continue;
   }
-  int index=start+k;if(category>=ROSTER_COUNT&&index>=GROUP_COUNT)break;
-  int yy=y+header+12*s+k*step,key=key_for(category,index),taken=state&&reward_claimed(state,key);
+  int index=start+k;if(category<ROSTER_COUNT&&index>=5)break;if(category>=ROSTER_COUNT&&index>=GROUP_COUNT)break;
+  int yy=y+header+8*s+k*step,key=key_for(category,index),taken=state&&reward_claimed(state,key);
   int done=state&&complete(category,index,state);
   unsigned color=taken?0xA9A0B4:done?0x91FFAE:0xE1D9E9;
   if(index==row)host->fill(host,x+10*s,yy-12*s,width-20*s,step-3*s,0x413051,255);
@@ -220,20 +221,20 @@ static void overlay(void){
    if(index<4)snprintf(line,sizeof(line),"%s %d %s  (%d/%d)  [%s]",index==row?">":" ",goals[index],english?"wins":"victoires",wins(category)>goals[index]?goals[index]:wins(category),goals[index],status);
    else snprintf(line,sizeof(line),"%s %s  (%d/1)  [%s]",index==row?">":" ",english?"First S/A TEC win":"Premier S/A TEC",state&&reward_tec(state,category)?1:0,status);
    text(x+20*s,yy,line,color,s);
-   snprintf(line,sizeof(line),english?"  Reward: %u star chips":"  Gain : %u etoiles",prizes[index]);
+   snprintf(line,sizeof(line),english?"  +%u star chips":"  +%u etoiles",prizes[index]);
   }else{
    const GroupSpec *g=&groups[index];
    snprintf(line,sizeof(line),"%s %s  (%d/%d) [%s]",index==row?">":" ",english?g->en:g->name,group_progress(index),g->count,status);text(x+20*s,yy,line,color,s);
    if(g->stars)snprintf(line,sizeof(line),english?"  %d wins each -> %u star chips":"  %d victoire(s) chacun -> %u etoiles",g->target,g->stars);
    else snprintf(line,sizeof(line),"  %d %s -> %s x1",g->target,english?"wins each":"victoires chacun",g->card_name);
   }
-  text(x+20*s,yy+14*s,line,0xC9BAD8,s);
+  text(x+20*s,yy+18*s,line,0xC9BAD8,s);
  }
- if(corrupt)text(x+16*s,y+height-bottom+11*s,english?"Ledger damaged: claiming disabled.":"Suivi endommage : recuperation desactivee.",0xFF9999,s);
- else if(notice[0])text(x+16*s,y+height-bottom+11*s,notice,0xFFF1A0,s);
- else text(x+16*s,y+height-bottom+11*s,english?"One reward per save. Save after claiming.":"Une fois par sauvegarde. Sauvegarde apres recuperation.",0xC9BAD8,s);
- text(x+16*s,y+height-35*s,english?"Up/Down: select  X: claim  O: back":"Haut/Bas : choisir  X : recuperer  O : retour",0xEEE4FF,s);
- text(x+16*s,y+height-13*s,english?"L1/R1: tabs  Square: available  Triangle: FR":"L1/R1 : pages  Carre : disponibles  Triangle : EN",0x9ACDFF,s);
+ if(corrupt)text(x+16*s,y+height-58*s,english?"Ledger damaged.":"Suivi endommage.",0xFF9999,s);
+ else if(notice[0])text(x+16*s,y+height-58*s,notice,0xFFF1A0,s);
+ else text(x+16*s,y+height-58*s,english?"Save after claiming.":"Sauvegarde apres.",0xC9BAD8,s);
+ text(x+16*s,y+height-38*s,english?"X: claim  O: back":"X: prendre O: retour",0xEEE4FF,s);
+ text(x+16*s,y+height-18*s,english?"L1/R1: tabs  Tri: FR":"L1/R1: pages Tri: EN",0x9ACDFF,s);
 }
 static unsigned signature(void){return serial;}
 static void reset(void){opened=0;notice[0]=0;serial++;}

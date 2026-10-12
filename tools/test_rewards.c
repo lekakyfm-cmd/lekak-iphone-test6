@@ -28,6 +28,28 @@ unsigned char *Cards_ChestSlot(void *state,int id){(void)state;return &chest[id]
 void Cards_MarkSeen(int id){assert(id==123);seen++;}
 static void stock_build(void *p){memset(p,0,0xf00);memcpy((unsigned char *)p+0x200,save_base,0x680);memcpy((unsigned char *)p+0x880,save_base,0x680);memset((unsigned char *)p+0x828,0,88);memset((unsigned char *)p+0xea8,0,88);memset(save_base+TAIL_OFFSET,0,88);}
 static void stock_apply(void *p){memcpy(save_base,p,0x680);}
+static int screen_w,screen_h,drawn,last_middle,last_scale;
+static void screen(const MemoriesModHost *h,int *w,int *hh,int *s){(void)h;*w=screen_w;*hh=screen_h;*s=1;}
+static int measure(const MemoriesModHost *h,const char *v,int s){(void)h;return (int)strlen(v)*12*s;}
+static void paint(const MemoriesModHost *h,int x,int middle,const char *v,uint32_t rgb,int s){
+ (void)h;(void)rgb;if(!*v)return;
+ assert(x>=0&&x+measure(h,v,s)<=screen_w);
+ assert(middle-7*s>=0&&middle+7*s<=screen_h);
+ if(drawn)assert(middle-7*s>=last_middle+7*last_scale);
+ last_middle=middle;last_scale=s;drawn++;
+}
+static void rect(const MemoriesModHost *h,int x,int y,int w,int hh,uint32_t rgb,unsigned alpha){(void)h;(void)rgb;(void)alpha;assert(x>=0&&y>=0&&x+w<=screen_w&&y+hh<=screen_h);}
+static void check_layout(void){
+ static MemoriesModHost ui;ui.overlay_size=screen;ui.text_width=measure;ui.draw_text=paint;ui.fill=rect;host=&ui;opened=1;
+ const int sizes[][2]={{320,240},{512,240},{640,480},{1280,720}};
+ for(unsigned j=0;j<sizeof(sizes)/sizeof(sizes[0]);j++){
+  screen_w=sizes[j][0];screen_h=sizes[j][1];
+  for(int lang=0;lang<2;lang++)for(int cat=0;cat<CATEGORY_COUNT;cat++){
+   english=lang;category=cat;row=0;notice[0]=0;drawn=last_middle=last_scale=0;overlay();assert(drawn>=6);
+  }
+ }
+ puts("Rewards layout: bitmap glyph bounds and line spacing passed at 320x240, 512x240, 640x480 and 1280x720, FR/EN.");
+}
 int main(void){
  unsigned char runtime[0x680]={0},payload[0xf00];unsigned chips=0;uint32_t code=77;
  save_base=runtime;starchips=&chips;memcpy(runtime+0x334,&code,4);
@@ -49,6 +71,7 @@ int main(void){
  ready()->checksum^=1;assert(!ready()&&corrupt);
  code++;memcpy(runtime+0x334,&code,4);assert(reward_valid(ready(),code)&&!reward_claimed(ready(),0));
  assert(!reward_mark(ready(),-1)&&!reward_mark(ready(),512));
+ check_layout();
  puts("Rewards: retroactive wins, once-only payouts, save/load, caps, card grant, TEC, corruption and new saves passed.");
  return 0;
 }
