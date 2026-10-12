@@ -1,0 +1,351 @@
+@bank dialog
+
+[FE80]
+Gagner 1 duel contre Heishin.{end}
+
+[FE81]
+Gagner 15 duels contre Pegasus.{end}
+
+[FE82]
+Gagner 5 duels contre Dark Simon.{end}
+
+[FE83]
+Posséder au moins un Red-eyes B.
+Dragon (n°82)
+dans le coffre ou le deck.{end}
+
+[FE84]
+Atteindre 100 victoires au total.{end}
+
+[FE85]
+Gagner 1 duel contre Nitemare.{end}
+
+[FE86]
+Débloquer les six premiers
+duellistes ajoutés :
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura,
+Eclipse Isis, Primal Rex et
+Heishin the Eternal.{end}
+
+[FE87]
+Débloquer les six premiers
+duellistes ajoutés :
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura,
+Eclipse Isis, Primal Rex et
+Heishin the Eternal.
+Gagner 10 duels contre Primal Rex.{end}
+
+[FE88]
+Débloquer les six premiers
+duellistes ajoutés :
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura,
+Eclipse Isis, Primal Rex et
+Heishin the Eternal.
+Gagner 10 duels contre Soul Reaper
+Bakura.{end}
+
+[FE89]
+Débloquer Tyrant Kaiba, Vorthrax
+et Némérys.
+Gagner 5 duels contre Vorthrax
+et 5 contre Némérys.{end}
+
+[FE8A]
+Débloquer Ignaroth et gagner 5
+duels contre lui.
+Atteindre 200 victoires au total.{end}
+
+[FE8B]
+Débloquer Ignaroth et gagner 5
+duels contre lui.
+Atteindre 200 victoires au total.{end}
+
+[FE8C]
+Débloquer Ignaroth et gagner 5
+duels contre lui.
+Atteindre 200 victoires au total.{end}
+
+[FE8D]
+Débloquer Vesper.
+Découvrir 200 cartes différentes
+dans la bibliothèque.
+Gagner 10 duels contre Vesper.{end}
+
+[FE8E]
+Débloquer Azhur.
+Découvrir 200 cartes différentes
+dans la bibliothèque.
+Gagner 10 duels contre Azhur.{end}
+
+[FE8F]
+Débloquer Ferron.
+Découvrir 200 cartes différentes
+dans la bibliothèque.
+Gagner 10 duels contre Ferron.{end}
+
+[FE90]
+Débloquer Tharn.
+Découvrir Terrorking Archfiend
+dans la bibliothèque.{end}
+
+[FE91]
+Débloquer Tharn.
+Découvrir Helpoemer dans la
+bibliothèque.{end}
+
+[FE92]
+Débloquer Tharn.
+Découvrir Sea King Dragon (n°443)
+dans la bibliothèque.{end}
+
+[FE93]
+Débloquer Zerak.
+Atteindre 300 victoires au total.{end}
+
+[FE94]
+Débloquer Nékris.
+Gagner 10 duels contre chacun :
+Vesper, Azhur et Ferron.{end}
+
+[FE95]
+Débloquer Oryx.
+Gagner 10 duels contre chacun :
+Néréx, Ravok et Tharn.{end}
+
+[FE96]
+Débloquer Drazhen.
+Découvrir Saggi the Dark Clown
+(n°34)
+dans la bibliothèque.{end}
+
+[FE97]
+Débloquer Drazhen.
+Découvrir Saggi the Dark Clown
+(n°34)
+dans la bibliothèque.{end}
+
+[FE98]
+Débloquer Drazhen.
+Découvrir Saggi the Dark Clown
+(n°34)
+dans la bibliothèque.{end}
+
+[FE99]
+Débloquer Malvek, Nyss et Krag.
+Gagner au moins un duel contre
+chacun
+des 39 adversaires du jeu
+original.{end}
+
+[FE9A]
+Débloquer Malvek, Nyss et Krag.
+Gagner au moins un duel contre
+chacun
+des 39 adversaires du jeu
+original.{end}
+
+[FE9B]
+Débloquer Malvek, Nyss et Krag.
+Gagner au moins un duel contre
+chacun
+des 39 adversaires du jeu
+original.{end}
+
+[FE9C]
+Débloquer Velkôr.
+Atteindre 500 victoires au total.{end}
+
+[FE9D]
+Débloquer Nharos.
+Atteindre 500 victoires au total.{end}
+
+[FE9E]
+Débloquer Ossyr.
+Atteindre 500 victoires au total.{end}
+
+[FE9F]
+Débloquer Solkar.
+Gagner 10 duels contre Solkar.{end}
+
+[FEA0]
+Débloquer Luneth.
+Gagner 10 duels contre Luneth.{end}
+
+[FEA1]
+Débloquer Voryn.
+Gagner 10 duels contre Voryn.{end}
+
+[FEA2]
+Débloquer Rakhan, Krozak et
+Varnek.
+Gagner 20 duels contre chacun de
+ces trois duellistes.{end}
+
+[FEA3]
+Débloquer Rakhan, Krozak et
+Varnek.
+Gagner 20 duels contre chacun de
+ces trois duellistes.{end}
+
+[FEA4]
+Débloquer Rakhan, Krozak et
+Varnek.
+Gagner 20 duels contre chacun de
+ces trois duellistes.{end}
+
+[FEA5]
+Débloquer les 37 autres nouveaux
+duellistes.
+Gagner au moins un duel contre
+chacun.{end}
+
+[FEA6]
+Débloquer les 37 autres nouveaux
+duellistes.
+Gagner au moins un duel contre
+chacun.{end}
+
+[FEA7]
+Débloquer les 37 autres nouveaux
+duellistes.
+Gagner au moins un duel contre
+chacun.{end}
+
+[FED0]
+01/40  Dark Simon{end}
+
+[FED1]
+02/40  Destroyer Pegasus{end}
+
+[FED2]
+03/40  Soul Reaper Bakura{end}
+
+[FED3]
+04/40  Eclipse Isis{end}
+
+[FED4]
+05/40  Primal Rex{end}
+
+[FED5]
+06/40  Heishin the Eternal{end}
+
+[FED6]
+07/40  Tyrant Kaiba{end}
+
+[FED7]
+08/40  Vorthrax{end}
+
+[FED8]
+09/40  Némérys{end}
+
+[FED9]
+10/40  Ignaroth{end}
+
+[FEDA]
+11/40  Vesper{end}
+
+[FEDB]
+12/40  Azhur{end}
+
+[FEDC]
+13/40  Ferron{end}
+
+[FEDD]
+14/40  Néréx{end}
+
+[FEDE]
+15/40  Ravok{end}
+
+[FEDF]
+16/40  Tharn{end}
+
+[FEE0]
+17/40  Zerak{end}
+
+[FEE1]
+18/40  Nékris{end}
+
+[FEE2]
+19/40  Oryx{end}
+
+[FEE3]
+20/40  Valtor{end}
+
+[FEE4]
+21/40  Serya{end}
+
+[FEE5]
+22/40  Drazhen{end}
+
+[FEE6]
+23/40  Malvek{end}
+
+[FEE7]
+24/40  Nyss{end}
+
+[FEE8]
+25/40  Krag{end}
+
+[FEE9]
+26/40  Velkôr{end}
+
+[FEEA]
+27/40  Ossyr{end}
+
+[FEEB]
+28/40  Nharos{end}
+
+[FEEC]
+29/40  Solkar{end}
+
+[FEED]
+30/40  Luneth{end}
+
+[FEEE]
+31/40  Voryn{end}
+
+[FEEF]
+32/40  Rakhan{end}
+
+[FEF0]
+33/40  Krozak{end}
+
+[FEF1]
+34/40  Varnek{end}
+
+[FEF2]
+35/40  Zhyr{end}
+
+[FEF3]
+36/40  Skorath{end}
+
+[FEF4]
+37/40  Vezra{end}
+
+[FEF5]
+38/40  LeSub{end}
+
+[FEF6]
+39/40  Yem{end}
+
+[FEF7]
+40/40  Lekak{end}
+
+[FEF8]
+{f8 02 14}{f8 0A 00}OBJECTIFS{end}
+
+[FEF9]
+{f8 02 14}{f8 0A 01}OBJECTIFS{end}
+
+[FEFC]
+L1/R1 : pages  Cercle : retour
+Carre : gains  Triangle : EN{end}
+
+[FEFE]
+À DÉBLOQUER{end}
+
+[FEFF]
+DÉBLOQUÉ{end}

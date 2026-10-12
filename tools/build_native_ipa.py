@@ -77,7 +77,7 @@ def build(core,mods,deps,output):
     shutil.copytree(ROOT/'Resources/Lekak',app/'mods/Lekak')
     info=plistlib.loads((ROOT/'App/Info.plist').read_bytes())
     info.update(CFBundleDisplayName='Lekak',CFBundleExecutable='LekakNative',
-        CFBundleName='LekakNative',CFBundleShortVersionString='0.28',CFBundleVersion='28',
+        CFBundleName='LekakNative',CFBundleShortVersionString='0.29',CFBundleVersion='29',
         MinimumOSVersion='15.0',UIFileSharingEnabled=True,LSSupportsOpeningDocumentsInPlace=True,
         ITSAppUsesNonExemptEncryption=False)
     (app/'Info.plist').write_bytes(plistlib.dumps(info))
@@ -87,7 +87,7 @@ def build(core,mods,deps,output):
         player_disc_included=False,unlock_conditions='normal, unchanged',
         pending=['Sign and install through Sideloadly','Verify launch, controls, saves, objectives and music on a physical iPhone'])
     (app/'native-build-report.json').write_text(json.dumps(report,indent=2)+'\n')
-    ipa=output/'Lekak_iPhone_28_Revanche_Triangle.ipa'
+    ipa=output/'Lekak_iPhone_29_Recompenses.ipa'
     with zipfile.ZipFile(ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
         for file in sorted(payload.rglob('*')):
             if file.is_file():bundle.write(file,file.relative_to(output))
@@ -97,7 +97,7 @@ def build(core,mods,deps,output):
     (app/'Info.plist').write_bytes(plistlib.dumps(info))
     test_report=dict(report,unlock_conditions='all duelists unlocked for tests')
     (app/'native-build-report.json').write_text(json.dumps(test_report,indent=2)+'\n')
-    test_ipa=output/'Lekak_iPhone_28_Revanche_Triangle_Full_Unlock.ipa'
+    test_ipa=output/'Lekak_iPhone_29_Recompenses_Full_Unlock.ipa'
     with zipfile.ZipFile(test_ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
         for file in sorted(payload.rglob('*')):
             if file.is_file():bundle.write(file,file.relative_to(output))

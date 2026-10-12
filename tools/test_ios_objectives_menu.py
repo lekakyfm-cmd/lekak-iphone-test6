@@ -17,7 +17,7 @@ PAD_BUTTON_TRIANGLE=8, PAD_BUTTON_R1=16, PAD_DIRECTION_RIGHT=32,
 PAD_BUTTON_L1=64, PAD_DIRECTION_LEFT=128, PAD_BUTTON_CONFIRM_MASK=256,
 PAD_BUTTON_START=512 };
 static u16 gInput_wPad1Pressed,gInput_wPad1Held,gInput_wPad1Repeat;
-static int selected,opened,page,label=-1,english,update_logged,gMain_bMenuID=8;
+static int selected,opened,page,label=-1,english,gMain_bMenuID=8;
 struct Host {void (*log)(const struct Host *,const char *);void (*set_setting)(const struct Host *,const char *,int);};
 static struct Host stub_host;static const struct Host *host=&stub_host;
 static int stable(void){return 1;}

@@ -1,0 +1,2038 @@
+{
+  "format": 1,
+  "save_tail_offset": "0x628",
+  "save_tail_size": 88,
+  "reward_keys": [
+    {
+      "key": 0,
+      "duelist": "Simon Muran",
+      "goal": 1
+    },
+    {
+      "key": 1,
+      "duelist": "Simon Muran",
+      "goal": 10
+    },
+    {
+      "key": 2,
+      "duelist": "Simon Muran",
+      "goal": 25
+    },
+    {
+      "key": 3,
+      "duelist": "Simon Muran",
+      "goal": 50
+    },
+    {
+      "key": 4,
+      "duelist": "Simon Muran",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 5,
+      "duelist": "Teana",
+      "goal": 1
+    },
+    {
+      "key": 6,
+      "duelist": "Teana",
+      "goal": 10
+    },
+    {
+      "key": 7,
+      "duelist": "Teana",
+      "goal": 25
+    },
+    {
+      "key": 8,
+      "duelist": "Teana",
+      "goal": 50
+    },
+    {
+      "key": 9,
+      "duelist": "Teana",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 10,
+      "duelist": "Jono",
+      "goal": 1
+    },
+    {
+      "key": 11,
+      "duelist": "Jono",
+      "goal": 10
+    },
+    {
+      "key": 12,
+      "duelist": "Jono",
+      "goal": 25
+    },
+    {
+      "key": 13,
+      "duelist": "Jono",
+      "goal": 50
+    },
+    {
+      "key": 14,
+      "duelist": "Jono",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 15,
+      "duelist": "Villager 1",
+      "goal": 1
+    },
+    {
+      "key": 16,
+      "duelist": "Villager 1",
+      "goal": 10
+    },
+    {
+      "key": 17,
+      "duelist": "Villager 1",
+      "goal": 25
+    },
+    {
+      "key": 18,
+      "duelist": "Villager 1",
+      "goal": 50
+    },
+    {
+      "key": 19,
+      "duelist": "Villager 1",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 20,
+      "duelist": "Villager 2",
+      "goal": 1
+    },
+    {
+      "key": 21,
+      "duelist": "Villager 2",
+      "goal": 10
+    },
+    {
+      "key": 22,
+      "duelist": "Villager 2",
+      "goal": 25
+    },
+    {
+      "key": 23,
+      "duelist": "Villager 2",
+      "goal": 50
+    },
+    {
+      "key": 24,
+      "duelist": "Villager 2",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 25,
+      "duelist": "Villager 3",
+      "goal": 1
+    },
+    {
+      "key": 26,
+      "duelist": "Villager 3",
+      "goal": 10
+    },
+    {
+      "key": 27,
+      "duelist": "Villager 3",
+      "goal": 25
+    },
+    {
+      "key": 28,
+      "duelist": "Villager 3",
+      "goal": 50
+    },
+    {
+      "key": 29,
+      "duelist": "Villager 3",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 30,
+      "duelist": "Seto",
+      "goal": 1
+    },
+    {
+      "key": 31,
+      "duelist": "Seto",
+      "goal": 10
+    },
+    {
+      "key": 32,
+      "duelist": "Seto",
+      "goal": 25
+    },
+    {
+      "key": 33,
+      "duelist": "Seto",
+      "goal": 50
+    },
+    {
+      "key": 34,
+      "duelist": "Seto",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 35,
+      "duelist": "Heishin",
+      "goal": 1
+    },
+    {
+      "key": 36,
+      "duelist": "Heishin",
+      "goal": 10
+    },
+    {
+      "key": 37,
+      "duelist": "Heishin",
+      "goal": 25
+    },
+    {
+      "key": 38,
+      "duelist": "Heishin",
+      "goal": 50
+    },
+    {
+      "key": 39,
+      "duelist": "Heishin",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 40,
+      "duelist": "Rex Raptor",
+      "goal": 1
+    },
+    {
+      "key": 41,
+      "duelist": "Rex Raptor",
+      "goal": 10
+    },
+    {
+      "key": 42,
+      "duelist": "Rex Raptor",
+      "goal": 25
+    },
+    {
+      "key": 43,
+      "duelist": "Rex Raptor",
+      "goal": 50
+    },
+    {
+      "key": 44,
+      "duelist": "Rex Raptor",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 45,
+      "duelist": "Weevil Underwood",
+      "goal": 1
+    },
+    {
+      "key": 46,
+      "duelist": "Weevil Underwood",
+      "goal": 10
+    },
+    {
+      "key": 47,
+      "duelist": "Weevil Underwood",
+      "goal": 25
+    },
+    {
+      "key": 48,
+      "duelist": "Weevil Underwood",
+      "goal": 50
+    },
+    {
+      "key": 49,
+      "duelist": "Weevil Underwood",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 50,
+      "duelist": "Mai Valentine",
+      "goal": 1
+    },
+    {
+      "key": 51,
+      "duelist": "Mai Valentine",
+      "goal": 10
+    },
+    {
+      "key": 52,
+      "duelist": "Mai Valentine",
+      "goal": 25
+    },
+    {
+      "key": 53,
+      "duelist": "Mai Valentine",
+      "goal": 50
+    },
+    {
+      "key": 54,
+      "duelist": "Mai Valentine",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 55,
+      "duelist": "Bandit Keith",
+      "goal": 1
+    },
+    {
+      "key": 56,
+      "duelist": "Bandit Keith",
+      "goal": 10
+    },
+    {
+      "key": 57,
+      "duelist": "Bandit Keith",
+      "goal": 25
+    },
+    {
+      "key": 58,
+      "duelist": "Bandit Keith",
+      "goal": 50
+    },
+    {
+      "key": 59,
+      "duelist": "Bandit Keith",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 60,
+      "duelist": "Shadi",
+      "goal": 1
+    },
+    {
+      "key": 61,
+      "duelist": "Shadi",
+      "goal": 10
+    },
+    {
+      "key": 62,
+      "duelist": "Shadi",
+      "goal": 25
+    },
+    {
+      "key": 63,
+      "duelist": "Shadi",
+      "goal": 50
+    },
+    {
+      "key": 64,
+      "duelist": "Shadi",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 65,
+      "duelist": "Yami Bakura",
+      "goal": 1
+    },
+    {
+      "key": 66,
+      "duelist": "Yami Bakura",
+      "goal": 10
+    },
+    {
+      "key": 67,
+      "duelist": "Yami Bakura",
+      "goal": 25
+    },
+    {
+      "key": 68,
+      "duelist": "Yami Bakura",
+      "goal": 50
+    },
+    {
+      "key": 69,
+      "duelist": "Yami Bakura",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 70,
+      "duelist": "Pegasus",
+      "goal": 1
+    },
+    {
+      "key": 71,
+      "duelist": "Pegasus",
+      "goal": 10
+    },
+    {
+      "key": 72,
+      "duelist": "Pegasus",
+      "goal": 25
+    },
+    {
+      "key": 73,
+      "duelist": "Pegasus",
+      "goal": 50
+    },
+    {
+      "key": 74,
+      "duelist": "Pegasus",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 75,
+      "duelist": "Isis",
+      "goal": 1
+    },
+    {
+      "key": 76,
+      "duelist": "Isis",
+      "goal": 10
+    },
+    {
+      "key": 77,
+      "duelist": "Isis",
+      "goal": 25
+    },
+    {
+      "key": 78,
+      "duelist": "Isis",
+      "goal": 50
+    },
+    {
+      "key": 79,
+      "duelist": "Isis",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 80,
+      "duelist": "Kaiba",
+      "goal": 1
+    },
+    {
+      "key": 81,
+      "duelist": "Kaiba",
+      "goal": 10
+    },
+    {
+      "key": 82,
+      "duelist": "Kaiba",
+      "goal": 25
+    },
+    {
+      "key": 83,
+      "duelist": "Kaiba",
+      "goal": 50
+    },
+    {
+      "key": 84,
+      "duelist": "Kaiba",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 85,
+      "duelist": "Mage Soldier",
+      "goal": 1
+    },
+    {
+      "key": 86,
+      "duelist": "Mage Soldier",
+      "goal": 10
+    },
+    {
+      "key": 87,
+      "duelist": "Mage Soldier",
+      "goal": 25
+    },
+    {
+      "key": 88,
+      "duelist": "Mage Soldier",
+      "goal": 50
+    },
+    {
+      "key": 89,
+      "duelist": "Mage Soldier",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 90,
+      "duelist": "Jono 2nd",
+      "goal": 1
+    },
+    {
+      "key": 91,
+      "duelist": "Jono 2nd",
+      "goal": 10
+    },
+    {
+      "key": 92,
+      "duelist": "Jono 2nd",
+      "goal": 25
+    },
+    {
+      "key": 93,
+      "duelist": "Jono 2nd",
+      "goal": 50
+    },
+    {
+      "key": 94,
+      "duelist": "Jono 2nd",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 95,
+      "duelist": "Teana 2nd",
+      "goal": 1
+    },
+    {
+      "key": 96,
+      "duelist": "Teana 2nd",
+      "goal": 10
+    },
+    {
+      "key": 97,
+      "duelist": "Teana 2nd",
+      "goal": 25
+    },
+    {
+      "key": 98,
+      "duelist": "Teana 2nd",
+      "goal": 50
+    },
+    {
+      "key": 99,
+      "duelist": "Teana 2nd",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 100,
+      "duelist": "Ocean Mage",
+      "goal": 1
+    },
+    {
+      "key": 101,
+      "duelist": "Ocean Mage",
+      "goal": 10
+    },
+    {
+      "key": 102,
+      "duelist": "Ocean Mage",
+      "goal": 25
+    },
+    {
+      "key": 103,
+      "duelist": "Ocean Mage",
+      "goal": 50
+    },
+    {
+      "key": 104,
+      "duelist": "Ocean Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 105,
+      "duelist": "High Mage Secmeton",
+      "goal": 1
+    },
+    {
+      "key": 106,
+      "duelist": "High Mage Secmeton",
+      "goal": 10
+    },
+    {
+      "key": 107,
+      "duelist": "High Mage Secmeton",
+      "goal": 25
+    },
+    {
+      "key": 108,
+      "duelist": "High Mage Secmeton",
+      "goal": 50
+    },
+    {
+      "key": 109,
+      "duelist": "High Mage Secmeton",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 110,
+      "duelist": "Forest Mage",
+      "goal": 1
+    },
+    {
+      "key": 111,
+      "duelist": "Forest Mage",
+      "goal": 10
+    },
+    {
+      "key": 112,
+      "duelist": "Forest Mage",
+      "goal": 25
+    },
+    {
+      "key": 113,
+      "duelist": "Forest Mage",
+      "goal": 50
+    },
+    {
+      "key": 114,
+      "duelist": "Forest Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 115,
+      "duelist": "High Mage Anubisius",
+      "goal": 1
+    },
+    {
+      "key": 116,
+      "duelist": "High Mage Anubisius",
+      "goal": 10
+    },
+    {
+      "key": 117,
+      "duelist": "High Mage Anubisius",
+      "goal": 25
+    },
+    {
+      "key": 118,
+      "duelist": "High Mage Anubisius",
+      "goal": 50
+    },
+    {
+      "key": 119,
+      "duelist": "High Mage Anubisius",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 120,
+      "duelist": "Mountain Mage",
+      "goal": 1
+    },
+    {
+      "key": 121,
+      "duelist": "Mountain Mage",
+      "goal": 10
+    },
+    {
+      "key": 122,
+      "duelist": "Mountain Mage",
+      "goal": 25
+    },
+    {
+      "key": 123,
+      "duelist": "Mountain Mage",
+      "goal": 50
+    },
+    {
+      "key": 124,
+      "duelist": "Mountain Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 125,
+      "duelist": "High Mage Atenza",
+      "goal": 1
+    },
+    {
+      "key": 126,
+      "duelist": "High Mage Atenza",
+      "goal": 10
+    },
+    {
+      "key": 127,
+      "duelist": "High Mage Atenza",
+      "goal": 25
+    },
+    {
+      "key": 128,
+      "duelist": "High Mage Atenza",
+      "goal": 50
+    },
+    {
+      "key": 129,
+      "duelist": "High Mage Atenza",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 130,
+      "duelist": "Desert Mage",
+      "goal": 1
+    },
+    {
+      "key": 131,
+      "duelist": "Desert Mage",
+      "goal": 10
+    },
+    {
+      "key": 132,
+      "duelist": "Desert Mage",
+      "goal": 25
+    },
+    {
+      "key": 133,
+      "duelist": "Desert Mage",
+      "goal": 50
+    },
+    {
+      "key": 134,
+      "duelist": "Desert Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 135,
+      "duelist": "High Mage Martis",
+      "goal": 1
+    },
+    {
+      "key": 136,
+      "duelist": "High Mage Martis",
+      "goal": 10
+    },
+    {
+      "key": 137,
+      "duelist": "High Mage Martis",
+      "goal": 25
+    },
+    {
+      "key": 138,
+      "duelist": "High Mage Martis",
+      "goal": 50
+    },
+    {
+      "key": 139,
+      "duelist": "High Mage Martis",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 140,
+      "duelist": "Meadow Mage",
+      "goal": 1
+    },
+    {
+      "key": 141,
+      "duelist": "Meadow Mage",
+      "goal": 10
+    },
+    {
+      "key": 142,
+      "duelist": "Meadow Mage",
+      "goal": 25
+    },
+    {
+      "key": 143,
+      "duelist": "Meadow Mage",
+      "goal": 50
+    },
+    {
+      "key": 144,
+      "duelist": "Meadow Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 145,
+      "duelist": "High Mage Kepura",
+      "goal": 1
+    },
+    {
+      "key": 146,
+      "duelist": "High Mage Kepura",
+      "goal": 10
+    },
+    {
+      "key": 147,
+      "duelist": "High Mage Kepura",
+      "goal": 25
+    },
+    {
+      "key": 148,
+      "duelist": "High Mage Kepura",
+      "goal": 50
+    },
+    {
+      "key": 149,
+      "duelist": "High Mage Kepura",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 150,
+      "duelist": "Labyrinth Mage",
+      "goal": 1
+    },
+    {
+      "key": 151,
+      "duelist": "Labyrinth Mage",
+      "goal": 10
+    },
+    {
+      "key": 152,
+      "duelist": "Labyrinth Mage",
+      "goal": 25
+    },
+    {
+      "key": 153,
+      "duelist": "Labyrinth Mage",
+      "goal": 50
+    },
+    {
+      "key": 154,
+      "duelist": "Labyrinth Mage",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 155,
+      "duelist": "Seto 2nd",
+      "goal": 1
+    },
+    {
+      "key": 156,
+      "duelist": "Seto 2nd",
+      "goal": 10
+    },
+    {
+      "key": 157,
+      "duelist": "Seto 2nd",
+      "goal": 25
+    },
+    {
+      "key": 158,
+      "duelist": "Seto 2nd",
+      "goal": 50
+    },
+    {
+      "key": 159,
+      "duelist": "Seto 2nd",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 160,
+      "duelist": "Guardian Sebek",
+      "goal": 1
+    },
+    {
+      "key": 161,
+      "duelist": "Guardian Sebek",
+      "goal": 10
+    },
+    {
+      "key": 162,
+      "duelist": "Guardian Sebek",
+      "goal": 25
+    },
+    {
+      "key": 163,
+      "duelist": "Guardian Sebek",
+      "goal": 50
+    },
+    {
+      "key": 164,
+      "duelist": "Guardian Sebek",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 165,
+      "duelist": "Guardian Neku",
+      "goal": 1
+    },
+    {
+      "key": 166,
+      "duelist": "Guardian Neku",
+      "goal": 10
+    },
+    {
+      "key": 167,
+      "duelist": "Guardian Neku",
+      "goal": 25
+    },
+    {
+      "key": 168,
+      "duelist": "Guardian Neku",
+      "goal": 50
+    },
+    {
+      "key": 169,
+      "duelist": "Guardian Neku",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 170,
+      "duelist": "Heishin 2nd",
+      "goal": 1
+    },
+    {
+      "key": 171,
+      "duelist": "Heishin 2nd",
+      "goal": 10
+    },
+    {
+      "key": 172,
+      "duelist": "Heishin 2nd",
+      "goal": 25
+    },
+    {
+      "key": 173,
+      "duelist": "Heishin 2nd",
+      "goal": 50
+    },
+    {
+      "key": 174,
+      "duelist": "Heishin 2nd",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 175,
+      "duelist": "Seto 3rd",
+      "goal": 1
+    },
+    {
+      "key": 176,
+      "duelist": "Seto 3rd",
+      "goal": 10
+    },
+    {
+      "key": 177,
+      "duelist": "Seto 3rd",
+      "goal": 25
+    },
+    {
+      "key": 178,
+      "duelist": "Seto 3rd",
+      "goal": 50
+    },
+    {
+      "key": 179,
+      "duelist": "Seto 3rd",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 180,
+      "duelist": "DarkNite",
+      "goal": 1
+    },
+    {
+      "key": 181,
+      "duelist": "DarkNite",
+      "goal": 10
+    },
+    {
+      "key": 182,
+      "duelist": "DarkNite",
+      "goal": 25
+    },
+    {
+      "key": 183,
+      "duelist": "DarkNite",
+      "goal": 50
+    },
+    {
+      "key": 184,
+      "duelist": "DarkNite",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 185,
+      "duelist": "Nitemare",
+      "goal": 1
+    },
+    {
+      "key": 186,
+      "duelist": "Nitemare",
+      "goal": 10
+    },
+    {
+      "key": 187,
+      "duelist": "Nitemare",
+      "goal": 25
+    },
+    {
+      "key": 188,
+      "duelist": "Nitemare",
+      "goal": 50
+    },
+    {
+      "key": 189,
+      "duelist": "Nitemare",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 190,
+      "duelist": "Duel Master K",
+      "goal": 1
+    },
+    {
+      "key": 191,
+      "duelist": "Duel Master K",
+      "goal": 10
+    },
+    {
+      "key": 192,
+      "duelist": "Duel Master K",
+      "goal": 25
+    },
+    {
+      "key": 193,
+      "duelist": "Duel Master K",
+      "goal": 50
+    },
+    {
+      "key": 194,
+      "duelist": "Duel Master K",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 195,
+      "duelist": "Lekakmod:dark-simon",
+      "goal": 1
+    },
+    {
+      "key": 196,
+      "duelist": "Lekakmod:dark-simon",
+      "goal": 10
+    },
+    {
+      "key": 197,
+      "duelist": "Lekakmod:dark-simon",
+      "goal": 25
+    },
+    {
+      "key": 198,
+      "duelist": "Lekakmod:dark-simon",
+      "goal": 50
+    },
+    {
+      "key": 199,
+      "duelist": "Lekakmod:dark-simon",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 200,
+      "duelist": "Lekakmod:destroyer-pegasus",
+      "goal": 1
+    },
+    {
+      "key": 201,
+      "duelist": "Lekakmod:destroyer-pegasus",
+      "goal": 10
+    },
+    {
+      "key": 202,
+      "duelist": "Lekakmod:destroyer-pegasus",
+      "goal": 25
+    },
+    {
+      "key": 203,
+      "duelist": "Lekakmod:destroyer-pegasus",
+      "goal": 50
+    },
+    {
+      "key": 204,
+      "duelist": "Lekakmod:destroyer-pegasus",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 205,
+      "duelist": "Lekakmod:soul-reaper-bakura",
+      "goal": 1
+    },
+    {
+      "key": 206,
+      "duelist": "Lekakmod:soul-reaper-bakura",
+      "goal": 10
+    },
+    {
+      "key": 207,
+      "duelist": "Lekakmod:soul-reaper-bakura",
+      "goal": 25
+    },
+    {
+      "key": 208,
+      "duelist": "Lekakmod:soul-reaper-bakura",
+      "goal": 50
+    },
+    {
+      "key": 209,
+      "duelist": "Lekakmod:soul-reaper-bakura",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 210,
+      "duelist": "Lekakmod:eclipse-isis",
+      "goal": 1
+    },
+    {
+      "key": 211,
+      "duelist": "Lekakmod:eclipse-isis",
+      "goal": 10
+    },
+    {
+      "key": 212,
+      "duelist": "Lekakmod:eclipse-isis",
+      "goal": 25
+    },
+    {
+      "key": 213,
+      "duelist": "Lekakmod:eclipse-isis",
+      "goal": 50
+    },
+    {
+      "key": 214,
+      "duelist": "Lekakmod:eclipse-isis",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 215,
+      "duelist": "Lekakmod:primal-rex",
+      "goal": 1
+    },
+    {
+      "key": 216,
+      "duelist": "Lekakmod:primal-rex",
+      "goal": 10
+    },
+    {
+      "key": 217,
+      "duelist": "Lekakmod:primal-rex",
+      "goal": 25
+    },
+    {
+      "key": 218,
+      "duelist": "Lekakmod:primal-rex",
+      "goal": 50
+    },
+    {
+      "key": 219,
+      "duelist": "Lekakmod:primal-rex",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 220,
+      "duelist": "Lekakmod:heishin-the-eternal",
+      "goal": 1
+    },
+    {
+      "key": 221,
+      "duelist": "Lekakmod:heishin-the-eternal",
+      "goal": 10
+    },
+    {
+      "key": 222,
+      "duelist": "Lekakmod:heishin-the-eternal",
+      "goal": 25
+    },
+    {
+      "key": 223,
+      "duelist": "Lekakmod:heishin-the-eternal",
+      "goal": 50
+    },
+    {
+      "key": 224,
+      "duelist": "Lekakmod:heishin-the-eternal",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 225,
+      "duelist": "Lekakmod:tyrant-kaiba",
+      "goal": 1
+    },
+    {
+      "key": 226,
+      "duelist": "Lekakmod:tyrant-kaiba",
+      "goal": 10
+    },
+    {
+      "key": 227,
+      "duelist": "Lekakmod:tyrant-kaiba",
+      "goal": 25
+    },
+    {
+      "key": 228,
+      "duelist": "Lekakmod:tyrant-kaiba",
+      "goal": 50
+    },
+    {
+      "key": 229,
+      "duelist": "Lekakmod:tyrant-kaiba",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 230,
+      "duelist": "Lekakmod:vorthrax",
+      "goal": 1
+    },
+    {
+      "key": 231,
+      "duelist": "Lekakmod:vorthrax",
+      "goal": 10
+    },
+    {
+      "key": 232,
+      "duelist": "Lekakmod:vorthrax",
+      "goal": 25
+    },
+    {
+      "key": 233,
+      "duelist": "Lekakmod:vorthrax",
+      "goal": 50
+    },
+    {
+      "key": 234,
+      "duelist": "Lekakmod:vorthrax",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 235,
+      "duelist": "Lekakmod:nemerys",
+      "goal": 1
+    },
+    {
+      "key": 236,
+      "duelist": "Lekakmod:nemerys",
+      "goal": 10
+    },
+    {
+      "key": 237,
+      "duelist": "Lekakmod:nemerys",
+      "goal": 25
+    },
+    {
+      "key": 238,
+      "duelist": "Lekakmod:nemerys",
+      "goal": 50
+    },
+    {
+      "key": 239,
+      "duelist": "Lekakmod:nemerys",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 240,
+      "duelist": "Lekakmod:ignaroth",
+      "goal": 1
+    },
+    {
+      "key": 241,
+      "duelist": "Lekakmod:ignaroth",
+      "goal": 10
+    },
+    {
+      "key": 242,
+      "duelist": "Lekakmod:ignaroth",
+      "goal": 25
+    },
+    {
+      "key": 243,
+      "duelist": "Lekakmod:ignaroth",
+      "goal": 50
+    },
+    {
+      "key": 244,
+      "duelist": "Lekakmod:ignaroth",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 245,
+      "duelist": "Lekakmod:vesper",
+      "goal": 1
+    },
+    {
+      "key": 246,
+      "duelist": "Lekakmod:vesper",
+      "goal": 10
+    },
+    {
+      "key": 247,
+      "duelist": "Lekakmod:vesper",
+      "goal": 25
+    },
+    {
+      "key": 248,
+      "duelist": "Lekakmod:vesper",
+      "goal": 50
+    },
+    {
+      "key": 249,
+      "duelist": "Lekakmod:vesper",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 250,
+      "duelist": "Lekakmod:azhur",
+      "goal": 1
+    },
+    {
+      "key": 251,
+      "duelist": "Lekakmod:azhur",
+      "goal": 10
+    },
+    {
+      "key": 252,
+      "duelist": "Lekakmod:azhur",
+      "goal": 25
+    },
+    {
+      "key": 253,
+      "duelist": "Lekakmod:azhur",
+      "goal": 50
+    },
+    {
+      "key": 254,
+      "duelist": "Lekakmod:azhur",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 255,
+      "duelist": "Lekakmod:ferron",
+      "goal": 1
+    },
+    {
+      "key": 256,
+      "duelist": "Lekakmod:ferron",
+      "goal": 10
+    },
+    {
+      "key": 257,
+      "duelist": "Lekakmod:ferron",
+      "goal": 25
+    },
+    {
+      "key": 258,
+      "duelist": "Lekakmod:ferron",
+      "goal": 50
+    },
+    {
+      "key": 259,
+      "duelist": "Lekakmod:ferron",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 260,
+      "duelist": "Lekakmod:nerex",
+      "goal": 1
+    },
+    {
+      "key": 261,
+      "duelist": "Lekakmod:nerex",
+      "goal": 10
+    },
+    {
+      "key": 262,
+      "duelist": "Lekakmod:nerex",
+      "goal": 25
+    },
+    {
+      "key": 263,
+      "duelist": "Lekakmod:nerex",
+      "goal": 50
+    },
+    {
+      "key": 264,
+      "duelist": "Lekakmod:nerex",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 265,
+      "duelist": "Lekakmod:ravok",
+      "goal": 1
+    },
+    {
+      "key": 266,
+      "duelist": "Lekakmod:ravok",
+      "goal": 10
+    },
+    {
+      "key": 267,
+      "duelist": "Lekakmod:ravok",
+      "goal": 25
+    },
+    {
+      "key": 268,
+      "duelist": "Lekakmod:ravok",
+      "goal": 50
+    },
+    {
+      "key": 269,
+      "duelist": "Lekakmod:ravok",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 270,
+      "duelist": "Lekakmod:tharn",
+      "goal": 1
+    },
+    {
+      "key": 271,
+      "duelist": "Lekakmod:tharn",
+      "goal": 10
+    },
+    {
+      "key": 272,
+      "duelist": "Lekakmod:tharn",
+      "goal": 25
+    },
+    {
+      "key": 273,
+      "duelist": "Lekakmod:tharn",
+      "goal": 50
+    },
+    {
+      "key": 274,
+      "duelist": "Lekakmod:tharn",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 275,
+      "duelist": "Lekakmod:zerak",
+      "goal": 1
+    },
+    {
+      "key": 276,
+      "duelist": "Lekakmod:zerak",
+      "goal": 10
+    },
+    {
+      "key": 277,
+      "duelist": "Lekakmod:zerak",
+      "goal": 25
+    },
+    {
+      "key": 278,
+      "duelist": "Lekakmod:zerak",
+      "goal": 50
+    },
+    {
+      "key": 279,
+      "duelist": "Lekakmod:zerak",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 280,
+      "duelist": "Lekakmod:nekris",
+      "goal": 1
+    },
+    {
+      "key": 281,
+      "duelist": "Lekakmod:nekris",
+      "goal": 10
+    },
+    {
+      "key": 282,
+      "duelist": "Lekakmod:nekris",
+      "goal": 25
+    },
+    {
+      "key": 283,
+      "duelist": "Lekakmod:nekris",
+      "goal": 50
+    },
+    {
+      "key": 284,
+      "duelist": "Lekakmod:nekris",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 285,
+      "duelist": "Lekakmod:oryx",
+      "goal": 1
+    },
+    {
+      "key": 286,
+      "duelist": "Lekakmod:oryx",
+      "goal": 10
+    },
+    {
+      "key": 287,
+      "duelist": "Lekakmod:oryx",
+      "goal": 25
+    },
+    {
+      "key": 288,
+      "duelist": "Lekakmod:oryx",
+      "goal": 50
+    },
+    {
+      "key": 289,
+      "duelist": "Lekakmod:oryx",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 290,
+      "duelist": "Lekakmod:valtor",
+      "goal": 1
+    },
+    {
+      "key": 291,
+      "duelist": "Lekakmod:valtor",
+      "goal": 10
+    },
+    {
+      "key": 292,
+      "duelist": "Lekakmod:valtor",
+      "goal": 25
+    },
+    {
+      "key": 293,
+      "duelist": "Lekakmod:valtor",
+      "goal": 50
+    },
+    {
+      "key": 294,
+      "duelist": "Lekakmod:valtor",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 295,
+      "duelist": "Lekakmod:serya",
+      "goal": 1
+    },
+    {
+      "key": 296,
+      "duelist": "Lekakmod:serya",
+      "goal": 10
+    },
+    {
+      "key": 297,
+      "duelist": "Lekakmod:serya",
+      "goal": 25
+    },
+    {
+      "key": 298,
+      "duelist": "Lekakmod:serya",
+      "goal": 50
+    },
+    {
+      "key": 299,
+      "duelist": "Lekakmod:serya",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 300,
+      "duelist": "Lekakmod:drazhen",
+      "goal": 1
+    },
+    {
+      "key": 301,
+      "duelist": "Lekakmod:drazhen",
+      "goal": 10
+    },
+    {
+      "key": 302,
+      "duelist": "Lekakmod:drazhen",
+      "goal": 25
+    },
+    {
+      "key": 303,
+      "duelist": "Lekakmod:drazhen",
+      "goal": 50
+    },
+    {
+      "key": 304,
+      "duelist": "Lekakmod:drazhen",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 305,
+      "duelist": "Lekakmod:malvek",
+      "goal": 1
+    },
+    {
+      "key": 306,
+      "duelist": "Lekakmod:malvek",
+      "goal": 10
+    },
+    {
+      "key": 307,
+      "duelist": "Lekakmod:malvek",
+      "goal": 25
+    },
+    {
+      "key": 308,
+      "duelist": "Lekakmod:malvek",
+      "goal": 50
+    },
+    {
+      "key": 309,
+      "duelist": "Lekakmod:malvek",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 310,
+      "duelist": "Lekakmod:nyss",
+      "goal": 1
+    },
+    {
+      "key": 311,
+      "duelist": "Lekakmod:nyss",
+      "goal": 10
+    },
+    {
+      "key": 312,
+      "duelist": "Lekakmod:nyss",
+      "goal": 25
+    },
+    {
+      "key": 313,
+      "duelist": "Lekakmod:nyss",
+      "goal": 50
+    },
+    {
+      "key": 314,
+      "duelist": "Lekakmod:nyss",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 315,
+      "duelist": "Lekakmod:krag",
+      "goal": 1
+    },
+    {
+      "key": 316,
+      "duelist": "Lekakmod:krag",
+      "goal": 10
+    },
+    {
+      "key": 317,
+      "duelist": "Lekakmod:krag",
+      "goal": 25
+    },
+    {
+      "key": 318,
+      "duelist": "Lekakmod:krag",
+      "goal": 50
+    },
+    {
+      "key": 319,
+      "duelist": "Lekakmod:krag",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 320,
+      "duelist": "Lekakmod:velkor",
+      "goal": 1
+    },
+    {
+      "key": 321,
+      "duelist": "Lekakmod:velkor",
+      "goal": 10
+    },
+    {
+      "key": 322,
+      "duelist": "Lekakmod:velkor",
+      "goal": 25
+    },
+    {
+      "key": 323,
+      "duelist": "Lekakmod:velkor",
+      "goal": 50
+    },
+    {
+      "key": 324,
+      "duelist": "Lekakmod:velkor",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 325,
+      "duelist": "Lekakmod:ossyr",
+      "goal": 1
+    },
+    {
+      "key": 326,
+      "duelist": "Lekakmod:ossyr",
+      "goal": 10
+    },
+    {
+      "key": 327,
+      "duelist": "Lekakmod:ossyr",
+      "goal": 25
+    },
+    {
+      "key": 328,
+      "duelist": "Lekakmod:ossyr",
+      "goal": 50
+    },
+    {
+      "key": 329,
+      "duelist": "Lekakmod:ossyr",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 330,
+      "duelist": "Lekakmod:nharos",
+      "goal": 1
+    },
+    {
+      "key": 331,
+      "duelist": "Lekakmod:nharos",
+      "goal": 10
+    },
+    {
+      "key": 332,
+      "duelist": "Lekakmod:nharos",
+      "goal": 25
+    },
+    {
+      "key": 333,
+      "duelist": "Lekakmod:nharos",
+      "goal": 50
+    },
+    {
+      "key": 334,
+      "duelist": "Lekakmod:nharos",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 335,
+      "duelist": "Lekakmod:solkar",
+      "goal": 1
+    },
+    {
+      "key": 336,
+      "duelist": "Lekakmod:solkar",
+      "goal": 10
+    },
+    {
+      "key": 337,
+      "duelist": "Lekakmod:solkar",
+      "goal": 25
+    },
+    {
+      "key": 338,
+      "duelist": "Lekakmod:solkar",
+      "goal": 50
+    },
+    {
+      "key": 339,
+      "duelist": "Lekakmod:solkar",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 340,
+      "duelist": "Lekakmod:luneth",
+      "goal": 1
+    },
+    {
+      "key": 341,
+      "duelist": "Lekakmod:luneth",
+      "goal": 10
+    },
+    {
+      "key": 342,
+      "duelist": "Lekakmod:luneth",
+      "goal": 25
+    },
+    {
+      "key": 343,
+      "duelist": "Lekakmod:luneth",
+      "goal": 50
+    },
+    {
+      "key": 344,
+      "duelist": "Lekakmod:luneth",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 345,
+      "duelist": "Lekakmod:voryn",
+      "goal": 1
+    },
+    {
+      "key": 346,
+      "duelist": "Lekakmod:voryn",
+      "goal": 10
+    },
+    {
+      "key": 347,
+      "duelist": "Lekakmod:voryn",
+      "goal": 25
+    },
+    {
+      "key": 348,
+      "duelist": "Lekakmod:voryn",
+      "goal": 50
+    },
+    {
+      "key": 349,
+      "duelist": "Lekakmod:voryn",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 350,
+      "duelist": "Lekakmod:rakhan",
+      "goal": 1
+    },
+    {
+      "key": 351,
+      "duelist": "Lekakmod:rakhan",
+      "goal": 10
+    },
+    {
+      "key": 352,
+      "duelist": "Lekakmod:rakhan",
+      "goal": 25
+    },
+    {
+      "key": 353,
+      "duelist": "Lekakmod:rakhan",
+      "goal": 50
+    },
+    {
+      "key": 354,
+      "duelist": "Lekakmod:rakhan",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 355,
+      "duelist": "Lekakmod:krozak",
+      "goal": 1
+    },
+    {
+      "key": 356,
+      "duelist": "Lekakmod:krozak",
+      "goal": 10
+    },
+    {
+      "key": 357,
+      "duelist": "Lekakmod:krozak",
+      "goal": 25
+    },
+    {
+      "key": 358,
+      "duelist": "Lekakmod:krozak",
+      "goal": 50
+    },
+    {
+      "key": 359,
+      "duelist": "Lekakmod:krozak",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 360,
+      "duelist": "Lekakmod:varnek",
+      "goal": 1
+    },
+    {
+      "key": 361,
+      "duelist": "Lekakmod:varnek",
+      "goal": 10
+    },
+    {
+      "key": 362,
+      "duelist": "Lekakmod:varnek",
+      "goal": 25
+    },
+    {
+      "key": 363,
+      "duelist": "Lekakmod:varnek",
+      "goal": 50
+    },
+    {
+      "key": 364,
+      "duelist": "Lekakmod:varnek",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 365,
+      "duelist": "Lekakmod:zhyr",
+      "goal": 1
+    },
+    {
+      "key": 366,
+      "duelist": "Lekakmod:zhyr",
+      "goal": 10
+    },
+    {
+      "key": 367,
+      "duelist": "Lekakmod:zhyr",
+      "goal": 25
+    },
+    {
+      "key": 368,
+      "duelist": "Lekakmod:zhyr",
+      "goal": 50
+    },
+    {
+      "key": 369,
+      "duelist": "Lekakmod:zhyr",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 370,
+      "duelist": "Lekakmod:skorath",
+      "goal": 1
+    },
+    {
+      "key": 371,
+      "duelist": "Lekakmod:skorath",
+      "goal": 10
+    },
+    {
+      "key": 372,
+      "duelist": "Lekakmod:skorath",
+      "goal": 25
+    },
+    {
+      "key": 373,
+      "duelist": "Lekakmod:skorath",
+      "goal": 50
+    },
+    {
+      "key": 374,
+      "duelist": "Lekakmod:skorath",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 375,
+      "duelist": "Lekakmod:vezra",
+      "goal": 1
+    },
+    {
+      "key": 376,
+      "duelist": "Lekakmod:vezra",
+      "goal": 10
+    },
+    {
+      "key": 377,
+      "duelist": "Lekakmod:vezra",
+      "goal": 25
+    },
+    {
+      "key": 378,
+      "duelist": "Lekakmod:vezra",
+      "goal": 50
+    },
+    {
+      "key": 379,
+      "duelist": "Lekakmod:vezra",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 380,
+      "duelist": "Lekakmod:lesub",
+      "goal": 1
+    },
+    {
+      "key": 381,
+      "duelist": "Lekakmod:lesub",
+      "goal": 10
+    },
+    {
+      "key": 382,
+      "duelist": "Lekakmod:lesub",
+      "goal": 25
+    },
+    {
+      "key": 383,
+      "duelist": "Lekakmod:lesub",
+      "goal": 50
+    },
+    {
+      "key": 384,
+      "duelist": "Lekakmod:lesub",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 385,
+      "duelist": "Lekakmod:yem",
+      "goal": 1
+    },
+    {
+      "key": 386,
+      "duelist": "Lekakmod:yem",
+      "goal": 10
+    },
+    {
+      "key": 387,
+      "duelist": "Lekakmod:yem",
+      "goal": 25
+    },
+    {
+      "key": 388,
+      "duelist": "Lekakmod:yem",
+      "goal": 50
+    },
+    {
+      "key": 389,
+      "duelist": "Lekakmod:yem",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 390,
+      "duelist": "Lekakmod:lekak",
+      "goal": 1
+    },
+    {
+      "key": 391,
+      "duelist": "Lekakmod:lekak",
+      "goal": 10
+    },
+    {
+      "key": 392,
+      "duelist": "Lekakmod:lekak",
+      "goal": 25
+    },
+    {
+      "key": 393,
+      "duelist": "Lekakmod:lekak",
+      "goal": 50
+    },
+    {
+      "key": 394,
+      "duelist": "Lekakmod:lekak",
+      "goal": "SA_TEC"
+    },
+    {
+      "key": 395,
+      "group": "Villager 1, 2, 3"
+    },
+    {
+      "key": 396,
+      "group": "Jono, Teana, Seto"
+    },
+    {
+      "key": 397,
+      "group": "Les cinq Low Mages"
+    },
+    {
+      "key": 398,
+      "group": "Low Meadow Mage"
+    },
+    {
+      "key": 399,
+      "group": "Les cinq High Mages"
+    },
+    {
+      "key": 400,
+      "group": "Seto 3"
+    },
+    {
+      "key": 401,
+      "group": "Nitemare"
+    },
+    {
+      "key": 402,
+      "group": "Vesper, Azhur, Ferron"
+    },
+    {
+      "key": 403,
+      "group": "Nerex, Ravok, Tharn"
+    },
+    {
+      "key": 404,
+      "group": "Zerak, Nekris, Oryx"
+    },
+    {
+      "key": 405,
+      "group": "LeSub"
+    },
+    {
+      "key": 406,
+      "group": "Yem"
+    },
+    {
+      "key": 407,
+      "group": "Lekak"
+    },
+    {
+      "key": 408,
+      "group": "Les 40 nouveaux duelistes"
+    }
+  ]
+}

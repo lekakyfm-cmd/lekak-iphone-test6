@@ -1,0 +1,218 @@
+@bank dialog
+
+[FE68]
+LOCKED{end}
+
+[FE69]
+UNLOCKED{end}
+
+[FEA8]
+Win 1 duel against Heishin.{end}
+
+[FEA9]
+Win 15 duels against Pegasus.{end}
+
+[FEAA]
+Win 5 duels against Dark Simon.{end}
+
+[FEAB]
+Own at least one Red-eyes B.
+Dragon
+(card #82) in your chest or deck.{end}
+
+[FEAC]
+Reach 100 total wins.{end}
+
+[FEAD]
+Win 1 duel against Nitemare.{end}
+
+[FEAE]
+Unlock the first six added
+duelists:
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura, Eclipse Isis,
+Primal Rex and Heishin the
+Eternal.{end}
+
+[FEAF]
+Unlock the first six added
+duelists:
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura, Eclipse Isis,
+Primal Rex and Heishin the
+Eternal.
+Win 10 duels against Primal Rex.{end}
+
+[FEB0]
+Unlock the first six added
+duelists:
+Dark Simon, Destroyer Pegasus,
+Soul Reaper Bakura, Eclipse Isis,
+Primal Rex and Heishin the
+Eternal.
+Win 10 duels against Soul Reaper
+Bakura.{end}
+
+[FEB1]
+Unlock Tyrant Kaiba, Vorthrax and
+Némérys.
+Win 5 duels against Vorthrax
+and 5 against Némérys.{end}
+
+[FEB2]
+Unlock Ignaroth and win 5 duels
+against him.
+Reach 200 total wins.{end}
+
+[FEB3]
+Unlock Ignaroth and win 5 duels
+against him.
+Reach 200 total wins.{end}
+
+[FEB4]
+Unlock Ignaroth and win 5 duels
+against him.
+Reach 200 total wins.{end}
+
+[FEB5]
+Unlock Vesper.
+Discover 200 different cards
+in the Library.
+Win 10 duels against Vesper.{end}
+
+[FEB6]
+Unlock Azhur.
+Discover 200 different cards
+in the Library.
+Win 10 duels against Azhur.{end}
+
+[FEB7]
+Unlock Ferron.
+Discover 200 different cards
+in the Library.
+Win 10 duels against Ferron.{end}
+
+[FEB8]
+Unlock Tharn.
+Discover Terrorking Archfiend
+in the Library.{end}
+
+[FEB9]
+Unlock Tharn.
+Discover Helpoemer in the Library.{end}
+
+[FEBA]
+Unlock Tharn.
+Discover Sea King Dragon (#443)
+in the Library.{end}
+
+[FEBB]
+Unlock Zerak.
+Reach 300 total wins.{end}
+
+[FEBC]
+Unlock Nékris.
+Win 10 duels against each:
+Vesper, Azhur and Ferron.{end}
+
+[FEBD]
+Unlock Oryx.
+Win 10 duels against each:
+Néréx, Ravok and Tharn.{end}
+
+[FEBE]
+Unlock Drazhen.
+Discover Saggi the Dark Clown
+(card #34) in the Library.{end}
+
+[FEBF]
+Unlock Drazhen.
+Discover Saggi the Dark Clown
+(card #34) in the Library.{end}
+
+[FEC0]
+Unlock Drazhen.
+Discover Saggi the Dark Clown
+(card #34) in the Library.{end}
+
+[FEC1]
+Unlock Malvek, Nyss and Krag.
+Win at least one duel against each
+of the 39 original opponents.{end}
+
+[FEC2]
+Unlock Malvek, Nyss and Krag.
+Win at least one duel against each
+of the 39 original opponents.{end}
+
+[FEC3]
+Unlock Malvek, Nyss and Krag.
+Win at least one duel against each
+of the 39 original opponents.{end}
+
+[FEC4]
+Unlock Velkôr.
+Reach 500 total wins.{end}
+
+[FEC5]
+Unlock Nharos.
+Reach 500 total wins.{end}
+
+[FEC6]
+Unlock Ossyr.
+Reach 500 total wins.{end}
+
+[FEC7]
+Unlock Solkar.
+Win 10 duels against Solkar.{end}
+
+[FEC8]
+Unlock Luneth.
+Win 10 duels against Luneth.{end}
+
+[FEC9]
+Unlock Voryn.
+Win 10 duels against Voryn.{end}
+
+[FECA]
+Unlock Rakhan, Krozak and Varnek.
+Win 20 duels against each
+of these three duelists.{end}
+
+[FECB]
+Unlock Rakhan, Krozak and Varnek.
+Win 20 duels against each
+of these three duelists.{end}
+
+[FECC]
+Unlock Rakhan, Krozak and Varnek.
+Win 20 duels against each
+of these three duelists.{end}
+
+[FECD]
+Unlock the other 37 added
+duelists.
+Win at least one duel against
+each.{end}
+
+[FECE]
+Unlock the other 37 added
+duelists.
+Win at least one duel against
+each.{end}
+
+[FECF]
+Unlock the other 37 added
+duelists.
+Win at least one duel against
+each.{end}
+
+[FEFA]
+{f8 02 28}{f8 0A 00}OBJECTIVES{end}
+
+[FEFB]
+{f8 02 28}{f8 0A 01}OBJECTIVES{end}
+
+[FEFD]
+L1/R1: pages  Circle: back
+Square: rewards  Triangle: FR{end}

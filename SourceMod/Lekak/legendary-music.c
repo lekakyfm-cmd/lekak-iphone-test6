@@ -87,5 +87,3 @@ int LekakMusicBaseInit(const MemoriesModHost *h,MemoriesMod *m){
  &&h->hook(h,(void*)SD_PlaySequence,(void*)play,&prev_play)
  &&h->hook(h,(void*)func_80045514,(void*)pump,&prev_pump);
 }
-
-#include "quick-rematch.h"

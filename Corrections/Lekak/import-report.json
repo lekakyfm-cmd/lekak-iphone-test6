@@ -3673,13 +3673,13 @@
     },
     {
       "path": "objectives-text.txt",
-      "sha256": "b31775db5f46205fcb0e4262ff5fb1192a2b1cc41036da9326d17dd031f53b4e",
-      "bytes": 5124
+      "sha256": "fb9a4bde261fecd2ed6d30450a94cb9bd43c43f627f312f9a89b53d87f16d482",
+      "bytes": 5134
     },
     {
       "path": "objectives-text-en.txt",
-      "sha256": "6f36b67c2b142256604d4e5232ea10c5c16dfcf8939b0b9288cf3f418b456928",
-      "bytes": 3545
+      "sha256": "5193c0083f99bad287d15bdf0b4ccf350a4c48aba40837569790aeeea83499d4",
+      "bytes": 3555
     },
     {
       "path": "objectives-progress-reserve.txt",
