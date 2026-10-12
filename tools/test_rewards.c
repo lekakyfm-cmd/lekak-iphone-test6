@@ -2,6 +2,12 @@
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>
+/* Host-only fixture: guest pointer annotations require the pinned LLVM
+ * compiler, while macOS cc uses Apple Clang. No guest layouts are exercised
+ * by this fixture; actual module compilation keeps the real G32 annotations. */
+#include "../EngineSDK/src/types.h"
+#undef G32
+#define G32
 #define MEMORIES_DECOMP_DISPLAY_OBJECT_H
 #define MEMORIES_DECOMP_DUEL_RESULT_DISPLAY_H
 typedef struct {unsigned flags;} DisplayObject;
