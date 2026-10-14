@@ -1,6 +1,17 @@
 name: Lekak - native iPhone app
 on:
   workflow_dispatch:
+    inputs:
+      experimental_data_catalog:
+        description: 'Build separate data-only rarity preview IPA (no graphics/drops/hooks; backup saves)'
+        type: boolean
+        required: false
+        default: false
+      experimental_rarity_drops:
+        description: 'Build additional isolated rarity reward test IPA (requires experimental_data_catalog)'
+        type: boolean
+        required: false
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -37,6 +48,14 @@ jobs:
           python tools/test_ios_object_format.py
           python -c 'import sys; sys.path.insert(0,"tools"); from test_lekak_sdk import verify_sources; verify_sources()'
           test -f SourceMod/Lekak/native-units.json
+          cc -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -I SourceMod/RaritiesNative tools/test_rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_snapshot.c SourceMod/RaritiesNative/rarity_registry.c SourceMod/RaritiesNative/rarity_core.c -o build/rarity-drop-bridge-test
+          build/rarity-drop-bridge-test
+          python tools/test_step6_integration.py
+          python tools/test_rarity_port.py
+          python tools/test_rarity_ios_catalog.py
+          python tools/stage_rarity_ios_catalog.py --check
+          python tools/test_experimental_rarity_bundle.py
+          python tools/generate_rarity_registry.py --check
           python tools/verify_lekak.py
           python tools/test_card_references.py
           python tools/test_shop.py
@@ -58,6 +77,8 @@ jobs:
           python tools/test_ios_objectives_menu.py
           clang -std=gnu11 -DMEMORIES_PC -DMEMORIES_TRANSLATED -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-test
           for mode in 0 1 2 3; do build/native-entry-test "$mode"; done
+          clang -std=gnu11 -O2 -Wall -Wextra -Werror -DMEMORIES_PC -DMEMORIES_TRANSLATED -DMEMORIES_IOS -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry_rarity_gate.c SourceMod/RaritiesNative/rarity_registry.c SourceMod/RaritiesNative/rarity_snapshot.c SourceMod/RaritiesNative/rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_core.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-rarity-gate-test
+          for mode in 0 1 2 3 4 5; do build/native-entry-rarity-gate-test "$mode"; done
       - uses: actions/cache@v4
         with:
           path: |
@@ -102,7 +123,7 @@ jobs:
           path: |
             build/iphone-core/libMemories_iPhone.a
             build/iphone-core/ios-core-report.json
-          key: lekak-ios-core-v1-${{ hashFiles('App/native_entry.c', 'App/native_entry.h', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
+          key: lekak-ios-core-v1-${{ hashFiles('App/native_entry.c', 'App/native_entry.h', 'SourceMod/RaritiesNative/rarity_registry.h', 'SourceMod/RaritiesNative/rarity_snapshot.h', 'SourceMod/RaritiesNative/rarity_snapshot.c', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'Corrections/EngineSDK/src/game/duel_result_runtime.c', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
       - name: Cross-compile complete engine core for iPhone
         if: steps.ios-core-cache.outputs.cache-hit != 'true'
         run: |
@@ -127,13 +148,23 @@ jobs:
       - name: Link complete native game and package unsigned IPA
         run: |
           set -o pipefail
-          python tools/build_native_ipa.py 2>&1 | tee build/logs/native-app.log
+          extra=()
+          if [[ "${{ inputs.experimental_data_catalog }}" == "true" ]]; then
+            extra+=(--experimental-data-catalog)
+          fi
+          if [[ "${{ inputs.experimental_rarity_drops }}" == "true" ]]; then
+            extra+=(--experimental-rarity-drops)
+          fi
+          python tools/build_native_ipa.py "${extra[@]}" 2>&1 | tee build/logs/native-app.log
       - name: Upload native iPhone application
         uses: actions/upload-artifact@v4
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_29_*.ipa
+          path: |
+            build/native-app/Lekak_iPhone_29_*.ipa
+            build/native-app/Lekak_iPhone_RarityDataOnly_EXPERIMENTAL_UNSIGNED.ipa
+            build/native-app/Lekak_iPhone_RarityDrops_EXPERIMENTAL_UNSIGNED.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
