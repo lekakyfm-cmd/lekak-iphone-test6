@@ -16,6 +16,11 @@
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
+#ifdef MEMORIES_IOS
+#include "../SourceMod/RaritiesNative/rarity_registry.h"
+#include "../SourceMod/RaritiesNative/rarity_snapshot.h"
+#include "../SourceMod/RaritiesNative/rarity_drop_bridge.h"
+#endif
 static double startup_begin;
 static double seconds_now(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return t.tv_sec+t.tv_nsec/1e9;}
 static void stage(const char *name){fprintf(stderr,"Lekak timing: %.3f s — %s\n",seconds_now()-startup_begin,name);}
@@ -38,9 +43,21 @@ void LekakNative_StopGame(void){
 int LekakNative_Run(const char *disc,const char *program,const char *user){
     if(!disc||!program||!user||disc[0]!='/'||program[0]!='/'||user[0]!='/')return -1;
     if(atomic_exchange(&launched,1))return -2;
+#ifdef MEMORIES_IOS
+    /* Start every session fail-closed; no opt-in may survive a previous run. */
+    LekakRarity_DropBridgeSetEnabled(0);
+#endif
     if(setenv("MEMORIES_DISC",disc,1)||setenv("MEMORIES_PROGRAM_DIR",program,1)||
        setenv("MEMORIES_USER_DIR",user,1)||setenv("MEMORIES_NO_MONITOR","1",1)||
        setenv("MEMORIES_MODS","1",1)||setenv("MEMORIES_MOD_LEKAKMOD","1",1))return -3;
+#ifdef MEMORIES_IOS
+    /* A second, explicitly requested iOS IPA can ship a DATA-ONLY catalogue.
+     * Never allow persisted settings to silently enable 4960 variants in the
+     * stable build. The variants have no duel/graphic hooks on iOS yet. */
+    int data_only = getenv("LEKAK_IOS_RARITY_DATA_ONLY") &&
+        !strcmp(getenv("LEKAK_IOS_RARITY_DATA_ONLY"), "1");
+    if(setenv("MEMORIES_MOD_LEKAK_RARITIES_TEST", data_only ? "1" : "0", 1)) return -11;
+#endif
     Log_Init();startup_begin=seconds_now();stage("start");
     fprintf(stderr,"Lekak startup: mapping translated memory\n");
     if(Memories_GuestMap())return -4;
@@ -76,7 +93,42 @@ int LekakNative_Run(const char *disc,const char *program,const char *user){
     }
     if(Mods_Status(lekak)[0])fprintf(stderr,"Lekak mod notes: %s\n",Mods_Status(lekak));
     fprintf(stderr,"Lekak startup: mod active; building text and cards\n");
-    Text_Build();stage("text built");Cards_Build();stage("cards built");Text_SortCards();stage("card names sorted");
+    Text_Build();stage("text built");Cards_Build();stage("cards built");
+#ifdef MEMORIES_IOS
+    int matched_bases=LekakRarity_ProbeBases(Cards_FindIdentity,gCard_nCount);
+    int snapshot=LekakRarity_SnapshotBuildIndexed(Cards_FindIdentity,Cards_Identity,gCard_nCount);
+    fprintf(stderr,"Lekak rarity registry: %d/1240 base cards; snapshot=%d (1=complete, 0=absent, -1=invalid/partial); gameplay hooks NOT enabled\n",matched_bases,snapshot);
+    /* An experimental build must never enter a game with a partial catalogue,
+     * whether the mod was missing, invalid, or failed to build. Bail out
+     * BEFORE Text_SortCards or any sidecar save is read/written. */
+    if(data_only){
+        int variant_mod=-1;
+        for(int i=0;i<Mods_Count();++i)
+            if(!strcmp(Mods_Id(i),"lekak-rarities-test")) variant_mod=i;
+        if(variant_mod<0 || !Mods_Enabled(variant_mod) ||
+            !Mods_Active(variant_mod) || Mods_Failed(variant_mod) ||
+            matched_bases!=LEKAK_RARITY_TOTAL_BASE_CARDS ||
+            snapshot!=1 || gCard_nCount!=6200){
+            Platform_ShowError("Experimental rarity catalogue",
+                "Incomplete or invalid iOS data-only variant catalogue. No saves changed.");
+            LekakRarity_SnapshotClear();
+            return -12;
+        }
+        /* An additional IPA has an explicit drops opt-in. The data-only IPA
+         * still uses unmodified drop selection. Neither enables graphics. */
+        int test_drops = getenv("LEKAK_IOS_RARITY_DROPS") &&
+            !strcmp(getenv("LEKAK_IOS_RARITY_DROPS"), "1");
+        if(test_drops) LekakRarity_DropBridgeSetEnabled(1);
+        fprintf(stderr,"Lekak iOS EXPERIMENTAL: %d card identities; drops=%d; duel palettes NOT installed\n",gCard_nCount,LekakRarity_DropBridgeEnabled());
+    }else if(snapshot!=0){
+        /* Stable IPA must remain on the base catalogue, even if user settings
+         * were copied from a separate experimental IPA. */
+        LekakRarity_SnapshotClear();
+        Platform_ShowError("Rarity catalogue", "Variants unexpectedly loaded in stable build.");
+        return -13;
+    }
+#endif
+    Text_SortCards();stage("card names sorted");
     fprintf(stderr,"Lekak startup: entering game\n");
     boundary_active=1;
     if(setjmp(exit_boundary)==0){

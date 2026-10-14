@@ -18,6 +18,14 @@ def stage_sources(stage):
     # Only copy authoritative source roots, never recursively copy tmp/build.
     for folder in ['src','config','tools']:
         shutil.copytree(SDK/folder,stage/folder,dirs_exist_ok=True)
+    # iOS-only game code: apply after the immutable upstream SDK is checked
+    # and copied. Patching EngineSDK itself would break source-provenance.json
+    # and might contaminate Windows/host ABI builds.
+    rarity_hook=ROOT/'Corrections/EngineSDK/src/game/duel_result_runtime.c'
+    hook_source=stage/'src/game/duel_result_runtime.c'
+    if not rarity_hook.is_file() or 'LekakRarity_DropBridgeChoose' not in rarity_hook.read_text():
+        raise ValueError('Missing iOS-only rarity reward bridge correction')
+    hook_source.write_bytes(rarity_hook.read_bytes())
     for file in ['native_platform.c','native_platform.h','native_entry.c','native_entry.h']:
         shutil.copyfile(ROOT/'App'/file,stage/'src/pc/platform'/file)
     # Objectives must receive navigation before TitleMenu_Before consumes it.

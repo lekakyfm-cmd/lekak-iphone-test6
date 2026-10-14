@@ -276,6 +276,14 @@ static void pumpGame(void *context){[(__bridge LekakNativeController *)context p
         freopen(log.fileSystemRepresentation,"w",stderr);setvbuf(stderr,NULL,_IOLBF,0);
         if([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"LekakTestUnlockAll"] boolValue]) setenv("LEKAK_TEST_UNLOCK_ALL","1",1);
         else unsetenv("LEKAK_TEST_UNLOCK_ALL");
+        /* Opt-in DATA-ONLY iOS build. Not present in stable IPA. */
+        if([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"LekakExperimentalRarityDataOnly"] boolValue])
+            setenv("LEKAK_IOS_RARITY_DATA_ONLY", "1", 1);
+        else unsetenv("LEKAK_IOS_RARITY_DATA_ONLY");
+        if([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"LekakExperimentalRarityDataOnly"] boolValue] &&
+           [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"LekakExperimentalRarityDrops"] boolValue])
+            setenv("LEKAK_IOS_RARITY_DROPS", "1", 1);
+        else unsetenv("LEKAK_IOS_RARITY_DROPS");
         int result=LekakNative_Run(self->discPath.fileSystemRepresentation,
             NSBundle.mainBundle.bundlePath.fileSystemRepresentation,self->userRoot.fileSystemRepresentation);
         dispatch_sync(dispatch_get_main_queue(),^{

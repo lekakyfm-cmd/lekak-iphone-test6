@@ -21,6 +21,22 @@ def validate_inputs(core,mods,deps):
         if data.get('emit_failures') or data.get('transform_failures'):raise RuntimeError('Incomplete core build')
     # Verify source-to-module linkage instead of silently accepting an old mod.
     modules=json.loads((mods/'build-report.json').read_text())
+    rarity_source=ROOT/'SourceMod/RaritiesNative/rarity_core.c'
+    if modules.get('rarity_core_sha256')!=digest(rarity_source):
+        raise RuntimeError('Stale rarity CPU rules: '+str(rarity_source))
+    registry_source=ROOT/'SourceMod/RaritiesNative/rarity_registry.c'
+    registry_header=ROOT/'SourceMod/RaritiesNative/rarity_base_keys.h'
+    if modules.get('rarity_registry_sha256')!=digest(registry_source) or modules.get('rarity_registry_generated_sha256')!=digest(registry_header):
+        raise RuntimeError('Stale rarity identity registry: '+str(registry_source))
+    snapshot_source=ROOT/'SourceMod/RaritiesNative/rarity_snapshot.c'
+    if modules.get('rarity_snapshot_sha256')!=digest(snapshot_source):
+        raise RuntimeError('Stale rarity snapshot: '+str(snapshot_source))
+    save_source=ROOT/'SourceMod/RaritiesNative/rarity_save_bridge.c'
+    if modules.get('rarity_save_bridge_sha256')!=digest(save_source):
+        raise RuntimeError('Stale native rarity save bridge: '+str(save_source))
+    drop_source=ROOT/'SourceMod/RaritiesNative/rarity_drop_bridge.c'
+    if modules.get('rarity_drop_bridge_sha256')!=digest(drop_source):
+        raise RuntimeError('Stale iOS rarity drop bridge: '+str(drop_source))
     for unit in modules['units']:
         if unit['source_sha256']!=digest(ROOT/'SourceMod/Lekak'/unit['source']):
             raise RuntimeError('Stale mod source: '+unit['source'])
@@ -39,8 +55,10 @@ def validate_inputs(core,mods,deps):
         if dependencies['libraries'][name]['archive_sha256']!=digest(archive):raise RuntimeError('Stale iOS dependency')
         verify_archive(archive)
 
-def build(core,mods,deps,output):
+def build(core,mods,deps,output,experimental_data_catalog=False,experimental_rarity_drops=False):
     if platform.system()!='Darwin' or platform.machine()!='arm64':raise SystemExit('Requires macOS ARM64 and Xcode.')
+    if experimental_rarity_drops and not experimental_data_catalog:
+        raise ValueError('Rarity drops require the separate experimental catalogue IPA')
     output.mkdir(parents=True,exist_ok=True)
     report={'target':'arm64-apple-ios15.0','iphone_game_linked':False,'device_tested':False,
         'scope':'Full translated engine and static Lekak mod with UIKit frontend'}
@@ -102,6 +120,42 @@ def build(core,mods,deps,output):
         for file in sorted(payload.rglob('*')):
             if file.is_file():bundle.write(file,file.relative_to(output))
     report['full_unlock_ipa_sha256']=digest(test_ipa);save()
+    if experimental_data_catalog:
+        # Explicit third IPA; neither regular nor full-unlock IPA includes
+        # the 4960 data-only variants. Never copy an offline catalogue into
+        # the stable bundle. The preview has NO rarity gameplay hooks.
+        from experimental_rarity_bundle import prepare_experimental_bundle
+        details=prepare_experimental_bundle(ROOT, output, app, info)
+        exp_report=dict(report,
+            scope='UNSAFE FOR MAIN SAVES: 4960 variant card records; no rarity hooks',
+            catalogue_mode='EXPERIMENTAL_DATA_ONLY',
+            catalogue_source_sha256=details['source_mod_json_sha256'],
+            expected_cards=6200, expected_variants=4960,
+            save_testing='NOT_TESTED_ON_DEVICE',
+            player_warning='Use a separate test installation and backup saves')
+        (app/'native-build-report.json').write_text(json.dumps(exp_report,indent=2)+'\n')
+        exp_ipa=output/'Lekak_iPhone_RarityDataOnly_EXPERIMENTAL_UNSIGNED.ipa'
+        with zipfile.ZipFile(exp_ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
+            for file in sorted(payload.rglob('*')):
+                if file.is_file():bundle.write(file,file.relative_to(output))
+        report['experimental_data_catalog_ipa_sha256']=digest(exp_ipa)
+        report['experimental_data_catalog_mode']='EXPLICIT_OPT_IN_ONLY'
+        if experimental_rarity_drops:
+            # FOURTH, separate IPA: never alter the stable or data-only test.
+            from experimental_rarity_bundle import enable_experimental_drop_test
+            enable_experimental_drop_test(app, info)
+            drops_report=dict(exp_report,catalogue_mode='EXPERIMENTAL_RARITY_DROPS',
+                gameplay='Reward rarity mapping ONLY; no stat/graphics/library hooks',
+                caveat='Untested on device; separate sandbox and backup saves')
+            (app/'native-build-report.json').write_text(json.dumps(drops_report,indent=2)+'\n')
+            drops_ipa=output/'Lekak_iPhone_RarityDrops_EXPERIMENTAL_UNSIGNED.ipa'
+            with zipfile.ZipFile(drops_ipa,'w',zipfile.ZIP_DEFLATED) as bundle:
+                for file in sorted(payload.rglob('*')):
+                    if file.is_file():bundle.write(file,file.relative_to(output))
+            report['experimental_rarity_drops_ipa_sha256']=digest(drops_ipa)
+            report['experimental_rarity_drops_mode']='OPT_IN_BETA_NOT_DEVICE_TESTED'
+
+        save()
     print('Full native iPhone application linked and packaged. Physical-device behavior remains unverified.')
     return ipa
 
@@ -111,4 +165,6 @@ if __name__=='__main__':
     p.add_argument('--mods',type=Path,default=ROOT/'build/lekak-ios')
     p.add_argument('--deps',type=Path,default=ROOT/'EngineSDK/tmp/pc/ios-deps')
     p.add_argument('--output',type=Path,default=ROOT/'build/native-app')
-    a=p.parse_args();build(a.core.resolve(),a.mods.resolve(),a.deps.resolve(),a.output.resolve())
+    p.add_argument('--experimental-data-catalog',action='store_true',help='Also produce an explicitly gated data-only rarity preview IPA; not safe for main saves')
+    p.add_argument('--experimental-rarity-drops',action='store_true',help='Build an additional isolated experimental drops IPA (requires --experimental-data-catalog)')
+    a=p.parse_args();build(a.core.resolve(),a.mods.resolve(),a.deps.resolve(),a.output.resolve(),a.experimental_data_catalog,a.experimental_rarity_drops)

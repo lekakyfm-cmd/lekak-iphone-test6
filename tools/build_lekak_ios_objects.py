@@ -103,6 +103,45 @@ def build(game,output):
         units.append({'source':unit['source'],'source_sha256':source_sha256,
             'compiled_source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'object_sha256':hashlib.sha256(obj.read_bytes()).hexdigest()})
+    # Phase 1 of the rarity port: CPU-only rules cross-compiled for iPhoneOS.
+    # They do not install hooks or enable the desktop mod. Keep this native
+    # object independent from translated game's guest-address instrumentation.
+    rarity_source=ROOT/'SourceMod/RaritiesNative/rarity_core.c'
+    rarity_object=output/'rarity_core.o'
+    subprocess.run([compiler,*target,'-std=c11','-O2','-Wall','-Wextra','-Werror',
+        '-c',str(rarity_source),'-o',str(rarity_object)],check=True)
+    check_macho_ios(rarity_object)
+    objects.append(rarity_object)
+    registry_source=ROOT/'SourceMod/RaritiesNative/rarity_registry.c'
+    registry_object=output/'rarity_registry.o'
+    subprocess.run([compiler,*target,'-std=c11','-O2','-Wall','-Wextra','-Werror',
+        '-c',str(registry_source),'-o',str(registry_object)],check=True)
+    check_macho_ios(registry_object)
+    objects.append(registry_object)
+    snapshot_source=ROOT/'SourceMod/RaritiesNative/rarity_snapshot.c'
+    snapshot_object=output/'rarity_snapshot.o'
+    subprocess.run([compiler,*target,'-std=c11','-O2','-Wall','-Wextra','-Werror',
+        '-c',str(snapshot_source),'-o',str(snapshot_object)],check=True)
+    check_macho_ios(snapshot_object)
+    objects.append(snapshot_object)
+    # Step 4: stable variant save identities in portable C. This does NOT
+    # intercept iOS saves; it only prepares a tested remapping API.
+    save_source=ROOT/'SourceMod/RaritiesNative/rarity_save_bridge.c'
+    save_object=output/'rarity_save_bridge.o'
+    subprocess.run([compiler,*target,'-std=c11','-O2','-Wall','-Wextra','-Werror',
+        '-fno-stack-protector','-ffreestanding',
+        '-c',str(save_source),'-o',str(save_object)],check=True)
+    check_macho_ios(save_object)
+    objects.append(save_object)
+    # Step 6: pure native opt-in reward mapping, called by the translated
+    # duel-result pool selector on experimental IPA only.
+    rarity_drop_source=ROOT/'SourceMod/RaritiesNative/rarity_drop_bridge.c'
+    rarity_drop_object=output/'rarity_drop_bridge.o'
+    subprocess.run([compiler,*target,'-std=c11','-O2','-Wall','-Wextra','-Werror',
+        '-fno-stack-protector','-ffreestanding',
+        '-c',str(rarity_drop_source),'-o',str(rarity_drop_object)],check=True)
+    check_macho_ios(rarity_drop_object)
+    objects.append(rarity_drop_object)
     if entries!=1:raise ValueError('Expected exactly one final MemoriesModInit')
     registration=output/'registration.c'
     registration.write_text(''.join(f'extern void {name}(void); extern void {name}_Unregister(void);\n' for name in routines)
@@ -130,6 +169,17 @@ def build(game,output):
     report={'scope':'ARM64 iPhoneOS static Lekak objects; final game backend linkage pending',
         'target':'arm64-apple-ios15.0','units':units,'entrypoint':'MemoriesModInit',
         'undefined_imports':sorted(undefined-defined),'game_summary_sha256':hashlib.sha256((game/'summary.json').read_bytes()).hexdigest(),
+        'rarity_core_sha256':hashlib.sha256(rarity_source.read_bytes()).hexdigest(),
+        'rarity_core_object_sha256':hashlib.sha256(rarity_object.read_bytes()).hexdigest(),
+        'rarity_registry_sha256':hashlib.sha256(registry_source.read_bytes()).hexdigest(),
+        'rarity_registry_generated_sha256':hashlib.sha256((registry_source.parent/'rarity_base_keys.h').read_bytes()).hexdigest(),
+        'rarity_registry_object_sha256':hashlib.sha256(registry_object.read_bytes()).hexdigest(),
+        'rarity_snapshot_sha256':hashlib.sha256(snapshot_source.read_bytes()).hexdigest(),
+        'rarity_snapshot_object_sha256':hashlib.sha256(snapshot_object.read_bytes()).hexdigest(),
+        'rarity_save_bridge_sha256':hashlib.sha256(save_source.read_bytes()).hexdigest(),
+        'rarity_save_bridge_object_sha256':hashlib.sha256(save_object.read_bytes()).hexdigest(),
+        'rarity_drop_bridge_sha256':hashlib.sha256(rarity_drop_source.read_bytes()).hexdigest(),
+        'rarity_drop_bridge_object_sha256':hashlib.sha256(rarity_drop_object.read_bytes()).hexdigest(),
         'archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),
         'iphone_game_linked':False,'device_tested':False}
     (output/'build-report.json').write_text(json.dumps(report,indent=2)+'\n')
