@@ -21,6 +21,7 @@ jobs:
         run: |
           unzip -o Lekak_iPhone_30_Sources.zip
           cp -R Updates/v31/. .
+          cp -R Updates/v32/. .
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -45,6 +46,7 @@ jobs:
       - name: Verify Windows port
         run: |
           python tools/test_windows_port.py
+          python tools/test_duel_field_visibility.py
           python tools/test_collection_readability.py
           cc -std=c11 -Wall -Wextra -Werror -I EngineSDK/src tools/test_ios_full_unlock.c -o /tmp/lekak-full-unlock-test
           /tmp/lekak-full-unlock-test
@@ -156,7 +158,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_31_*.ipa
+          path: build/native-app/Lekak_iPhone_32_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
