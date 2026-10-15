@@ -44,8 +44,6 @@ jobs:
         run: |
           python tools/test_windows_port.py
           mkdir -p build
-          clang -std=gnu11 -fms-extensions -O2 -ffunction-sections -fdata-sections -DMEMORIES_PC -DMEMORIES_IOS -I EngineSDK/src -Wno-pointer-to-int-cast -Wno-gnu-folding-constant tools/test_collection_canvas.c -Wl,-dead_strip -o build/collection-canvas-test
-          build/collection-canvas-test
       - name: Verify inputs and object platform checks
         run: |
           mkdir -p build/logs
@@ -107,6 +105,11 @@ jobs:
             build/game-abi/exports.txt
             build/game-abi/mod_signatures.json
           key: ${{ steps.game-abi-cache.outputs.cache-primary-key }}
+      - name: Verify collection canvas with the pinned LLVM compiler
+        run: |
+          LLVM_CLANG=$(python -c 'import sys; sys.path.insert(0,"EngineSDK/tools/pc"); from llvm_guest import toolchain; print(toolchain()/"bin/clang")')
+          "$LLVM_CLANG" -std=gnu11 -fms-extensions -O2 -ffunction-sections -fdata-sections -DMEMORIES_PC -DMEMORIES_IOS -I EngineSDK/src -Wno-pointer-to-int-cast -Wno-gnu-folding-constant tools/test_collection_canvas.c -Wl,-dead_strip -o build/collection-canvas-test
+          build/collection-canvas-test
       - name: Compile static Lekak modules for a physical iPhone
         run: |
           set -o pipefail
