@@ -39,28 +39,87 @@ jobs:
           for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_24_Music_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
-      - name: Restore and verify all stages 1-6 sources (single ZIP)
+      - name: Find, restore, and verify the complete iOS sources archive
         run: |
           set -euo pipefail
-          archive=LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip
-          if [ ! -f "$archive" ]; then
-            echo "ERROR: Upload $archive at the repository root, not inside a folder." >&2
-            exit 1
-          fi
-          python - <<'PYVERIFY'
+          # GitHub's web uploader may place the ZIP inside a folder. Find the
+          # complete corrected archive and stage it at repository root, where
+          # the preflight integrity checker expects to find it.
+          python - <<'PYFIND'
           from pathlib import Path
+          import shutil
           import zipfile
-          archive=Path('LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip')
-          with zipfile.ZipFile(archive) as z:
-              assert z.testzip() is None, 'Source ZIP damaged'
-              expected={'tools/generate_rarity_registry.py',
-                        'tools/test_rarity_port.py',
-                        'Portage/Raretes_PC_v0.7.6/mod.json',
-                        'SourceMod/RaritiesNative/rarity_registry.c',
-                        'tools/verify_ios_source_bundle.py'}
-              assert expected.issubset(set(z.namelist())), 'Incomplete source ZIP'
-          PYVERIFY
-          unzip -q -o "$archive"
+
+          root = Path.cwd()
+          filename = 'LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip'
+          needed = {
+              'tools/build_lekak_ios_objects.py',
+              'tools/generate_rarity_registry.py',
+              'tools/test_rarity_port.py',
+              'tools/verify_ios_source_bundle.py',
+              'Portage/Raretes_PC_v0.7.6/mod.json',
+              'SourceMod/RaritiesNative/rarity_registry.c',
+              'LEKAK_SOURCE_BUNDLE_MANIFEST.json',
+          }
+          candidates = sorted(
+              p for p in root.rglob(filename)
+              if p.is_file() and '.git' not in p.relative_to(root).parts
+          )
+          print('Found iOS source ZIP candidates:')
+          for p in candidates:
+              print(' -', p.relative_to(root))
+          if not candidates:
+              print('ZIP files present in the repository (first 25):')
+              for p in sorted(root.rglob('*.zip'))[:25]:
+                  print(' -', p.relative_to(root))
+              raise SystemExit(
+                  'ERROR: No complete source ZIP found anywhere in this checkout. '
+                  'Upload LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip '
+                  '(the ZIP itself, not only the containing folder).'
+              )
+          usable = []
+          for p in candidates:
+              try:
+                  with zipfile.ZipFile(p) as z:
+                      files = set(z.namelist())
+                      if not needed.issubset(files):
+                          print('Skipping incomplete archive:', p.relative_to(root))
+                          continue
+                      code = z.read('tools/build_lekak_ios_objects.py')
+                      fixed = b"'__stack_chk_fail'" in code and b"'__stack_chk_guard'" in code
+                      usable.append((p, fixed))
+              except (OSError, zipfile.BadZipFile, KeyError) as exc:
+                  print('Skipping unreadable archive:', p.relative_to(root), exc)
+          # Prefer the version with the stack-symbol correction; old ZIPs
+          # may coexist in another folder after uploads via GitHub UI.
+          fixed = [p for p, is_fixed in usable if is_fixed]
+          if len(fixed) == 1:
+              chosen = fixed[0]
+          elif len(fixed) > 1:
+              # Same corrected archive might be uploaded more than once.
+              roots = [p for p in fixed if p == root / filename]
+              chosen = roots[0] if roots else sorted(fixed, key=lambda p: str(p))[0]
+              print('Multiple corrected archives found; using:', chosen.relative_to(root))
+          elif usable:
+              raise SystemExit(
+                  'ERROR: Only outdated archive copies were found. '
+                  'Upload the corrected ZIP containing the stack-symbol fix.'
+              )
+          else:
+              raise SystemExit('ERROR: Found ZIP(s), but none includes the complete iOS sources.')
+          target = root / filename
+          if chosen != target:
+              print('Restoring ZIP from subfolder:', chosen.relative_to(root))
+              shutil.copyfile(chosen, target)
+          else:
+              print('ZIP already at repository root')
+          with zipfile.ZipFile(target) as z:
+              broken = z.testzip()
+              if broken:
+                  raise SystemExit(f'ERROR: Corrupted ZIP entry: {broken}')
+              print('Verified archive file count:', len(z.namelist()))
+          PYFIND
+          unzip -q -o LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip
           python tools/verify_ios_source_bundle.py
       - name: Apply verified card reference corrections after asset extraction
         run: |
