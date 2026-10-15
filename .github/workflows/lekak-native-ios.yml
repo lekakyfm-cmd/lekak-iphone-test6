@@ -1,17 +1,8 @@
 name: Lekak - native iPhone app
 on:
+  push:
+    branches: [port/windows-iphone-v30]
   workflow_dispatch:
-    inputs:
-      experimental_data_catalog:
-        description: 'Build separate data-only rarity preview IPA (no graphics/drops/hooks; backup saves)'
-        type: boolean
-        required: false
-        default: false
-      experimental_rarity_drops:
-        description: 'Build additional isolated rarity reward test IPA (requires experimental_data_catalog)'
-        type: boolean
-        required: false
-        default: false
 permissions:
   contents: read
 concurrency:
@@ -26,6 +17,8 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v4
+      - name: Restore Windows port sources
+        run: unzip -o Lekak_iPhone_30_Sources.zip
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -39,105 +32,26 @@ jobs:
           for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_24_Music_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
-      - name: Find, restore, and verify the complete iOS sources archive
-        run: |
-          set -euo pipefail
-          # GitHub's web uploader may place the ZIP inside a folder. Find the
-          # complete corrected archive and stage it at repository root, where
-          # the preflight integrity checker expects to find it.
-          python - <<'PYFIND'
-          from pathlib import Path
-          import shutil
-          import zipfile
-
-          root = Path.cwd()
-          filename = 'LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip'
-          needed = {
-              'tools/build_lekak_ios_objects.py',
-              'tools/generate_rarity_registry.py',
-              'tools/test_rarity_port.py',
-              'tools/verify_ios_source_bundle.py',
-              'Portage/Raretes_PC_v0.7.6/mod.json',
-              'SourceMod/RaritiesNative/rarity_registry.c',
-              'LEKAK_SOURCE_BUNDLE_MANIFEST.json',
-          }
-          candidates = sorted(
-              p for p in root.rglob(filename)
-              if p.is_file() and '.git' not in p.relative_to(root).parts
-          )
-          print('Found iOS source ZIP candidates:')
-          for p in candidates:
-              print(' -', p.relative_to(root))
-          if not candidates:
-              print('ZIP files present in the repository (first 25):')
-              for p in sorted(root.rglob('*.zip'))[:25]:
-                  print(' -', p.relative_to(root))
-              raise SystemExit(
-                  'ERROR: No complete source ZIP found anywhere in this checkout. '
-                  'Upload LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip '
-                  '(the ZIP itself, not only the containing folder).'
-              )
-          usable = []
-          for p in candidates:
-              try:
-                  with zipfile.ZipFile(p) as z:
-                      files = set(z.namelist())
-                      if not needed.issubset(files):
-                          print('Skipping incomplete archive:', p.relative_to(root))
-                          continue
-                      code = z.read('tools/build_lekak_ios_objects.py')
-                      fixed = b"'__stack_chk_fail'" in code and b"'__stack_chk_guard'" in code
-                      usable.append((p, fixed))
-              except (OSError, zipfile.BadZipFile, KeyError) as exc:
-                  print('Skipping unreadable archive:', p.relative_to(root), exc)
-          # Prefer the version with the stack-symbol correction; old ZIPs
-          # may coexist in another folder after uploads via GitHub UI.
-          fixed = [p for p, is_fixed in usable if is_fixed]
-          if len(fixed) == 1:
-              chosen = fixed[0]
-          elif len(fixed) > 1:
-              # Same corrected archive might be uploaded more than once.
-              roots = [p for p in fixed if p == root / filename]
-              chosen = roots[0] if roots else sorted(fixed, key=lambda p: str(p))[0]
-              print('Multiple corrected archives found; using:', chosen.relative_to(root))
-          elif usable:
-              raise SystemExit(
-                  'ERROR: Only outdated archive copies were found. '
-                  'Upload the corrected ZIP containing the stack-symbol fix.'
-              )
-          else:
-              raise SystemExit('ERROR: Found ZIP(s), but none includes the complete iOS sources.')
-          target = root / filename
-          if chosen != target:
-              print('Restoring ZIP from subfolder:', chosen.relative_to(root))
-              shutil.copyfile(chosen, target)
-          else:
-              print('ZIP already at repository root')
-          with zipfile.ZipFile(target) as z:
-              broken = z.testzip()
-              if broken:
-                  raise SystemExit(f'ERROR: Corrupted ZIP entry: {broken}')
-              print('Verified archive file count:', len(z.namelist()))
-          PYFIND
-          unzip -q -o LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip
-          python tools/verify_ios_source_bundle.py
       - name: Apply verified card reference corrections after asset extraction
         run: |
           if [ -d Corrections/Lekak ]; then cp -R Corrections/Lekak/. Resources/Lekak/; fi
+      - name: Apply Windows TEST8 assets after legacy corrections
+        run: |
+          for pack in Lekak_iPhone_30_Windows_Assets_*.zip; do
+            if [ -f "$pack" ]; then unzip -o "$pack"; fi
+          done
+      - name: Verify Windows port
+        run: |
+          python tools/test_windows_port.py
+          mkdir -p build
+          clang -std=gnu11 -fms-extensions -O2 -ffunction-sections -fdata-sections -DMEMORIES_PC -DMEMORIES_IOS -I EngineSDK/src -Wno-pointer-to-int-cast -Wno-gnu-folding-constant tools/test_collection_canvas.c -Wl,-dead_strip -o build/collection-canvas-test
+          build/collection-canvas-test
       - name: Verify inputs and object platform checks
         run: |
           mkdir -p build/logs
           python tools/test_ios_object_format.py
           python -c 'import sys; sys.path.insert(0,"tools"); from test_lekak_sdk import verify_sources; verify_sources()'
           test -f SourceMod/Lekak/native-units.json
-          cc -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -I SourceMod/RaritiesNative tools/test_rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_snapshot.c SourceMod/RaritiesNative/rarity_registry.c SourceMod/RaritiesNative/rarity_core.c -o build/rarity-drop-bridge-test
-          build/rarity-drop-bridge-test
-          python tools/test_step6_integration.py
-          python tools/test_rarity_port.py
-          python tools/test_rarity_ios_catalog.py
-          python tools/stage_rarity_ios_catalog.py --check
-          python tools/test_experimental_rarity_bundle.py
-          python tools/generate_rarity_registry.py --check
           python tools/verify_lekak.py
           python tools/test_card_references.py
           python tools/test_shop.py
@@ -158,9 +72,7 @@ jobs:
           python tools/test_native_card_pixels.py
           python tools/test_ios_objectives_menu.py
           clang -std=gnu11 -DMEMORIES_PC -DMEMORIES_TRANSLATED -Wall -Wextra -Werror -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-test
-          for mode in 0 1 2 3; do build/native-entry-test "$mode"; done
-          clang -std=gnu11 -O2 -Wall -Wextra -Werror -DMEMORIES_PC -DMEMORIES_TRANSLATED -DMEMORIES_IOS -IApp -IEngineSDK/src App/native_entry.c tools/test_native_entry_rarity_gate.c SourceMod/RaritiesNative/rarity_registry.c SourceMod/RaritiesNative/rarity_snapshot.c SourceMod/RaritiesNative/rarity_drop_bridge.c SourceMod/RaritiesNative/rarity_core.c EngineSDK/src/pc/guest/translated_runtime.c EngineSDK/src/pc/guest/translated_alloc.c EngineSDK/src/pc/memory.c -o build/native-entry-rarity-gate-test
-          for mode in 0 1 2 3 4 5; do build/native-entry-rarity-gate-test "$mode"; done
+          for mode in 0 1 2 3 4 5 6; do build/native-entry-test "$mode"; done
       - uses: actions/cache@v4
         with:
           path: |
@@ -205,7 +117,7 @@ jobs:
           path: |
             build/iphone-core/libMemories_iPhone.a
             build/iphone-core/ios-core-report.json
-          key: lekak-ios-core-v1-${{ hashFiles('App/native_entry.c', 'App/native_entry.h', 'SourceMod/RaritiesNative/rarity_registry.h', 'SourceMod/RaritiesNative/rarity_snapshot.h', 'SourceMod/RaritiesNative/rarity_snapshot.c', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'Corrections/EngineSDK/src/game/duel_result_runtime.c', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
+          key: lekak-ios-core-v30-${{ hashFiles('tools/static_modules.py', 'SourceMod/Lekak/native-units.json', 'App/native_entry.c', 'App/native_entry.h', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
       - name: Cross-compile complete engine core for iPhone
         if: steps.ios-core-cache.outputs.cache-hit != 'true'
         run: |
@@ -230,23 +142,13 @@ jobs:
       - name: Link complete native game and package unsigned IPA
         run: |
           set -o pipefail
-          extra=()
-          if [[ "${{ inputs.experimental_data_catalog }}" == "true" ]]; then
-            extra+=(--experimental-data-catalog)
-          fi
-          if [[ "${{ inputs.experimental_rarity_drops }}" == "true" ]]; then
-            extra+=(--experimental-rarity-drops)
-          fi
-          python tools/build_native_ipa.py "${extra[@]}" 2>&1 | tee build/logs/native-app.log
+          python tools/build_native_ipa.py 2>&1 | tee build/logs/native-app.log
       - name: Upload native iPhone application
         uses: actions/upload-artifact@v4
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: |
-            build/native-app/Lekak_iPhone_29_*.ipa
-            build/native-app/Lekak_iPhone_RarityDataOnly_EXPERIMENTAL_UNSIGNED.ipa
-            build/native-app/Lekak_iPhone_RarityDrops_EXPERIMENTAL_UNSIGNED.ipa
+          path: build/native-app/Lekak_iPhone_30_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
