@@ -18,7 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Restore Windows port sources
-        run: unzip -o Lekak_iPhone_30_Sources.zip
+        run: |
+          unzip -o Lekak_iPhone_30_Sources.zip
+          cp -R Updates/v31/. .
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -43,6 +45,9 @@ jobs:
       - name: Verify Windows port
         run: |
           python tools/test_windows_port.py
+          python tools/test_collection_readability.py
+          cc -std=c11 -Wall -Wextra -Werror -I EngineSDK/src tools/test_ios_full_unlock.c -o /tmp/lekak-full-unlock-test
+          /tmp/lekak-full-unlock-test
           mkdir -p build
       - name: Verify inputs and object platform checks
         run: |
@@ -65,7 +70,7 @@ jobs:
           /tmp/lekak-music-test
       - name: Verify native display and controls
         run: |
-          clang -std=c11 -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
+          clang -std=c11 -DMEMORIES_IOS -Wall -Wextra -Werror -Wno-misleading-indentation -IApp -IEngineSDK/src App/native_platform.c tools/test_native_platform.c -o build/native-platform-test
           build/native-platform-test
           python tools/test_native_card_pixels.py
           python tools/test_ios_objectives_menu.py
@@ -120,7 +125,7 @@ jobs:
           path: |
             build/iphone-core/libMemories_iPhone.a
             build/iphone-core/ios-core-report.json
-          key: lekak-ios-core-v30-${{ hashFiles('tools/static_modules.py', 'SourceMod/Lekak/native-units.json', 'App/native_entry.c', 'App/native_entry.h', 'App/native_platform.c', 'App/native_platform.h', 'tools/build_iphone_engine.py', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
+          key: lekak-ios-core-v30-${{ hashFiles('tools/static_modules.py', 'SourceMod/Lekak/native-units.json', 'App/native_entry.c', 'App/native_entry.h', 'App/native_platform.c', 'App/native_platform.h', 'App/ios_full_unlock.h', 'tools/build_iphone_engine.py', 'EngineSDK/source-provenance.json', 'EngineSDK/tools/pc/macos_toolchain.json') }}
       - name: Cross-compile complete engine core for iPhone
         if: steps.ios-core-cache.outputs.cache-hit != 'true'
         run: |
@@ -151,7 +156,7 @@ jobs:
         with:
           name: Lekak-iPhone-Native-${{ github.run_number }}
           if-no-files-found: error
-          path: build/native-app/Lekak_iPhone_30_*.ipa
+          path: build/native-app/Lekak_iPhone_31_*.ipa
       - name: Upload reports even when compilation fails
         if: always()
         uses: actions/upload-artifact@v4
@@ -159,6 +164,7 @@ jobs:
           name: Lekak-iPhone-native-compile-${{ github.run_number }}
           if-no-files-found: warn
           path: |
+            build/readability/
             build/logs/
             build/game-abi/logs/
             build/game-abi/summary.json
