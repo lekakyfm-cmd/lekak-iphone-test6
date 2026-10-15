@@ -39,12 +39,29 @@ jobs:
           for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_24_Music_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
-      - name: Extract PC rarity portage reference files
+      - name: Restore and verify all stages 1-6 sources (single ZIP)
         run: |
-          test -f LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip || { echo 'Missing LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip at repository root'; exit 1; }
-          unzip -q -o LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip
-          test -f Portage/Raretes_PC_v0.7.6/mod.json
-          test -f Portage/Raretes_PC_v0.7.6/sources/identities.h
+          set -euo pipefail
+          archive=LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip
+          if [ ! -f "$archive" ]; then
+            echo "ERROR: Upload $archive at the repository root, not inside a folder." >&2
+            exit 1
+          fi
+          python - <<'PYVERIFY'
+          from pathlib import Path
+          import zipfile
+          archive=Path('LEKAK_IOS_SOURCES_COMPLETES_ETAPES_1_A_6.zip')
+          with zipfile.ZipFile(archive) as z:
+              assert z.testzip() is None, 'Source ZIP damaged'
+              expected={'tools/generate_rarity_registry.py',
+                        'tools/test_rarity_port.py',
+                        'Portage/Raretes_PC_v0.7.6/mod.json',
+                        'SourceMod/RaritiesNative/rarity_registry.c',
+                        'tools/verify_ios_source_bundle.py'}
+              assert expected.issubset(set(z.namelist())), 'Incomplete source ZIP'
+          PYVERIFY
+          unzip -q -o "$archive"
+          python tools/verify_ios_source_bundle.py
       - name: Apply verified card reference corrections after asset extraction
         run: |
           if [ -d Corrections/Lekak ]; then cp -R Corrections/Lekak/. Resources/Lekak/; fi
