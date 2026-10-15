@@ -39,6 +39,12 @@ jobs:
           for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_24_Music_*.zip; do
             if [ -f "$pack" ]; then unzip -o "$pack"; fi
           done
+      - name: Extract PC rarity portage reference files
+        run: |
+          test -f LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip || { echo 'Missing LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip at repository root'; exit 1; }
+          unzip -q -o LEKAK_PORTAGE_RARETES_PC_076_GITHUB.zip
+          test -f Portage/Raretes_PC_v0.7.6/mod.json
+          test -f Portage/Raretes_PC_v0.7.6/sources/identities.h
       - name: Apply verified card reference corrections after asset extraction
         run: |
           if [ -d Corrections/Lekak ]; then cp -R Corrections/Lekak/. Resources/Lekak/; fi
