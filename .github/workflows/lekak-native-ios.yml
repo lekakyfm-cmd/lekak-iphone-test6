@@ -2,6 +2,8 @@ name: Lekak - native iPhone app
 on:
   push:
     branches: [port/windows-iphone-v30]
+    paths-ignore:
+      - '.github/workflows/lekak-native-ios.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,6 +24,13 @@ jobs:
           unzip -o Lekak_iPhone_30_Sources.zip
           cp -R Updates/v31/. .
           cp -R Updates/v32/. .
+          if [ ! -f LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip ]; then
+            echo '::error::Dépose le ZIP du patch UI v33 à la racine de cette branche avant compilation.'
+            exit 1
+          fi
+          echo '2d53beca4d0a94d179b23a6fd3874c7fc58ee8dac263fe6ec6991a4b84e51006  LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip' | shasum -a 256 -c -
+          unzip -o LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip 'Updates/v33/*'
+          cp -R Updates/v33/. .
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
