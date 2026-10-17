@@ -31,6 +31,14 @@ jobs:
           echo '2d53beca4d0a94d179b23a6fd3874c7fc58ee8dac263fe6ec6991a4b84e51006  LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip' | shasum -a 256 -c -
           unzip -o LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip 'Updates/v33/*'
           cp -R Updates/v33/. .
+          if [ ! -f LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip ]; then
+            echo '::error::Il manque le ZIP du correctif de lisibilite V34 a la racine de cette branche.'
+            exit 1
+          fi
+          echo 'cfed2ccdbdeb2bfdf5f5b1c72079e47129bc3c70a5769a344e1cf49c5fd68010  LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip' | shasum -a 256 -c -
+          unzip -o LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip 'Updates/v34/*'
+          cp -R Updates/v34/. .
+          python tools/test_v34_ui_bounds.py
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
