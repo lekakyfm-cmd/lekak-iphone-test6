@@ -1,0 +1,180 @@
+name: Lekak - exporter sources iPhone V34
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/lekak-export-sources.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  sources-v34:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restaurer les sources exactes de la build V34
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -oq Lekak_iPhone_30_Sources.zip
+          cp -R Updates/v31/. .
+          cp -R Updates/v32/. .
+          echo '2d53beca4d0a94d179b23a6fd3874c7fc58ee8dac263fe6ec6991a4b84e51006  LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip' | sha256sum -c -
+          unzip -oq LEKAK_iPhone_v032_Meme_Build_UI_PATCH_SOURCES.zip 'Updates/v33/*'
+          cp -R Updates/v33/. .
+          echo 'cfed2ccdbdeb2bfdf5f5b1c72079e47129bc3c70a5769a344e1cf49c5fd68010  LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip' | sha256sum -c -
+          unzip -oq LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip 'Updates/v34/*'
+          cp -R Updates/v34/. .
+          unzip -oq Lekak_iPhone_10_Moteur_Et_Correctifs.zip 'EngineSDK/*'
+          for pack in Lekak_iPhone_13_Assets_*.zip Lekak_iPhone_30_Windows_Assets_*.zip; do
+            if [ -f "$pack" ]; then unzip -oq "$pack"; fi
+          done
+          mkdir -p Resources/Lekak
+          if [ -d Corrections/Lekak ]; then cp -R Corrections/Lekak/. Resources/Lekak/; fi
+          test -f EngineSDK/src/pc/mods/modapi.h
+          test -f SourceMod/Lekak/objectives.c
+          test -f SourceMod/Lekak/rewards.c
+          test -f SourceMod/Lekak/Collection/collection.c
+          test -f tools/test_v34_ui_bounds.py
+          python3 tools/test_v34_ui_bounds.py
+
+      - name: Regrouper toutes les sources de code et documenter les archives de ressources
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json, os, zipfile
+
+          archive = Path('export/LEKAK_iPhone_v032_SOURCES_V34.zip')
+          archive.parent.mkdir(exist_ok=True)
+          root_name = 'LEKAK_iPhone_v032_SOURCES_V34'
+          roots = ['App', 'Engine', 'EngineSDK', 'SourceMod', 'tools',
+                   'Updates', 'Corrections', '.github', 'Resources']
+          code_extensions = {
+              '.c','.h','.m','.mm','.cc','.cpp','.hpp','.py','.json',
+              '.yml','.yaml','.txt','.md','.plist','.cfg','.ini','.toml',
+              '.sh','.patch','.diff','.ld','.lds','.s','.xml','.csv',
+              '.tsv','.cmake','.in','.bat','.cmd','.ps1','.gitignore',
+              '.gitattributes'
+          }
+          permitted_plain_names = {
+              'LICENSE','COPYING','Makefile','GNUmakefile','CMakeLists.txt',
+              '.gitignore','.gitattributes'
+          }
+          ignored_dirs = {
+              '__pycache__','.git','.venv','node_modules','build','tmp',
+              '.pytest_cache','.mypy_cache','.cache'
+          }
+          selected = []
+          for root in roots:
+              folder = Path(root)
+              if not folder.exists():
+                  continue
+              for file in folder.rglob('*'):
+                  if not file.is_file():
+                      continue
+                  if any(part in ignored_dirs for part in file.parts):
+                      continue
+                  if file.suffix.lower() not in code_extensions and file.name not in permitted_plain_names:
+                      continue
+                  # Resource images, music, card media and compiled binaries
+                  # remain in the original versioned archives on GitHub.
+                  selected.append(file)
+
+          for name in ['engine-audit.json']:
+              if Path(name).is_file():
+                  selected.append(Path(name))
+          selected = sorted(set(selected), key=lambda p: p.as_posix())
+          required = [
+              'EngineSDK/src/pc/mods/modapi.h',
+              'SourceMod/Lekak/objectives.c',
+              'SourceMod/Lekak/rewards.c',
+              'SourceMod/Lekak/Collection/collection.c',
+              'tools/build_native_ipa.py',
+              'tools/test_v34_ui_bounds.py',
+              '.github/workflows/lekak-native-ios.yml',
+          ]
+          for path in required:
+              if Path(path) not in selected:
+                  raise SystemExit('Missing required source: ' + path)
+
+          pack_files = sorted(
+              [p for p in Path('.').glob('Lekak_iPhone_*.zip')]
+              + [p for p in Path('.').glob('LEKAK_iPhone_*.zip')],
+              key=lambda p:p.name
+          )
+          dependencies = []
+          for item in pack_files:
+              digest = hashlib.sha256(item.read_bytes()).hexdigest()
+              dependencies.append({'file':item.name,'size':item.stat().st_size,
+                                   'sha256':digest,
+                                   'github_url':'https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/blob/main/'+item.name})
+          notes = """LEKAK iPHONE - SAUVEGARDE DES SOURCES v0.32 + correctifs V33/V34
+          ===============================================================
+          Ce dossier contient les sources de code EFFECTIVEMENT utilisees
+          par la compilation iPhone n51 apres application des couches :
+            Sources v30 -> v31 -> v32 -> v33 -> v34.
+          Les fichiers C / Objective-C / H / Python / SDK, les workflows
+          GitHub, les configurations et les textes sont inclus.
+
+          A conserver pour les prochaines mises a jour : il suffit de
+          fournir cette archive de sources pour modifier le code iOS.
+
+          IMPORTANT : ce ZIP est l'export des SOURCES DE CODE, sans IPA,
+          sans sauvegardes et sans les gros medias images/musiques.
+          Les archives de ressources, musique et assets necessaires pour
+          refaire la build sont toujours dans le depot GitHub d'origine.
+          Voir ARCHIVES_RESSOURCES_ET_EMPREINTES.json.
+          Pour reconstruire la build complete, utiliser ce meme depot :
+          https://github.com/lekakyfm-cmd/lekak-iphone-test6
+          Workflow : .github/workflows/lekak-native-ios.yml
+          Branche principale : main
+          Branch TEST conservee : port/windows-iphone-v30
+
+          Le Bundle ID et le numero de build de l'application iOS ne sont
+          pas modifies par cet export. Un export de code n'est pas un IPA.
+          """
+          notes = '\n'.join(x.strip() for x in notes.splitlines()).strip()+'\n'
+          index = {
+              'project':'Lekak iPhone',
+              'app_version':'0.32',
+              'last_ui_patch':'v34',
+              'source_branch':os.environ.get('GITHUB_REF_NAME','main'),
+              'source_commit':os.environ.get('GITHUB_SHA'),
+              'build_success_reference':'GitHub Actions native IPA n51',
+              'files_count':len(selected),
+              'source_file_sha256':{
+                  p.as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in selected
+              },
+              'asset_packs_not_included':dependencies
+          }
+          with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=7,allowZip64=True) as z:
+              z.writestr(root_name+'/LISEZ_MOI_SOURCES.txt',notes)
+              z.writestr(root_name+'/MANIFEST_SOURCES.json',json.dumps(index,ensure_ascii=False,indent=2)+'\n')
+              z.writestr(root_name+'/ARCHIVES_RESSOURCES_ET_EMPREINTES.json',
+                         json.dumps(dependencies,ensure_ascii=False,indent=2)+'\n')
+              for p in selected:
+                  z.write(p,root_name+'/'+p.as_posix())
+          with zipfile.ZipFile(archive) as z:
+              bad=z.testzip()
+              if bad:
+                  raise SystemExit('Damaged archive member: '+bad)
+              if len(z.namelist()) != len(selected)+3:
+                  raise SystemExit('Wrong source count')
+          print(f'SOURCES: {len(selected)} files, {archive.stat().st_size:,} bytes')
+          print('SHA256:',hashlib.sha256(archive.read_bytes()).hexdigest())
+          PY
+
+      - name: Mettre les sources a disposition
+        uses: actions/upload-artifact@v4
+        with:
+          name: LEKAK-iPhone-v032-SOURCES-V34
+          path: export/LEKAK_iPhone_v032_SOURCES_V34.zip
+          retention-days: 90
+          if-no-files-found: error
