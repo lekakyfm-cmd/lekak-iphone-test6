@@ -1,0 +1,133 @@
+name: Lekak - IPA 51 en petits morceaux
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/lekak-ipa51-parts.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  split-ipa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Recuperer IPA 51 deja compile
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p source pieces
+          gh run download 38986941483 -R '${{ github.repository }}' -n 'Lekak-iPhone-Native-51' -D source
+          find source -type f -maxdepth 4 -printf '%p (%s bytes)\n'
+      - name: Separer uniquement IPA normal en parties de 40 Mio
+        run: |
+          set -euo pipefail
+          mapfile -d '' candidates < <(find source -type f -iname '*.ipa' ! -iname '*full*unlock*' ! -iname '*test*unlock*' -print0)
+          if [ "${#candidates[@]}" -ne 1 ]; then
+            echo "::error::Selection IPA ambiguë : ${#candidates[@]} candidates. Ne pas publier de fichier par erreur."
+            exit 1
+          fi
+          selected="${candidates[0]}"
+          printf 'IPA normal : %s\n' "$selected"
+          printf 'Fichier IPA normal SHA256 :\n' > pieces/LISEZ_MOI.txt
+          sha256sum "$selected" | awk '{print $1}' >> pieces/LISEZ_MOI.txt
+          printf 'Taille en octets : %s\n' "$(stat -c '%s' "$selected")" >> pieces/LISEZ_MOI.txt
+          printf 'Reconstitution dans CMD Windows (dans un dossier contenant toutes les parties) :\n' >> pieces/LISEZ_MOI.txt
+          printf 'copy /b Lekak_iPhone_51.ipa.part00+Lekak_iPhone_51.ipa.part01+... Lekak_iPhone_51.ipa\n' >> pieces/LISEZ_MOI.txt
+          split -b 40m -d -a 2 "$selected" pieces/Lekak_iPhone_51.ipa.part
+          sha256sum pieces/Lekak_iPhone_51.ipa.part* > pieces/PARTS_SHA256.txt
+          printf '\nParties :\n'; ls -lh pieces/Lekak_iPhone_51.ipa.part*
+          test "$(find pieces -maxdepth 1 -type f -name 'Lekak_iPhone_51.ipa.part*' | wc -l)" -le 10
+      - name: Metadonnees et empreintes
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-VERIFICATION
+          path: |
+            pieces/LISEZ_MOI.txt
+            pieces/PARTS_SHA256.txt
+          retention-days: 30
+      - name: Partie 00
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part00') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART00
+          path: pieces/Lekak_iPhone_51.ipa.part00
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 01
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part01') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART01
+          path: pieces/Lekak_iPhone_51.ipa.part01
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 02
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part02') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART02
+          path: pieces/Lekak_iPhone_51.ipa.part02
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 03
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part03') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART03
+          path: pieces/Lekak_iPhone_51.ipa.part03
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 04
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part04') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART04
+          path: pieces/Lekak_iPhone_51.ipa.part04
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 05
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part05') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART05
+          path: pieces/Lekak_iPhone_51.ipa.part05
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 06
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part06') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART06
+          path: pieces/Lekak_iPhone_51.ipa.part06
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 07
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part07') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART07
+          path: pieces/Lekak_iPhone_51.ipa.part07
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 08
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part08') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART08
+          path: pieces/Lekak_iPhone_51.ipa.part08
+          compression-level: 0
+          retention-days: 30
+      - name: Partie 09
+        if: ${{ hashFiles('pieces/Lekak_iPhone_51.ipa.part09') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Lekak-iPhone-51-PART09
+          path: pieces/Lekak_iPhone_51.ipa.part09
+          compression-level: 0
+          retention-days: 30
