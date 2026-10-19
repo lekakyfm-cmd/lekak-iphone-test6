@@ -1,7 +1,7 @@
 name: Lekak - native iPhone app
 on:
   push:
-    branches: [port/windows-iphone-v30]
+    branches: [port/windows-iphone-v30, feature/lekak-ios-fusions-v14]
     paths-ignore:
       - '.github/workflows/lekak-native-ios.yml'
   workflow_dispatch:
@@ -38,6 +38,7 @@ jobs:
           echo 'cfed2ccdbdeb2bfdf5f5b1c72079e47129bc3c70a5769a344e1cf49c5fd68010  LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip' | shasum -a 256 -c -
           unzip -o LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip 'Updates/v34/*'
           cp -R Updates/v34/. .
+          cp -R Updates/v35/. .
           python tools/test_v34_ui_bounds.py
       - uses: actions/setup-python@v5
         with:
