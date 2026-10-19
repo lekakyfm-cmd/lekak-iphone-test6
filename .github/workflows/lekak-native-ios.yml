@@ -1,7 +1,7 @@
 name: Lekak - native iPhone app
 on:
   push:
-    branches: [port/windows-iphone-v30]
+    branches: [port/windows-iphone-v30, feature/lekak-ios-fusions-v14]
     paths-ignore:
       - '.github/workflows/lekak-native-ios.yml'
   workflow_dispatch:
@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   native-modules:
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 90
     defaults:
       run:
@@ -38,6 +38,13 @@ jobs:
           echo 'cfed2ccdbdeb2bfdf5f5b1c72079e47129bc3c70a5769a344e1cf49c5fd68010  LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip' | shasum -a 256 -c -
           unzip -o LEKAK_iPhone_v032_Correctif_Lisibilite_V34.zip 'Updates/v34/*'
           cp -R Updates/v34/. .
+          # Keep the v0.32 manifest and reward chain: v35 must add, not replace.
+          cp SourceMod/Lekak/native-units.json /tmp/lekak_units_before_v35.json
+          cp SourceMod/Lekak/rewards-chain.c /tmp/lekak_rewards_before_v35.c
+          cp -R Updates/v35/. .
+          cp /tmp/lekak_units_before_v35.json SourceMod/Lekak/native-units.json
+          cp /tmp/lekak_rewards_before_v35.c SourceMod/Lekak/rewards-chain.c
+          python tools/apply_ios_fusion_patch.py
           python tools/test_v34_ui_bounds.py
       - uses: actions/setup-python@v5
         with:
@@ -170,6 +177,7 @@ jobs:
         run: |
           set -o pipefail
           python tools/build_native_ipa.py 2>&1 | tee build/logs/native-app.log
+          python tools/apply_ios_fusion_copies_to_ipa.py build/native-app
       - name: Upload native iPhone application
         uses: actions/upload-artifact@v4
         with:
