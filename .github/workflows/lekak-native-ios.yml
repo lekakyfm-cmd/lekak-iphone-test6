@@ -177,6 +177,7 @@ jobs:
         run: |
           set -o pipefail
           python tools/build_native_ipa.py 2>&1 | tee build/logs/native-app.log
+          python tools/apply_ios_fusion_copies_to_ipa.py build/native-app
       - name: Upload native iPhone application
         uses: actions/upload-artifact@v4
         with:
