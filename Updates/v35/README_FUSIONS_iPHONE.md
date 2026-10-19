@@ -9,3 +9,5 @@ Le code est intégré à la chaîne native ARM64 à travers l'overlay `Updates/v
 Le patch utilisateur final nécessitera également de conserver les `copy` déjà synchronisés dans les mod.json iPhone et une validation sur appareil. Les tests du module C sur Linux passent (8/8), mais ne prouvent pas à eux seuls son comportement en duel iPhone.
 
 Mise à jour : intégration additive (préserve le manifeste static_modules de v0.32).
+
+Compilation GitHub Actions : runner macos-26 (ARM64), remplace macos-15 pour le portage iPhone.
