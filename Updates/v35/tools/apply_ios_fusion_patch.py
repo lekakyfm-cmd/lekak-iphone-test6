@@ -34,4 +34,15 @@ if "LekakFusionInit(h,m)" not in text:
     text = text.replace(anchor,
         anchor + '\n if(!LekakFusionInit(h,m)){\n  if(h->log)h->log(h,"LEKAK iPhone fusion guard unavailable");\n  return 0;\n }', 1)
     chain.write_text(text, encoding="utf-8")
+# Update only the old unit-count assertion in v0.32 integration tests.
+test = ROOT / "tools/test_windows_port.py"
+if test.is_file():
+    checks = test.read_text(encoding="utf-8")
+    old = "assert len(plan['units'])==23"
+    new = "assert len(plan['units'])==24"
+    if old in checks:
+        checks = checks.replace(old, new, 1)
+        test.write_text(checks, encoding="utf-8")
+    elif new not in checks:
+        raise SystemExit("Unexpected iPhone module-count test; refusing to bypass validation")
 print("LEKAK fusion module added, existing iPhone v0.32 units and static_modules preserved")
